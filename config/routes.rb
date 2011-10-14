@@ -1,4 +1,10 @@
 Navd::Application.routes.draw do
+  resources :notes
+
+  resources :memes
+
+  resources :shows
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
