@@ -27,8 +27,10 @@ describe "Navd::Scraper::ShowLoader" do
       its(:published) { should be_false }
     end
     context "bad url" do
-      let(:show_number) { 'bad^karma' }
-      before { show_loader.scan_show_assets }
+      before {
+        show_loader.spider.expects(:get_uri_for_show).returns('bad://karma')
+        show_loader.scan_show_assets
+      }
       its(:found) { should be_false }
       its(:published) { should be_false }
     end
