@@ -14,11 +14,8 @@ module ::Navd::Scraper
     end
 
     def scan_show_assets
-      unless self.uri = spider.get_uri_for_show(number)
-        self.errors << "URI could not be found for show number #{number}"
-        return
-      end
-      unless page = spider.get_page(uri)
+      self.uri, page = spider.get_page_for_show(number)
+      if spider.errors.present?
         self.errors + spider.errors
         return
       end

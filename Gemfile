@@ -9,5 +9,4 @@ gem 'nokogiri'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.4'
-  gem 'mocha'
 end

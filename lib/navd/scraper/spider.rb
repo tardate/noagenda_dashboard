@@ -26,5 +26,13 @@ module ::Navd::Scraper
       nil
     end
 
+    # Loads HTML web page for specific show number
+    # Returns [URI,Nokogiri::HTML::Document] or nil (if error)
+    def get_page_for_show(number)
+      uri = get_uri_for_show(number)
+      doc = uri && get_page(uri)
+      [uri,doc]
+    end
+
   end
 end
