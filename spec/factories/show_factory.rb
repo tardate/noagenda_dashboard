@@ -1,3 +1,3 @@
 Factory.define :show do |f|
-  f.sequence(:code)
+  f.sequence(:number)
 end

@@ -51,6 +51,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    nokogiri (1.5.0)
     pg (0.11.0)
     polyglot (0.3.2)
     rack (1.2.4)
@@ -102,6 +103,7 @@ DEPENDENCIES
   factory_girl_rails
   haml
   inherited_resources
+  nokogiri
   pg
   rails (= 3.0.10)
   rspec-rails (~> 2.4)

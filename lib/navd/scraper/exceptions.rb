@@ -1,4 +1,4 @@
-class ::Navd::Scraper
+module ::Navd::Scraper
 	class DataError < StandardError
 	end
 end

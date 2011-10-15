@@ -1,1 +1,5 @@
-require 'navd/scraper'
+require 'navd/scraper/exceptions'
+require 'navd/scraper/support'
+require 'navd/scraper/spider'
+require 'navd/scraper/show_loader'
+require 'navd/scraper/control'

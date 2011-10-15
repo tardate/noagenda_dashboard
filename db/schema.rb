@@ -30,8 +30,15 @@ ActiveRecord::Schema.define(:version => 20111014154156) do
   end
 
   create_table "shows", :force => true do |t|
-    t.integer  "code"
-    t.date     "published"
+    t.integer  "number"
+    t.date     "published_date"
+    t.boolean  "published"
+    t.string   "url"
+    t.string   "audio_url"
+    t.string   "cover_art_url"
+    t.string   "assets_url"
+    t.string   "show_notes_url"
+    t.text     "credits"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
