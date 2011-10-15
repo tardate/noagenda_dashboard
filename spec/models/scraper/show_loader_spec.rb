@@ -22,10 +22,13 @@ describe "Navd::Scraper::ShowLoader" do
 
     context "unpublished show" do
       let(:show_number) { 33 }
-      before { show_loader.scan_show_assets }
+      before {
+        show_loader.spider.expects(:get_page).returns(Nokogiri::HTML(unpublished_show_page_html))
+        show_loader.scan_show_assets }
       its(:found) { should be_true }
       its(:published) { should be_false }
     end
+
     context "bad url" do
       before {
         show_loader.spider.expects(:get_uri_for_show).returns('bad://karma')
