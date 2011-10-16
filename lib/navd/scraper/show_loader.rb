@@ -1,13 +1,14 @@
 module ::Navd::Scraper
   class ShowLoader
     attr_accessor :number, :spider, :uri, :found, :published, :errors
-    attr_reader :attributes
+    attr_reader :attributes, :show_notes
     
     def initialize(number)
       @errors = []
       @number = number
       @spider = Navd::Scraper::Spider.new
       @attributes = {}
+      @show_notes = []
     end
 
     def loaded?
@@ -30,11 +31,47 @@ module ::Navd::Scraper
       @attributes[:published] = @published = true
       @attributes[:published_date] = extract_show_date(@attributes[:audio_url])
       @attributes[:cover_art_url] = extract_cover_art_link(page)
-      @attributes[:assets_url] = URI.join(@attributes[:show_notes_url],extract_assets_link(page)).to_s
+      @attributes[:assets_url] = uri.merge(extract_assets_link(page)).to_s
       @attributes[:url] = extract_episode_web_link(page)
-      show_note_assets_url = URI.join(@attributes[:show_notes_url],extract_show_notes_link(page)).to_s
+      show_note_assets_uri = uri.merge(extract_show_notes_link(page))
       # credits
-      # show notes
+      all_notes = get_all_notes_page(show_note_assets_uri)
+      @show_notes = extract_notes_from_page(all_notes)
+    end
+
+    def get_all_notes_page(show_note_assets_uri)
+      assets_page = spider.get_page(show_note_assets_uri)
+      notes_uri = show_note_assets_uri.merge(extract_show_notes_link(assets_page))
+      notes_page = spider.get_page(notes_uri)
+      all_notes_uri = show_note_assets_uri.merge(extract_nodes(notes_page,:all_notes)[:href])
+      spider.get_page(all_notes_uri)
+    end
+
+    def extract_notes_from_page(page)
+      notes = []
+      current_meme = nil
+      page.at_css('ul.ulDirectory').children.each do |n|
+        if n.name=='li' && n[:class]=='directoryItem'
+          current_meme = n.text
+        elsif n.name=='ul' && n[:class]=='ulDirectory'
+          current_title = nil
+          n.children.each do |meme|
+            if meme.name=='li' && meme[:class]=='directoryItem'
+              current_title = meme.text
+            elsif meme.name=='ul' && meme[:class]=='ulDirectory'
+              meme.text
+              meme.at_css('a')[:href]
+              notes << {
+                :name => current_title,
+                :meme_name => current_meme,
+                :description => meme.text,
+                :url => meme.at_css('a')[:href]
+              }
+            end
+          end
+        end
+      end
+      notes
     end
 
     def extract_show_date(mp3)
@@ -64,6 +101,8 @@ module ::Navd::Scraper
 
     def extract_nodes(page,item)
       result = case item
+      when :all_notes
+        page.css('a.directoryLink').select{|n| n.text[/expand all/i] }.first
       when :assets
         page.css('a.directoryLink').select{|n| n.text[/Assets/] }.first
       when :cover_art
