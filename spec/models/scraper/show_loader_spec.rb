@@ -14,10 +14,6 @@ describe "Navd::Scraper::ShowLoader" do
   end
 
   describe "#scan_show_assets" do
-    context "live example page" do
-      before { show_loader.scan_show_assets }
-      its(:errors) { should be_empty }
-    end
 
     context "published show" do
       let(:expected_attributes) { {
