@@ -4,10 +4,10 @@ describe "shows/index.html.erb" do
   before(:each) do
     assign(:shows, [
       stub_model(Show,
-        :code => 1
+        :number => 1
       ),
       stub_model(Show,
-        :code => 1
+        :number => 1
       )
     ])
   end

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "shows/show.html.erb" do
   before(:each) do
     @show = assign(:show, stub_model(Show,
-      :code => 1
+      :number => 1
     ))
   end
 
