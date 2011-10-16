@@ -34,9 +34,12 @@ module ::Navd::Scraper
       @attributes[:assets_url] = uri.merge(extract_assets_link(page)).to_s
       @attributes[:url] = extract_episode_web_link(page)
       show_note_assets_uri = uri.merge(extract_show_notes_link(page))
-      # credits
+      # TODO: credits
+      @show_notes = extract_show_notes(show_note_assets_uri)
+    end
+    def extract_show_notes(show_note_assets_uri)
       all_notes = get_all_notes_page(show_note_assets_uri)
-      @show_notes = extract_notes_from_page(all_notes)
+      extract_notes_from_page(all_notes)
     end
 
     def get_all_notes_page(show_note_assets_uri)

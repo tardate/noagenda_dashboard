@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    = render :partial => 'common/head'
+  %body{:class => "#{controller_path.split('/').join(' ')} #{params[:action]}"}
+    = render :partial => 'common/header'
+    #container
+      #content
+        #wrapper
+          .content
+            = yield
+
+    = render :partial => 'common/basement'

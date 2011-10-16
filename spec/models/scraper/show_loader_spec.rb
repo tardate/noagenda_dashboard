@@ -32,6 +32,7 @@ describe "Navd::Scraper::ShowLoader" do
       } }
       before {
         show_loader.spider.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
+        show_loader.stub(:extract_show_notes).and_return([])
         show_loader.scan_show_assets
       }
       its(:found) { should be_true }
@@ -44,6 +45,7 @@ describe "Navd::Scraper::ShowLoader" do
       let(:show_number) { 33 }
       before {
         show_loader.spider.stub(:get_page).and_return(Nokogiri::HTML(unpublished_show_page_html))
+        show_loader.stub(:extract_show_notes).and_return([])
         show_loader.scan_show_assets
       }
       its(:found) { should be_true }
@@ -54,6 +56,7 @@ describe "Navd::Scraper::ShowLoader" do
     context "bad url" do
       before {
         show_loader.spider.stub(:get_uri_for_show).and_return('bad://karma')
+        show_loader.stub(:extract_show_notes).and_return([])
         show_loader.scan_show_assets
       }
       its(:found) { should be_false }

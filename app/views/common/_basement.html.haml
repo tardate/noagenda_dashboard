@@ -1,0 +1,13 @@
+#footer
+  .content
+    .nav
+    #copyright
+
+= javascript_include_tag :defaults, :cache => true
+
+:javascript
+  jQuery(document).ready(function() {
+    NAVD.init({});
+  });
+
+= yield :javascript
