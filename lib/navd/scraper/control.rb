@@ -39,6 +39,7 @@ module ::Navd::Scraper
         end
         return true
       else
+        log "#{number}: show not published yet"
         return false
       end
     end

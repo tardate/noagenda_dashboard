@@ -19,28 +19,39 @@ ActiveRecord::Schema.define(:version => 20111014154156) do
     t.datetime "updated_at"
   end
 
+  add_index "memes", ["name"], :name => "index_memes_on_name", :unique => true
+
   create_table "notes", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "url"
+    t.string   "url",         :limit => 2000
     t.integer  "show_id"
     t.integer  "meme_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "notes", ["meme_id", "show_id"], :name => "index_notes_on_meme_id_and_show_id"
+  add_index "notes", ["meme_id"], :name => "index_notes_on_meme_id"
+  add_index "notes", ["show_id", "url"], :name => "index_notes_on_show_id_and_url"
+  add_index "notes", ["show_id"], :name => "index_notes_on_show_id"
+
   create_table "shows", :force => true do |t|
     t.integer  "number"
     t.date     "published_date"
     t.boolean  "published"
-    t.string   "url"
-    t.string   "audio_url"
-    t.string   "cover_art_url"
-    t.string   "assets_url"
-    t.string   "show_notes_url"
+    t.string   "url",            :limit => 2000
+    t.string   "audio_url",      :limit => 2000
+    t.string   "cover_art_url",  :limit => 2000
+    t.string   "assets_url",     :limit => 2000
+    t.string   "show_notes_url", :limit => 2000
     t.text     "credits"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "shows", ["number", "published"], :name => "index_shows_on_number_and_published", :unique => true
+  add_index "shows", ["number"], :name => "index_shows_on_number", :unique => true
+  add_index "shows", ["published_date"], :name => "index_shows_on_published_date"
 
 end
