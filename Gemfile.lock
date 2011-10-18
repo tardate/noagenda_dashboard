@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.10)
     activesupport (3.0.10)
     arel (2.0.10)
+    browser (0.1.3)
     builder (2.1.2)
     chunky_png (1.2.5)
     compass (0.11.5)
@@ -107,6 +108,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  browser
   compass
   factory_girl_rails
   haml

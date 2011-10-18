@@ -44,7 +44,9 @@
     select {
       background-color: $c_bg_footer;
       border: 1px solid $c_block_footer;
-      color: $c_block_footer;
+      color: $c_select_text;
+      font-size: 12px;
+      height: 26px;
       margin: 0;
       padding: 3px;
       width: 160px;

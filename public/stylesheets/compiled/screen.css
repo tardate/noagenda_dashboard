@@ -86,7 +86,7 @@ div.field, div.actions {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.9);
   color: white;
   height: 100px;
-  min-width: 1000px;
+  min-width: 980px;
   position: fixed;
   top: 0;
   left: 0;
@@ -120,11 +120,11 @@ div.field, div.actions {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
   background: url("/images/stainless-plaque.png") repeat scroll 0 0 #dddddd;
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   height: 30px;
-  margin: 20px;
-  padding: 10px 5px 0;
+  margin: 20px 20px 0 0;
+  padding: 10px 0 0;
   text-align: center;
   vertical-align: middle;
   width: 230px;
@@ -163,7 +163,7 @@ div.field, div.actions {
 /* line 1, ../../../app/stylesheets/_content.scss */
 #container {
   margin-top: 100px;
-  min-width: 1000px;
+  min-width: 980px;
 }
 
 /* line 6, ../../../app/stylesheets/_content.scss */
@@ -181,12 +181,24 @@ div.field, div.actions {
   height: 100px;
 }
 
+/* line 20, ../../../app/stylesheets/_content.scss */
+.mediaplayer.flash embed {
+  height: 27px;
+  width: 320px;
+}
+
+/* line 26, ../../../app/stylesheets/_content.scss */
+.mediaplayer.html5 embed {
+  height: 42px;
+  width: 320px;
+}
+
 /* line 1, ../../../app/stylesheets/_footer.scss */
 #footer {
   background-color: #282e0c;
   color: white;
   height: 150px;
-  min-width: 1000px;
+  min-width: 980px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -199,7 +211,7 @@ div.field, div.actions {
 /* line 13, ../../../app/stylesheets/_footer.scss */
 #footer .panel {
   height: 150px;
-  min-width: 1000px;
+  min-width: 980px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -247,16 +259,18 @@ div.field, div.actions {
 #footer .block select {
   background-color: #282e0c;
   border: 1px solid #b8aa83;
-  color: #b8aa83;
+  color: white;
+  font-size: 12px;
+  height: 26px;
   margin: 0;
   padding: 3px;
   width: 160px;
 }
-/* line 52, ../../../app/stylesheets/_footer.scss */
+/* line 54, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 56, ../../../app/stylesheets/_footer.scss */
+/* line 58, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   background-color: #b8aa83;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b8aa83), to(#282e0c));
@@ -269,7 +283,7 @@ div.field, div.actions {
   height: 150px;
   margin-top: -30px;
 }
-/* line 67, ../../../app/stylesheets/_footer.scss */
+/* line 69, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -279,7 +293,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 71, ../../../app/stylesheets/_footer.scss */
+/* line 73, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -289,16 +303,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 75, ../../../app/stylesheets/_footer.scss */
+/* line 77, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 78, ../../../app/stylesheets/_footer.scss */
+/* line 80, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 81, ../../../app/stylesheets/_footer.scss */
+/* line 83, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

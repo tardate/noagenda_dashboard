@@ -16,6 +16,8 @@ gem 'nokogiri'
 
 # compass/sass: DRY css
 gem 'compass'
+# browser detection
+gem 'browser'
 
 group :test, :development do
   # rspec for all testing
