@@ -11,6 +11,6 @@
   - if resource.credits?
     .credits= resource.credits
   %ul.stats
-    %li= resource.memes.uniq.count
+    %li= resource.memes.count
     %li= resource.notes.count
     = embed_media_player(resource.audio_url) if resource.audio_url?

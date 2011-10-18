@@ -19,5 +19,5 @@
         - for item in collection do
           %tr
             %td= link_to(item.full_title, [item])
-            %td= item.memes.uniq.count
+            %td= item.memes.count
             %td= item.notes.count
