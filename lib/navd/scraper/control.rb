@@ -7,10 +7,24 @@ module ::Navd::Scraper
     def initialize(custom_options={})
       self.options = DEFAULT_OPTIONS.merge(custom_options)
     end
+    def log(msg, level=:info)
+      puts msg
+      Rails.logger.send(level,msg)
+    end
+    def load_all_shows
+      begin
+        loaded = load_show(Show.next_number_to_load)
+      end while loaded
+    end
 
     def load_show(number)
+      log "#{number}: loading show"
       show_loader = Navd::Scraper::ShowLoader.new(number)
       show_loader.scan_show_assets
+      if show_loader.errors.present?
+        log "#{number}: errors: #{show_loader.errors.inspect}"
+        return false
+      end
       if show_loader.published
         show = Show.find_or_initialize_by_number(number)
         show.update_attributes!(show_loader.attributes)
@@ -23,6 +37,9 @@ module ::Navd::Scraper
             :description => show_note[:description]
           )
         end
+        return true
+      else
+        return false
       end
     end
 

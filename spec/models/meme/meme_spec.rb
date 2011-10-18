@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Meme do
+  let(:resource) { Factory(:meme) }
   subject { Meme }
 
   it_behaves_like "has a valid test factory", :meme, Meme
@@ -9,6 +10,14 @@ describe Meme do
     :notes             => :has_many,
     :shows             => :has_many
   }
+
+  describe "#shows" do
+    let!(:show) { Factory(:show) }
+    before { 3.times { Factory.create(:note, :show => show, :meme => resource)} }
+    subject { resource.shows }
+    its(:count) { should eql(1) }
+    it { should include(show) }
+  end
 
   describe "##select_listing" do
     let!(:meme_a) { Factory(:meme, :name => 'aaa') }
@@ -43,6 +52,19 @@ describe Meme do
     it "should normalize the meme name as required" do
       Meme.stub(:normalize_name).and_return('Normalized')
       Meme.factory('33').name.should eql('Normalized')
+    end
+  end
+
+  describe "#destroy" do
+    let!(:meme) { Factory(:meme) }
+    let!(:show) { Factory(:show) }
+    let!(:note) { Factory(:note, :show => show, :meme => meme ) }
+    subject { meme.destroy }
+    it "should not remove related shows" do
+      expect { subject }.not_to change { Show.count }
+    end
+    it "should remove related notes" do
+      expect { subject }.to change { Note.count }.from(1).to(0)
     end
   end
 end

@@ -8,4 +8,16 @@ describe Note do
     :meme             => :belongs_to
   }
 
+  describe "#destroy" do
+    let!(:meme) { Factory(:meme) }
+    let!(:show) { Factory(:show) }
+    let!(:note) { Factory(:note, :show => show, :meme => meme ) }
+    subject { note.destroy }
+    it "should not remove related shows" do
+      expect { subject }.not_to change { Show.count }
+    end
+    it "should not remove related memes" do
+      expect { subject }.not_to change { Meme.count }
+    end
+  end
 end

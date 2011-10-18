@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
-  has_many :notes
+  has_many :notes, :dependent => :destroy
   has_many :memes, :through => :notes, :uniq => true, :order => :name
 
   scope :select_listing, where(:published => true).order('number desc')
@@ -7,6 +7,9 @@ class Show < ActiveRecord::Base
   class << self
     def latest
       order('number desc').limit(1).first
+    end
+    def next_number_to_load
+      (Show.maximum(:number) || 300) + 1
     end
   end
 

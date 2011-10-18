@@ -1,7 +1,7 @@
 # coding: utf-8
 class Meme < ActiveRecord::Base
-  has_many :notes
-  has_many :shows, :through => :notes
+  has_many :notes, :dependent => :destroy
+  has_many :shows, :through => :notes, :uniq => true, :order => 'number desc'
 
   scope :select_listing, order(:name)
 

@@ -25,4 +25,12 @@ describe "Navd::Scraper::Control" do
       expect { subject }.to change { Show.count }.from(0).to(1)
     end
   end
+
+  describe '#load_all_shows' do
+    subject { scraper_control.load_all_shows }
+    it "should start loading from 301" do
+      scraper_control.stub(:load_show).with(301).and_return(false)
+      subject
+    end
+  end
 end
