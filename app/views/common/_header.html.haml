@@ -6,7 +6,4 @@
       = image_tag('navd.png', :alt => 'Attack Vector Dashboard')
     .dedouche.block.menu_tip
       %a.menu.donor Be a Donor not a Boner!
-      %ul.submenu{:style => 'display:none'}
-        - ['Blankets', 'Water', 'Just Send Cash'].each do |pledge|
-          %li
-            %a{:href => 'http://dvorak.org/na'}= pledge
+      = render :partial => 'common/submenu', :locals => { :links => dedouche_links}

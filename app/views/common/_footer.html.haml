@@ -7,8 +7,10 @@
         .levels.block
           = render :partial => 'shows/select'
         .book-of-knowledge.block.right
-          .wrapper
-            = image_tag('bok.png', :alt => 'Book of Knowledge', :class => 'bok')
+          .wrapper.menu_tip
+            = image_tag('bok.png', :alt => 'Book of Knowledge', :class => 'bok menu mtc')
+            = render :partial => 'common/submenu', :locals => { :links => bok_links}
+
     .left.player.crackpot
       = image_tag('crackpot.png')
       .health.latd

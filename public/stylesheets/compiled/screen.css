@@ -108,11 +108,11 @@ div.field, div.actions {
   margin: 2px 0 2px 16px;
   height: 90px;
 }
-/* line 29, ../../../app/stylesheets/_header.scss */
+/* line 27, ../../../app/stylesheets/_header.scss */
 #header .dedouche {
   float: right;
 }
-/* line 31, ../../../app/stylesheets/_header.scss */
+/* line 29, ../../../app/stylesheets/_header.scss */
 #header .dedouche a.donor {
   -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
@@ -129,35 +129,6 @@ div.field, div.actions {
   vertical-align: middle;
   width: 230px;
   text-shadow: 1px 1px 0 #FFF;
-}
-/* line 45, ../../../app/stylesheets/_header.scss */
-#header .dedouche ul.submenu {
-  list-style: none outside none;
-  margin: 0;
-  padding: 0;
-}
-/* line 49, ../../../app/stylesheets/_header.scss */
-#header .dedouche ul.submenu li {
-  background-color: #FFF;
-  border: 2px solid #000;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -o-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -khtml-border-radius: 8px;
-  border-radius: 8px;
-  padding: 5px 5px 2px;
-}
-/* line 54, ../../../app/stylesheets/_header.scss */
-#header .dedouche ul.submenu li:hover {
-  background-color: #C00;
-}
-/* line 57, ../../../app/stylesheets/_header.scss */
-#header .dedouche ul.submenu li a {
-  color: #000;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
 }
 
 /* line 1, ../../../app/stylesheets/_content.scss */
@@ -976,4 +947,34 @@ div.field, div.actions {
 .ui-tooltip:not(.ie9haxors) div.ui-tooltip-titlebar {
   filter: none;
   -ms-filter: none;
+}
+
+/* line 1, ../../../app/stylesheets/_qtip_custom.scss */
+ul.submenu {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+/* line 5, ../../../app/stylesheets/_qtip_custom.scss */
+ul.submenu li {
+  background-color: #FFF;
+  border: 2px solid #000;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  padding: 5px 5px 2px;
+}
+/* line 10, ../../../app/stylesheets/_qtip_custom.scss */
+ul.submenu li:hover {
+  background-color: #C00;
+}
+/* line 13, ../../../app/stylesheets/_qtip_custom.scss */
+ul.submenu li a {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
 }

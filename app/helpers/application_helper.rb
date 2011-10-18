@@ -14,4 +14,21 @@ src="http://www.google.com/reader/ui/3523697345-audio-player.swf?audioUrl=#{sour
     end
   end
 
+  # Returns the set of links to use in the book of knowledge
+  def bok_links
+    [
+      { :url => 'http://www.noagendashow.com/', :name => 'NoAgendaShow.com'},
+      { :url => 'http://noagendachat.net/', :name => 'NoAgenda Chat'},
+      { :url => 'http://noagendastream.com/', :name => 'NoAgenda Stream'}
+    ]
+  end
+
+  # Returns the set of links to use in the donation menu
+  def dedouche_links
+    [
+      { :url => 'http://dvorak.org/na', :name => 'Blankets'},
+      { :url => 'http://dvorak.org/na', :name => 'Water'},
+      { :url => 'http://dvorak.org/na', :name => 'Just Send Cash'}
+    ]
+  end
 end

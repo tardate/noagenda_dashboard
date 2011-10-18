@@ -1,0 +1,4 @@
+%ul.submenu{:style => 'display:none'}
+  - links.each do |link|
+    %li
+      %a{:href => link[:url]}= link[:name]
