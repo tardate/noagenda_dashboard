@@ -62,13 +62,12 @@ module ::Navd::Scraper
             if meme.name=='li' && meme[:class]=='directoryItem'
               current_title = meme.text
             elsif meme.name=='ul' && meme[:class]=='ulDirectory'
-              meme.text
-              meme.at_css('a')[:href]
+              anchor = meme.at_css('a') || {}
               notes << {
                 :name => current_title,
                 :meme_name => current_meme,
                 :description => meme.text,
-                :url => meme.at_css('a')[:href]
+                :url => anchor[:href]
               }
             end
           end

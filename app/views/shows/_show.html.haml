@@ -1,0 +1,16 @@
+
+.panel[resource]
+  - if resource.cover_art_url?
+    .cover_art= image_tag(resource.cover_art_url)
+  %h2= resource.full_title
+  %ul.resources
+    %li= link_to_if(resource.url?,'Episode Webpage',resource.url)
+    %li= link_to_if(resource.audio_url?,'Direct Link to the mp3 file',resource.audio_url)
+    %li= link_to_if(resource.show_notes_url?,'Shownotes',resource.show_notes_url)
+    %li= link_to_if(resource.assets_url?,'Assets',resource.assets_url)
+  - if resource.credits?
+    .credits= resource.credits
+  %ul.stats
+    %li= resource.memes.uniq.count
+    %li= resource.notes.count
+    = embed_media_player(resource.audio_url) if resource.audio_url?

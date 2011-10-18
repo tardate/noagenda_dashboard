@@ -1,0 +1,86 @@
+#footer {
+  background-color:$c_bg_footer;
+  color: $c_text_footer;
+  height: $d_h_footer;
+  min-width: $d_w_min;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .wrapper {
+    height: $d_h_footer;
+  }
+  .panel {
+    
+    height: $d_h_footer;
+    min-width: $d_w_min;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .controls {
+      padding-left: $d_w_player;
+      padding-right: $d_w_player;
+    }
+  }
+  .block {
+    height: $d_h_footer;
+    float: left;
+    &.right {
+      float: right;
+    }
+    &.memes {
+      @include border-radius(10px);
+      margin: 3px;
+      padding: 10px;
+      background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
+    }
+    &.levels {
+      @include border-radius(10px);
+      margin: 3px;
+      padding: 10px;
+      background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
+    }
+    select {
+      background-color: $c_bg_footer;
+      border: 1px solid $c_block_footer;
+      color: $c_block_footer;
+      margin: 0;
+      padding: 3px;
+      width: 160px;
+		}
+    option {
+			padding: 5px;
+    }
+  }
+  .player {
+    background-color: $c_block_footer;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($c_block_footer), to($c_block_footer_to));
+    background-image: -webkit-linear-gradient(top, $c_block_footer, $c_block_footer_to);
+    background-image: -moz-linear-gradient(top, $c_block_footer, $c_block_footer_to);
+    background-image: -ms-linear-gradient(top, $c_block_footer, $c_block_footer_to);
+    background-image: -o-linear-gradient(top, $c_block_footer, $c_block_footer_to);
+    background-image: linear-gradient(top, $c_block_footer, $c_block_footer_to);
+    padding: 10px;
+    height: $d_h_footer;
+    margin-top: -30px;
+    &.left {
+      float: left;
+      @include border-top-right-radius(8px);
+    }
+    &.right {
+      float: right;
+      @include border-top-left-radius(8px);
+    }
+    .health {
+      width: 100px;
+      height: 20px;
+      .label {
+        float:left;
+      }
+      .level {
+        float:left;
+      }
+    }
+  }
+}

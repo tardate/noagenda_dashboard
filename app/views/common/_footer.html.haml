@@ -1,0 +1,42 @@
+#footer
+  .wrapper
+    .panel
+      .controls
+        .memes.block
+          = render :partial => 'memes/select'
+        .levels.block
+          = render :partial => 'shows/select'
+        .book-of-knowledge.block.right
+          = image_tag('bok.png', :alt => 'Book of Knowledge')
+    .left.player.crackpot
+      = image_tag('crackpot.png')
+      .health.latd
+        .label LTAD:
+        .level
+      .health.s
+        .label S:
+        .level
+      .health.h
+        .label H:
+        .level
+    .right.player.buzzkill
+      = image_tag('buzzkill.png')
+      .health.latd
+        .label LTAD:
+        .level
+      .health.s
+        .label S:
+        .level
+      .health.h
+        .label H:
+        .level
+      
+
+= javascript_include_tag :defaults, :cache => true
+
+:javascript
+  jQuery(document).ready(function() {
+    NAVD.init({});
+  });
+
+= yield :javascript

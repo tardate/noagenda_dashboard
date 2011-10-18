@@ -34,6 +34,7 @@ module Navd
     config.action_view.javascript_expansions[:defaults] = %w(
       jquery-1.6.4.min rails
       raphael-min elycharts.min
+      jquery.qtip.min
     )
 
     # Configure the default encoding used in templates for Ruby 1.9.

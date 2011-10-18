@@ -5,9 +5,9 @@
   %body{:class => "#{controller_path.split('/').join(' ')} #{params[:action]}"}
     = render :partial => 'common/header'
     #container
-      #content
-        #wrapper
-          .content
+      .wrapper
+        #content
+          .wrapper
             = yield
 
-    = render :partial => 'common/basement'
+    = render :partial => 'common/footer'
