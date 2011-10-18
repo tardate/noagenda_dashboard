@@ -1,6 +1,6 @@
 /* line 1, ../../../app/stylesheets/_base.scss */
 body {
-  background-color: #8c7a58;
+  background: url("/images/content-texture.png") repeat scroll 0 0 #8c7a58;
   color: black;
   margin: 0;
   padding: 0;
@@ -165,29 +165,52 @@ div.field, div.actions {
   margin-top: 100px;
   min-width: 980px;
 }
-
-/* line 6, ../../../app/stylesheets/_content.scss */
-#content .panel {
-  width: 75%;
-  margin: 0 auto;
+/* line 4, ../../../app/stylesheets/_content.scss */
+#container > .wrapper {
+  padding: 20px;
 }
 
-/* line 12, ../../../app/stylesheets/_content.scss */
+/* line 9, ../../../app/stylesheets/_content.scss */
+#content .panel {
+  background: url("/images/woody.png") repeat scroll 0 0 transparent;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 15, ../../../app/stylesheets/_content.scss */
+#content .panel .wrapper {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
+  padding: 20px;
+}
+
+/* line 23, ../../../app/stylesheets/_content.scss */
 #content .panel.show .cover_art {
   float: right;
 }
-/* line 14, ../../../app/stylesheets/_content.scss */
+/* line 25, ../../../app/stylesheets/_content.scss */
 #content .panel.show .cover_art img {
-  height: 100px;
+  height: 200px;
 }
 
-/* line 20, ../../../app/stylesheets/_content.scss */
+/* line 31, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 26, ../../../app/stylesheets/_content.scss */
+/* line 37, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;
@@ -195,7 +218,8 @@ div.field, div.actions {
 
 /* line 1, ../../../app/stylesheets/_footer.scss */
 #footer {
-  background-color: #282e0c;
+  background-color: #2b3b13;
+  background: url("/images/flakypaint.png") repeat scroll 0 0 #2b3b13;
   color: white;
   height: 150px;
   min-width: 980px;
@@ -204,23 +228,23 @@ div.field, div.actions {
   left: 0;
   width: 100%;
 }
-/* line 10, ../../../app/stylesheets/_footer.scss */
+/* line 11, ../../../app/stylesheets/_footer.scss */
 #footer .wrapper {
   height: 150px;
 }
-/* line 13, ../../../app/stylesheets/_footer.scss */
+/* line 14, ../../../app/stylesheets/_footer.scss */
 #footer .panel {
+  -moz-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -webkit-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -o-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
   height: 150px;
-  min-width: 980px;
   position: fixed;
   bottom: 0;
+  margin: 0 110px;
   left: 0;
-  width: 100%;
-}
-/* line 21, ../../../app/stylesheets/_footer.scss */
-#footer .panel .controls {
-  padding-left: 120px;
-  padding-right: 120px;
+  right: 0;
+  width: auto;
 }
 /* line 26, ../../../app/stylesheets/_footer.scss */
 #footer .block {
@@ -239,11 +263,16 @@ div.field, div.actions {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
+  -moz-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -webkit-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -o-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
   margin: 3px;
+  height: 30px;
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 38, ../../../app/stylesheets/_footer.scss */
+/* line 40, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -251,13 +280,39 @@ div.field, div.actions {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
+  -moz-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -webkit-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -o-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
   margin: 3px;
+  height: 30px;
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 44, ../../../app/stylesheets/_footer.scss */
+/* line 48, ../../../app/stylesheets/_footer.scss */
+#footer .block.book-of-knowledge {
+  padding: 8px 10px;
+}
+/* line 50, ../../../app/stylesheets/_footer.scss */
+#footer .block.book-of-knowledge > .wrapper {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0px 0px 8px black;
+  -webkit-box-shadow: 0px 0px 8px black;
+  -o-box-shadow: 0px 0px 8px black;
+  box-shadow: 0px 0px 8px black;
+  background-color: #1C260C;
+  padding: 2px;
+  height: 125px;
+  border: 2px solid #171F0A;
+}
+/* line 59, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
-  background-color: #282e0c;
+  background-color: #2b3b13;
   border: 1px solid #b8aa83;
   color: white;
   font-size: 12px;
@@ -266,11 +321,11 @@ div.field, div.actions {
   padding: 3px;
   width: 160px;
 }
-/* line 54, ../../../app/stylesheets/_footer.scss */
+/* line 69, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 58, ../../../app/stylesheets/_footer.scss */
+/* line 73, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   background-color: #b8aa83;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b8aa83), to(#282e0c));
@@ -280,10 +335,11 @@ div.field, div.actions {
   background-image: -o-linear-gradient(top, #b8aa83, #282e0c);
   background-image: linear-gradient(top, #b8aa83, #282e0c);
   padding: 10px;
-  height: 150px;
+  height: 160px;
   margin-top: -30px;
+  width: 90px;
 }
-/* line 69, ../../../app/stylesheets/_footer.scss */
+/* line 85, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -293,7 +349,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 73, ../../../app/stylesheets/_footer.scss */
+/* line 89, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -303,16 +359,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 77, ../../../app/stylesheets/_footer.scss */
+/* line 93, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 80, ../../../app/stylesheets/_footer.scss */
+/* line 96, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 83, ../../../app/stylesheets/_footer.scss */
+/* line 99, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

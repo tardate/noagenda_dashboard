@@ -6,18 +6,19 @@
   }
 
 .panel
-  %table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
-    %thead
-      %tr
-        %th= resource_class.human_attribute_name :show
-        %th= resource_class.human_attribute_name :meme
-        %th= resource_class.human_attribute_name :name
-        
-
-    %tbody
-      - unless ajax
-        - for item in collection do
-          %tr
-            %td= item.show.number
-            %td= item.meme.name
-            %td= link_to_if(item.url?,item.name,item.url)
+  .wrapper
+    %table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
+      %thead
+        %tr
+          %th= resource_class.human_attribute_name :show
+          %th= resource_class.human_attribute_name :meme
+          %th= resource_class.human_attribute_name :name
+          
+  
+      %tbody
+        - unless ajax
+          - for item in collection do
+            %tr
+              %td= item.show.number
+              %td= item.meme.name
+              %td= link_to_if(item.url?,item.name,item.url)

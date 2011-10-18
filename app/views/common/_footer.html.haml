@@ -7,7 +7,8 @@
         .levels.block
           = render :partial => 'shows/select'
         .book-of-knowledge.block.right
-          = image_tag('bok.png', :alt => 'Book of Knowledge')
+          .wrapper
+            = image_tag('bok.png', :alt => 'Book of Knowledge', :class => 'bok')
     .left.player.crackpot
       = image_tag('crackpot.png')
       .health.latd

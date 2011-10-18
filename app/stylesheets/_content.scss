@@ -1,18 +1,29 @@
 #container {
   margin-top:$d_h_header;
   min-width: $d_w_min;
+  > .wrapper {
+    padding: 20px;
+  }
 }
 
 #content .panel {
+  background: url("/images/woody.png") repeat scroll 0 0 transparent;
   width: 75%;
   margin: 0 auto;
+  padding: 20px;
+  @include border-radius(10px);
+  .wrapper {
+    @include border-radius(10px);
+    background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
+    padding: 20px;
+  }
 }
 
 #content .panel.show {
   .cover_art {
     float: right;
     img {
-      height: 100px;
+      height: $d_h_cover_art;
     }
   }
 }

@@ -6,16 +6,17 @@
   }
 
 .panel
-  %table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
-    %thead
-      %tr
-        %th= resource_class.human_attribute_name :name
-        %th= resource_class.human_attribute_name :notes_count
-        
-
-    %tbody
-      - unless ajax
-        - for item in collection do
-          %tr
-            %td= item.name
-            %td= item.notes.count
+  .wrapper
+    %table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
+      %thead
+        %tr
+          %th= resource_class.human_attribute_name :name
+          %th= resource_class.human_attribute_name :notes_count
+          
+  
+      %tbody
+        - unless ajax
+          - for item in collection do
+            %tr
+              %td= item.name
+              %td= item.notes.count

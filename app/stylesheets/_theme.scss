@@ -1,7 +1,9 @@
 
 $c_bg: #8C7A58;
 $c_bg_header: #000;
-$c_bg_footer: #282E0C;
+$c_bg_footer: #2B3B13; //2B3B13 282E0C
+$c_bg_footer_rgba: rgba(43,59,19,0.9);
+$c_bg_bok_rgba: rgba(0,0,0,1.0);
 $c_text: #000;
 $c_text_header: #FFF;
 $c_text_footer: #FFF;
@@ -19,5 +21,7 @@ $d_h_header: 100px;
 $d_h_footer: 150px;
 $d_mt_footer_block: 50px;
 $d_h_body_min: 500px;
-$d_w_player: 120px;
+$d_w_player: 90px;
+$d_w_player_total: 110px;
 $d_h_min_content: 300px;
+$d_h_cover_art: 200px;
