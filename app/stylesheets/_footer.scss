@@ -1,6 +1,6 @@
 #footer {
   background-color:$c_bg_footer;
-  background: url("/images/flakypaint.png") repeat scroll 0 0 $c_bg_footer;
+  background: url("/images/panel-bg.png") repeat scroll 0 0 $c_bg_footer;
   color: $c_text_footer;
   height: $d_h_footer;
   min-width: $d_w_min;
@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  .wrapper {
+  > .wrapper {
     height: $d_h_footer;
   }
   .panel {
@@ -20,6 +20,7 @@
     left: 0;
     right: 0;
     width: auto;
+    min-width: $d_w_footer_min;
     .controls {
     }
   }
@@ -28,10 +29,17 @@
     float: left;
     &.right {
       float: right;
+      padding: 8px 10px 0 0;
+    }
+    &.cc {
+      > .wrapper {
+        padding: 5px 5px 0;
+        background-color: #fff;
+      }
     }
     &.memes {
       @include border-radius(10px);
-      @include single-box-shadow($c_bg_footer_rgba, 0px, -3px, 5px);
+      @include single-box-shadow($c_bg_footer_rgba, 4px, 4px, 5px);
       margin: 3px;
       height: 30px;
       padding: 10px;
@@ -39,21 +47,19 @@
     }
     &.levels {
       @include border-radius(10px);
-      @include single-box-shadow($c_bg_footer_rgba, 0px, -3px, 5px);
+      @include single-box-shadow($c_bg_footer_rgba, 4px, 4px, 5px);
       margin: 3px;
       height: 30px;
       padding: 10px;
       background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
     }
     &.book-of-knowledge {
-      padding: 8px 10px;
       > .wrapper {
         @include border-radius(10px);
-        @include single-box-shadow($c_bg_bok_rgba, 0px, 0px, 8px);
-        background-color:#1C260C;
-        padding: 2px;
+        @include single-box-shadow($c_bg_bok_rgba, 0px, 0px, 6px);
+        background: url("/images/bok-bg.png") repeat scroll 0 0 $c_bg_footer;
+        padding: 5px;
         height: 125px;
-        border: 2px solid #171F0A;
       }
     }
     select {
@@ -71,13 +77,8 @@
     }
   }
   .player {
-    background-color: $c_block_footer;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($c_block_footer), to($c_block_footer_to));
-    background-image: -webkit-linear-gradient(top, $c_block_footer, $c_block_footer_to);
-    background-image: -moz-linear-gradient(top, $c_block_footer, $c_block_footer_to);
-    background-image: -ms-linear-gradient(top, $c_block_footer, $c_block_footer_to);
-    background-image: -o-linear-gradient(top, $c_block_footer, $c_block_footer_to);
-    background-image: linear-gradient(top, $c_block_footer, $c_block_footer_to);
+    @include single-box-shadow($c_bg_bok_rgba, 0px, 0px, 8px);
+    background: url("/images/player-bg.png") repeat scroll 0 0 $c_block_footer;
     padding: 10px;
     height: 160px;
     margin-top: -30px;

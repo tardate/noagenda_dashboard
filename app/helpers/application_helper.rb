@@ -19,7 +19,9 @@ src="http://www.google.com/reader/ui/3523697345-audio-player.swf?audioUrl=#{sour
     [
       { :url => 'http://www.noagendashow.com/', :name => 'NoAgendaShow.com'},
       { :url => 'http://noagendachat.net/', :name => 'NoAgenda Chat'},
-      { :url => 'http://noagendastream.com/', :name => 'NoAgenda Stream'}
+      { :url => 'http://www.noagendasoundboard.com/', :name => 'NoAgenda Soundboard'},
+      { :url => 'http://noagendastream.com/', :name => 'NoAgenda Stream'},
+      { :url => 'http://en.wikipedia.org/wiki/No_Agenda', :name => 'wikipedia'}
     ]
   end
 

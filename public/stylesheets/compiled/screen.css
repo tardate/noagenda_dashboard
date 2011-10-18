@@ -190,7 +190,7 @@ div.field, div.actions {
 /* line 1, ../../../app/stylesheets/_footer.scss */
 #footer {
   background-color: #2b3b13;
-  background: url("/images/flakypaint.png") repeat scroll 0 0 #2b3b13;
+  background: url("/images/panel-bg.png") repeat scroll 0 0 #2b3b13;
   color: white;
   height: 150px;
   min-width: 980px;
@@ -200,7 +200,7 @@ div.field, div.actions {
   width: 100%;
 }
 /* line 11, ../../../app/stylesheets/_footer.scss */
-#footer .wrapper {
+#footer > .wrapper {
   height: 150px;
 }
 /* line 14, ../../../app/stylesheets/_footer.scss */
@@ -216,17 +216,24 @@ div.field, div.actions {
   left: 0;
   right: 0;
   width: auto;
+  min-width: 760px;
 }
-/* line 26, ../../../app/stylesheets/_footer.scss */
+/* line 27, ../../../app/stylesheets/_footer.scss */
 #footer .block {
   height: 150px;
   float: left;
 }
-/* line 29, ../../../app/stylesheets/_footer.scss */
+/* line 30, ../../../app/stylesheets/_footer.scss */
 #footer .block.right {
   float: right;
+  padding: 8px 10px 0 0;
 }
-/* line 32, ../../../app/stylesheets/_footer.scss */
+/* line 35, ../../../app/stylesheets/_footer.scss */
+#footer .block.cc > .wrapper {
+  padding: 5px 5px 0;
+  background-color: #fff;
+}
+/* line 40, ../../../app/stylesheets/_footer.scss */
 #footer .block.memes {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -234,16 +241,16 @@ div.field, div.actions {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
-  -webkit-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
-  -o-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
-  box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -moz-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  -webkit-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  -o-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
   margin: 3px;
   height: 30px;
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 40, ../../../app/stylesheets/_footer.scss */
+/* line 48, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -251,20 +258,16 @@ div.field, div.actions {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
-  -webkit-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
-  -o-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
-  box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
+  -moz-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  -webkit-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  -o-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
   margin: 3px;
   height: 30px;
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 48, ../../../app/stylesheets/_footer.scss */
-#footer .block.book-of-knowledge {
-  padding: 8px 10px;
-}
-/* line 50, ../../../app/stylesheets/_footer.scss */
+/* line 57, ../../../app/stylesheets/_footer.scss */
 #footer .block.book-of-knowledge > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -272,16 +275,15 @@ div.field, div.actions {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 0px 0px 8px black;
-  -webkit-box-shadow: 0px 0px 8px black;
-  -o-box-shadow: 0px 0px 8px black;
-  box-shadow: 0px 0px 8px black;
-  background-color: #1C260C;
-  padding: 2px;
+  -moz-box-shadow: 0px 0px 6px black;
+  -webkit-box-shadow: 0px 0px 6px black;
+  -o-box-shadow: 0px 0px 6px black;
+  box-shadow: 0px 0px 6px black;
+  background: url("/images/bok-bg.png") repeat scroll 0 0 #2b3b13;
+  padding: 5px;
   height: 125px;
-  border: 2px solid #171F0A;
 }
-/* line 59, ../../../app/stylesheets/_footer.scss */
+/* line 65, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -292,25 +294,23 @@ div.field, div.actions {
   padding: 3px;
   width: 160px;
 }
-/* line 69, ../../../app/stylesheets/_footer.scss */
+/* line 75, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 73, ../../../app/stylesheets/_footer.scss */
+/* line 79, ../../../app/stylesheets/_footer.scss */
 #footer .player {
-  background-color: #b8aa83;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#b8aa83), to(#282e0c));
-  background-image: -webkit-linear-gradient(top, #b8aa83, #282e0c);
-  background-image: -moz-linear-gradient(top, #b8aa83, #282e0c);
-  background-image: -ms-linear-gradient(top, #b8aa83, #282e0c);
-  background-image: -o-linear-gradient(top, #b8aa83, #282e0c);
-  background-image: linear-gradient(top, #b8aa83, #282e0c);
+  -moz-box-shadow: 0px 0px 8px black;
+  -webkit-box-shadow: 0px 0px 8px black;
+  -o-box-shadow: 0px 0px 8px black;
+  box-shadow: 0px 0px 8px black;
+  background: url("/images/player-bg.png") repeat scroll 0 0 #b8aa83;
   padding: 10px;
   height: 160px;
   margin-top: -30px;
   width: 90px;
 }
-/* line 85, ../../../app/stylesheets/_footer.scss */
+/* line 86, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -320,7 +320,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 89, ../../../app/stylesheets/_footer.scss */
+/* line 90, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -330,16 +330,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 93, ../../../app/stylesheets/_footer.scss */
+/* line 94, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 96, ../../../app/stylesheets/_footer.scss */
+/* line 97, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 99, ../../../app/stylesheets/_footer.scss */
+/* line 100, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }
