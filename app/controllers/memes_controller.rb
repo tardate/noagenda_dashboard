@@ -1,6 +1,6 @@
 class MemesController < InheritedResources::Base
   belongs_to :show, :finder => :find_by_number!, :optional => true
-  custom_actions :collection => [:stats]
+  custom_actions :collection => [:stats], :member => [:stat]
 
   include Navd::Chartable
 
@@ -13,12 +13,11 @@ class MemesController < InheritedResources::Base
   end
 
   def stats
-    template_options = {
-      template: 'line_basic',
-      ylabels: { :column => 'meme_name'},
-      yvalues: { :column => 'note_count'},
-      xlabels: { :column => 'number'}
-    }
-    render :json => to_chartable_structure(Meme.stats_over_time,template_options).to_json
+    render :json => to_chartable_structure(Meme.stats_over_time,Meme::STAT_CHART_TEMPLATE).to_json
   end
+
+  def stat
+    render :json => to_chartable_structure(resource.stat_over_time,Meme::STAT_CHART_TEMPLATE).to_json
+  end
+
 end

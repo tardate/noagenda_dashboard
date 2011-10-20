@@ -23,6 +23,13 @@ class Meme < ActiveRecord::Base
     self.class.stats_over_time(self.id)
   end
 
+  STAT_CHART_TEMPLATE = {
+    template: 'line_basic',
+    ylabels: { :column => 'meme_name'},
+    yvalues: { :column => 'note_count'},
+    xlabels: { :column => 'number'}
+  }.freeze
+
   class << self
     # Returns the arel fragment to get the mem ids of the top 10 memes over time
     # TODO: VIDEO gets included, maybe it shouldn't

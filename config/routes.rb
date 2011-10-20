@@ -6,6 +6,7 @@ Navd::Application.routes.draw do
   resources :notes, :only => [:index,:show]
   resources :memes, :only => [:index,:show] do
     get :stats, :on => :collection
+    get :stat, :on => :member
   end
   resources :shows, :only => [:index,:show] do
     resources :notes, :only => [:index,:show]

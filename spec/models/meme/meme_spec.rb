@@ -10,6 +10,10 @@ describe Meme do
     :notes             => :has_many,
     :shows             => :has_many
   }
+  describe "##STAT_CHART_TEMPLATE" do
+    subject { Meme::STAT_CHART_TEMPLATE }
+    it { should be_a(Hash) }
+  end
 
   describe "#shows" do
     let!(:show) { Factory(:show) }
