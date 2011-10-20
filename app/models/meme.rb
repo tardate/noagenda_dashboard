@@ -5,25 +5,30 @@ class Meme < ActiveRecord::Base
 
   scope :select_listing, order(:name)
 
-  scope :top10, lambda {
-    unscoped.where(Meme.arel_table[:id].in(top10_arel))
+  scope :topn, lambda { |limit=10|
+    unscoped.where(Meme.arel_table[:id].in(topn_arel(limit)))
   }
 
-  scope :stats_over_time, lambda {
+  scope :stats_over_time, lambda { |meme_id=nil|
     unscoped.
     select("memes.name AS meme_name, shows.number as number, count(notes.id) as note_count").
     joins(:shows).
-    where(Meme.arel_table[:id].in(top10_arel)).
+    where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel(AppConstants.number_of_trending_memes)))).
     group(:"memes.name", :"shows.number").
     order('memes.name, shows.number')
   }
 
+  # Gets the stats over time for the current meme
+  def stat_over_time
+    self.class.stats_over_time(self.id)
+  end
+
   class << self
     # Returns the arel fragment to get the mem ids of the top 10 memes over time
     # TODO: VIDEO gets included, maybe it shouldn't
-    def top10_arel
+    def topn_arel(limit = 10)
       n = Note.arel_table
-      n.project(n[:meme_id]).group(n[:meme_id]).order('count(id) desc').take(10)
+      n.project(n[:meme_id]).group(n[:meme_id]).order('count(id) desc').take(limit)
     end
 
     # Tries to coalesce different spellings to one standard form

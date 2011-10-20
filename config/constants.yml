@@ -1,0 +1,10 @@
+# Enter your per-environment constants below
+
+development: &default
+  number_of_trending_memes: 5
+
+production:
+  <<: *default
+
+test:
+  <<: *default

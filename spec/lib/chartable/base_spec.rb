@@ -17,9 +17,13 @@ describe "Chartable" do
   end
 
   describe "#to_chartable_structure" do
+    let(:meme_limit) { AppConstants.number_of_trending_memes || 10 }
+    let(:seed_limit) { meme_limit + 10 }
+    let(:first_top_meme) { seed_limit - meme_limit + 1 }
+
     let!(:show) { Factory.create(:show, :number => 33 ) }
     before {
-      (1..20).each do |i|
+      (1..seed_limit).each do |i|
         m = Factory.create(:meme, :name => "meme-#{i}" )
         i.times { Factory.create(:note, :meme => m, :show => show) }
       end
@@ -37,15 +41,15 @@ describe "Chartable" do
     it "should have 1 show (x axis)" do
       subject[:labels].count.should eql(1)
     end
-    it "should have 10 series values sets" do
-      subject[:values].count.should eql(10)
+    it "should have required number of series values sets" do
+      subject[:values].count.should eql(meme_limit)
     end
-    it "should have 10 series legends" do
-      subject[:legend].count.should eql(10)
+    it "should have required number of series legends" do
+      subject[:legend].count.should eql(meme_limit)
     end
-    it "should have the correct 5th data series (for example)" do
-      subject[:values][:"serie5"].should eql([15])
-      subject[:legend][:"serie5"].should eql("meme-15")
+    it "should have the correct 1st data series (for example)" do
+      subject[:values][:"serie1"].should eql([first_top_meme])
+      subject[:legend][:"serie1"].should eql("meme-#{first_top_meme}")
     end
   end
 
