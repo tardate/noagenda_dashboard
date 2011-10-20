@@ -10,6 +10,7 @@ var NAVD = {
     NAVD.enableControls();
     NAVD.enableqTips();
     NAVD.setupCharts();
+    NAVD.renderCharts();
   },
 
   enableControls: function() {
@@ -33,11 +34,13 @@ var NAVD = {
   load_show: function(number) {
     $.get('/shows/' + number, function(data) {
       $('#content').html(data);
+      NAVD.renderCharts();
     });
   },
   load_meme: function(id) {
     $.get('/memes/' + id, function(data) {
       $('#content').html(data);
+      NAVD.renderCharts();
     });
   },
 
@@ -94,6 +97,67 @@ var NAVD = {
   setupCharts: function() {
     $.elycharts.templates['line_basic'] = {
       type : "line",
+      margins : [10, 10, 20, 40],
+      defaultSeries: {
+        rounded: 0.6,
+        fill: false,
+        plotProps: {
+            "stroke-width": 2
+        },
+        dot: true,
+        dotProps: {
+            stroke: "white",
+            "stroke-width": 2
+        },
+        highlight : {
+          scale : 2
+        }
+      },
+      series : {
+        serie1 : { color : "#ff0000" },
+        serie2 : { color : "#ff4000" },
+        serie3 : { color : "#ff8000" },
+        serie4 : { color : "#ffB000" },
+        serie5 : { color : "#ff0080" },
+        serie6 : { color : "#8000ff" },
+        serie7 : { color : "#00B0ff" },
+        serie8 : { color : "#0080ff" },
+        serie9 : { color : "#0040ff" },
+        serie10 : { color : "#0000ff" }
+      },
+      defaultAxis : {
+        labels : true
+      },
+      features : {
+        grid : {
+          draw: [true,true],    // draw both x and y grids
+          forceBorder: true,    // force grid for external border
+          //ny: 22,             // divisions for y grid
+          //nx: 1,              // divisions for x grid
+          props: {
+              stroke: "#505040" // color for the grid
+          }
+        },
+        legend : {
+          horizontal : true,
+          x : 0,
+          y : -20,
+          dotType : "circle",
+          dotProps : {
+            stroke : "white",
+            "stroke-width" : 2
+          },
+          borderProps : {
+            opacity : 0,
+            //fill : "#c0c0c0",
+            "stroke-width" : 0,
+            "stroke-opacity" : 0
+          }
+        }
+      }
+    };
+    $.elycharts.templates['line_basic_with_legend'] = {
+      type : "line",
       margins : [10, 10, 20, 160],
       defaultSeries: {
         rounded: 0.6,
@@ -127,14 +191,10 @@ var NAVD = {
       },
       features : {
         grid : {
-          draw: [true,true],
-          // draw both x and y grids
-          forceBorder: true,
-          // force grid for external border
-          //ny: 22,
-          // use 10 divisions for y grid
-          //nx: 1,
-          // 10 divisions for x grid
+          draw: [true,true],    // draw both x and y grids
+          forceBorder: true,    // force grid for external border
+          //ny: 22,             // divisions for y grid
+          //nx: 1,              // divisions for x grid
           props: {
               stroke: "#505040" // color for the grid
           }
@@ -162,10 +222,18 @@ var NAVD = {
     };
 
   },
-
-  drawTop10: function(element) {
-    $.getJSON('/memes/stats.json', {}, function(data) {
-      $(element).chart(data);
+  
+  renderCharts: function() {
+    $('.chart').each(function(index) {
+      var element = $(this);
+      var url = element.data('url');
+      var options = {
+        template: element.data('template')
+      };
+      $.getJSON(url, {}, function(data) {
+        data = $.extend(data, options);
+        $(element).chart(data);
+      });
     });
   }
 

@@ -5,20 +5,18 @@
   datatable_options = {
   }
 
-.panel
-  .wrapper
-    %table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
-      %thead
+%table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
+  %thead
+    %tr
+      %th= resource_class.human_attribute_name :full_title
+      %th= resource_class.human_attribute_name :memes_count
+      %th= resource_class.human_attribute_name :notes_count
+      
+
+  %tbody
+    - unless ajax
+      - for item in collection do
         %tr
-          %th= resource_class.human_attribute_name :full_title
-          %th= resource_class.human_attribute_name :memes_count
-          %th= resource_class.human_attribute_name :notes_count
-          
-  
-      %tbody
-        - unless ajax
-          - for item in collection do
-            %tr
-              %td= link_to(item.full_title, [item])
-              %td= item.memes.count
-              %td= item.notes.count
+          %td= link_to(item.full_title, [item])
+          %td= item.memes.count
+          %td= item.notes.count

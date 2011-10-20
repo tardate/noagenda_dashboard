@@ -1,9 +1,3 @@
 .chart-container.main
   %h2= t('stats.top_memes.title', :n => AppConstants.number_of_trending_memes)
-  #top_memes.chart{ 'data-url' => stats_memes_url(:format => 'json'), 'data-template' => 'line_basic' }
-
-- content_for :javascript do
-  :javascript
-    jQuery(function($) {
-      NAVD.drawTop10('#top_memes');
-    });
+  .chart{ 'data-url' => stats_memes_url(:format => 'json'), 'data-template' => 'line_basic_with_legend' }

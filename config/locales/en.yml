@@ -2,8 +2,8 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  about_the_show: "No Agenda is a podcast which takes place two times a week on Thursday and Sunday in the morning,
-    hosted by Adam Curry and John C. Dvorak on the mevio network. The show is a free-flowing conversation that
+  about_the_show: "No Agenda is a podcast which takes place two times a week on Thursday and Sunday in the morning.
+    It is hosted by Adam Curry and John C. Dvorak. The show is a free-flowing conversation that
     deconstructs recent news and media memes. The show has no advertisers, instead supported directly by it's avid listeners."
   activerecord:
     attributes:
@@ -26,6 +26,9 @@ en:
         assets_url: Show Assets
         show_notes_url: Offical Show Notes
         credits: Credits
+        memes_count: Memes
+        notes_count: Show Notes
+        full_title: Episode
     models:
       meme: Meme
       note: Show Note
@@ -34,6 +37,9 @@ en:
   book_of_knowledge: Book of Knowledge
   donor:
     title: Be a Donor not a Boner!
+  memes:
+    show:
+      title: '%{name}: Trend by Show (Hits in the Mouth)'
   site:
     title: NoAgenda Attack Vector Dashboard
     short_title: Attack Vector Dashboard

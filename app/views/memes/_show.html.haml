@@ -1,3 +1,6 @@
 .panel[resource]
   .wrapper
-    %h2= resource.name
+    %h2= t('.title', :name => resource.name)
+    .chart-container
+      .chart{ 'data-url' => stat_meme_url(resource,:format => 'json'), 'data-template' => 'line_basic' }
+    = render :partial => 'notes/table', :locals => { :data => resource.notes, :include_meme => false }
