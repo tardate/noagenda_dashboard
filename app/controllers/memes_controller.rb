@@ -1,6 +1,7 @@
 class MemesController < InheritedResources::Base
   belongs_to :show, :finder => :find_by_number!, :optional => true
   custom_actions :collection => [:stats], :member => [:stat]
+  respond_to :html, :json, :xml
 
   include Navd::Chartable
 
