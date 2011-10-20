@@ -156,7 +156,7 @@ div.field, div.actions {
   border-radius: 10px;
 }
 /* line 15, ../../../app/stylesheets/_content.scss */
-#content .panel .wrapper {
+#content .panel > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -o-border-radius: 10px;
@@ -166,32 +166,44 @@ div.field, div.actions {
   background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
   padding: 20px;
 }
+/* line 20, ../../../app/stylesheets/_content.scss */
+#content .panel.about {
+  width: 18%;
+  float: left;
+  padding: 10px;
+  margin-right: 20px;
+}
 
-/* line 23, ../../../app/stylesheets/_content.scss */
+/* line 28, ../../../app/stylesheets/_content.scss */
+#content .right-panel {
+  float: left;
+  width: 75%;
+}
+/* line 31, ../../../app/stylesheets/_content.scss */
+#content .right-panel .chart {
+  width: 100%;
+  height: 300px;
+}
+
+/* line 38, ../../../app/stylesheets/_content.scss */
 #content .panel.show .cover_art {
   float: right;
 }
-/* line 25, ../../../app/stylesheets/_content.scss */
+/* line 40, ../../../app/stylesheets/_content.scss */
 #content .panel.show .cover_art img {
   height: 200px;
 }
 
-/* line 31, ../../../app/stylesheets/_content.scss */
+/* line 46, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 37, ../../../app/stylesheets/_content.scss */
+/* line 52, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;
-}
-
-/* line 42, ../../../app/stylesheets/_content.scss */
-.chart {
-  width: 75%;
-  height: 400px;
 }
 
 /* line 1, ../../../app/stylesheets/_footer.scss */

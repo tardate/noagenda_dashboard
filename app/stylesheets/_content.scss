@@ -12,10 +12,25 @@
   margin: 0 auto;
   padding: 20px;
   @include border-radius(10px);
-  .wrapper {
+  > .wrapper {
     @include border-radius(10px);
     background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
     padding: 20px;
+  }
+  &.about {
+    width: 18%;
+    float: left;
+    padding: 10px;
+    margin-right: 20px;
+  }
+}
+
+#content .right-panel {
+  float: left;
+  width: 75%;
+  .chart {
+    width: 100%;
+    height: 300px;
   }
 }
 
@@ -39,7 +54,4 @@
     width:320px;
   }
 }
-.chart {
-  width: 75%;
-  height: 400px;
-}
+
