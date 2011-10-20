@@ -3,7 +3,7 @@
     .logo.block
       = link_to image_tag('NA_logo.png'), root_url, :class => 'image'
     .title.block
-      = image_tag('navd.png', :alt => 'Attack Vector Dashboard')
+      = image_tag('navd.png', :alt => t('site.short_title'))
     .dedouche.block.menu_tip
-      %a.menu.donor Be a Donor not a Boner!
+      %a.menu.donor= t('donor.title')
       = render :partial => 'common/submenu', :locals => { :links => dedouche_links}

@@ -5,10 +5,10 @@
       .cover_art= image_tag(resource.cover_art_url)
     %h2= resource.full_title
     %ul.resources
-      %li= link_to_if(resource.url?,'Episode Webpage',resource.url)
-      %li= link_to_if(resource.audio_url?,'Direct Link to the mp3 file',resource.audio_url)
-      %li= link_to_if(resource.show_notes_url?,'Shownotes',resource.show_notes_url)
-      %li= link_to_if(resource.assets_url?,'Assets',resource.assets_url)
+      %li= link_to_if(resource.url?,resource_class.human_attribute_name(:url),resource.url)
+      %li= link_to_if(resource.audio_url?,resource_class.human_attribute_name(:audio_url),resource.audio_url)
+      %li= link_to_if(resource.show_notes_url?,resource_class.human_attribute_name(:show_notes_url),resource.show_notes_url)
+      %li= link_to_if(resource.assets_url?,resource_class.human_attribute_name(:assets_url),resource.assets_url)
     - if resource.credits?
       .credits= resource.credits
     %ul.stats

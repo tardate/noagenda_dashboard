@@ -2,4 +2,37 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      meme:
+        name: Name
+        notes_count: Hits
+      note:
+        name: Name
+        description: Description
+        url: Link
+        show: Episode
+        meme: Meme
+      show:
+        number: Number
+        published_date: Show Date
+        published: Published
+        url: Official Show Site
+        audio_url: Direct link to audio file
+        cover_art_url: Cover Art
+        assets_url: Show Assets
+        show_notes_url: Offical Show Notes
+        credits: Credits
+    models:
+      meme: Meme
+      note: Show Note
+      show: Episode
+  back: Back
+  book_of_knowledge: Book of Knowledge
+  donor:
+    title: Be a Donor not a Boner!
+  site:
+    title: NoAgenda Attack Vector Dashboard
+    short_title: Attack Vector Dashboard
+    description: NoAgenda Attack Vector Dashboard
+    keywords: 'NoAgenda Show, Adam Curry, John C. Dvorak'
