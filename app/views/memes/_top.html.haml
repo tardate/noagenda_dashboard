@@ -1,4 +1,6 @@
-#top_memes.chart
+.chart-container.main
+  %h2= t('stats.top_memes.title', :n => AppConstants.number_of_trending_memes)
+  #top_memes.chart
 
 - content_for :javascript do
   :javascript

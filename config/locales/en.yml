@@ -36,3 +36,6 @@ en:
     short_title: Attack Vector Dashboard
     description: NoAgenda Attack Vector Dashboard
     keywords: 'NoAgenda Show, Adam Curry, John C. Dvorak'
+  stats:
+    top_memes:
+      title: 'Top %{n} Trending Memes'
