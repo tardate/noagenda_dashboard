@@ -9,7 +9,7 @@ class Show < ActiveRecord::Base
       order('number desc').limit(1).first
     end
     def next_number_to_load
-      (Show.maximum(:number) || 300) + 1
+      (Show.maximum(:number) || AppConstants.earliest_show_to_load - 1) + 1
     end
   end
 

@@ -1,6 +1,9 @@
 # Enter your per-environment constants below
 
 development: &default
+  # earliest show we are abe to scrape at the moment
+  earliest_show_to_load: 333
+  # number of memes to include in the top trending chart
   number_of_trending_memes: 5
 
 production:

@@ -27,9 +27,10 @@ describe "Navd::Scraper::Control" do
   end
 
   describe '#load_all_shows' do
+    let(:first_show_number) { AppConstants.earliest_show_to_load }
     subject { scraper_control.load_all_shows }
-    it "should start loading from 301" do
-      scraper_control.stub(:load_show).with(301).and_return(false)
+    it "should start loading from AppConstants.earliest_show_to_load" do
+      scraper_control.stub(:load_show).with(first_show_number).and_return(false)
       subject
     end
   end

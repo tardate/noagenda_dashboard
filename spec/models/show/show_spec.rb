@@ -49,9 +49,10 @@ describe Show do
   end
 
   describe '##next_number_to_load' do
+    let(:first_show_number) { AppConstants.earliest_show_to_load }
     subject { Show.next_number_to_load }
-    it "should start from 301" do
-      should eql(301)
+    it "should start from AppConstants.earliest_show_to_load" do
+      should eql(first_show_number)
     end
     context "with shows already loaded" do
       before { resource }
