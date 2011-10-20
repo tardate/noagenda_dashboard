@@ -1,5 +1,8 @@
 :ruby
   data = data || collection
+  if defined?(include_show).nil?
+    include_show = true
+  end
   if defined?(include_meme).nil?
     include_meme = true
   end
@@ -12,7 +15,8 @@
 %table#notes.datatable.display{:class => ('ajax' if ajax), 'data-datatable-options' => datatable_options.to_json }
   %thead
     %tr
-      %th= resource_class.human_attribute_name :show
+      - if include_show
+        %th= resource_class.human_attribute_name :show
       - if include_meme
         %th= resource_class.human_attribute_name :meme
       %th= resource_class.human_attribute_name :name
@@ -22,7 +26,8 @@
     - unless ajax
       - for item in data do
         %tr
-          %td= item.show.number
+          - if include_show
+            %td= item.show.number
           - if include_meme
             %td= item.meme.name
-          %td= link_to_if(item.url?,item.name,item.url)
+          %td= link_to_if(item.url?,item.name,item.url, :class=>'shownote', :target => '_blank', :description => item.description)

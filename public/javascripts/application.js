@@ -34,20 +34,38 @@ var NAVD = {
   load_show: function(number) {
     $.get('/shows/' + number, function(data) {
       $('#content').html(data);
+      NAVD.enableLinkableTips();
       NAVD.renderCharts();
     });
   },
   load_meme: function(id) {
     $.get('/memes/' + id, function(data) {
       $('#content').html(data);
+      NAVD.enableLinkableTips();
       NAVD.renderCharts();
     });
   },
 
-  enableqTips: function() {
+  enableLinkableTips: function() {
     // match all anchors with titles
     $('a[title]').qtip();
-    
+    // match all shownote descriptions
+    $('.shownote').qtip({
+      content: {
+        text: function(api) {
+          // Retrieve content from custom attribute of the $('.selector') elements.
+          return $(this).attr('description');
+        }
+      },
+      position: { my: 'top left', at: 'bottom center'},
+      style: {
+        classes: 'ui-tooltip-blue ui-tooltip-shadow ui-tooltip-tipsy'
+      }
+    });
+  },
+
+  enableqTips: function() {
+    NAVD.enableLinkableTips();
 
    $('.menu_tip').delegate('.menu', 'mouseover', function(event) {
       var self = $(this),

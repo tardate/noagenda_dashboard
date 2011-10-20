@@ -5,6 +5,7 @@ Navd::Application.routes.draw do
   # TODO need to refine/refactor:
   resources :notes, :only => [:index,:show]
   resources :memes, :only => [:index,:show] do
+    resources :notes, :only => [:index,:show]
     get :stats, :on => :collection
     get :stat, :on => :member
   end

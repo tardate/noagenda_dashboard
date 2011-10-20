@@ -40,6 +40,9 @@ en:
   memes:
     show:
       title: '%{name}: Trend by Show (Hits in the Mouth)'
+  notes:
+    index:
+      title: Show Notes
   site:
     title: NoAgenda Attack Vector Dashboard
     short_title: Attack Vector Dashboard

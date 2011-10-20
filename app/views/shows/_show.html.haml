@@ -14,3 +14,5 @@
       %li= resource.memes.count
       %li= resource.notes.count
     = embed_media_player(resource.audio_url)
+    %h2= t('notes.index.title')
+    = render :partial => 'notes/table', :locals => { :data => resource.notes.show_meme_note_order, :include_show => false }

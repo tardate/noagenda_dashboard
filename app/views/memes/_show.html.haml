@@ -3,4 +3,5 @@
     %h2= t('.title', :name => resource.name)
     .chart-container
       .chart{ 'data-url' => stat_meme_url(resource,:format => 'json'), 'data-template' => 'line_basic' }
-    = render :partial => 'notes/table', :locals => { :data => resource.notes, :include_meme => false }
+    %h2= t('notes.index.title')
+    = render :partial => 'notes/table', :locals => { :data => resource.notes.show_meme_note_order, :include_meme => false }

@@ -19,4 +19,17 @@ describe ShowsController do
     it { should be_success }
   end
 
+  context "API" do
+    ['xml','json'].each do |format|
+      describe "GET :index.#{format}" do
+        subject { get :index, :format => format }
+        it { should be_success }
+      end
+      describe "GET :show.#{format}" do
+        subject { get :show, :id => resource.number, :format => format }
+        it { should be_success }
+      end
+    end
+  end
+
 end
