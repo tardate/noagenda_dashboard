@@ -91,28 +91,29 @@ div.field, div.actions {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 99;
 }
-/* line 10, ../../../app/stylesheets/_header.scss */
+/* line 11, ../../../app/stylesheets/_header.scss */
 #header .wrapper {
   background: url("/images/toolbar.png") repeat-x 0 0 black;
   height: 100px;
 }
-/* line 14, ../../../app/stylesheets/_header.scss */
+/* line 15, ../../../app/stylesheets/_header.scss */
 #header .block {
   height: 100px;
   float: left;
 }
-/* line 19, ../../../app/stylesheets/_header.scss */
+/* line 20, ../../../app/stylesheets/_header.scss */
 #header .logo img {
   border: 0;
   margin: 2px 0 2px 16px;
   height: 90px;
 }
-/* line 27, ../../../app/stylesheets/_header.scss */
+/* line 28, ../../../app/stylesheets/_header.scss */
 #header .dedouche {
   float: right;
 }
-/* line 29, ../../../app/stylesheets/_header.scss */
+/* line 30, ../../../app/stylesheets/_header.scss */
 #header .dedouche a.donor {
   -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
@@ -187,6 +188,12 @@ div.field, div.actions {
   width: 320px;
 }
 
+/* line 42, ../../../app/stylesheets/_content.scss */
+.chart {
+  width: 75%;
+  height: 400px;
+}
+
 /* line 1, ../../../app/stylesheets/_footer.scss */
 #footer {
   background-color: #2b3b13;
@@ -198,12 +205,13 @@ div.field, div.actions {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 99;
 }
-/* line 11, ../../../app/stylesheets/_footer.scss */
+/* line 12, ../../../app/stylesheets/_footer.scss */
 #footer > .wrapper {
   height: 150px;
 }
-/* line 14, ../../../app/stylesheets/_footer.scss */
+/* line 15, ../../../app/stylesheets/_footer.scss */
 #footer .panel {
   -moz-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
   -webkit-box-shadow: 0px -3px 5px rgba(43, 59, 19, 0.9);
@@ -218,22 +226,22 @@ div.field, div.actions {
   width: auto;
   min-width: 760px;
 }
-/* line 27, ../../../app/stylesheets/_footer.scss */
+/* line 28, ../../../app/stylesheets/_footer.scss */
 #footer .block {
   height: 150px;
   float: left;
 }
-/* line 30, ../../../app/stylesheets/_footer.scss */
+/* line 31, ../../../app/stylesheets/_footer.scss */
 #footer .block.right {
   float: right;
   padding: 8px 10px 0 0;
 }
-/* line 35, ../../../app/stylesheets/_footer.scss */
+/* line 36, ../../../app/stylesheets/_footer.scss */
 #footer .block.cc > .wrapper {
   padding: 5px 5px 0;
   background-color: #fff;
 }
-/* line 40, ../../../app/stylesheets/_footer.scss */
+/* line 41, ../../../app/stylesheets/_footer.scss */
 #footer .block.memes {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -250,7 +258,7 @@ div.field, div.actions {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 48, ../../../app/stylesheets/_footer.scss */
+/* line 49, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -267,7 +275,7 @@ div.field, div.actions {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 57, ../../../app/stylesheets/_footer.scss */
+/* line 58, ../../../app/stylesheets/_footer.scss */
 #footer .block.book-of-knowledge > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -283,7 +291,7 @@ div.field, div.actions {
   padding: 5px;
   height: 125px;
 }
-/* line 65, ../../../app/stylesheets/_footer.scss */
+/* line 66, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -294,11 +302,11 @@ div.field, div.actions {
   padding: 3px;
   width: 160px;
 }
-/* line 75, ../../../app/stylesheets/_footer.scss */
+/* line 76, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 79, ../../../app/stylesheets/_footer.scss */
+/* line 80, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -310,7 +318,7 @@ div.field, div.actions {
   margin-top: -30px;
   width: 90px;
 }
-/* line 86, ../../../app/stylesheets/_footer.scss */
+/* line 87, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -320,7 +328,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 90, ../../../app/stylesheets/_footer.scss */
+/* line 91, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -330,16 +338,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 94, ../../../app/stylesheets/_footer.scss */
+/* line 95, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 97, ../../../app/stylesheets/_footer.scss */
+/* line 98, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 100, ../../../app/stylesheets/_footer.scss */
+/* line 101, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 99;
   .wrapper {
     background: url('/images/toolbar.png') repeat-x 0 0 $c_bg_header;
     height: $d_h_header;
