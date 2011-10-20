@@ -5,7 +5,27 @@ class Meme < ActiveRecord::Base
 
   scope :select_listing, order(:name)
 
+  scope :top10, lambda {
+    unscoped.where(Meme.arel_table[:id].in(top10_arel))
+  }
+
+  scope :stats_over_time, lambda {
+    unscoped.
+    select("memes.name AS meme_name, shows.number as number, count(notes.id) as note_count").
+    joins(:shows).
+    where(Meme.arel_table[:id].in(top10_arel)).
+    group(:"memes.name", :"shows.number").
+    order('memes.name, shows.number')
+  }
+
   class << self
+    # Returns the arel fragment to get the mem ids of the top 10 memes over time
+    # TODO: VIDEO gets included, maybe it shouldn't
+    def top10_arel
+      n = Note.arel_table
+      n.project(n[:meme_id]).group(n[:meme_id]).order('count(id) desc').take(10)
+    end
+
     # Tries to coalesce different spellings to one standard form
     def normalize_name(value)
       case value
@@ -13,7 +33,7 @@ class Meme < ActiveRecord::Base
         'Biodiversitée'
       when /eq.+chine/i
         'EQ Machine$'
-      when /fal[s\$]e flag/
+      when /fal[s\$]e.*flag/
         'Fal$e Flag'
       when /squirrel/i
         'Squirrel!!'
