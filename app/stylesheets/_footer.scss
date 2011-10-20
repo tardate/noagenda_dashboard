@@ -25,6 +25,21 @@
     .controls {
     }
   }
+  .media {
+    @include single-box-shadow($c_bg_footer_rgba, 4px, 4px, 5px);
+    border: 1px solid #333333;
+    background: url('/images/stainless-plaque.png') repeat scroll 0 0 #DDDDDD;
+    bottom: 15px;
+    left: 130px;
+    padding: 5px;
+    position: fixed;
+    > .wrapper {
+    }
+    .title {
+      background-color:#000;
+      padding: 1px 3px;
+    }
+  }
   .block {
     height: $d_h_footer;
     float: left;

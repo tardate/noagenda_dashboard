@@ -198,14 +198,18 @@ div.field, div.actions {
 #content .panel.show .cover_art img {
   height: 200px;
 }
+/* line 48, ../../../app/stylesheets/_content.scss */
+#content .panel.show .datatable {
+  clear: right;
+}
 
-/* line 50, ../../../app/stylesheets/_content.scss */
+/* line 53, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 56, ../../../app/stylesheets/_content.scss */
+/* line 59, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;
@@ -244,21 +248,39 @@ div.field, div.actions {
   min-width: 760px;
 }
 /* line 28, ../../../app/stylesheets/_footer.scss */
+#footer .media {
+  -moz-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  -webkit-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  -o-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
+  border: 1px solid #333333;
+  background: url("/images/stainless-plaque.png") repeat scroll 0 0 #dddddd;
+  bottom: 15px;
+  left: 130px;
+  padding: 5px;
+  position: fixed;
+}
+/* line 38, ../../../app/stylesheets/_footer.scss */
+#footer .media .title {
+  background-color: #000;
+  padding: 1px 3px;
+}
+/* line 43, ../../../app/stylesheets/_footer.scss */
 #footer .block {
   height: 150px;
   float: left;
 }
-/* line 31, ../../../app/stylesheets/_footer.scss */
+/* line 46, ../../../app/stylesheets/_footer.scss */
 #footer .block.right {
   float: right;
   padding: 8px 10px 0 0;
 }
-/* line 36, ../../../app/stylesheets/_footer.scss */
+/* line 51, ../../../app/stylesheets/_footer.scss */
 #footer .block.cc > .wrapper {
   padding: 5px 5px 0;
   background-color: #fff;
 }
-/* line 41, ../../../app/stylesheets/_footer.scss */
+/* line 56, ../../../app/stylesheets/_footer.scss */
 #footer .block.memes {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -275,7 +297,7 @@ div.field, div.actions {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 49, ../../../app/stylesheets/_footer.scss */
+/* line 64, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -292,7 +314,7 @@ div.field, div.actions {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 58, ../../../app/stylesheets/_footer.scss */
+/* line 73, ../../../app/stylesheets/_footer.scss */
 #footer .block.book-of-knowledge > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -308,7 +330,7 @@ div.field, div.actions {
   padding: 5px;
   height: 125px;
 }
-/* line 66, ../../../app/stylesheets/_footer.scss */
+/* line 81, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -319,11 +341,11 @@ div.field, div.actions {
   padding: 3px;
   width: 160px;
 }
-/* line 76, ../../../app/stylesheets/_footer.scss */
+/* line 91, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 80, ../../../app/stylesheets/_footer.scss */
+/* line 95, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -335,7 +357,7 @@ div.field, div.actions {
   margin-top: -30px;
   width: 90px;
 }
-/* line 87, ../../../app/stylesheets/_footer.scss */
+/* line 102, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -345,7 +367,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 91, ../../../app/stylesheets/_footer.scss */
+/* line 106, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -355,16 +377,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 95, ../../../app/stylesheets/_footer.scss */
+/* line 110, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 98, ../../../app/stylesheets/_footer.scss */
+/* line 113, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 101, ../../../app/stylesheets/_footer.scss */
+/* line 116, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

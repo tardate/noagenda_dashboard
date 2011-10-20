@@ -1,0 +1,9 @@
+:ruby
+  show = current_show_context
+  title = show.try(:full_title)
+  audio_url = show.try(:audio_url)
+
+.media
+  .wrapper
+    .title= title
+    #mainmediaplayer.control=embed_media_player(audio_url)
