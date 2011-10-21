@@ -15,10 +15,12 @@ ActiveRecord::Schema.define(:version => 20111014154156) do
 
   create_table "memes", :force => true do |t|
     t.string   "name"
+    t.boolean  "trending",   :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "memes", ["name", "trending"], :name => "index_memes_on_name_and_trending"
   add_index "memes", ["name"], :name => "index_memes_on_name", :unique => true
 
   create_table "notes", :force => true do |t|

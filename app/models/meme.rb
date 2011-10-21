@@ -78,7 +78,11 @@ class Meme < ActiveRecord::Base
     # It will create the mem record if it doesn't already exist
     def factory(name)
       normalized_name = normalize_name(name)
-      find_or_create_by_name(normalized_name)
+      meme = find_or_create_by_name(normalized_name)
+      if meme && name == 'VIDEO'
+        meme.update_attribute(:trending,false)
+      end
+      meme
     end
   end
 end

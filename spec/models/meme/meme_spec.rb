@@ -57,6 +57,12 @@ describe Meme do
       Meme.stub(:normalize_name).and_return('Normalized')
       Meme.factory('33').name.should eql('Normalized')
     end
+    it "should set trending by default" do
+      existing.trending.should be_true
+    end
+    it "should disable trending for VIDEO" do
+      Meme.factory('VIDEO').trending.should be_false
+    end
   end
 
   describe "#destroy" do
