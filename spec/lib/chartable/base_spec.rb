@@ -70,7 +70,7 @@ describe "Chartable" do
         subject[:values].count.should eql(1)
       end
       it "should not have a legend collection" do
-        subject[:legend].should eql({})
+        subject[:legend].should be_nil
       end
       it "should have the correct 1st data series" do
         expect = []

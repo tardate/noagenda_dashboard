@@ -19,6 +19,7 @@ var NAVD = {
     NAVD.renderCharts();
     setTimeout(NAVD.asyncSetup, 200);
   },
+
   asyncSetup: function() {
     NAVD.load_media(NAVD.config.current_show, false);
   },
@@ -170,12 +171,12 @@ var NAVD = {
         rounded: 0.6,
         fill: false,
         plotProps: {
-            "stroke-width": 2
+          "stroke-width": 2
         },
         dot: true,
         dotProps: {
-            stroke: "white",
-            "stroke-width": 2
+          stroke: "white",
+          "stroke-width": 2
         },
         highlight : {
           scale : 2
@@ -231,12 +232,12 @@ var NAVD = {
         rounded: 0.6,
         fill: false,
         plotProps: {
-            "stroke-width": 2
+          "stroke-width": 2
         },
         dot: true,
         dotProps: {
-            stroke: "white",
-            "stroke-width": 2
+          stroke: "white",
+          "stroke-width": 2
         },
         highlight : {
           scale : 2
@@ -288,7 +289,53 @@ var NAVD = {
         }
       }
     };
-
+    $.elycharts.templates['donut_basic'] = {
+      type : "line",
+      margins : [10, 60, 120, 30],
+      defaultAxis : {
+        labels : true
+      },
+      axis : {
+        x : {
+          labelsRotate : -45,
+          labelsProps : {
+            font : "12px Verdana"
+          }
+        }
+      },
+      defaultSeries : {
+        type : "bar",
+        plotProps : {
+          stroke : "black",
+          "stroke-width" : 2,
+          opacity : 0.6
+        },
+        highlight : {
+          newProps : {
+            opacity : 1
+          }
+        },
+        tooltip : {
+          frameProps : false,
+          height : 20,
+          width : 220,
+          offset : [10, 30],
+          contentStyle : "font-weight: bold"
+        }
+      },
+      series : {
+        serie1 : { color : "#ff0000" },
+        serie2 : { color : "#ff4000" },
+        serie3 : { color : "#ff8000" },
+        serie4 : { color : "#ffB000" },
+        serie5 : { color : "#ff0080" },
+        serie6 : { color : "#8000ff" },
+        serie7 : { color : "#00B0ff" },
+        serie8 : { color : "#0080ff" },
+        serie9 : { color : "#0040ff" },
+        serie10 : { color : "#0000ff" }
+      },
+    }
   },
   
   renderCharts: function() {

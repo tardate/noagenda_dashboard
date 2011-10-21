@@ -45,7 +45,7 @@ module ::Navd::Chartable
     def to_chartable_structure(collection, options={})
       return unless options[:yvalues] && options[:xlabels]
       
-      data = { :template => (options[:template]||'line_basic'), :tooltips => {}, :values => {}, :labels => [], :legend => {} }
+      data = { :template => (options[:template]||'line_basic'), :tooltips => {}, :values => {}, :labels => [] }
 
       xlabel_c = options[:xlabels][:column].to_sym
       yvalue_c = options[:yvalues][:column].to_sym
@@ -60,6 +60,7 @@ module ::Navd::Chartable
 
 
       if ylabel_c
+        data[:legend] = {}
         ylabels.each_with_index do |ylabel,index|
           data[:values][:"serie#{index + 1}"] = Array.new(datapoints,0)
           data[:legend][:"serie#{index + 1}"] = ylabel
@@ -76,12 +77,14 @@ module ::Navd::Chartable
         end
       else
         data[:values][:"serie1"] = Array.new(datapoints,0)
+        data[:tooltips][:"serie1"] = Array.new(datapoints,0)
         collection.each do |record|
           yvalue = record[yvalue_c].to_i
           xlabel = record[xlabel_c]
           
           x_index = data[:labels].index(xlabel)
           data[:values][:"serie1"][x_index] = yvalue
+          data[:tooltips][:"serie1"][x_index] = xlabel
         end
       end
       data
