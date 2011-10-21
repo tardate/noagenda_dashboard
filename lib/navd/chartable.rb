@@ -52,9 +52,11 @@ module ::Navd::Chartable
       if options[:ylabels]
         ylabel_c = options[:ylabels][:column].to_sym
         ylabels = collection.collect(&ylabel_c).uniq
+        xlabels = collection.collect(&xlabel_c).uniq.sort
+      else
+        xlabels = collection.collect(&xlabel_c).uniq
       end
       
-      xlabels = collection.collect(&xlabel_c).uniq
       data[:labels] = xlabels
       datapoints = xlabels.count
 

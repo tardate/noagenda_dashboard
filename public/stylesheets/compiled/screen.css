@@ -79,7 +79,7 @@ div.field, div.actions {
 }
 
 /* line 2, ../../../app/stylesheets/_controls.scss */
-.playmedia.control {
+.control {
   -moz-border-radius: 14px;
   -webkit-border-radius: 14px;
   -o-border-radius: 14px;
@@ -95,8 +95,17 @@ div.field, div.actions {
   padding: 3px 21px;
 }
 /* line 10, ../../../app/stylesheets/_controls.scss */
-.playmedia.control:hover {
+.control:hover {
   background-color: #3b4b23;
+}
+
+/* line 17, ../../../app/stylesheets/_controls.scss */
+a.control.technoexperts,
+a.control.technoexperts:visited,
+a.control.technoexperts:hover {
+  color: white;
+  text-decoration: none;
+  padding: 3px 4px;
 }
 
 /* line 1, ../../../app/stylesheets/_header.scss */
@@ -203,7 +212,7 @@ div.field, div.actions {
 }
 /* line 31, ../../../app/stylesheets/_content.scss */
 #content .panel.about p {
-  font-family: Time New Roman, Serif;
+  font-family: Times New Roman, Serif;
   margin: 0 0 12px;
 }
 /* line 35, ../../../app/stylesheets/_content.scss */
@@ -246,13 +255,31 @@ div.field, div.actions {
   height: 300px;
 }
 
-/* line 71, ../../../app/stylesheets/_content.scss */
+/* line 72, ../../../app/stylesheets/_content.scss */
+table.datatable td {
+  vertical-align: top;
+}
+/* line 74, ../../../app/stylesheets/_content.scss */
+table.datatable td.bold {
+  font-weight: bold;
+}
+/* line 78, ../../../app/stylesheets/_content.scss */
+table.datatable td.note a {
+  font-weight: bold;
+}
+/* line 81, ../../../app/stylesheets/_content.scss */
+table.datatable td.note .description {
+  font-family: Times New Roman, Serif;
+  font-size: 12px;
+}
+
+/* line 89, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 77, ../../../app/stylesheets/_content.scss */
+/* line 95, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;
@@ -424,24 +451,6 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   margin: 14px 4px;
 }
 /* line 84, ../../../app/stylesheets/_footer.scss */
-#footer .block input {
-  -moz-border-radius: 14px;
-  -webkit-border-radius: 14px;
-  -o-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -khtml-border-radius: 14px;
-  border-radius: 14px;
-  background-color: #2b3b13;
-  color: white;
-  padding: 3px;
-  cursor: pointer;
-  cursor: hand;
-}
-/* line 90, ../../../app/stylesheets/_footer.scss */
-#footer .block input:hover {
-  background-color: #3b4b23;
-}
-/* line 94, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -452,11 +461,11 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 3px;
   width: 160px;
 }
-/* line 104, ../../../app/stylesheets/_footer.scss */
+/* line 94, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 108, ../../../app/stylesheets/_footer.scss */
+/* line 98, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -468,7 +477,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   margin-top: -30px;
   width: 90px;
 }
-/* line 115, ../../../app/stylesheets/_footer.scss */
+/* line 105, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -478,7 +487,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 119, ../../../app/stylesheets/_footer.scss */
+/* line 109, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -488,16 +497,16 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 123, ../../../app/stylesheets/_footer.scss */
+/* line 113, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 126, ../../../app/stylesheets/_footer.scss */
+/* line 116, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 129, ../../../app/stylesheets/_footer.scss */
+/* line 119, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

@@ -56,7 +56,7 @@ var NAVD = {
       return false;
     });
     $('.pageload').bind('click', function() {
-      var url = $(this).data('url');
+      var url = $(this).data('url') || $(this).attr('href');
       if (url != "") {
         NAVD.load_page(url);
       }
@@ -195,15 +195,10 @@ var NAVD = {
       },
       series : {
         serie1 : { color : "#ff0000" },
-        serie2 : { color : "#ff4000" },
-        serie3 : { color : "#ff8000" },
-        serie4 : { color : "#ffB000" },
-        serie5 : { color : "#ff0080" },
-        serie6 : { color : "#8000ff" },
-        serie7 : { color : "#00B0ff" },
-        serie8 : { color : "#0080ff" },
-        serie9 : { color : "#0040ff" },
-        serie10 : { color : "#0000ff" }
+        serie2 : { color : "#ff8000" },
+        serie3 : { color : "#80ff80" },
+        serie4 : { color : "#00B0ff" },
+        serie5 : { color : "#0000ff" }
       },
       defaultAxis : {
         labels : true
@@ -256,15 +251,10 @@ var NAVD = {
       },
       series : {
         serie1 : { color : "#ff0000" },
-        serie2 : { color : "#ff4000" },
-        serie3 : { color : "#ff8000" },
-        serie4 : { color : "#ffB000" },
-        serie5 : { color : "#ff0080" },
-        serie6 : { color : "#8000ff" },
-        serie7 : { color : "#00B0ff" },
-        serie8 : { color : "#0080ff" },
-        serie9 : { color : "#0040ff" },
-        serie10 : { color : "#0000ff" }
+        serie2 : { color : "#ff8000" },
+        serie3 : { color : "#80ff80" },
+        serie4 : { color : "#00B0ff" },
+        serie5 : { color : "#0000ff" }
       },
       defaultAxis : {
         labels : true

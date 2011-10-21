@@ -67,6 +67,24 @@
     height: 300px;
   }
 }
+
+table.datatable {
+  td {
+    vertical-align: top;
+    &.bold {
+      font-weight: bold;
+    }
+    &.note {
+      a {
+        font-weight: bold;
+      }
+      .description {
+        font-family: $f_with_style;
+        font-size:12px;
+      }
+    }
+  }
+}
 .mediaplayer.flash {
   embed {
     height:27px;

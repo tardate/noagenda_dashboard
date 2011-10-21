@@ -81,16 +81,6 @@
     &.technoexperts {
       margin: 14px 4px;
     }
-    input {
-      @include border-radius(14px);
-      background-color: $c_control;
-      color: $c_control_text;
-      padding: 3px;
-      cursor: pointer; cursor: hand;
-      &:hover {
-        background-color: $c_control_sel;
-      }
-    }
     select {
       background-color: $c_bg_footer;
       border: 1px solid $c_block_footer;

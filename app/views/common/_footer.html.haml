@@ -8,7 +8,7 @@
         .levels.block
           = render :partial => 'shows/select'
         .technoexperts.block
-          = button_to t('pages.technoexperts.title'), technoexperts_path, :method => :get, :class => 'pageload duffbutton', 'data-url' => technoexperts_path
+          = link_to t('pages.technoexperts.title'), technoexperts_path, :class => 'pageload control technoexperts'
         .cc.block.right
           .wrapper
             %a{:href=>'http://creativecommons.org/licenses/by-sa/3.0/', :target=>'_blank'}

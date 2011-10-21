@@ -27,9 +27,9 @@
       - for item in data do
         %tr
           - if include_show
-            %td= item.show.number
+            %td.bold= item.show.number
           - if include_meme
-            %td= item.meme.name
-          %td
+            %td.bold= item.meme.name
+          %td.note
             = link_to_if(item.url?,item.name,item.url, :class=>'shownote', :target => '_blank')
             .description= item.description

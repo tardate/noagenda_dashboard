@@ -1,5 +1,5 @@
 
-.playmedia.control {
+.control {
   @include border-radius(14px);
   background-color: $c_play_control;
   border: 2px outset #F0F0F0;
@@ -10,4 +10,12 @@
   &:hover {
     background-color: $c_play_control_sel;
   }
+}
+a.control.technoexperts,
+a.control.technoexperts:visited,
+a.control.technoexperts:hover
+{
+  color: $c_play_control_text;
+  text-decoration: none;
+  padding: 3px 4px;
 }
