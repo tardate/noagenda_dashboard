@@ -30,11 +30,20 @@ class Meme < ActiveRecord::Base
   }.freeze
 
   class << self
-    # Returns the arel fragment to get the mem ids of the top 10 memes over time
+    # Returns the arel fragment to get the meme ids of the top 10 memes over time
     # TODO: VIDEO gets included, maybe it shouldn't
     def topn_arel(limit = 10)
       n = Note.arel_table
-      n.project(n[:meme_id]).group(n[:meme_id]).order('count(id) desc').take(limit)
+      n.project(n[:meme_id]).
+      where(n[:meme_id].not_in(non_trending_arel)).
+      group(n[:meme_id]).order('count(id) desc').take(limit)
+    end
+
+    # Returns the arel fragementto get the mem ids that are not trending
+    def non_trending_arel
+      m = Meme.arel_table
+      m.project(m[:id]).
+      where(m[:trending].eq(false))
     end
 
     # Tries to coalesce different spellings to one standard form

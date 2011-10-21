@@ -9,15 +9,29 @@ describe Meme do
 
   describe "##topn" do
     subject { Meme.topn(meme_limit) }
-    before {
-      (1..seed_limit).each do |i|
-        m = Factory.create(:meme, :name => i.to_s )
-        i.times { Factory.create(:note, :meme => m) }
+    context "with more than n memes" do
+      before {
+        (1..seed_limit).each do |i|
+          m = Factory.create(:meme, :name => i.to_s )
+          i.times { Factory.create(:note, :meme => m) }
+        end
+      }
+      its(:count) { should eql(meme_limit) }
+      it "should only include the top memes" do
+        subject.map{|m| m.name.to_i }.min.should eql(first_top_meme)
       end
-    }
-    its(:count) { should eql(meme_limit) }
-    it "should only include the top memes" do
-      subject.map{|m| m.name.to_i }.min.should eql(first_top_meme)
+    end
+    context "with non-trending memes" do
+      let!(:trending_meme) { Factory(:meme, :name => "trending") }
+      let!(:non_trending_meme) { Factory(:meme, :name => "non-trending", :trending => false) }
+      before {
+        [trending_meme,non_trending_meme].each do |meme|
+          Factory.create(:note, :meme => meme)
+        end
+      }
+      it "should only include trending memes" do
+        subject.map{|m| m.name }.should_not include(non_trending_meme.name)
+      end
     end
   end
 
