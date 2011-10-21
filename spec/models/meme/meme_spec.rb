@@ -36,7 +36,7 @@ describe Meme do
       :unknown_value => { :given => 'unique', :expect => 'unique' },
       :false_flag_alt1 => { :given => 'UK false flag', :expect => 'Fal$e Flag' },
       :false_flag_alt2 => { :given => 'false flag', :expect => 'Fal$e Flag' },
-      :false_flag_alt3 => { :given => 'fal$e flag', :expect => 'Fal$e Flag' }
+      :false_flag_alt3 => { :given => 'Fal$e flag', :expect => 'Fal$e Flag' }
     }.each do |test_name,options|
       context "with #{test_name} given #{options[:given]} then expect #{options[:expect]}" do
         subject { Meme.normalize_name(options[:given]) }

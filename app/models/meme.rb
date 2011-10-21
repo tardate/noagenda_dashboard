@@ -40,18 +40,34 @@ class Meme < ActiveRecord::Base
     # Tries to coalesce different spellings to one standard form
     def normalize_name(value)
       case value
-      when /bi.+vers/i
+      when /arab.+prin/i
+        'Arab Spring'
+      when /b.+divers/i
         'Biodiversitée'
       when /eq.+chine/i
         'EQ Machine$'
-      when /fal[s\$]e.*flag/
+      when /fal[s\$]e.*flag/i
         'Fal$e Flag'
-      when /squirrel/i
-        'Squirrel!!'
-      when /trains.+planes/i
-        'Trains Good, Planes Bad (Whoo Hoo!)'
+      when /magic.*number/i
+        'Magic Numbers'
       when /military.+industrial.+compl/i
         'Military Industrial Complex'
+      when /minist.*truth/i
+        'Ministry of Truth'
+      when /monsant/i
+        'Monsantooo'
+      when /shut.*up.*slave/i
+        'Shut Up Slave!'
+      when /squirrel/i
+        'Squirrel!!'
+      when /techno.*expert/i
+        'Techno Experts'
+      when /trains.+planes/i
+        'Trains Good, Planes Bad (Whoo Hoo!)'
+      when /united.*tate.*euro/i
+        'United $tates of EUROpe'
+      when /vagina/i
+        'Vagina'
       else
         value
       end
