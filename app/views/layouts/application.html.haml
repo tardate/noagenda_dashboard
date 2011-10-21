@@ -5,7 +5,7 @@
   %body{:class => "#{controller_path.split('/').join(' ')} #{params[:action]}"}
     = render :partial => 'common/header'
     #container
-      .wrapper
+      .wrapper#scroller
         #content
           .wrapper
             = yield

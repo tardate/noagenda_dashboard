@@ -78,6 +78,16 @@
         height: 125px;
       }
     }
+    &.technoexperts {
+      margin: 14px 4px;
+    }
+    input {
+      @include border-radius(14px);
+      background-color: $c_bg_footer;
+      border: 1px solid $c_block_footer;
+      color: $c_select_text;
+      padding: 3px;
+    }
     select {
       background-color: $c_bg_footer;
       border: 1px solid $c_block_footer;

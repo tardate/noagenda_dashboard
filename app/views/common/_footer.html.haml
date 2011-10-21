@@ -7,7 +7,7 @@
           = render :partial => 'memes/select'
         .levels.block
           = render :partial => 'shows/select'
-        .block
+        .technoexperts.block
           = button_to t('pages.technoexperts.title'), technoexperts_path, :method => :get, :class => 'pageload', 'data-url' => technoexperts_path
         .cc.block.right
           .wrapper
@@ -27,7 +27,9 @@
 
 :javascript
   jQuery(document).ready(function() {
-    NAVD.init({});
+    NAVD.init({
+      mobile: #{ browser.ios? || browser.android? }
+    });
   });
 
 = yield :javascript

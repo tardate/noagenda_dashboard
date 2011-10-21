@@ -1,5 +1,8 @@
 var NAVD = {
-  config: {},
+  config: {
+    mobile: false
+  },
+  mainScroller: null,
 
   init: function(settings) {
     $.extend(NAVD.config, settings);
@@ -7,10 +10,17 @@ var NAVD = {
   },
 
   setup: function() {
+    NAVD.setupScroller();
     NAVD.enableControls();
     NAVD.enableqTips();
     NAVD.setupCharts();
     NAVD.renderCharts();
+  },
+
+  setupScroller: function() {
+    if ( NAVD.config.mobile ) {
+      NAVD.mainScroller = new iScroll('container');
+    }
   },
 
   enableControls: function() {

@@ -1,6 +1,6 @@
 /* line 1, ../../../app/stylesheets/_base.scss */
 body {
-  background: url("/images/content-texture.png") repeat scroll 0 0 #8c7a58;
+  background: url("/images/content-texture.png") repeat scroll 0 0 #838696;
   color: black;
   margin: 0;
   padding: 0;
@@ -134,15 +134,17 @@ div.field, div.actions {
 
 /* line 1, ../../../app/stylesheets/_content.scss */
 #container {
-  margin-top: 100px;
   min-width: 980px;
+  position: absolute;
+  top: 100px;
+  bottom: 150px;
 }
-/* line 4, ../../../app/stylesheets/_content.scss */
+/* line 7, ../../../app/stylesheets/_content.scss */
 #container > .wrapper {
   padding: 20px 20px 170px;
 }
 
-/* line 9, ../../../app/stylesheets/_content.scss */
+/* line 12, ../../../app/stylesheets/_content.scss */
 #content .panel {
   background: url("/images/woody.png") repeat scroll 0 0 transparent;
   width: 75%;
@@ -155,7 +157,7 @@ div.field, div.actions {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 15, ../../../app/stylesheets/_content.scss */
+/* line 18, ../../../app/stylesheets/_content.scss */
 #content .panel > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -166,68 +168,68 @@ div.field, div.actions {
   background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
   padding: 20px;
 }
-/* line 20, ../../../app/stylesheets/_content.scss */
+/* line 23, ../../../app/stylesheets/_content.scss */
 #content .panel.about {
   width: 18%;
   float: left;
   padding: 10px;
   margin-right: 20px;
 }
-/* line 25, ../../../app/stylesheets/_content.scss */
+/* line 28, ../../../app/stylesheets/_content.scss */
 #content .panel.about > .wrapper {
   padding: 10px;
 }
-/* line 28, ../../../app/stylesheets/_content.scss */
+/* line 31, ../../../app/stylesheets/_content.scss */
 #content .panel.about p {
   font-family: Time New Roman, Serif;
   margin: 0 0 12px;
 }
-/* line 32, ../../../app/stylesheets/_content.scss */
+/* line 35, ../../../app/stylesheets/_content.scss */
 #content .panel.about .important {
   font-weight: bold;
 }
-/* line 35, ../../../app/stylesheets/_content.scss */
+/* line 38, ../../../app/stylesheets/_content.scss */
 #content .panel.about img.itm {
   width: 100%;
   margin: 0 -5px;
 }
-/* line 40, ../../../app/stylesheets/_content.scss */
+/* line 43, ../../../app/stylesheets/_content.scss */
 #content .panel .chart {
   width: 100%;
   height: 200px;
 }
 
-/* line 46, ../../../app/stylesheets/_content.scss */
+/* line 49, ../../../app/stylesheets/_content.scss */
 #content .right-panel {
   float: left;
   width: 75%;
 }
-/* line 49, ../../../app/stylesheets/_content.scss */
+/* line 52, ../../../app/stylesheets/_content.scss */
 #content .right-panel .chart {
   width: 100%;
   height: 300px;
 }
 
-/* line 56, ../../../app/stylesheets/_content.scss */
+/* line 59, ../../../app/stylesheets/_content.scss */
 #content .panel.show .cover_art {
   float: right;
 }
-/* line 58, ../../../app/stylesheets/_content.scss */
+/* line 61, ../../../app/stylesheets/_content.scss */
 #content .panel.show .cover_art img {
   height: 200px;
 }
-/* line 62, ../../../app/stylesheets/_content.scss */
+/* line 65, ../../../app/stylesheets/_content.scss */
 #content .panel.show .datatable {
   clear: right;
 }
 
-/* line 67, ../../../app/stylesheets/_content.scss */
+/* line 70, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 73, ../../../app/stylesheets/_content.scss */
+/* line 76, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;
@@ -349,6 +351,23 @@ div.field, div.actions {
   height: 125px;
 }
 /* line 81, ../../../app/stylesheets/_footer.scss */
+#footer .block.technoexperts {
+  margin: 14px 4px;
+}
+/* line 84, ../../../app/stylesheets/_footer.scss */
+#footer .block input {
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -o-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -khtml-border-radius: 14px;
+  border-radius: 14px;
+  background-color: #2b3b13;
+  border: 1px solid #b8aa83;
+  color: white;
+  padding: 3px;
+}
+/* line 91, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -359,11 +378,11 @@ div.field, div.actions {
   padding: 3px;
   width: 160px;
 }
-/* line 91, ../../../app/stylesheets/_footer.scss */
+/* line 101, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 95, ../../../app/stylesheets/_footer.scss */
+/* line 105, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -375,7 +394,7 @@ div.field, div.actions {
   margin-top: -30px;
   width: 90px;
 }
-/* line 102, ../../../app/stylesheets/_footer.scss */
+/* line 112, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -385,7 +404,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 106, ../../../app/stylesheets/_footer.scss */
+/* line 116, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -395,16 +414,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 110, ../../../app/stylesheets/_footer.scss */
+/* line 120, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 113, ../../../app/stylesheets/_footer.scss */
+/* line 123, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 116, ../../../app/stylesheets/_footer.scss */
+/* line 126, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }
