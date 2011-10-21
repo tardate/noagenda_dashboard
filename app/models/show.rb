@@ -4,6 +4,15 @@ class Show < ActiveRecord::Base
 
   scope :select_listing, where(:published => true).order('number desc')
 
+  scope :meme_stats, lambda { |show_id=nil|
+    query = show_id ? unscoped.where(Show.arel_table[:id].eq(show_id)) : unscoped
+    query.
+    select("memes.name AS meme_name, count(notes.id) as note_count").
+    joins(:memes).
+    group(:"memes.name").
+    order('count(notes.id)')
+  }
+
   class << self
     def latest
       order('number desc').limit(1).first
@@ -13,6 +22,11 @@ class Show < ActiveRecord::Base
     end
   end
 
+  STAT_CHART_TEMPLATE = {
+    xlabels: { :column => 'meme_name'},
+    yvalues: { :column => 'note_count'}
+  }.freeze
+
   def full_title
     "#{number} - #{published_date.to_s}"
   end
@@ -21,4 +35,7 @@ class Show < ActiveRecord::Base
     "#{number}"
   end
 
+  def meme_stat
+    self.class.meme_stats(self.id)
+  end
 end

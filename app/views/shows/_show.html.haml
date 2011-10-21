@@ -18,9 +18,8 @@
         - if resource.credits?
           %li{'data-section'=>'show_credits'}= resource_class.human_attribute_name(:credits)
       .section.tabbed_info#show_memes{:style=>"display: block;",:class=>"selected"}
-        %ul.stats
-          %li= resource.memes.count
-          %li= resource.notes.count
+        .chart-container
+          .chart{ 'data-url' => stat_show_url(resource,:format => 'json'), 'data-template' => 'donut_basic' }
       .section.tabbed_info#show_notes{:style=>"display: none;"}
         = render :partial => 'notes/table', :locals => { :data => resource.notes.show_meme_note_order, :include_show => false }
       - if resource.credits?

@@ -24,7 +24,6 @@ class Meme < ActiveRecord::Base
   end
 
   STAT_CHART_TEMPLATE = {
-    template: 'line_basic',
     ylabels: { :column => 'meme_name'},
     yvalues: { :column => 'note_count'},
     xlabels: { :column => 'number'}
