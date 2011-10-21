@@ -11,7 +11,6 @@ var NAVD = {
   },
 
   setup: function() {
-    NAVD.setupScroller();
     NAVD.enableControls();
     NAVD.enableTabbedInfoMenus();
     NAVD.enableqTips();
@@ -21,12 +20,21 @@ var NAVD = {
   },
 
   asyncSetup: function() {
+    NAVD.enableScroller();
     NAVD.load_media(NAVD.config.current_show, false);
   },
 
-  setupScroller: function() {
+  enableScroller: function() {
     if ( NAVD.config.mobile ) {
       NAVD.mainScroller = new iScroll('container');
+    }
+  },
+
+  refreshScroller: function() {
+    if ( NAVD.mainScroller ) {
+      setTimeout(function () {
+		    NAVD.mainScroller.refresh();
+	    }, 0);
     }
   },
 
@@ -88,6 +96,7 @@ var NAVD = {
       $('#content').html(data);
       NAVD.enableAjaxLoadedControls();
       NAVD.renderCharts();
+      NAVD.refreshScroller();
     });
   },
   load_media: function(number,autoplay) {
@@ -99,6 +108,7 @@ var NAVD = {
     $.get('/memes/' + id, function(data) {
       $('#content').html(data);
       NAVD.renderCharts();
+      NAVD.refreshScroller();
     });
   },
 
@@ -110,6 +120,7 @@ var NAVD = {
       var container = $(this.parentNode.parentNode);
       container.find('.section').hide();
       container.find('.section#' + selectedSection).show();
+      NAVD.refreshScroller();
       return false;
     });
   },
