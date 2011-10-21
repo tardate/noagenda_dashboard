@@ -1,6 +1,6 @@
 #container {
-  //margin-top:$d_h_header;
   min-width: $d_w_min;
+  width: 100%;
   position: absolute;
   top: $d_h_header;
   bottom: $d_h_footer;
@@ -61,9 +61,6 @@
     img {
       height: $d_h_cover_art;
     }
-  }
-  .datatable {
-    clear: right;
   }
 }
 .mediaplayer.flash {

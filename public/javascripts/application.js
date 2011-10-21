@@ -12,6 +12,7 @@ var NAVD = {
   setup: function() {
     NAVD.setupScroller();
     NAVD.enableControls();
+    NAVD.enableTabbedInfoMenus();
     NAVD.enableqTips();
     NAVD.setupCharts();
     NAVD.renderCharts();
@@ -70,6 +71,17 @@ var NAVD = {
       $('#content').html(data);
       NAVD.enableLinkableTips();
       NAVD.renderCharts();
+    });
+  },
+
+  enableTabbedInfoMenus: function() {
+    $('ul.tabbed_info li').live('click', function () {
+      var selectedSection = $(this).attr('data-section');
+      $(this.parentNode).find('li').removeClass('selected');
+      $(this).addClass('selected');
+      $(this.parentNode.parentNode).find('.section').hide();
+      $(this.parentNode.parentNode).find('.section#' + selectedSection).show();
+      return false;
     });
   },
 

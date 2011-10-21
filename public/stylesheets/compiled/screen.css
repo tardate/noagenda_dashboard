@@ -135,6 +135,7 @@ div.field, div.actions {
 /* line 1, ../../../app/stylesheets/_content.scss */
 #container {
   min-width: 980px;
+  width: 100%;
   position: absolute;
   top: 100px;
   bottom: 150px;
@@ -218,21 +219,60 @@ div.field, div.actions {
 #content .panel.show .cover_art img {
   height: 200px;
 }
-/* line 65, ../../../app/stylesheets/_content.scss */
-#content .panel.show .datatable {
-  clear: right;
-}
 
-/* line 70, ../../../app/stylesheets/_content.scss */
+/* line 67, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 76, ../../../app/stylesheets/_content.scss */
+/* line 73, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;
+}
+
+/* line 1, ../../../app/stylesheets/_tabbed_info.scss */
+ul.tabbed_info {
+  clear: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 26px;
+}
+/* line 7, ../../../app/stylesheets/_tabbed_info.scss */
+ul.tabbed_info li {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  float: left;
+  width: 100px;
+  height: 20px;
+  margin-right: 2px;
+  padding: 5px 13px 1px;
+  background-color: #b8aa83;
+  color: #282e0c;
+  cursor: pointer;
+  cursor: hand;
+}
+/* line 18, ../../../app/stylesheets/_tabbed_info.scss */
+ul.tabbed_info li:hover, ul.tabbed_info li.selected {
+  background-color: #2b3b13;
+  color: #b8aa83;
+}
+
+/* line 23, ../../../app/stylesheets/_tabbed_info.scss */
+.section.tabbed_info {
+  border-top: 2px solid #2b3b13;
 }
 
 /* line 1, ../../../app/stylesheets/_footer.scss */
@@ -366,8 +406,10 @@ div.field, div.actions {
   border: 1px solid #b8aa83;
   color: white;
   padding: 3px;
+  cursor: pointer;
+  cursor: hand;
 }
-/* line 91, ../../../app/stylesheets/_footer.scss */
+/* line 92, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -378,11 +420,11 @@ div.field, div.actions {
   padding: 3px;
   width: 160px;
 }
-/* line 101, ../../../app/stylesheets/_footer.scss */
+/* line 102, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 105, ../../../app/stylesheets/_footer.scss */
+/* line 106, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -394,7 +436,7 @@ div.field, div.actions {
   margin-top: -30px;
   width: 90px;
 }
-/* line 112, ../../../app/stylesheets/_footer.scss */
+/* line 113, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -404,7 +446,7 @@ div.field, div.actions {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 116, ../../../app/stylesheets/_footer.scss */
+/* line 117, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -414,16 +456,16 @@ div.field, div.actions {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 120, ../../../app/stylesheets/_footer.scss */
+/* line 121, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 123, ../../../app/stylesheets/_footer.scss */
+/* line 124, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 126, ../../../app/stylesheets/_footer.scss */
+/* line 127, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

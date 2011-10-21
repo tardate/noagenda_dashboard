@@ -28,7 +28,9 @@ en:
         assets_url: Show Assets
         show_notes_url: Official Show Notes
         credits: Credits
+        memes: Memes
         memes_count: Memes
+        notes: Show Notes
         notes_count: Show Notes
         full_title: Episode
     models:

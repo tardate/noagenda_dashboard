@@ -1,0 +1,25 @@
+ul.tabbed_info {
+  clear: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 26px;
+  li {
+    @include border-top-radius(10px);
+    float: left;
+    width: 100px;
+    height: 20px;
+    margin-right: 2px;
+    padding: 5px 13px 1px;
+    background-color: $c_bg_tabbed_info;
+    color: $c_text_tabbed_info;
+    cursor: pointer; cursor: hand;
+  }
+  li:hover, li.selected {
+    background-color: $c_bg_tabbed_info_sel;
+    color: $c_text_tabbed_info_sel;
+  }
+}
+.section.tabbed_info {
+  border-top: 2px solid $c_bg_tabbed_info_sel;
+}

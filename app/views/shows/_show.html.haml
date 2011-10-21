@@ -11,10 +11,17 @@
       %li= link_to_if(resource.url?,resource_class.human_attribute_name(:url),resource.url, :target => '_blank')
       %li= link_to_if(resource.show_notes_url?,resource_class.human_attribute_name(:show_notes_url),resource.show_notes_url, :target => '_blank')
       %li= link_to_if(resource.audio_url?,resource_class.human_attribute_name(:audio_url),resource.audio_url, :target => '_blank', :class => 'mp3')
-    - if resource.credits?
-      .credits= resource.credits
-    %ul.stats
-      %li= resource.memes.count
-      %li= resource.notes.count
-    %h2= t('notes.index.title')
-    = render :partial => 'notes/table', :locals => { :data => resource.notes.show_meme_note_order, :include_show => false }
+    .resources
+      %ul.tabbed_info
+        %li{:class=>"selected", 'data-section'=>'show_memes'}= resource_class.human_attribute_name(:memes)
+        %li{'data-section'=>'show_notes'}= resource_class.human_attribute_name(:notes)
+        - if resource.credits?
+          %li{'data-section'=>'show_credits'}= resource_class.human_attribute_name(:credits)
+      .section.tabbed_info#show_memes{:style=>"display: block;",:class=>"selected"}
+        %ul.stats
+          %li= resource.memes.count
+          %li= resource.notes.count
+      .section.tabbed_info#show_notes{:style=>"display: none;"}
+        = render :partial => 'notes/table', :locals => { :data => resource.notes.show_meme_note_order, :include_show => false }
+      - if resource.credits?
+        .section.tabbed_info#show_credits{:style=>"display: none;"}
