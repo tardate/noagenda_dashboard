@@ -1,4 +1,6 @@
 .panel.about
-  .wrapper= t(:about_the_show)
+  .wrapper
+    = raw t(:about_the_show)
+    = image_tag('NA_inTheMorning.png', :alt => 'In The Morning', :class => 'itm')
 .right-panel
   = render :partial => 'memes/top'

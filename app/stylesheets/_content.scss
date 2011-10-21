@@ -22,6 +22,20 @@
     float: left;
     padding: 10px;
     margin-right: 20px;
+    > .wrapper {
+      padding: 10px;
+    }
+    p {
+      font-family: $f_with_style;
+      margin: 0 0 12px;
+    }
+    .important {
+      font-weight: bold;
+    }
+    img.itm {
+      width:100%;
+      margin: 0 -5px;
+    }
   }
   .chart {
     width: 100%;

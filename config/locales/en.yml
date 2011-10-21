@@ -2,9 +2,11 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  about_the_show: "No Agenda is a podcast which takes place two times a week on Thursday and Sunday in the morning.
-    It is hosted by Adam Curry and John C. Dvorak. The show is a free-flowing conversation that
-    deconstructs recent news and media memes. The show has no advertisers, instead supported directly by it's avid listeners."
+  about_the_show: "<p><span class='important'>No Agenda</span> is a podcast hosted
+    by <span class='important'>Adam Curry</span> and <span class='important'>John C. Dvorak</span> which takes place two times a week
+    on Thursday and Sunday in the morning.</p>
+    <p>The show deconstructs the news and media memes.
+    It accepts no advertisers, instead being directly supported and promoted by the listeners.</p>"
   activerecord:
     attributes:
       meme:
