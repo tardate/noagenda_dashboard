@@ -1,0 +1,13 @@
+
+.playmedia.control {
+  @include border-radius(14px);
+  background-color: $c_play_control;
+  border: 2px outset #F0F0F0;
+  color: $c_play_control_text;
+  cursor: pointer; cursor: hand;
+  display: inline-block;
+  padding: 3px 21px;
+  &:hover {
+    background-color: $c_play_control_sel;
+  }
+}

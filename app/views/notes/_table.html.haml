@@ -16,10 +16,10 @@
   %thead
     %tr
       - if include_show
-        %th= resource_class.human_attribute_name :show
+        %th= Note.human_attribute_name :show
       - if include_meme
-        %th= resource_class.human_attribute_name :meme
-      %th= resource_class.human_attribute_name :name
+        %th= Note.human_attribute_name :meme
+      %th= Note.human_attribute_name :name
       
 
   %tbody
@@ -30,4 +30,6 @@
             %td= item.show.number
           - if include_meme
             %td= item.meme.name
-          %td= link_to_if(item.url?,item.name,item.url, :class=>'shownote', :target => '_blank', :description => item.description)
+          %td
+            = link_to_if(item.url?,item.name,item.url, :class=>'shownote', :target => '_blank')
+            .description= item.description

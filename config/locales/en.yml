@@ -13,7 +13,7 @@ en:
         name: Name
         notes_count: Hits
       note:
-        name: Name
+        name: Note
         description: Description
         url: Link
         show: Episode
@@ -50,6 +50,7 @@ en:
   pages:
     technoexperts:
       title: TECHNO EXPERTS
+  play: Play Now
   site:
     title: NoAgenda Attack Vector Dashboard
     short_title: Attack Vector Dashboard

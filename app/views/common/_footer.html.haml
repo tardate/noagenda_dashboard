@@ -2,13 +2,13 @@
   .wrapper
     .panel
       .controls
-        = render :partial => 'common/mediaplayer'
+        .media#mediawidget
         .memes.block
           = render :partial => 'memes/select'
         .levels.block
           = render :partial => 'shows/select'
         .technoexperts.block
-          = button_to t('pages.technoexperts.title'), technoexperts_path, :method => :get, :class => 'pageload', 'data-url' => technoexperts_path
+          = button_to t('pages.technoexperts.title'), technoexperts_path, :method => :get, :class => 'pageload duffbutton', 'data-url' => technoexperts_path
         .cc.block.right
           .wrapper
             %a{:href=>'http://creativecommons.org/licenses/by-sa/3.0/', :target=>'_blank'}
@@ -28,6 +28,7 @@
 :javascript
   jQuery(document).ready(function() {
     NAVD.init({
+      current_show: #{current_show_context.try(:number)},
       mobile: #{ browser.ios? || browser.android? }
     });
   });

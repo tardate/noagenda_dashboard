@@ -78,6 +78,27 @@ div.field, div.actions {
   list-style: square;
 }
 
+/* line 2, ../../../app/stylesheets/_controls.scss */
+.playmedia.control {
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -o-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -khtml-border-radius: 14px;
+  border-radius: 14px;
+  background-color: #2b3b13;
+  border: 2px outset #F0F0F0;
+  color: white;
+  cursor: pointer;
+  cursor: hand;
+  display: inline-block;
+  padding: 3px 21px;
+}
+/* line 10, ../../../app/stylesheets/_controls.scss */
+.playmedia.control:hover {
+  background-color: #3b4b23;
+}
+
 /* line 1, ../../../app/stylesheets/_header.scss */
 #header {
   -moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.9);
@@ -309,16 +330,19 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
 }
 /* line 28, ../../../app/stylesheets/_footer.scss */
 #footer .media {
+  bottom: 15px;
+  left: 130px;
+  position: fixed;
+}
+/* line 32, ../../../app/stylesheets/_footer.scss */
+#footer .media > .wrapper {
   -moz-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
   -webkit-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
   -o-box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
   box-shadow: 4px 4px 5px rgba(43, 59, 19, 0.9);
   border: 1px solid #333333;
   background: url("/images/stainless-plaque.png") repeat scroll 0 0 #dddddd;
-  bottom: 15px;
-  left: 130px;
   padding: 5px;
-  position: fixed;
 }
 /* line 38, ../../../app/stylesheets/_footer.scss */
 #footer .media .title {
@@ -403,13 +427,16 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-radius: 14px;
   border-radius: 14px;
   background-color: #2b3b13;
-  border: 1px solid #b8aa83;
   color: white;
   padding: 3px;
   cursor: pointer;
   cursor: hand;
 }
-/* line 92, ../../../app/stylesheets/_footer.scss */
+/* line 90, ../../../app/stylesheets/_footer.scss */
+#footer .block input:hover {
+  background-color: #3b4b23;
+}
+/* line 94, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -420,23 +447,23 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 3px;
   width: 160px;
 }
-/* line 102, ../../../app/stylesheets/_footer.scss */
+/* line 104, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 106, ../../../app/stylesheets/_footer.scss */
+/* line 108, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
   -o-box-shadow: 0px 0px 8px black;
   box-shadow: 0px 0px 8px black;
-  background: url("/images/player-bg.png") repeat scroll 0 0 #b8aa83;
+  background: url("/images/player-bg.png") repeat scroll 0 0 #2b3b13;
   padding: 10px;
   height: 160px;
   margin-top: -30px;
   width: 90px;
 }
-/* line 113, ../../../app/stylesheets/_footer.scss */
+/* line 115, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -446,7 +473,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 117, ../../../app/stylesheets/_footer.scss */
+/* line 119, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -456,16 +483,16 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 121, ../../../app/stylesheets/_footer.scss */
+/* line 123, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 124, ../../../app/stylesheets/_footer.scss */
+/* line 126, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 127, ../../../app/stylesheets/_footer.scss */
+/* line 129, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

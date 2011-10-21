@@ -26,14 +26,14 @@
     }
   }
   .media {
-    @include single-box-shadow($c_bg_footer_rgba, 4px, 4px, 5px);
-    border: 1px solid #333333;
-    background: url('/images/stainless-plaque.png') repeat scroll 0 0 #DDDDDD;
     bottom: 15px;
     left: 130px;
-    padding: 5px;
     position: fixed;
     > .wrapper {
+      @include single-box-shadow($c_bg_footer_rgba, 4px, 4px, 5px);
+      border: 1px solid #333333;
+      background: url('/images/stainless-plaque.png') repeat scroll 0 0 #DDDDDD;
+      padding: 5px;
     }
     .title {
       background-color:#000;
@@ -83,11 +83,13 @@
     }
     input {
       @include border-radius(14px);
-      background-color: $c_bg_footer;
-      border: 1px solid $c_block_footer;
-      color: $c_select_text;
+      background-color: $c_control;
+      color: $c_control_text;
       padding: 3px;
       cursor: pointer; cursor: hand;
+      &:hover {
+        background-color: $c_control_sel;
+      }
     }
     select {
       background-color: $c_bg_footer;
@@ -105,7 +107,7 @@
   }
   .player {
     @include single-box-shadow($c_bg_bok_rgba, 0px, 0px, 8px);
-    background: url("/images/player-bg.png") repeat scroll 0 0 $c_block_footer;
+    background: url("/images/player-bg.png") repeat scroll 0 0 $c_bg_footer;
     padding: 10px;
     height: 160px;
     margin-top: -30px;

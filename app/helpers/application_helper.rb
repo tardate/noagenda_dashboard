@@ -1,16 +1,17 @@
 module ApplicationHelper
   
   # Returns media player code given audio url
-  def embed_media_player(source_url)
+  def embed_media_player(source_url,autoplay=false)
     return unless source_url.present?
     if browser.ios?
       return raw <<-EOSCRIPT
-<div class="mediaplayer html5"><embed src="#{source_url}" autoplay="false"></embed></div>
+<div class="mediaplayer html5"><embed src="#{source_url}" autoplay="#{autoplay}"></embed></div>
       EOSCRIPT
     else
+      autoplay_param = autoplay ? '&autoPlay=true' : ''
       return raw <<-EOSCRIPT
 <div class="mediaplayer flash"><embed type="application/x-shockwave-flash" wmode="transparent"
-src="http://www.google.com/reader/ui/3523697345-audio-player.swf?audioUrl=#{source_url}"></embed></div>
+src="http://www.google.com/reader/ui/3523697345-audio-player.swf?audioUrl=#{source_url}#{autoplay_param}"></embed></div>
       EOSCRIPT
     end
   end

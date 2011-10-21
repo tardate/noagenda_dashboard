@@ -5,7 +5,7 @@
       .cover_art= image_tag(resource.cover_art_url)
     %h2= resource.full_title
     - if resource.audio_url?
-      = button_to "Play", '#', :method => :get, :class => 'load-media', 'data-url' => resource.audio_url, 'data-title' => resource.full_title
+      .playmedia.control{'data-number' => resource.number}=t(:play)
 
     %ul.resources
       %li= link_to_if(resource.url?,resource_class.human_attribute_name(:url),resource.url, :target => '_blank')

@@ -1,5 +1,6 @@
 var NAVD = {
   config: {
+    current_show: null,
     mobile: false
   },
   mainScroller: null,
@@ -16,6 +17,10 @@ var NAVD = {
     NAVD.enableqTips();
     NAVD.setupCharts();
     NAVD.renderCharts();
+    setTimeout(NAVD.asyncSetup, 200);
+  },
+  asyncSetup: function() {
+    NAVD.load_media(NAVD.config.current_show, false);
   },
 
   setupScroller: function() {
@@ -48,12 +53,30 @@ var NAVD = {
       }
       return false;
     });
-    $('.pageload').each(function(index) {
+    $('.playmedia').bind('click', function() {
+      var number = $(this).data('number');
+      if (number != "") {
+        NAVD.load_media(number,true);
+      }
+      return false;
+    });
+    $('.duffbutton').each(function(index) {
       $(this).parents('form').bind('onsubmit', function() {
         return false;
       });
     });
   },
+
+  enableAjaxLoadedControls: function() {
+    $('#content .playmedia').bind('click', function() {
+      var number = $(this).data('number');
+      if (number != "") {
+        NAVD.load_media(number,true);
+      }
+      return false;
+    });
+  },
+
   load_page: function(url) {
     $.get(url, function(data) {
       $('#content').html(data);
@@ -62,14 +85,18 @@ var NAVD = {
   load_show: function(number) {
     $.get('/shows/' + number, function(data) {
       $('#content').html(data);
-      NAVD.enableLinkableTips();
+      NAVD.enableAjaxLoadedControls();
       NAVD.renderCharts();
+    });
+  },
+  load_media: function(number,autoplay) {
+    $.get('/shows/' + number + '/mediawidget', {autoplay: autoplay}, function(data) {
+      $('#mediawidget').html(data);
     });
   },
   load_meme: function(id) {
     $.get('/memes/' + id, function(data) {
       $('#content').html(data);
-      NAVD.enableLinkableTips();
       NAVD.renderCharts();
     });
   },
@@ -79,34 +106,18 @@ var NAVD = {
       var selectedSection = $(this).attr('data-section');
       $(this.parentNode).find('li').removeClass('selected');
       $(this).addClass('selected');
-      $(this.parentNode.parentNode).find('.section').hide();
-      $(this.parentNode.parentNode).find('.section#' + selectedSection).show();
+      var container = $(this.parentNode.parentNode);
+      container.find('.section').hide();
+      container.find('.section#' + selectedSection).show();
       return false;
     });
   },
-
-  enableLinkableTips: function() {
+  
+  enableqTips: function() {
     // match all anchors with titles
     $('a[title]').qtip();
-    // match all shownote descriptions
-    $('.shownote').qtip({
-      content: {
-        text: function(api) {
-          // Retrieve content from custom attribute of the $('.selector') elements.
-          return $(this).attr('description');
-        }
-      },
-      position: { my: 'top left', at: 'bottom center'},
-      style: {
-        classes: 'ui-tooltip-blue ui-tooltip-shadow ui-tooltip-tipsy'
-      }
-    });
-  },
 
-  enableqTips: function() {
-    NAVD.enableLinkableTips();
-
-   $('.menu_tip').delegate('.menu', 'mouseover', function(event) {
+    $('.menu_tip').delegate('.menu', 'mouseover', function(event) {
       var self = $(this),
          qtip = '.qtip.ui-tooltip',
          container = $(event.liveFired),

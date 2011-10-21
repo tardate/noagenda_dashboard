@@ -9,5 +9,8 @@ class ShowsController < InheritedResources::Base
       show!
     end
   end
-  
+
+  def mediawidget
+    render :partial => 'shows/mediawidget', :locals => { :autoplay => params[:autoplay] && params[:autoplay]=='true' }
+  end
 end
