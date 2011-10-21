@@ -43,6 +43,9 @@ en:
   notes:
     index:
       title: Show Notes
+  pages:
+    technoexperts:
+      title: TECHNO EXPERTS
   site:
     title: NoAgenda Attack Vector Dashboard
     short_title: Attack Vector Dashboard

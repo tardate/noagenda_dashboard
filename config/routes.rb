@@ -1,8 +1,8 @@
 Navd::Application.routes.draw do
   resource :dashboard, :only => [:show]
   root :to => "dashboard#show"
+  match 'technoexperts' => 'pages#technoexperts'
 
-  # TODO need to refine/refactor:
   resources :notes, :only => [:index,:show]
   resources :memes, :only => [:index,:show] do
     resources :notes, :only => [:index,:show]

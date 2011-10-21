@@ -30,6 +30,23 @@ var NAVD = {
       }
       return false;
     });
+    $('.pageload').bind('click', function() {
+      var url = $(this).data('url');
+      if (url != "") {
+        NAVD.load_page(url);
+      }
+      return false;
+    });
+    $('.pageload').each(function(index) {
+      $(this).parents('form').bind('onsubmit', function() {
+        return false;
+      });
+    });
+  },
+  load_page: function(url) {
+    $.get(url, function(data) {
+      $('#content').html(data);
+    });
   },
   load_show: function(number) {
     $.get('/shows/' + number, function(data) {
