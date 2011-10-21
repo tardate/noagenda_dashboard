@@ -4,7 +4,7 @@
     %p
       The NoAgenda Dashboard works best on late model Chrome/Firefox/Safari/IE browsers
       It also works pretty darn good on the iPad. A special version for Android and iPhone devices
-      is still in the works.
+      is in the works.
     %p
       If you have any issues with this app, or any suggestions to make, you can post them on the
       %a{:href=>'https://github.com/tardate/noagenda_dashboard/issues', :target=>'_blank'}github project issues
@@ -22,13 +22,14 @@
     %p
       Here's a quick run down of some of the main data sets available.
       These examples show requests for json format data.
-      You can get data in XML - simply replace .json with .xml
+      You can get data in XML if you prefer - simply replace .json with .xml
     %ul
       %li http://noagendadashboard.com/shows.json - gets all the shows
       %li http://noagendadashboard.com/shows/333.json - gets show number 333 (for example)
       %li http://noagendadashboard.com/shows/333/memes.json - gets all the memes on show number 333
       %li http://noagendadashboard.com/shows/333/notes.json - gets all the notes for show number 333
       %li http://noagendadashboard.com/memes.json - gets all the memes
+      %li http://noagendadashboard.com/memes/1/notes.json - gets all the notes for meme #1
       %li http://noagendadashboard.com/notes.json - gets all the notes
     %p
       There's more we can do with the API (e.g. searching), but currently incomplete and/or nodoc;-)

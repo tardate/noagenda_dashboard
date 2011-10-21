@@ -1,3 +1,6 @@
+:ruby
+  smart_mobile_device = browser.ios? || browser.android?
+
 #footer
   .wrapper
     .panel
@@ -23,13 +26,17 @@
     .right.player.buzzkill
       = image_tag('buzzkill.png')
 
-= javascript_include_tag :defaults, :cache => true
+- if Rails.env.development?
+  = javascript_include_tag :jquery_local, :cache => false
+- else
+  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'
+= javascript_include_tag :defaults, :cache => false
 
 :javascript
   jQuery(document).ready(function() {
     NAVD.init({
       current_show: #{current_show_context.try(:number)},
-      mobile: #{ browser.ios? || browser.android? }
+      mobile: #{ smart_mobile_device }
     });
   });
 

@@ -30,12 +30,15 @@ module Navd
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.action_view.javascript_expansions[:jquery_local] = %w(jquery-1.6.4.min)
     # JavaScript files you want as :defaults (application.js is always included).
     config.action_view.javascript_expansions[:defaults] = %w(
-      jquery-1.6.4.min rails
-      raphael-min elycharts.min
-      jquery.qtip.min iscroll-lite
-    )
+      rails
+      raphael-min
+      elycharts.min
+      iscroll-lite
+      jquery.qtip.min
+    )  # NB: not caching these at the moment; these libraries are troublesome when packed together
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
