@@ -1,0 +1,33 @@
+== NoAgenda Attack Vector Dashboard
+
+This is the complete source for the
+link:http://noagendadashboard.com
+web application.
+
+Some technologies it demonstrates in combination:
+* Rails 3.0.10 (probably updating to 3.1 soon - just need to make sure I can host it without issues first)
+* InheritedResources and haml for super thin controllers and views
+* elycharts (with jQuery and Raphaël)
+* iPad friendly fixed-layout (using iScroll)
+* web scraping with NokoGiri
+
+
+== The NoAgenda Show?
+
+No Agenda is a podcast hosted by Adam Curry and John C. Dvorak twice a week
+on Thursday and Sunday in the morning. The show deconstructs the news and media memes.
+It accepts no advertisers, instead being directly supported and promoted by the listeners.
+
+
+== Contributing
+
+Yes please! If you have any ideas, or can help with design, development or translation, you are most welcome.
+
+If you are familiar with the github process, we're good to go:
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Do your stuff (adding tests where appropriate)
+* Commit and push until you are happy with your contribution
+* Send me a pull request on github.
