@@ -23,4 +23,4 @@
       .section.tabbed_info#show_notes{:style=>"display: none;"}
         = render :partial => 'notes/table', :locals => { :data => resource.notes.show_meme_note_order, :include_show => false }
       - if resource.credits?
-        .section.tabbed_info#show_credits{:style=>"display: none;"}
+        .section.tabbed_info#show_credits{:style=>"display: none;"}= raw resource.credits

@@ -20,7 +20,7 @@ module ::Navd::Scraper
     end
 
     # Loads all the show details for given show
-    # If an error is encountered, +@errors+ will be present
+    # If an error is encountered, +@errors+ will be present and method will return false
     def scan_show_assets
       @uri, @p_shownotes_main = spider.get_page_for_show(number)
       if spider.errors.present?
@@ -51,9 +51,9 @@ module ::Navd::Scraper
 
 
     # Returns an array of hashes with show note detail (:name,:meme_name,:description,:url)
-    # def extract_show_notes_from_page(page)
+    # This is probably the dodgiest bit of the parsing. If something goes wrong, exceptions are left unhandled
     def show_notes
-      return @show_notes if @show_notes
+      return @show_notes unless @show_notes.empty?
       # TODO: test for p_shownotes_detail_all
       notes = []
       current_meme = nil
@@ -80,9 +80,14 @@ module ::Navd::Scraper
       @show_notes = notes
     end
 
-    # TODO: parse/extract credits
+    # Returns a text representation of the show credits
     def credits
-      @credits ||= nil
+      @credits ||= if p_credits
+        nbsp = Nokogiri::HTML("&nbsp;").text
+        c = p_credits.css('.directoryComment').children.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ') : nil }
+        c.reject!{|i| i.blank?}
+        c.join('<br/>')
+      end
     end
     protected :credits
 

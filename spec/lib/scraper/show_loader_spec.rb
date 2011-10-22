@@ -32,6 +32,7 @@ describe "Navd::Scraper::ShowLoader" do
       before {
         show_loader.spider.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
         show_loader.stub(:show_notes).and_return([])
+        show_loader.stub(:credits).and_return(nil)
         show_loader.scan_show_assets
       }
       its(:found) { should be_true }
@@ -60,7 +61,19 @@ describe "Navd::Scraper::ShowLoader" do
           it { should eql(expected) }
         end
       end
+    end
 
+    context "parsing credits" do
+      before {
+        show_loader.stub(:p_credits).and_return(Nokogiri::HTML(credits_page_html))
+      }
+      describe "#credits [protected]" do
+        subject { show_loader.send(:credits) }
+        let(:expected) {
+          %(Lions Stood Still<br/>Executive Producers: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel, Jrdan Wyatt<br/>Associate Executive Producers:  Scott Hankel<br/>Executive Producers and 333  Club members: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel<br/>Knighthoods: Jordan Wyatt<br/>Art By: Thoren)
+        }
+        it { should eql(expected) }
+      end
     end
 
     context "unpublished show" do
