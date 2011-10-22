@@ -53,12 +53,22 @@ class Meme < ActiveRecord::Base
       case value
       when /arab.+prin/i
         'Arab Spring'
+      when /agen.+21/i
+        'Agenda21'
+      when /ant.+constit/i
+        'Anti Constitution'
       when /b.+versi/i
         'Biodiversitée'
+      when /cyb.+war/i
+        'CyberWar$'
       when /eq.+chine/i
         'EQ Machine$'
       when /fal[s\$]e.*flag/i
         'Fal$e Flag'
+      when /hollywood.+whack/i
+        'Hollywood Whacker$'
+      when /l.b.*a/i
+        'Libya'
       when /magic.*number/i
         'Magic Numbers'
       when /military.+industrial.+compl/i
@@ -73,7 +83,7 @@ class Meme < ActiveRecord::Base
         'Squirrel!!'
       when /techno.*expert/i
         'Techno Experts'
-      when /trains.+planes/i
+      when /trains.+pla.es/i
         'Trains Good, Planes Bad (Whoo Hoo!)'
       when /united.*tate.*euro/i
         'United $tates of EUROpe'
