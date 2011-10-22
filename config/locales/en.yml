@@ -33,6 +33,7 @@ en:
         notes: Show Notes
         notes_count: Show Notes
         full_title: Episode
+        short_title: Episode
     models:
       meme: Meme
       note: Show Note

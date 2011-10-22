@@ -45,8 +45,14 @@ describe Show do
     its(:count) { should eql(limit) }
   end
 
-  describe "#full_title" do
+  describe "#short_title" do
     let(:expected) { "33 - #{published_date}" }
+    subject { resource }
+    its(:short_title) { should eql(expected) }
+  end
+
+  describe "#full_title" do
+    let(:expected) { "33 - #{published_date} #{resource.name}" }
     subject { resource }
     its(:full_title) { should eql(expected) }
   end

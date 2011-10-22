@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20111014154156) do
 
   create_table "shows", :force => true do |t|
     t.integer  "number"
+    t.string   "name"
     t.date     "published_date"
     t.boolean  "published"
     t.string   "url",            :limit => 2000

@@ -34,8 +34,12 @@ class Show < ActiveRecord::Base
     yvalues: { :column => 'note_count'}
   }.freeze
 
-  def full_title
+  def short_title
     "#{number} - #{published_date.to_s}"
+  end
+
+  def full_title
+    "#{number} - #{published_date.to_s} #{name}"
   end
 
   def to_param
