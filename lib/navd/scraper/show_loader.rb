@@ -3,16 +3,15 @@ module ::Navd::Scraper
     attr_accessor :number, :spider, :uri, :found, :published, :errors
     attr_reader :attributes, :show_notes
 
-    attr_reader :p_shownotes_page # Nokogiri::HTML::Document of the main shownotes page being processed
+    attr_reader :p_shownotes_main # Nokogiri::HTML::Document of the main shownotes page being processed
 
     # +number+ - show number to load
     def initialize(number)
       @errors = []
       @number = number
-      @spider = Navd::Scraper::Spider.new
       @attributes = {}
       @show_notes = []
-      @p_shownotes_page = nil
+      @spider = Navd::Scraper::Spider.new
     end
 
     # Returns true if show details have been scraped without error
@@ -23,7 +22,7 @@ module ::Navd::Scraper
     # Loads all the show details for given show
     # If an error is encountered, +@errors+ will be present
     def scan_show_assets
-      @uri, @p_shownotes_page = spider.get_page_for_show(number)
+      @uri, @p_shownotes_main = spider.get_page_for_show(number)
       if spider.errors.present?
         @errors += spider.errors
         return false
@@ -43,32 +42,22 @@ module ::Navd::Scraper
         :published_date => published_date,
         :cover_art_url => cover_art_url,
         :assets_url => assets_url,
-        :url =>episode_url
+        :url => episode_url,
+        :credits => credits
       })
-      # TODO: credits
       show_notes
       errors.empty?
     end
 
+
     # Returns an array of hashes with show note detail (:name,:meme_name,:description,:url)
-    # +show_note_details_uri+ URI to show note details page (e.g. http://349.nashownotes.com/shownotes)
+    # def extract_show_notes_from_page(page)
     def show_notes
-      @show_notes ||= extract_notes_from_page(get_all_notes_page)
-    end
-
-    # TODO: need some refactoring and exception handling
-    def get_all_notes_page
-      assets_page = spider.get_page(show_note_details_uri)
-      notes_uri = show_note_assets_uri.merge(extract_show_notes_link(assets_page))
-      notes_page = spider.get_page(notes_uri)
-      all_notes_uri = show_note_assets_uri.merge(extract_nodes(notes_page,:all_notes)[:href])
-      spider.get_page(all_notes_uri)
-    end
-
-    def extract_notes_from_page(page)
+      return @show_notes if @show_notes
+      # TODO: test for p_shownotes_detail_all
       notes = []
       current_meme = nil
-      page.at_css('ul.ulDirectory').children.each do |n|
+      p_shownotes_detail_all.at_css('ul.ulDirectory').children.each do |n|
         if n.name=='li' && n[:class]=='directoryItem'
           current_meme = n.text
         elsif n.name=='ul' && n[:class]=='ulDirectory'
@@ -88,8 +77,14 @@ module ::Navd::Scraper
           end
         end
       end
-      notes
+      @show_notes = notes
     end
+
+    # TODO: parse/extract credits
+    def credits
+      @credits ||= nil
+    end
+    protected :credits
 
     # Returns the show date (as extracted from the audio file name)
     # Dodgy approach, but seems the most reliable way of automatically getting the show date
@@ -106,41 +101,72 @@ module ::Navd::Scraper
     # Returns the link to audio file from the main shownotes page
     # e.g. http://m.podshow.com/media/15412/episodes/299798/noagenda-299798-10-20-2011.mp3
     def mp3_url
-      @mp3_url ||= extract_nodes(p_shownotes_page,:mp3)[:href]
+      @mp3_url ||= extract_nodes(p_shownotes_main,:mp3)[:href]
     end
     protected :mp3_url
+
+    # Returns the link to official show page
+    # e.g. http://blog.curry.com/stories/2011/10/20/na34920111020.html
+    def episode_url
+      @episode_url ||= extract_nodes(p_shownotes_main,:web)[:href]
+    end
+    protected :episode_url
 
     # Returns the link to cover art
     # e.g. http://dropbox.curry.com/ShowNotesArchive/2011/10/NA-349-2011-10-20/Assets/ns349art.png
     def cover_art_url
-      @cover_art_url ||= extract_nodes(p_shownotes_page,:cover_art)[:href]
+      @cover_art_url ||= extract_nodes(p_shownotes_main,:cover_art)[:href]
     end
     protected :cover_art_url
 
     # Returns the link to show assets page
     # e.g. http://349.nashownotes.com/assets
     def assets_url
-      @assets_url ||= uri.merge(extract_nodes(p_shownotes_page,:assets)[:href]).to_s
+      @assets_url ||= uri.merge(extract_nodes(p_shownotes_main,:assets)[:href]).to_s
     end
     protected :assets_url
 
-    # Returns the URI for link to show notes detail page
+    # Returns the URI to show notes menu page
     # e.g. http://349.nashownotes.com/shownotes
-    def show_note_details_uri
-      @show_note_details_uri ||= uri.merge(extract_nodes(p_shownotes_page,:notes)[:href])
+    def shownotes_menu_uri
+      @shownotes_menu_uri ||= uri.merge(extract_nodes(p_shownotes_main,:notes)[:href])
     end
-    protected :show_note_details_uri
+    # Returns Nokogiri::HTML::Document of the main shownotes menu page being processed
+    def p_shownotes_menu
+      @p_shownotes_menu ||= spider.get_page(shownotes_menu_uri)
+    end
+    protected :shownotes_menu_uri, :p_shownotes_menu
 
+    # e.g. http://349.nashownotes.com/shownotes/na34920111020Shownotes
+    def shownotes_detail_main_uri
+      @shownotes_detail_main_uri ||= uri.merge(extract_nodes(p_shownotes_menu,:notes)[:href])
+    end
+    def p_shownotes_detail_main
+      @p_show_note_detail_main ||= spider.get_page(shownotes_detail_main_uri)
+    end
+    protected :shownotes_detail_main_uri, :p_shownotes_detail_main
+
+    # e.g. http://349.nashownotes.com/shownotes/na34920111020Shownotes/expandAllTopics
+    def shownotes_detail_all_uri
+      @shownotes_detail_all_uri ||= uri.merge(extract_nodes(p_shownotes_detail_main,:all_notes)[:href])
+    end
+    def p_shownotes_detail_all
+      @p_shownotes_detail_all ||= spider.get_page(shownotes_detail_all_uri)
+    end
+    protected :shownotes_detail_all_uri, :p_shownotes_detail_all
+
+    # Returns the URI to show credits page
     # http://349.nashownotes.com/shownotes/na34920111020Credits
+    def credits_uri
+      @credits_uri ||= uri.merge(extract_nodes(p_shownotes_menu,:credits)[:href])
+    end
+    def p_credits
+      @p_credits ||= spider.get_page(credits_uri)
+    end
+    protected :credits_uri, :p_credits
+
     # http://349.nashownotes.com/shownotes/na34920111020Shownotes
     
-    # Returns the link to official show page
-    # e.g. http://blog.curry.com/stories/2011/10/20/na34920111020.html
-    def episode_url
-      @episode_url ||= extract_nodes(p_shownotes_page,:web)[:href]
-    end
-    protected :episode_url
-
     # Set of algorithms to extracts parts of a page
     # +page+ is a Nokogiri::HTML::Document
     # +item+ - symbol for note type required
@@ -148,6 +174,8 @@ module ::Navd::Scraper
       result = case item
       when :all_notes
         page.css('a.directoryLink').select{|n| n.text[/expand all/i] }.first
+      when :credits
+        page.css('a.directoryLink').select{|n| n.text[/credits/i] }.first
       when :assets
         page.css('a.directoryLink').select{|n| n.text[/Assets/] }.first
       when :cover_art

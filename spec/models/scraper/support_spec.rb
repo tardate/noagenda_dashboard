@@ -21,7 +21,6 @@ describe "Navd::Scraper::Support" do
     describe "#normalize_uri" do
       it "should return a URI object" do
         subject.normalize_uri('http://example.net').should be_a(URI)
-        
       end
     end
   end

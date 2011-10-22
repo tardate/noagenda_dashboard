@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'support/scraper_mocks'
+include ScraperMocksHelper
 
 describe "Navd::Scraper::Spider" do
   let(:spider) { Navd::Scraper::Spider.new }
@@ -35,7 +37,13 @@ describe "Navd::Scraper::Spider" do
   describe "#get_page" do
     let(:uri) { spider.get_uri_for_show(333) }
     subject { spider.get_page(uri) }
-    it { should be_a(Nokogiri::HTML::Document) }
+    context "valid uri" do
+      before {
+        # Bypassing true integration tests that make real web calls for now ...
+        spider.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
+      }
+      it { should be_a(Nokogiri::HTML::Document) }
+    end
     context "bad uri" do
       let(:uri) { 'bad:://karma' }
       it { should be_nil }
