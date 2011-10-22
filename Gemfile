@@ -2,7 +2,8 @@ source 'http://rubygems.org'
 
 # Maybe should try this with 3.1 next
 gem 'rails', '3.0.10'
-
+# use thin instead of WEBrick
+gem 'thin'
 # haml: mmmm, less <%%>s
 gem 'haml'
 # inherited_resources: for controllers with less code
