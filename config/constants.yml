@@ -10,6 +10,7 @@ development: &default
 
 production:
   <<: *default
+  ga_id: UA-4894631-11
 
 test:
   <<: *default
