@@ -86,12 +86,18 @@ var NAVD = {
     });
   },
 
+  setLoadingStatus: function() {
+    $('#content').html('<div class="loading">Loading...</div>');
+  },
+
   load_page: function(url) {
+    NAVD.setLoadingStatus();
     $.get(url, function(data) {
       $('#content').html(data);
     });
   },
   load_show: function(number) {
+    NAVD.setLoadingStatus();
     $.get('/shows/' + number, function(data) {
       $('#content').html(data);
       NAVD.enableAjaxLoadedControls();
@@ -105,6 +111,7 @@ var NAVD = {
     });
   },
   load_meme: function(id) {
+    NAVD.setLoadingStatus();
     $.get('/memes/' + id, function(data) {
       $('#content').html(data);
       NAVD.renderCharts();

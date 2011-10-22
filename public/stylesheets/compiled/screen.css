@@ -255,31 +255,47 @@ a.control.technoexperts:hover {
   height: 300px;
 }
 
-/* line 72, ../../../app/stylesheets/_content.scss */
+/* line 71, ../../../app/stylesheets/_content.scss */
+#content .loading {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background: url("/images/loading.gif") no-repeat scroll 5px 5px #838696;
+  font-size: 18px;
+  height: 23px;
+  margin: 0 auto;
+  padding: 11px 5px 11px 43px;
+  width: 84px;
+}
+
+/* line 82, ../../../app/stylesheets/_content.scss */
 table.datatable td {
   vertical-align: top;
 }
-/* line 74, ../../../app/stylesheets/_content.scss */
+/* line 84, ../../../app/stylesheets/_content.scss */
 table.datatable td.bold {
   font-weight: bold;
 }
-/* line 78, ../../../app/stylesheets/_content.scss */
+/* line 88, ../../../app/stylesheets/_content.scss */
 table.datatable td.note a {
   font-weight: bold;
 }
-/* line 81, ../../../app/stylesheets/_content.scss */
+/* line 91, ../../../app/stylesheets/_content.scss */
 table.datatable td.note .description {
   font-family: Times New Roman, Serif;
   font-size: 12px;
 }
 
-/* line 89, ../../../app/stylesheets/_content.scss */
+/* line 99, ../../../app/stylesheets/_content.scss */
 .mediaplayer.flash embed {
   height: 27px;
   width: 320px;
 }
 
-/* line 95, ../../../app/stylesheets/_content.scss */
+/* line 105, ../../../app/stylesheets/_content.scss */
 .mediaplayer.html5 embed {
   height: 42px;
   width: 320px;

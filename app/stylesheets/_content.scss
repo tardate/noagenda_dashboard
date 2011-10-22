@@ -68,6 +68,16 @@
   }
 }
 
+#content .loading {
+  @include border-radius(10px);
+  background: url("/images/loading.gif") no-repeat scroll 5px 5px $c_bg;
+  font-size: 18px;
+  height: 23px;
+  margin: 0 auto;
+  padding: 11px 5px 11px 43px;
+  width: 84px;
+}
+
 table.datatable {
   td {
     vertical-align: top;
