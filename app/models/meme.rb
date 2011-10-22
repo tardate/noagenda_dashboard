@@ -13,7 +13,7 @@ class Meme < ActiveRecord::Base
     unscoped.
     select("memes.name AS meme_name, shows.number as number, count(notes.id) as note_count").
     joins(:shows).
-    where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel(AppConstants.number_of_trending_memes)))).
+    where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel))).
     group(:"memes.name", :"shows.number").
     order('memes.name, shows.number')
   }
@@ -30,11 +30,13 @@ class Meme < ActiveRecord::Base
   }.freeze
 
   class << self
-    # Returns the arel fragment to get the meme ids of the top 10 memes over time
-    # TODO: VIDEO gets included, maybe it shouldn't
-    def topn_arel(limit = 10)
+
+    # Returns the arel fragment to get the meme ids of the top +limit+ memes over time
+    # Trending is based on lastn_shows
+    def topn_arel(limit = AppConstants.number_of_trending_memes)
       n = Note.arel_table
       n.project(n[:meme_id]).
+      where(n[:show_id].in(Show.lastn_arel)).
       where(n[:meme_id].not_in(non_trending_arel)).
       group(n[:meme_id]).order('count(id) desc').take(limit)
     end
@@ -51,7 +53,7 @@ class Meme < ActiveRecord::Base
       case value
       when /arab.+prin/i
         'Arab Spring'
-      when /b.+divers/i
+      when /b.+versi/i
         'Biodiversitée'
       when /eq.+chine/i
         'EQ Machine$'

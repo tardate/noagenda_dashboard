@@ -36,6 +36,15 @@ describe Show do
     it { should_not include(show_c) }
   end
 
+  describe "##lastn_arel" do
+    let(:limit) { AppConstants.number_of_shows_for_trending }
+    before do
+      (limit * 2).times { Factory.create(:show) }
+    end
+    subject { Show.where(:id => Show.lastn_arel(limit)) }
+    its(:count) { should eql(limit) }
+  end
+
   describe "#full_title" do
     let(:expected) { "33 - #{published_date}" }
     subject { resource }

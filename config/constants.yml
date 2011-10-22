@@ -5,6 +5,8 @@ development: &default
   earliest_show_to_load: 333
   # number of memes to include in the top trending chart
   number_of_trending_memes: 5
+  # number of shows back to look to calculate trending stat
+  number_of_shows_for_trending: 6
 
 production:
   <<: *default

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Meme do
-  let(:resource) { Factory(:meme) }
+  let(:show) { Factory(:show) }
   let(:meme_limit) { AppConstants.number_of_trending_memes || 10 }
   let(:seed_limit) { meme_limit + 10 }
   let(:first_top_meme) { seed_limit - meme_limit + 1 }
@@ -13,7 +13,7 @@ describe Meme do
       before {
         (1..seed_limit).each do |i|
           m = Factory.create(:meme, :name => i.to_s )
-          i.times { Factory.create(:note, :meme => m) }
+          i.times { Factory.create(:note, :meme => m, :show => show) }
         end
       }
       its(:count) { should eql(meme_limit) }

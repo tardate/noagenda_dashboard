@@ -1,9 +1,0 @@
-
-switch to rspec
----
-rails generate rspec:install
-
-
-switch to pg
----
-psql postgres -c "create role navd with login superuser;"

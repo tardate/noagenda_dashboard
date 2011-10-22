@@ -20,6 +20,13 @@ class Show < ActiveRecord::Base
     def next_number_to_load
       (Show.maximum(:number) || AppConstants.earliest_show_to_load - 1) + 1
     end
+    # Returns the arel fragment to get the show ids for the last +limit+ shows
+    # Trending is based on lastn_shows
+    def lastn_arel(limit = AppConstants.number_of_shows_for_trending)
+      s = Show.arel_table
+      s.project(s[:id]).
+      order(s[:number].desc).take(limit)
+    end
   end
 
   STAT_CHART_TEMPLATE = {
