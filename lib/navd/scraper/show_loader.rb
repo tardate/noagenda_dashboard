@@ -43,7 +43,8 @@ module ::Navd::Scraper
         :cover_art_url => cover_art_url,
         :assets_url => assets_url,
         :url => episode_url,
-        :credits => credits
+        :credits => credits,
+        :name => credits_list.try(:first)
       })
       show_notes
       errors.empty?
@@ -82,14 +83,17 @@ module ::Navd::Scraper
 
     # Returns a text representation of the show credits
     def credits
-      @credits ||= if p_credits
+      @credits ||= credits_list.try(:join,'<br/>')
+    end
+    def credits_list
+       @credits_list ||= if p_credits
         nbsp = Nokogiri::HTML("&nbsp;").text
         c = p_credits.css('.directoryComment').children.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ') : nil }
         c.reject!{|i| i.blank?}
-        c.join('<br/>')
+        c
       end
     end
-    protected :credits
+    protected :credits, :credits_list
 
     # Returns the show date (as extracted from the audio file name)
     # Dodgy approach, but seems the most reliable way of automatically getting the show date

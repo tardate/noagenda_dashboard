@@ -27,12 +27,13 @@ describe "Navd::Scraper::ShowLoader" do
         :cover_art_url=>"http://dropbox.curry.com/ShowNotesArchive/2011/08/NA-333-2011-08-25/Assets/na333art.png",
         :assets_url=>"http://333.nashownotes.com/assets",
         :url=>"http://blog.curry.com/stories/2011/08/25/na33320110825.html",
-        :credits=>nil
+        :credits=>nil,
+        :name=>nil
       } }
       before {
         show_loader.spider.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
         show_loader.stub(:show_notes).and_return([])
-        show_loader.stub(:credits).and_return(nil)
+        show_loader.stub(:credits_list).and_return(nil)
         show_loader.scan_show_assets
       }
       its(:found) { should be_true }
