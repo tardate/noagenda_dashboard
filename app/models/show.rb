@@ -4,11 +4,14 @@ class Show < ActiveRecord::Base
 
   scope :select_listing, where(:published => true).order('number desc')
 
+  # TODO: there's a better query construct possible than this=>
   scope :meme_stats, lambda { |show_id=nil|
+    n = Note.arel_table
     query = show_id ? unscoped.where(Show.arel_table[:id].eq(show_id)) : unscoped
     query.
     select("memes.name AS meme_name, count(notes.id) as note_count").
     joins(:memes).
+    where(n[:meme_id].not_in(Meme.non_trending_arel)).
     group(:"memes.name").
     order('count(notes.id)')
   }

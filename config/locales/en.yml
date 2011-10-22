@@ -20,6 +20,7 @@ en:
         meme: Meme
       show:
         number: Number
+        name: Title
         published_date: Show Date
         published: Published
         url: Official Show Site
