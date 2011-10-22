@@ -320,7 +320,7 @@ ul.tabbed_info li {
 /* line 18, ../../../app/stylesheets/_tabbed_info.scss */
 ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   background-color: #2b3b13;
-  color: #b8aa83;
+  color: white;
 }
 
 /* line 23, ../../../app/stylesheets/_tabbed_info.scss */
