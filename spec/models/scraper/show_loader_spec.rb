@@ -46,7 +46,7 @@ describe "Navd::Scraper::ShowLoader" do
       }
       its(:found) { should be_true }
       its(:published) { should be_false }
-      its(:errors) { should be_empty }
+      its(:errors) { should_not be_empty }
     end
 
     context "bad url" do

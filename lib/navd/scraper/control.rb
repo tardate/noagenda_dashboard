@@ -7,16 +7,23 @@ module ::Navd::Scraper
     def initialize(custom_options={})
       self.options = DEFAULT_OPTIONS.merge(custom_options)
     end
+
+    # Simple logger
     def log(msg, level=:info)
-      puts msg
-      Rails.logger.send(level,msg)
+      m = "#{Time.now.utc}: #{msg}"
+      puts m
+      Rails.logger.send(level,m)
     end
+
+    # Loads all shows, starting from last loaded, until it reaches an unpublished show number
     def load_all_shows
       begin
         loaded = load_show(Show.next_number_to_load)
       end while loaded
     end
 
+    # +number+ - show number to load
+    # TODO: support reload operations
     def load_show(number)
       log "#{number}: loading show"
       show_loader = Navd::Scraper::ShowLoader.new(number)
