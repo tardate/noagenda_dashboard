@@ -51,6 +51,8 @@
       > .wrapper {
         padding: 5px 5px 0;
         background-color: #fff;
+        height: 129px;
+        width: 104px;
       }
     }
     &.memes {
@@ -76,6 +78,7 @@
         background: url("/images/bok-bg.png") repeat scroll 0 0 $c_bg_footer;
         padding: 5px;
         height: 125px;
+        width: 104px;
       }
     }
     &.technoexperts {

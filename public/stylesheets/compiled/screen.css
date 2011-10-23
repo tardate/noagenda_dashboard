@@ -411,8 +411,10 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
 #footer .block.cc > .wrapper {
   padding: 5px 5px 0;
   background-color: #fff;
+  height: 129px;
+  width: 104px;
 }
-/* line 56, ../../../app/stylesheets/_footer.scss */
+/* line 58, ../../../app/stylesheets/_footer.scss */
 #footer .block.memes {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -429,7 +431,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 64, ../../../app/stylesheets/_footer.scss */
+/* line 66, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -446,7 +448,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 73, ../../../app/stylesheets/_footer.scss */
+/* line 75, ../../../app/stylesheets/_footer.scss */
 #footer .block.book-of-knowledge > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -461,12 +463,13 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   background: url("/images/bok-bg.png") repeat scroll 0 0 #2b3b13;
   padding: 5px;
   height: 125px;
+  width: 104px;
 }
-/* line 81, ../../../app/stylesheets/_footer.scss */
+/* line 84, ../../../app/stylesheets/_footer.scss */
 #footer .block.technoexperts {
   margin: 14px 4px;
 }
-/* line 84, ../../../app/stylesheets/_footer.scss */
+/* line 87, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -477,11 +480,11 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 3px;
   width: 160px;
 }
-/* line 94, ../../../app/stylesheets/_footer.scss */
+/* line 97, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 98, ../../../app/stylesheets/_footer.scss */
+/* line 101, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -493,7 +496,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   margin-top: -30px;
   width: 90px;
 }
-/* line 105, ../../../app/stylesheets/_footer.scss */
+/* line 108, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -503,7 +506,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 109, ../../../app/stylesheets/_footer.scss */
+/* line 112, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -513,16 +516,16 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 113, ../../../app/stylesheets/_footer.scss */
+/* line 116, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 116, ../../../app/stylesheets/_footer.scss */
+/* line 119, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 119, ../../../app/stylesheets/_footer.scss */
+/* line 122, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }
