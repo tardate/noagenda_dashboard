@@ -18,6 +18,15 @@ No Agenda is a podcast hosted by Adam Curry and John C. Dvorak twice a week
 on Thursday and Sunday in the morning. The show deconstructs the news and media memes.
 It accepts no advertisers, instead being directly supported and promoted by the listeners.
 
+== Translation/Internationalisation
+
+Currently the site is all in English, but we can support other languages if someone can help with the translations.
+
+All the translatable text is in the file:
+link:config/locales/en.yml
+
+To provide a tranlsation for a given language, just grab a copy of this file, rename is <language-code>.yml,
+translate all the definitions and send it/push it back. Please keep it in UTF-8 character set though.
 
 == Contributing
 

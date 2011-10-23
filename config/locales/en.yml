@@ -13,7 +13,7 @@ en:
         name: Name
         notes_count: Hits
       note:
-        name: Note
+        name: Show Note
         description: Description
         url: Link
         show: Episode
