@@ -6,7 +6,7 @@
   %ul.rounded
     - if resource.url?
       %li
-        %a.touch_load{'data-url' => resource.url, 'data-transition' => 'slide-left'}
+        %a{:href => resource.url, :target => '_blank'}
           %img.icon.greenbox{ :src => "/images/mobile/tabs/aim.png" }
           = t(:link)
           %span.arrow
