@@ -56,7 +56,7 @@ class Meme < ActiveRecord::Base
         'Arab Spring'
       when /agen.+21/i
         'Agenda21'
-      when /ant.+constit/i
+      when /an.+constit/i
         'Anti Constitution'
       when /b.+versi/i
         'Biodiversitée'
@@ -90,6 +90,8 @@ class Meme < ActiveRecord::Base
         'United $tates of EUROpe'
       when /vagina/i
         'Vagina'
+      when /word.+matter/i
+        'Words Matter'
       else
         value
       end
