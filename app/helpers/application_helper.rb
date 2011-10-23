@@ -4,8 +4,11 @@ module ApplicationHelper
   def embed_media_player(source_url,autoplay=false)
     return unless source_url.present?
     if browser.ios?
+      # setting autoplay, although it doesn't actually work on iPad ""
+      # TODO: re-organise the playback so that can play via javascript
+      autoplay_param = autoplay ? 'autoplay' : ''
       return raw <<-EOSCRIPT
-<div class="mediaplayer html5"><embed src="#{source_url}" autoplay="#{autoplay}"></embed></div>
+<div id="showstream" class="mediaplayer html5"><audio src="#{source_url}" controls #{autoplay_param}></audio></div>
       EOSCRIPT
     else
       autoplay_param = autoplay ? '&autoPlay=true' : ''

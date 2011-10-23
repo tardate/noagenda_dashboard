@@ -19,3 +19,16 @@ a.control.technoexperts:hover
   text-decoration: none;
   padding: 3px 4px;
 }
+.mediaplayer.flash {
+  embed {
+    height:27px;
+    width:320px;
+  }
+}
+.mediaplayer.html5 {
+  audio {
+    height:27px;
+    width:320px;
+    padding-top:5px;
+  }
+}

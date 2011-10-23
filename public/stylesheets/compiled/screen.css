@@ -108,6 +108,19 @@ a.control.technoexperts:hover {
   padding: 3px 4px;
 }
 
+/* line 23, ../../../app/stylesheets/_controls.scss */
+.mediaplayer.flash embed {
+  height: 27px;
+  width: 320px;
+}
+
+/* line 29, ../../../app/stylesheets/_controls.scss */
+.mediaplayer.html5 audio {
+  height: 27px;
+  width: 320px;
+  padding-top: 5px;
+}
+
 /* line 1, ../../../app/stylesheets/_header.scss */
 #header {
   -moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.9);
@@ -289,18 +302,6 @@ table.datatable td.note .description {
   font-size: 12px;
 }
 
-/* line 99, ../../../app/stylesheets/_content.scss */
-.mediaplayer.flash embed {
-  height: 27px;
-  width: 320px;
-}
-
-/* line 105, ../../../app/stylesheets/_content.scss */
-.mediaplayer.html5 embed {
-  height: 42px;
-  width: 320px;
-}
-
 /* line 1, ../../../app/stylesheets/_tabbed_info.scss */
 ul.tabbed_info {
   clear: right;
@@ -396,25 +397,32 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
 #footer .media .title {
   background-color: #000;
   padding: 1px 3px;
+  height: 17px;
+  overflow: hidden;
+  width: 320px;
 }
-/* line 43, ../../../app/stylesheets/_footer.scss */
+/* line 46, ../../../app/stylesheets/_footer.scss */
 #footer .block {
   height: 150px;
   float: left;
 }
-/* line 46, ../../../app/stylesheets/_footer.scss */
+/* line 49, ../../../app/stylesheets/_footer.scss */
 #footer .block.right {
   float: right;
-  padding: 8px 10px 0 0;
+  padding: 8px 8px 0 0;
 }
-/* line 51, ../../../app/stylesheets/_footer.scss */
+/* line 54, ../../../app/stylesheets/_footer.scss */
 #footer .block.cc > .wrapper {
   padding: 5px 5px 0;
   background-color: #fff;
   height: 129px;
   width: 104px;
 }
-/* line 58, ../../../app/stylesheets/_footer.scss */
+/* line 60, ../../../app/stylesheets/_footer.scss */
+#footer .block.cc a, #footer .block.cc a:visited, #footer .block.cc a:hover {
+  text-decoration: none;
+}
+/* line 64, ../../../app/stylesheets/_footer.scss */
 #footer .block.memes {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -431,7 +439,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 66, ../../../app/stylesheets/_footer.scss */
+/* line 72, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -448,7 +456,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 75, ../../../app/stylesheets/_footer.scss */
+/* line 81, ../../../app/stylesheets/_footer.scss */
 #footer .block.book-of-knowledge > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -465,11 +473,11 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   height: 125px;
   width: 104px;
 }
-/* line 84, ../../../app/stylesheets/_footer.scss */
+/* line 90, ../../../app/stylesheets/_footer.scss */
 #footer .block.technoexperts {
   margin: 14px 4px;
 }
-/* line 87, ../../../app/stylesheets/_footer.scss */
+/* line 93, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -480,11 +488,11 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 3px;
   width: 160px;
 }
-/* line 97, ../../../app/stylesheets/_footer.scss */
+/* line 103, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 101, ../../../app/stylesheets/_footer.scss */
+/* line 107, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -496,7 +504,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   margin-top: -30px;
   width: 90px;
 }
-/* line 108, ../../../app/stylesheets/_footer.scss */
+/* line 114, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -506,7 +514,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 112, ../../../app/stylesheets/_footer.scss */
+/* line 118, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -516,16 +524,16 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 116, ../../../app/stylesheets/_footer.scss */
+/* line 122, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 119, ../../../app/stylesheets/_footer.scss */
+/* line 125, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 122, ../../../app/stylesheets/_footer.scss */
+/* line 128, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }

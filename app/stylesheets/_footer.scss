@@ -38,6 +38,9 @@
     .title {
       background-color:#000;
       padding: 1px 3px;
+      height: 17px;
+      overflow: hidden;
+      width: 320px;
     }
   }
   .block {
@@ -45,7 +48,7 @@
     float: left;
     &.right {
       float: right;
-      padding: 8px 10px 0 0;
+      padding: 8px 8px 0 0;
     }
     &.cc {
       > .wrapper {
@@ -53,6 +56,9 @@
         background-color: #fff;
         height: 129px;
         width: 104px;
+      }
+      a, a:visited, a:hover {
+        text-decoration: none;
       }
     }
     &.memes {
