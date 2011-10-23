@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DashboardController do
+describe DashboardsController do
   render_views
   
   describe "GET show" do
