@@ -55,6 +55,7 @@ en:
   play: Play Now
   site:
     title: NoAgenda Attack Vector Dashboard
+    show_title: NoAgenda Show
     short_title: Attack Vector Dashboard
     description: NoAgenda Attack Vector Dashboard
     keywords: 'NoAgenda Show, Adam Curry, John C. Dvorak'

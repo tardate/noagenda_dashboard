@@ -1,6 +1,8 @@
 Navd::Application.routes.draw do
-  resource :dashboard, :only => [:show]
-  root :to => "dashboard#show"
+  resource :dashboard, :only => [:show] do
+    get :menu, :on => :member
+  end
+  root :to => "dashboards#show"
   match 'technoexperts' => 'pages#technoexperts'
 
   resources :notes, :only => [:index,:show]

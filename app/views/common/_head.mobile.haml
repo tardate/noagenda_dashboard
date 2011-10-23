@@ -1,0 +1,16 @@
+%title= t('site.title')
+%meta{ :name => "description", :content => t('site.description') }
+%meta{ :name => "keywords", :content => t('site.keywords') }
+%meta{ :name => "viewport", :content => "initial-scale=1.0; maximum-scale=1.0; user-scalable=no; width=device-width;" }
+%meta{ :name => "apple-mobile-web-app-capable", :content => "yes" }
+%meta{ :name => "apple-mobile-web-app-status-bar-style", :content => "black" }
+%link{ :rel => "apple-touch-startup-image", :href => "/images/mobile/startup.png" }
+= favicon_link_tag 'na_logo114.png', :rel => 'apple-touch-icon', :type => 'image/png'
+%meta{ :charset => "UTF-8" }
+= csrf_meta_tag
+= stylesheet_link_tag "compiled/mobile.css", :media => "all"
+- if Rails.env.development?
+  = javascript_include_tag :jquery_local, :cache => false
+- else
+  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'
+= javascript_include_tag :mobile, :cache => false

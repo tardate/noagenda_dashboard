@@ -39,6 +39,11 @@ module Navd
       iscroll-lite
       jquery.qtip.min
     )  # NB: not caching these at the moment; these libraries are troublesome when packed together
+    config.action_view.javascript_expansions[:mobile] = %w(
+      jsTouch
+      iscroll
+      application
+    )
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

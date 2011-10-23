@@ -1,6 +1,3 @@
-:ruby
-  smart_mobile_device = browser.ios? || browser.android?
-
 #footer
   .wrapper
     .panel
@@ -36,7 +33,9 @@
   jQuery(document).ready(function() {
     NAVD.init({
       current_show: #{current_show_context.try(:number)},
-      mobile: #{ smart_mobile_device }
+      tablet: #{ tablet? },
+      smartphone: #{ smartphone? },
+      mobile: #{ mobile_device? }
     });
   });
 

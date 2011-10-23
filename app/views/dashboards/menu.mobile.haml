@@ -1,0 +1,15 @@
+.toolbar
+  %h1= t('site.show_title')
+.content
+  %h2= t('site.short_title')
+  %ul.rounded
+    %li
+      %a
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/flag.png" }
+        %span.arrow
+
+  %h2= t('book_of_knowledge')
+  = render :partial => 'common/submenu.html', :locals => { :links => bok_links}
+  %h2= t('donor.title')
+  = render :partial => 'common/submenu.html', :locals => { :links => dedouche_links}
+  .clearpanel

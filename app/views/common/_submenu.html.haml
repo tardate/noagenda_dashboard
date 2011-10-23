@@ -1,4 +1,11 @@
-%ul.submenu{:style => 'display:none'}
+:ruby
+  if smartphone?
+    list_style = {:class => 'rounded'}
+  else
+    list_style = {:style => 'display:none'}
+  end
+
+%ul.submenu{list_style}
   - links.each do |link|
     %li
       %a{:href => link[:url], :target=>'_blank'}= link[:name]

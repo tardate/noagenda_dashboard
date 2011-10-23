@@ -1,0 +1,12 @@
+:javascript
+  jQuery(document).ready(function() {
+    NAVD.init({
+      current_show: #{current_show_context.try(:number)},
+      tablet: #{ tablet? },
+      smartphone: #{ smartphone? },
+      mobile: #{ mobile_device? }
+    });
+  });
+
+= yield :javascript
+= insert_ga_script(AppConstants.ga_id)

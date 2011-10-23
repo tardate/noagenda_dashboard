@@ -1,13 +1,20 @@
 var NAVD = {
   config: {
     current_show: null,
+    tablet: false,
+    smartphone: false,
     mobile: false
   },
   mainScroller: null,
-
+  mobileMain: null,
+  
   init: function(settings) {
     $.extend(NAVD.config, settings);
-    NAVD.setup();
+    if ( NAVD.config.smartphone ) {
+      NAVD.smartphoneSetup();
+    } else {
+      NAVD.setup();
+    }
   },
 
   setup: function() {
@@ -19,10 +26,32 @@ var NAVD = {
     NAVD.renderCharts();
     setTimeout(NAVD.asyncSetup, 200);
   },
-
   asyncSetup: function() {
     NAVD.enableScroller();
     NAVD.load_media(NAVD.config.current_show, false);
+  },
+
+  smartphoneSetup: function() {
+    setTimeout(NAVD.asyncSmartphoneSetup, 200);
+  },
+  asyncSmartphoneSetup: function() {
+    $(document.body).append('<div id="mobileMain" class="jsTouchPanel" style="position: absolute; left: 0px; top: 0px; border-left: 0px !important;"></div>');
+    NAVD.mobileMain = jsTouch.init('mobileMain', { width: 320,  page: '/dashboard/menu' } );
+    NAVD.mobile_resize();
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('orientationchange', NAVD.mobile_resize, false);
+    window.addEventListener('resize', NAVD.mobile_resize, false);
+  },
+
+  mobile_resize: function() {
+    var width  = parseInt(window.innerWidth);
+  	var height = parseInt(window.innerHeight);
+    if (width > 1000 || height > 1000) {
+  		NAVD.mobileMain.width = 320;
+    } else {
+  		NAVD.mobileMain.width = width;
+    }
+  	jsTouch.resize();
   },
 
   enableScroller: function() {
