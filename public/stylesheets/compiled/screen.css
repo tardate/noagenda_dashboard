@@ -454,16 +454,25 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
 }
 /* line 54, ../../../app/stylesheets/_footer.scss */
 #footer .block.cc > .wrapper {
-  padding: 5px 5px 0;
+  padding: 5px;
   background-color: #fff;
-  height: 129px;
-  width: 104px;
+  height: 120px;
+  width: 100px;
 }
 /* line 60, ../../../app/stylesheets/_footer.scss */
 #footer .block.cc a, #footer .block.cc a:visited, #footer .block.cc a:hover {
   text-decoration: none;
+  border: medium none;
+  margin: 0;
+  padding: 0;
 }
-/* line 64, ../../../app/stylesheets/_footer.scss */
+/* line 66, ../../../app/stylesheets/_footer.scss */
+#footer .block.cc img {
+  height: 120px;
+  width: 100px;
+  border: medium none;
+}
+/* line 72, ../../../app/stylesheets/_footer.scss */
 #footer .block.memes {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -480,7 +489,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 72, ../../../app/stylesheets/_footer.scss */
+/* line 80, ../../../app/stylesheets/_footer.scss */
 #footer .block.levels {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -497,7 +506,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 10px;
   background: url("/images/memes-bg.png") repeat scroll 0 0 transparent;
 }
-/* line 81, ../../../app/stylesheets/_footer.scss */
+/* line 89, ../../../app/stylesheets/_footer.scss */
 #footer .block.book-of-knowledge > .wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -514,11 +523,11 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   height: 125px;
   width: 104px;
 }
-/* line 90, ../../../app/stylesheets/_footer.scss */
+/* line 98, ../../../app/stylesheets/_footer.scss */
 #footer .block.technoexperts {
   margin: 14px 4px;
 }
-/* line 93, ../../../app/stylesheets/_footer.scss */
+/* line 101, ../../../app/stylesheets/_footer.scss */
 #footer .block select {
   background-color: #2b3b13;
   border: 1px solid #b8aa83;
@@ -529,11 +538,11 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   padding: 3px;
   width: 160px;
 }
-/* line 103, ../../../app/stylesheets/_footer.scss */
+/* line 111, ../../../app/stylesheets/_footer.scss */
 #footer .block option {
   padding: 5px;
 }
-/* line 107, ../../../app/stylesheets/_footer.scss */
+/* line 115, ../../../app/stylesheets/_footer.scss */
 #footer .player {
   -moz-box-shadow: 0px 0px 8px black;
   -webkit-box-shadow: 0px 0px 8px black;
@@ -545,7 +554,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   margin-top: -30px;
   width: 90px;
 }
-/* line 114, ../../../app/stylesheets/_footer.scss */
+/* line 122, ../../../app/stylesheets/_footer.scss */
 #footer .player.left {
   float: left;
   -moz-border-radius-topright: 8px;
@@ -555,7 +564,7 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
 }
-/* line 118, ../../../app/stylesheets/_footer.scss */
+/* line 126, ../../../app/stylesheets/_footer.scss */
 #footer .player.right {
   float: right;
   -moz-border-radius-topleft: 8px;
@@ -565,16 +574,16 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
   -khtml-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 122, ../../../app/stylesheets/_footer.scss */
+/* line 130, ../../../app/stylesheets/_footer.scss */
 #footer .player .health {
   width: 100px;
   height: 20px;
 }
-/* line 125, ../../../app/stylesheets/_footer.scss */
+/* line 133, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .label {
   float: left;
 }
-/* line 128, ../../../app/stylesheets/_footer.scss */
+/* line 136, ../../../app/stylesheets/_footer.scss */
 #footer .player .health .level {
   float: left;
 }
