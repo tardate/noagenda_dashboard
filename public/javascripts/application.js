@@ -208,7 +208,7 @@ var NAVD = {
         rounded: 0.6,
         fill: false,
         plotProps: {
-          "stroke-width": 2
+          "stroke-width": 4
         },
         dot: true,
         dotProps: {
@@ -264,7 +264,7 @@ var NAVD = {
         rounded: 0.6,
         fill: false,
         plotProps: {
-          "stroke-width": 2
+          "stroke-width": 3
         },
         dot: true,
         dotProps: {

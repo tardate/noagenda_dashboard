@@ -322,18 +322,22 @@ a.control.technoexperts:hover {
 }
 
 /* line 82, ../../../app/stylesheets/_content.scss */
+table.datatable th {
+  text-align: left;
+}
+/* line 85, ../../../app/stylesheets/_content.scss */
 table.datatable td {
   vertical-align: top;
 }
-/* line 84, ../../../app/stylesheets/_content.scss */
+/* line 87, ../../../app/stylesheets/_content.scss */
 table.datatable td.bold {
   font-weight: bold;
 }
-/* line 88, ../../../app/stylesheets/_content.scss */
+/* line 91, ../../../app/stylesheets/_content.scss */
 table.datatable td.note a {
   font-weight: bold;
 }
-/* line 91, ../../../app/stylesheets/_content.scss */
+/* line 94, ../../../app/stylesheets/_content.scss */
 table.datatable td.note .description {
   font-family: Times New Roman, Serif;
   font-size: 12px;

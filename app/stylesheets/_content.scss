@@ -79,6 +79,9 @@
 }
 
 table.datatable {
+  th {
+    text-align: left;
+  }
   td {
     vertical-align: top;
     &.bold {
