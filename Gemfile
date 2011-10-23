@@ -14,7 +14,8 @@ gem 'pg'
 gem 'factory_girl_rails'
 # nokogiri: for web scraping
 gem 'nokogiri'
-
+# meta_search: Easy search and sorting.
+gem 'meta_search'
 # compass/sass: DRY css
 gem 'compass'
 # browser detection
