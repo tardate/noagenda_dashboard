@@ -16,7 +16,7 @@
   padding: 20px;
   @include border-radius(10px);
   > .wrapper {
-    @include border-radius(10px);
+    @include border-radius(6px);
     background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
     padding: 20px;
   }

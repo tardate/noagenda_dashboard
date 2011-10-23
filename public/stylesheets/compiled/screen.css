@@ -203,12 +203,12 @@ a.control.technoexperts:hover {
 }
 /* line 18, ../../../app/stylesheets/_content.scss */
 #content .panel > .wrapper {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -khtml-border-radius: 10px;
-  border-radius: 10px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
   background: url("/images/paper.jpg") repeat scroll 0 0 transparent;
   padding: 20px;
 }
