@@ -153,10 +153,47 @@ a.control.technoexperts:hover {
   height: 90px;
 }
 /* line 28, ../../../app/stylesheets/_header.scss */
+#header .search {
+  left: 260px;
+  position: fixed;
+  top: 69px;
+}
+/* line 29, ../../../app/stylesheets/_header.scss */
+#header .search input {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #DDFFDD;
+  border: 2px outset #F0F0F0;
+  width: 280px;
+  height: 17px;
+  padding: 1px 20px 1px 5px;
+  font-size: 12px;
+}
+/* line 39, ../../../app/stylesheets/_header.scss */
+#header .search .icon {
+  background: url("/images/search.png") no-repeat -32px 0px transparent;
+  height: 16px;
+  width: 16px;
+  display: inline;
+  position: fixed;
+  margin-left: -20px;
+  margin-top: 3px;
+}
+/* line 47, ../../../app/stylesheets/_header.scss */
+#header .search .icon:hover {
+  background-position: 0 0;
+  cursor: pointer;
+  cursor: hand;
+}
+/* line 56, ../../../app/stylesheets/_header.scss */
 #header .dedouche {
   float: right;
 }
-/* line 30, ../../../app/stylesheets/_header.scss */
+/* line 58, ../../../app/stylesheets/_header.scss */
 #header .dedouche a.donor {
   -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);

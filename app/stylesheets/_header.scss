@@ -25,6 +25,34 @@
   }
   .title {
   }
+  .search {
+    input {
+      @include border-radius(6px);
+      //@include single-box-shadow($c_bg_footer_rgba, 4px, 4px, 5px);
+      background-color: #DDFFDD;
+      border: 2px outset #F0F0F0;
+      width: 280px;
+      height: 17px;
+      padding:1px 20px 1px 5px;
+      font-size: 12px;
+    }
+    .icon {
+      background: url("/images/search.png") no-repeat -32px 0px transparent;
+      height:16px;
+      width:16px;
+      display: inline;
+      position: fixed;
+      margin-left:-20px;
+      margin-top:3px;
+      &:hover {
+        background-position:0 0;
+        cursor: pointer; cursor: hand;
+      };
+    }
+    left: 260px;
+    position: fixed;
+    top: 69px;
+  }
   .dedouche {
     float: right;
     a.donor {
