@@ -1,0 +1,21 @@
+.toolbar
+  %h1= resource.short_title
+  %a.button.back.touch_load{'data-url' => menu_dashboard_path, 'data-transition' => 'pop-out' }= t(:done)
+.content
+  %h2= resource.name
+  - if resource.cover_art_url?
+    .cover_art= image_tag(resource.cover_art_url)
+  %ul.rounded
+    %li
+      %a.touch_load{'data-url' => polymorphic_path([resource,:memes]), 'data-transition' => 'slide-left'}
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/aim.png" }
+        = t('memes.index.title')
+        %span.arrow
+    %li
+      %a.touch_load{'data-url' => polymorphic_path([resource,:notes]), 'data-transition' => 'slide-left'}
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/note.png" }
+        = t('notes.index.title')
+        %span.arrow
+  - if resource.credits?
+    %h2= resource_class.human_attribute_name(:credits)
+    %div= raw resource.credits

@@ -2,7 +2,8 @@ class Show < ActiveRecord::Base
   has_many :notes, :dependent => :destroy
   has_many :memes, :through => :notes, :uniq => true, :order => :name
 
-  scope :select_listing, where(:published => true).order('number desc')
+  default_scope order('shows.number desc')
+  scope :select_listing, where(:published => true)
 
   # TODO: there's a better query construct possible than this=>
   scope :meme_stats, lambda { |show_id=nil|
@@ -13,7 +14,7 @@ class Show < ActiveRecord::Base
     joins(:memes).
     where(n[:meme_id].not_in(Meme.non_trending_arel)).
     group(:"memes.name").
-    order('count(notes.id)')
+    reorder('count(notes.id)')
   }
 
   class << self
@@ -52,4 +53,5 @@ class Show < ActiveRecord::Base
   def meme_stat
     self.class.meme_stats(self.id)
   end
+
 end

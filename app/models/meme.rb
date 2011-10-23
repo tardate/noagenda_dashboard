@@ -3,9 +3,10 @@ class Meme < ActiveRecord::Base
   has_many :notes, :dependent => :destroy
   has_many :shows, :through => :notes, :uniq => true, :order => 'number desc'
 
+  default_scope order('memes.name')
   scope :select_listing, order(:name)
 
-  scope :topn, lambda { |limit=10|
+  scope :topn, lambda { |limit = AppConstants.number_of_trending_memes|
     unscoped.where(Meme.arel_table[:id].in(topn_arel(limit)))
   }
 
@@ -15,7 +16,7 @@ class Meme < ActiveRecord::Base
     joins(:shows).
     where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel))).
     group(:"memes.name", :"shows.number").
-    order('memes.name, shows.number')
+    reorder('memes.name, shows.number')
   }
 
   # Gets the stats over time for the current meme

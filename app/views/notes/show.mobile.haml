@@ -1,0 +1,23 @@
+.toolbar
+  %h1= t('.title')
+  %a.button.back.touch_load{'data-url' => menu_dashboard_path, 'data-transition' => 'pop-out' }= t(:done)
+.content
+  .name= resource.name
+  %ul.rounded
+    - if resource.url?
+      %li
+        %a.touch_load{'data-url' => resource.url, 'data-transition' => 'slide-left'}
+          %img.icon.greenbox{ :src => "/images/mobile/tabs/aim.png" }
+          = t(:link)
+          %span.arrow
+    %li
+      %a.touch_load{'data-url' => polymorphic_path([resource.meme,:notes]), 'data-transition' => 'slide-left'}
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/aim.png" }
+        = resource.meme.name
+        %span.arrow
+    %li
+      %a.touch_load{'data-url' => polymorphic_path([resource.show]), 'data-transition' => 'slide-left'}
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/note.png" }
+        = resource.show.short_title
+        %span.arrow
+  .description= resource.description

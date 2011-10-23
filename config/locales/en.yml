@@ -41,8 +41,10 @@ en:
       show: Episode
   back: Back
   book_of_knowledge: Book of Knowledge
+  done: Done
   donor:
     title: Be a Donor not a Boner!
+  link: On the web..
   memes:
     index:
       title: Memes
@@ -51,6 +53,8 @@ en:
   notes:
     index:
       title: Show Notes
+    show:
+      title: Show Note
   pages:
     technoexperts:
       title: TECHNO EXPERTS
@@ -67,3 +71,4 @@ en:
   stats:
     top_memes:
       title: 'Top %{n} Trending Memes'
+      short_title: 'Top %{n} Memes'

@@ -4,17 +4,17 @@
   %h2= t('site.short_title')
   %ul.rounded
     %li
-      %a
+      %a.touch_load{'data-url' => top_memes_path, 'data-transition' => 'pop-in'}
         %img.icon.greenbox{ :src => "/images/mobile/tabs/flag.png" }
         = t('stats.top_memes.title', :n => AppConstants.number_of_trending_memes)
         %span.arrow
     %li
-      %a
+      %a.touch_load{'data-url' => memes_path, 'data-transition' => 'slide-left'}
         %img.icon.greenbox{ :src => "/images/mobile/tabs/aim.png" }
         = t('memes.index.title')
         %span.arrow
     %li
-      %a
+      %a.touch_load{'data-url' => shows_path, 'data-transition' => 'slide-left'}
         %img.icon.greenbox{ :src => "/images/mobile/tabs/note.png" }
         = t('shows.index.title')
         %span.arrow

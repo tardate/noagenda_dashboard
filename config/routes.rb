@@ -8,7 +8,10 @@ Navd::Application.routes.draw do
   resources :notes, :only => [:index,:show]
   resources :memes, :only => [:index,:show] do
     resources :notes, :only => [:index,:show]
-    get :stats, :on => :collection
+    collection do
+      get :stats
+      get :top
+    end
     get :stat, :on => :member
   end
   resources :shows, :only => [:index,:show] do

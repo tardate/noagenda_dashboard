@@ -923,3 +923,17 @@ div.jsTouch div.content input {
   clear: both;
   height: 15px;
 }
+
+/* line 8, ../../../app/stylesheets/mobile/_base.scss */
+.content .name {
+  font-weight: bold;
+}
+/* line 11, ../../../app/stylesheets/mobile/_base.scss */
+.content .cover_art {
+  width: 100px;
+  margin: 10px auto 0;
+}
+/* line 14, ../../../app/stylesheets/mobile/_base.scss */
+.content .cover_art img {
+  height: 100px;
+}

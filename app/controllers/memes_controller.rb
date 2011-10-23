@@ -1,6 +1,6 @@
 class MemesController < InheritedResources::Base
   belongs_to :show, :finder => :find_by_number!, :optional => true
-  custom_actions :collection => [:stats], :member => [:stat]
+  custom_actions :collection => [:stats,:top], :member => [:stat]
   respond_to :html, :json, :xml
 
   include Navd::Chartable
@@ -13,4 +13,8 @@ class MemesController < InheritedResources::Base
     render :json => to_chartable_structure(resource.stat_over_time,Meme::STAT_CHART_TEMPLATE).to_json
   end
 
+  def top
+    @memes = Meme.topn
+    top!
+  end
 end

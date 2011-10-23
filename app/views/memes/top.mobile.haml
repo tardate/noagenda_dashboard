@@ -1,5 +1,5 @@
 .toolbar
-  %h1= t('.title')
+  %h1= t('stats.top_memes.short_title', :n => AppConstants.number_of_trending_memes)
   %a.button.back.touch_load{'data-url' => menu_dashboard_path, 'data-transition' => 'pop-out' }= t(:done)
 .content
   = render :partial => 'memes/table'

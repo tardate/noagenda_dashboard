@@ -4,3 +4,15 @@ body {
   clear: both;
   height: 15px;
 }
+.content {
+  .name {
+    font-weight: bold;
+  }
+  .cover_art {
+    width: 100px;
+    margin: 10px auto 0;
+    img {
+      height: 100px;
+    }
+  }
+}

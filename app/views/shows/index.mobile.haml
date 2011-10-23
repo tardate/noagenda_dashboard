@@ -1,12 +1,5 @@
 .toolbar
-  %h1
-    Shows
+  %h1= t('.title')
+  %a.button.back.touch_load{'data-url' => menu_dashboard_path, 'data-transition' => 'pop-out' }= t(:done)
 .content
-  %h2
-    Main Menu
-  %ul.rounded
-    %li
-      %a
-        %img.icon.greenbox{ :src => "/images/mobile/tabs/flag.png" }
-        %span.arrow
-  .clearpanel
+  = render :partial => 'shows/table'

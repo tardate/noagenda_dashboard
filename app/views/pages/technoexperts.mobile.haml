@@ -1,1 +1,5 @@
-= render :partial => 'pages/technoexperts.html'
+.toolbar
+  %h1= t('pages.technoexperts.title')
+  %a.button.touch_load{'data-url' => menu_dashboard_path, 'data-transition' => 'flip-right' }= t(:done)
+.content
+  = render :partial => 'pages/technoexperts.html'

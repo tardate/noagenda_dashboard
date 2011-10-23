@@ -1,0 +1,6 @@
+%ul.rounded
+  - collection.each do |item|
+    %li
+      %a.touch_load{'data-url' => polymorphic_path([item]), 'data-transition' => 'slide-left'}
+        = item.short_title
+        %span.count= item.notes.count

@@ -38,6 +38,7 @@ var NAVD = {
     $(document.body).append('<div id="mobileMain" class="jsTouchPanel" style="position: absolute; left: 0px; top: 0px; border-left: 0px !important;"></div>');
     NAVD.mobileMain = jsTouch.init('mobileMain', { width: 320,  page: '/dashboard/menu' } );
     NAVD.mobile_resize();
+    NAVD.enableSmartphonePageLoad();
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     document.addEventListener('orientationchange', NAVD.mobile_resize, false);
     window.addEventListener('resize', NAVD.mobile_resize, false);
@@ -52,6 +53,17 @@ var NAVD = {
   		NAVD.mobileMain.width = width;
     }
   	jsTouch.resize();
+  },
+
+  enableSmartphonePageLoad: function() {
+    $('.touch_load').live('click', function() {
+      var url = $(this).data('url') || $(this).attr('href');
+      var transition = $(this).data('transition') || 'slide-left';
+      if (url != "") {
+        jsTouch.loadPage(url, { transition: transition });
+      }
+      return false;
+    });
   },
 
   enableScroller: function() {
