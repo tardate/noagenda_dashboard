@@ -5,8 +5,8 @@
     .title.block
       = image_tag('navd.png', :alt => t('site.short_title'))
     .search
-      = form_for :search, :url => 'javascript:void(0);', :html => {:method => :get, :class => 'inline' } do |f|
-        = f.text_field :name_or_description_contains
+      = form_for :search, :url => 'javascript:void(0);', :html => {:method => :get, :id => 'search', :class => 'inline' } do |f|
+        = f.text_field :name_or_description_or_meme_name_contains
         .icon
     .dedouche.block.menu_tip
       %a.menu.donor= t('donor.title')

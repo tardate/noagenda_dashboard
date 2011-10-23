@@ -12,6 +12,7 @@ var NAVD = {
 
   setup: function() {
     NAVD.enableControls();
+    NAVD.enableSearch();
     NAVD.enableTabbedInfoMenus();
     NAVD.enableqTips();
     NAVD.setupCharts();
@@ -36,6 +37,20 @@ var NAVD = {
 		    NAVD.mainScroller.refresh();
 	    }, 0);
     }
+  },
+
+  enableSearch: function() {
+    $('#search').bind('submit', function() {
+      NAVD.doSearch();
+    });
+    $('.search .icon').bind('click', function() {
+      NAVD.doSearch();
+    });
+  },
+
+  doSearch: function() {
+    var search_params = $('form#search').serializeArray();
+    NAVD.load_page('/notes',search_params);
   },
 
   enableControls: function() {
@@ -90,10 +105,14 @@ var NAVD = {
     $('#content').html('<div class="loading">Loading...</div>');
   },
 
-  load_page: function(url) {
+  load_page: function(url,params) {
     NAVD.setLoadingStatus();
-    $.get(url, function(data) {
+    NAVD.refreshScroller();
+    var pdata = {}
+    if(params) pdata = params;
+    $.get(url, pdata, function(data) {
       $('#content').html(data);
+      NAVD.refreshScroller();
     });
   },
   load_show: function(number) {

@@ -4,15 +4,7 @@ class ShowsController < InheritedResources::Base
   respond_to :html, :json, :xml
 
   include Navd::Chartable
-
-  def show
-    if request.xhr?
-      render :partial => 'shows/show'
-    else
-      show!
-    end
-  end
-
+  
   def mediawidget
     render :partial => 'shows/mediawidget', :locals => { :autoplay => params[:autoplay] && params[:autoplay]=='true' }
   end

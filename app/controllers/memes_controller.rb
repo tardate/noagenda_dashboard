@@ -4,15 +4,7 @@ class MemesController < InheritedResources::Base
   respond_to :html, :json, :xml
 
   include Navd::Chartable
-
-  def show
-    if request.xhr?
-      render :partial => 'memes/show'
-    else
-      show!
-    end
-  end
-
+  
   def stats
     render :json => to_chartable_structure(Meme.stats_over_time,Meme::STAT_CHART_TEMPLATE).to_json
   end

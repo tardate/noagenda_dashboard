@@ -180,8 +180,8 @@ a.control.technoexperts:hover {
   width: 16px;
   display: inline;
   position: fixed;
-  margin-left: -20px;
-  margin-top: 3px;
+  top: 72px;
+  left: 548px;
 }
 /* line 47, ../../../app/stylesheets/_header.scss */
 #header .search .icon:hover {

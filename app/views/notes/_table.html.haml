@@ -24,7 +24,7 @@
 
   %tbody
     - unless ajax
-      - for item in data do
+      - data.each do |item|
         %tr
           - if include_show
             %td.bold= item.show.number
