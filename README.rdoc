@@ -5,11 +5,13 @@ link:http://noagendadashboard.com
 web application.
 
 Some technologies it demonstrates in combination:
-* Rails 3.0.10 (probably updating to 3.1 soon - just need to make sure I can host it without issues first)
-* InheritedResources and haml for super thin controllers and views
-* elycharts (with jQuery and Raphaël)
-* iPad friendly fixed-layout (using iScroll)
-* web scraping with NokoGiri
+* {Rails 3.0.10}[http://www.rubyonrails.org/] (probably updating to 3.1 soon - just need to make sure I can host it without issues first)
+* {InheritedResources}[https://github.com/josevalim/inherited_resources] and {haml}[http://haml-lang.com/] for super thin controllers and views
+* {elycharts}[http://elycharts.com/] (with {jQuery}[http://jquery.com/] and {Raphaël}[http://raphaeljs.com/])
+* iPad-friendly fixed-layout using {iScroll}[http://cubiq.org/iscroll-4]
+* web scraping with {Nokogiri}[http://nokogiri.org/]
+* Test-first with {RSpec}[http://relishapp.com/rspec]
+* iPhone/Android support using {Web 2.0 Touch}[https://github.com/web20boom/Web-2.0-Touch]
 
 
 == The NoAgenda Show?
