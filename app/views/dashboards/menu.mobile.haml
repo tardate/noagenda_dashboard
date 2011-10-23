@@ -6,6 +6,22 @@
     %li
       %a
         %img.icon.greenbox{ :src => "/images/mobile/tabs/flag.png" }
+        = t('stats.top_memes.title', :n => AppConstants.number_of_trending_memes)
+        %span.arrow
+    %li
+      %a
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/aim.png" }
+        = t('memes.index.title')
+        %span.arrow
+    %li
+      %a
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/note.png" }
+        = t('shows.index.title')
+        %span.arrow
+    %li
+      %a.touch_load{'data-url' => technoexperts_path}
+        %img.icon.greenbox{ :src => "/images/mobile/tabs/info.png" }
+        = t('pages.technoexperts.title')
         %span.arrow
 
   %h2= t('book_of_knowledge')

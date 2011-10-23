@@ -44,6 +44,8 @@ en:
   donor:
     title: Be a Donor not a Boner!
   memes:
+    index:
+      title: Memes
     show:
       title: '%{name}: Trend by Show (Hits in the Mouth)'
   notes:
@@ -53,6 +55,9 @@ en:
     technoexperts:
       title: TECHNO EXPERTS
   play: Play Now
+  shows:
+    index:
+      title: Shows
   site:
     title: NoAgenda Attack Vector Dashboard
     show_title: NoAgenda Show

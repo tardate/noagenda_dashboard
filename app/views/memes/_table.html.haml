@@ -14,7 +14,7 @@
 
   %tbody
     - unless ajax
-      - for item in collection do
+      - collection.each do |item|
         %tr
           %td= item.name
           %td= item.notes.count

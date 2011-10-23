@@ -1,0 +1,43 @@
+.panel
+  .wrapper
+    %h2 TECHNO EXPERTS!!
+    %p
+      The NoAgenda Dashboard works best on late model Chrome/Firefox/Safari/IE browsers
+      It also works pretty darn good on the iPad. A special version for Android and iPhone devices
+      is in the works.
+    %p
+      We're currently only loading show details since show number
+      = AppConstants.earliest_show_to_load
+      but will add earlier shows when possible (it requires some figuring out of different shownote archive structures).
+    %p
+      If you have any issues with this app, or any suggestions to make, you can post them on the
+      %a{:href=>'https://github.com/tardate/noagenda_dashboard/issues', :target=>'_blank'}github project issues
+      page.
+    %p
+      The app is fully open-source. If you'd like to help with any design, development, or
+      internationalization (translations), you are most welcome. Come see the project on
+      %a{:href=>'https://github.com/tardate/noagenda_dashboard', :target=>'_blank'}Github
+
+    %h2 The API
+    %p
+      Yes, the app has a simple REST API to get at the underlying data: show, meme and shownotes data.
+      You are welcome to slurp on the API if you are building something else and want a dead simple way
+      of getting all the show details in an organized fashion.
+    %p
+      Here's a quick run down of some of the main data sets available.
+      These examples show requests for json format data.
+      You can get data in XML if you prefer - simply replace .json with .xml
+    %ul
+      %li http://noagendadashboard.com/shows.json - gets all the shows
+      %li http://noagendadashboard.com/shows/333.json - gets show number 333 (for example)
+      %li http://noagendadashboard.com/shows/333/memes.json - gets all the memes on show number 333
+      %li http://noagendadashboard.com/shows/333/notes.json - gets all the notes for show number 333
+      %li http://noagendadashboard.com/memes.json - gets all the memes
+      %li http://noagendadashboard.com/memes/1/notes.json - gets all the notes for meme #1
+      %li http://noagendadashboard.com/notes.json - gets all the notes
+    %p
+      There's more we can do with the API (e.g. searching), but currently incomplete and/or nodoc;-)
+    %p
+      If you need something more from the API, or there are any problems, then drop by the
+      %a{:href=>'https://github.com/tardate/noagenda_dashboard/issues', :target=>'_blank'}github project issues
+      page and we can discuss.
