@@ -1,7 +1,7 @@
 module ::Navd::Scraper
   class ShowLoader
     attr_accessor :number, :spider, :uri, :found, :published, :errors
-    attr_reader :attributes, :show_notes
+    attr_reader :attributes, :show_notes, :format_version
 
     attr_reader :p_shownotes_main # Nokogiri::HTML::Document of the main shownotes page being processed
 
@@ -44,7 +44,7 @@ module ::Navd::Scraper
         :assets_url => assets_url,
         :url => episode_url,
         :credits => credits,
-        :name => credits_list.try(:first)
+        :name => show_name
       })
       show_notes
       errors.empty?
@@ -94,6 +94,11 @@ module ::Navd::Scraper
       end
     end
     protected :credits, :credits_list
+
+    # Returns the human name of the show
+    def show_name
+      credits_list.try(:first)
+    end
 
     # Returns the show date (as extracted from the audio file name)
     # Dodgy approach, but seems the most reliable way of automatically getting the show date
