@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :mobile_device?, :smartphone?, :tablet?
 
-  before_filter :set_request_format
+  before_filter { request.format = :mobile if smartphone? }
 
   protected
 
@@ -16,11 +16,6 @@ class ApplicationController < ActionController::Base
     end
     def tablet?
       browser.ipad?
-    end
-    def set_request_format
-      if smartphone?
-        request.format = :mobile
-      end
     end
 
 end
