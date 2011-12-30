@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Expand All Topics</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://static.curry.com/worldoutline/admin/rss.xml" />
+		
+		<link href="http://fonts.googleapis.com/css?family=IM Fell DW Pica SC" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<link href="http://static.scripting.com/github/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/docs.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/prettify.css" rel="stylesheet">
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.tablesorter.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-dropdown.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-twipsy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/application.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-popover.js"></script>
+
+<script>
+	$(function () {
+		$("a[rel=twipsy]").twipsy({
+			live: true
+			})
+		})
+	</script>
+<script>
+	$(function () {
+		$("a[rel=popover]")
+		.popover({
+			offset: 10
+			})
+		.click(function(e) {
+			e.preventDefault()
+			})
+		})
+	</script>
+<style>
+	body {
+		margin-top: -5px;
+		}
+	table th {
+		border: 0;
+		}
+	table {
+		border: 0px;
+		}
+	.actions {
+		border: 0;
+		background: none;
+		padding: 0;
+		}
+	</style>
+<style>
+	body {
+		color: black;
+		}
+	/* eliminate borders on tables */
+		table th {
+			border: 0;
+			}
+		table td {
+			border: 0;
+			}
+		table {
+			border: 0px;
+			}
+	.divOpmlWebpage {
+		margin-left: 12%;
+		margin-right: 12%;
+		margin-bottom: 65px;
+		color: black;
+		}
+	.divOpmlHeader {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		}
+	.divOpmlHeader h1 {
+		font-family: 'IM Fell DW Pica SC';
+		text-align: center;
+		text-shadow: 4px 4px 4px #AAA;
+		font-size: 68px;
+		padding: 0px;
+		margin: 0px;
+		}
+	.divOpmlHeader red {
+		color: red;
+		font-size: 110%;
+		}
+	.divOpmlHeader a:link {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:hover {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:visited {
+		text-decoration: none;
+		color:#000;
+		}
+	
+	.divOpmlMenubar a, .divOpmlMenubar a:link, .divOpmlMenubar a:visited {
+		color: lightgray;
+		}
+	.divOpmlMenubar white {
+		color: white;
+		}
+	.divOpmlMenubarStatus {
+		color: lightgray;
+		float: right;
+		line-height: 19px;
+		padding: 10px 0px 11px;
+		font-size: 13px;
+		}
+	
+	.divOpmlWebpageBody {
+		padding-top: 0px;
+		}
+	.divOpmlWebpageBody h3 {
+		font-family: Ubuntu;
+		font-size: 24px;
+		}
+	
+	.divIntroPgf {
+		font-size: 14px;
+		line-height: 120%;
+		color: black;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		}
+	.prefsTable th, .prefsTable td {
+		border: 0;
+		font-size: 140%;
+		line-height: 100%;
+		}
+	.prefsTable td.input: {
+		height: 100%;
+		padding: 0;
+		border: 0;
+		}
+	
+	/* sign-in form */
+		.divSigninForm .signinLabel {
+			text-align: right;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm td {
+			border: none;
+			}
+		.divSigninForm input {
+			height: 32px;
+			padding: 3px;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm table {
+			padding-top: 30px;
+			width: auto;
+			}
+	/* prefs */
+		.divPrefs {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs label {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs .row {
+			line-height: 24px;
+			margin-bottom: 12px;
+			}
+		.divPrefs red {
+			color: red;
+			}
+		.divPrefs li {
+			font-family: Ubuntu;
+			font-size: 17px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			}
+		.divPrefs h4 {
+			font-family: Ubuntu;
+			font-size: 22px;
+			padding-top: 15px;
+			padding-bottom: 5px;
+			}
+	/* log pages */
+		.logEvent {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			}
+		.logDescription {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			line-height: 120%;
+			}
+		.logDate {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.logSeconds {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.divLogPage table {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.divLogPage td {
+			border: none;
+			font-size: 16px;
+			}
+		.divLogPage th {
+			border: none;
+			font-size: 14px;
+			padding-bottom: 0px;
+			}
+	</style>
+
+		<style>
+			/* header */
+				.divGraphic {
+					margin: 0px auto;
+					}
+				.divGraphic img {
+					display: block;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:5px;
+					padding-bottom:20px;
+					}
+				.divGraphic h1 {
+					font-family: Lobster;
+					font-size: 64px;
+					line-height: 135%;
+					white-space: nowrap;
+					text-align:center;
+					padding-bottom: 10px;
+					padding-top: 0px;
+					}
+			/* directory */
+				.divDirectory {
+					width: 300px;
+					margin: 30px auto;
+					}
+				.ulDirectory {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					text-align: left;
+					list-style-type: none;
+					padding-left: 15px;
+					}
+				.directoryItem {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					}
+				.directoryComment {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					}
+				.directoryLink {
+					padding-left: 24px;
+					background: transparent url(http://static.opml.org/images/folder.gif) no-repeat top left;
+					}
+				.directoryIcon {
+					display: none;
+					padding-right: 10px;
+					}
+				.ulDirectory a:link {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectory a:hover {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectory a:visited {
+					text-decoration: underline;
+					color:#819fC7;
+					}
+				.directoryErrorMessage {
+					font-family: Arial;
+					font-size: 24;
+					padding-top: 24;
+					padding-bottom: 12;
+					}
+			/* directory additions */
+				.divDirectoryTitle {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					font-weight: bold;
+					}
+				.divLegend {
+					font-family: Arial;
+					font-size: 12px;
+					line-height: 14px;
+					color:#1E68A6;
+					}
+			/* bread crumbs */
+				.divBreadCrumbs {
+					font-family: Arial;
+					font-size: 15px;
+					line-height: 18px;
+					padding-bottom: 15px;
+					}
+				.divBreadCrumbs a:link {
+					text-decoration: underline;
+					color: #1E68A6;
+					}
+				.divBreadCrumbs a:hover {
+					text-decoration: underline;
+					color: #1E68A6;
+					}
+				.divBreadCrumbs a:visited {
+					text-decoration: underline;
+					color: #819fC7;
+					}
+				.aCurrentCrumb {
+					font-weight: bold;
+					color: black;
+					}
+			/* blogpost nodetype */
+				.divBlogPost h3 {
+					font-family: Georgia;
+					font-size: 22px;
+					line-height: 28px;
+					padding-left: 20px;
+					padding-top: 20px;
+					padding-bottom: 10px;
+					}
+				.divBlogPost p {
+					font-family: Georgia;
+					font-size: 16px;
+					line-height: 22px;
+					padding-left: 25px;
+					padding-right: 25px;
+					padding-bottom: 3px;
+					}
+			/* river nodetype */
+				.article .footer {
+					padding: 0px;
+					background-color: white;
+					border-top: 0px;
+					text-shadow: 0 0px;
+					min-width: 0px;
+					-moz-box-shadow: 0 0px 0px;
+					}
+				.article .description {
+					font-family: Arial,sans-serif;
+					font-size: 13px;
+					line-height: 17px;
+					}
+				.article h3 {
+					font-family: Arial,sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+					}
+			/* thumbList nodetype */
+				.divWorldOutlineThumbList td {
+					border: 3px red;
+					border-style: solid;
+					text-align: center;
+					padding-top: 12px;
+					padding-bottom: 8px;
+					}
+				.divWorldOutlineThumbList table {
+					border-collapse: collapse;
+					}
+				.divWorldOutlineThumbList .thumbListCaptionString {
+					font-size: 13px;
+					}
+			/* domains page */
+				.divDomains ul {
+					padding-top: 5px;
+					list-style: disc outside normal;
+					padding-left: 35px;
+					}
+				.divDomains li {
+					font-family: Ubuntu;
+					font-size: 18px;
+					line-height: 28px;
+					color: black;
+					}
+			.divLegend {
+				padding-top: 30px;
+				}
+			</style>
+		<style>html {
+  width: 980px;
+  margin: auto;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+p.blogPostPgf {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+h3.blogPostTitle {
+  font-family: georgia;
+  font-size: 28px;
+  }
+
+li.directoryComment {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+li.directoryItem {
+  font-family: arial;
+  font-size: 17px;
+  font-weight: plain;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+.divDirectory {
+  width: 680px;
+  margin: 3em auto;
+}
+
+.divFooter {
+  position: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  -mox-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  box-shadow: 0 0 8px rgba(0,0,0,.3)
+}
+</style>
+		</head>
+
+	<body>
+		
+		<div class="divOpmlWebpage">
+			<div class="divOpmlWebpageBody">
+				
+					<div class="divGraphic"><a href="/"><img src="http://blog.curry.com/images/2011/08/25/na333art.jpg" width="512" height="512" border="0" align="center" hspace="15" vspace="5" alt="A picture named na333art.jpg"></a></div>
+					<div class="divBreadCrumbs"><a class="aTopCrumb" href="/">NA-333-2011-08-25</a><span class="spnCrumbDivider"> > </span><a class="aPreviousCrumb" href="/shownotes">Shownotes</a><span class="spnCrumbDivider"> > </span><a class="aPreviousCrumb" href="/shownotes/na33320110825Shownotes">NA-333-2011-08-25&nbsp;Shownotes</a><span class="spnCrumbDivider"> > </span><span class="aCurrentCrumb">Expand All Topics</span></div>
+
+					<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/wagTheLibyanDog"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Wag The Libyan Dog</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/landDestroyerLibyaNatoPsyopCollapsesQaddafiPrevailsAgain"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Land Destroyer: Libya: NATO Psy-Op Collapses - Qaddafi Prevails Again</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://landdestroyer.blogspot.com/2011/08/libya-nato-psy-op-collapses-qaddafi.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=landdestroyer.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://landdestroyer.blogspot.com/2011/08/libya-nato-psy-op-collapses-qaddafi.html">You can't make this up - the International Criminal Court (ICC) now claims it never confirmed that Qaddafi's son Saif Al-Islam was captured. Here is the Telegraph article quoting ICC prosecutor Luis Moreno-Ocampo as having indeed confirmed his capture. Here is a farcical Reuters report now claiming such a confirmation was never claimed. ICC prosecutor Luis Moreno-Ocampo should resign, so should editors at both the Telegraph and Reuters and a myriad of other media agencies complicit in spreading this willful and malicious propaganda. </a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/bootsOnTheGroundLibyaSasLeadsHuntForGaddafiPaulsGitmoEastNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Boots on the Ground!!  -  Libya: SAS leads hunt for Gaddafi. (Paul's Gitmo East news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/d24w"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/d24w">British special forces are on the ground in Libya helping to spearhead the hunt for Col Muammar Gaddafi, The Daily Telegraph can disclose.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoAangirfanLibyaPsyop"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] aangirfan: LIBYA PSY-OP</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://aangirfan.blogspot.com/2011/08/libya-psy-op.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=aangirfan.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://aangirfan.blogspot.com/2011/08/libya-psy-op.html">"Libyan rebel leader Gibril Elqarfally stands before the Fortune 500-funded Brookings Institution openly declaring fealty to the globalist agenda of interdependency and subservience to a Wall Street-London international order." </a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/photoblogInTheRuinsOfGadhafisLairRebelsFindAlbumFilledWithPhotosOfHisDarlingCondoleezzaRice"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />PhotoBlog - In the ruins of Gadhafi's lair, rebels find album filled with photos of his 'darling' Condoleezza Rice</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://photoblog.msnbc.msn.com/_news/2011/08/25/7470058-in-the-ruins-of-gadhafis-lair-rebels-find-album-filled-with-photos-of-his-darling-condoleezza-rice"><img class="icon" src="http://www.google.com/s2/favicons?domain=photoblog.msnbc.msn.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://photoblog.msnbc.msn.com/_news/2011/08/25/7470058-in-the-ruins-of-gadhafis-lair-rebels-find-album-filled-with-photos-of-his-darling-condoleezza-rice">The ransacking of Moammar Gadhafi's compound is turning up some bizarre loot. Following on from the Libyan leader's eccentric-fashion accessories and his daughter's golden mermaid couch, the latest discovery is a photo album filled with page after page of pictures of Condoleezza Rice.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/libyaWar2011AishaGaddafiTauntsObamaAndHillaryClintonMailOnline"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Libya war 2011: Aisha Gaddafi taunts Obama and Hillary Clinton | Mail Online</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.dailymail.co.uk/news/article-1381198/Libya-war-2011-Aisha-Gaddafi-taunts-Obama-Hillary-Clinton.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.dailymail.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.dailymail.co.uk/news/article-1381198/Libya-war-2011-Aisha-Gaddafi-taunts-Obama-Hillary-Clinton.html">Ms Gaddafi also used the ongoing violence in Iraq as a warning to America.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >'The opposition in Iraq told the West that when you come to Iraq they will greet you with roses,' she said. 'Almost 10 years later they are receiving the Americans with bullets.'</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >'Believe me, the situation in Libya will be much worse,' she added.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/usWillTryToRelease15bnOfThe160blnFrozenLibyanAssetsBertbNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />US will "try" to release $1.5bn of the $160bln frozen Libyan assets (bertb news feed)</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/bnds"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/bnds">Libya has some $160-170bn in frozen assets. The US has said it will try to release up to $1.5bn, while British and French diplomats are working with their allies to draft a resolution that would free funds blocked by UN Security Council sanctions.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/euNatoAlliesToReleaseFrozenAssetsToLibyanRebelsWtNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />EU, NATO allies to release frozen assets to Libyan rebels. (WT news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/bnba"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/bnba">As rebels seize Muammar Gaddafi's compound and the regime enters its final days, the EU and NATO have taken the first steps to assist a transitional government in Libya and release frozen cash.</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/eniLeadsLibyaOilRaceRussiaChinaMayLoseOutWtNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />ENI leads Libya oil race; Russia, China may lose out. (WT news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/bnaz"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/bnaz">Italian oil company Eni led the charge back into Libya on Monday as rebels hailing the end of Muammar Gaddafi's rule warned Russian and Chinese firms that they may lose out on lucrative oil contracts for failing to support the rebellion.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/westVsChinaANewColdWarBeginsOnLibyanSoil21stCenturyWire"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />WEST vs CHINA: A NEW COLD WAR BEGINS ON LIBYAN SOIL - 21st Century Wire</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://21stcenturywire.com/2011/04/12/2577/"><img class="icon" src="http://www.google.com/s2/favicons?domain=21stcenturywire.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://21stcenturywire.com/2011/04/12/2577/">One only has to read the strategic briefings in U.S. AFRICOM documents to realise the true endgame in Libya: the control of valuable resources and the eviction of China from North Africa.</a></li>
+
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >When the US formed AFRICOM in 2007, some 49 countries signed on to the US military charter for Africa but one country refused: Libya. Such a treacherous act by Libya's leader Moummar Qaddafi would only sow the seeds for a future conflict down the road in 2011.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/twitterSenjohnmccainLateEveningWithColQad"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Twitter / @SenJohnMcCain: Late evening with Col. Qad ...</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="https://twitter.com/#!/senjohnmccain/status/3331878099"><img class="icon" src="http://www.google.com/s2/favicons?domain=twitter.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="https://twitter.com/#!/senjohnmccain/status/3331878099">Late evening with Col. Qadhafi at his "ranch" in Libya - interesting meeting with an interesting man.</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/hafedAlGhwellLibyaTv"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Hafed Al Ghwell | Libya TV</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://english.libya.tv/author/hafed-al-ghwell/"><img class="icon" src="http://www.google.com/s2/favicons?domain=english.libya.tv" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://english.libya.tv/author/hafed-al-ghwell/">Hafed Al Ghwell is Libyan-American analyst. He is a senior strategy officer and communication advisor at the World Bank Group in Washington DC and the former Director of External Affairs with the Dubai School of Government. </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/landDestroyerIntelligenceOutfitForeignSpecialForcesBehindTripoliShowdown"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Land Destroyer: Intelligence Outfit: Foreign Special Forces Behind Tripoli Showdown</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://landdestroyer.blogspot.com/2011/08/intelligence-outfit-foreign-special.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=landdestroyer.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://landdestroyer.blogspot.com/2011/08/intelligence-outfit-foreign-special.html">As we reported yesterday, the operation, nicknamed "Mermaid Dawn", is being directed by US and NATO forces. The rebels have received training and arms from special forces and are being directed by Western intelligence operatives on the ground in Libya.</a></li>
+
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >NATO is now planning a "humanitarian" occupation of Libya with thousands of British and American soldiers, risking the possibility that troops could be sent into yet another quagmire to rival Afghanistan and Iraq.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/libyaAug2320110433AlJazeeraBlogs"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Libya - Aug 23, 2011 - 04:33 | Al Jazeera Blogs</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://blogs.aljazeera.net/liveblog/libya-aug-23-2011-0433"><img class="icon" src="http://www.google.com/s2/favicons?domain=blogs.aljazeera.net" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://blogs.aljazeera.net/liveblog/libya-aug-23-2011-0433">NATO has been dropping leaflets in the area of Tripoli, The majority of the leaflets were intended to encourage pro- Gaddafi soldiers to lay down their weapons and to join the Libyan rebels and the wider Libyan people.</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/alJazeerasFakeGreenSquareStopWarCrimes"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Al Jazeera's fake Green Square - Stop War Crimes!</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://stopwarcrimes.wordpress.com/2011/08/22/al-jazeeras-fake-green-square/"><img class="icon" src="http://www.google.com/s2/favicons?domain=stopwarcrimes.wordpress.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://stopwarcrimes.wordpress.com/2011/08/22/al-jazeeras-fake-green-square/">What you're seeing here isn't the original Bab al-Hurriya ("Freedom Gate") and the 600 year old ancient walls around it. See for yourself how the walls in the Jazeera video miss quite a few important details from the original:</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/prisonPlanetcomDidNatoStageTheGreenSquareCelebration"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Prison Planet.com >> Did NATO Stage the Green Square "Celebration"?</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.prisonplanet.com/did-nato-stage-the-green-square-celebration.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.prisonplanet.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.prisonplanet.com/did-nato-stage-the-green-square-celebration.html">The fake scenery has purportedly been set up in Qatar for purposes of psychological manipulation. The Stop War Crimes website also reports that the footage showing victorious rebels in front of Gaddafi's Bab al-Azizia compound could similarly have been faked.</a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/the4thMediaWagTheDogInLibyaPropagandaLies"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />The 4th Media >> Wag the Dog in Libya: Propaganda Lies</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://en.m4.cn/archives/26263.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=en.m4.cn" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://en.m4.cn/archives/26263.html">And you want to talk about tough? How about warriors in sandals? Fucking sandals... and clean cuffed pants.</a></li>
+	</ul>
+	<li class="directoryComment" ><a href="http://powerwall.msnbc.msn.com/politics/moammar-gadhafis-gold-fist-and-other-dictators-arrogant-art-9690.gallery"><img class="icon" src="http://www.google.com/s2/favicons?domain=powerwall.msnbc.msn.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://powerwall.msnbc.msn.com/politics/moammar-gadhafis-gold-fist-and-other-dictators-arrogant-art-9690.gallery">Moammar Gadhafi's Gold Fist and Other Dictators' Arrogant Art | Gallery | POWERWALL</a></li>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/landDestroyerCallsForNatoOccupationOfLibyaDeafening"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Land Destroyer: Calls for NATO Occupation of Libya Deafening</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://landdestroyer.blogspot.com/2011/08/calls-for-nato-occupation-of-libya.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=landdestroyer.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://landdestroyer.blogspot.com/2011/08/calls-for-nato-occupation-of-libya.html">Now joining the growing chorus of globalists calling for a full NATO occupation of Libya is Neo-Con degenerate, fellow Council on Foreign Relations conspirator Max Boot who recently wrote an editorial for the LA Times titled, "Libya's problems are far from over," where he emphatically states "peacekeeping troops" are an absolute necessity to head off what the media is already trying to brand an "insurgency" referring to the Libyan government's defense of Tripoli. </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/noNatoTroopsOnTheGroundInPostgaddafiLibyaSpokeswoman"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />No NATO troops on the ground in post-Gaddafi Libya: spokeswoman</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://news.xinhuanet.com/english2010/world/2011-08/23/c_131069630.htm"><img class="icon" src="http://www.google.com/s2/favicons?domain=news.xinhuanet.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://news.xinhuanet.com/english2010/world/2011-08/23/c_131069630.htm"> NATO would not put boots on the ground and would only play a "supportive" role upon request in the post-Gaddafi Libya, the military alliance's spokeswoman Oana Lungescu said on Tuesday.</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/aangirfanLibyasFuture"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />aangirfan: LIBYA'S FUTURE?</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://aangirfan.blogspot.com/2011/08/libyas-future.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=aangirfan.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://aangirfan.blogspot.com/2011/08/libyas-future.html"></a></li>
+	<li class="directoryComment" >According to unreliable sources:</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Inter tribal fighting in Libya is expected to lead to the US-led coalition sending in troops and setting up a temporary government.</li>
+	<li class="directoryComment" ></li>
+
+	<li class="directoryComment" >Libya's Coalition Provisional Authority may be headed by L. Paul Bremer.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >It is possible that the U.S. Central Command will be the main military apparatus supporting the CPA.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >It is probable that the CPA will allow unlimited and unrestricted foreign investment.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Foreign contractors may be granted immunity from any kind of suit, civil or criminal.</li>
+
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Libya's state-owned central banking system is expected to be sold to privately held banking interests.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Supporters of Gaddafi are expected to be placed in concentration camps.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >At some future point the CPA is expected to hand over power to an elected prime minister, possibly Mr Hamza bin Laden. </li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/plannedLibyaInvasion"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Planned Libya Invasion</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://inteldaily.com/2011/04/planned-libya-invasion/"><img class="icon" src="http://www.google.com/s2/favicons?domain=inteldaily.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://inteldaily.com/2011/04/planned-libya-invasion/">In his book, "Winning Modern Wars," General Wesley Clark said Pentagon sources told him two months after 9/11 that war plans were being prepared against Iraq, Syria, Lebanon, Iran, Somalia, Sudan and Libya. Months earlier, they were finalized against Afghanistan.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/landDestroyerGlobalistRichardHaasCallsForNatoOccupationOfLibya"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Land Destroyer: Globalist Richard Haas Calls for NATO Occupation of Libya</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://landdestroyer.blogspot.com/2011/08/globalist-richard-haas-calls-for-nato.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=landdestroyer.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://landdestroyer.blogspot.com/2011/08/globalist-richard-haas-calls-for-nato.html">The Financial Times has featured an editorial penned by Council on Foreign Relations president Richard Haas titled, "Libya Now Needs Boots on the Ground," where the arch globalist states that Libya's rebels are in no way capable of rebuilding Libya properly and will require an "international force" to maintain order. Haas breathtakingly admits that the NATO intervention to "protect civilians" was in fact a political intervention designed to bring about regime change. </a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/tomClancysDeadOrAliveDidItPredictTheOsamaRaidTheDailyBeast"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Tom Clancy's 'Dead or Alive': Did It Predict the Osama Raid? - The Daily Beast</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.thedailybeast.com/articles/2011/05/05/tom-clancys-dead-or-alive-did-it-predict-the-osama-raid.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.thedailybeast.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.thedailybeast.com/articles/2011/05/05/tom-clancys-dead-or-alive-did-it-predict-the-osama-raid.html">In December, the author of The Hunt for Red October and Patriot Games published his first novel in seven years, Dead or Alive, this one with the help of a coauthor, Grant Blackwood. In it, Clancy's version of bin Laden is finally caught--and when he is, he turns out not to be hiding in the lawless mountain regions along the Afghanistan-Pakistan border, as most of the fictional intelligence community believes. Instead, he's been biding his time in an upscale house ("must have set him back a million") that is a shortish drive from a major city, and just a few miles from a major military institution. He works only with couriers and bodyguards. A super-elite Navy SEAL is on the team that takes him down. Oh, and one of the book's rejected titles? In Plain Sight.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/andThePropagandaContinuesGadaffiHadANeverlandlikeCompoundDrJonesReports"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />And the propaganda continues:  Gadaffi had a Neverland-like compound?! (Dr. Jones reports)</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://my.butt.org/bnvx"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/bnvx">Gitmo Nation Lowlands is a good place to monitor NWO agitprop. (In Dutch, from Parool.nl)</a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/outThere"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Out There</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/theAssociatedPressRussianSupplyShipForSpaceStationCrashes"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />The Associated Press: Russian supply ship for space station crashes</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.google.com/hostednews/ap/article/ALeqM5g8Jji2cx1GJN2BTjW97sMZOErAUg?docId=797374626d2a4205a92bdb4258e75810"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.google.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.google.com/hostednews/ap/article/ALeqM5g8Jji2cx1GJN2BTjW97sMZOErAUg?docId=797374626d2a4205a92bdb4258e75810">The failed launch of a Russian supply ship may have ripple effects at the International Space Station.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >A spacecraft carrying nearly 3 tons of supplies failed to reach orbit Wednesday and crashed into Siberia.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >NASA's space station program manager, Mike Suffredini, says next month's planned launch of a new crew may be delayed. That's because the upper stage of the Soyuz rocket that failed is similar to the ones used to launch astronauts.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/officialsSonicBoomCausedByMilitaryJetsFlyingAroundMacarthurNorthShoreSun"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Officials: 'Sonic boom' caused by military jets flying around MacArthur | North Shore Sun</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://northshoresun.timesreview.com/2011/08/16558/officials-sonic-boom-caused-by-military-jets-flying-around-macarthur/"><img class="icon" src="http://www.google.com/s2/favicons?domain=northshoresun.timesreview.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://northshoresun.timesreview.com/2011/08/16558/officials-sonic-boom-caused-by-military-jets-flying-around-macarthur/">A loud noise described by some as a sonic boom was reported in the area -- from Ridge to Mattituck -- Thursday morning, setting off worries that a major explosion had occurred at Brookhaven National Lab.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >But lab officials said the ground-shaking sound was caused by military jets flying around MacArthur Airport.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >FAA spokesman Jim Peters later confirmed that an F-15 military fighter aircraft flying at an altitude of 14,000 and 17,000 feet experienced a pressurization problem and had to make a rapid descent about 8:45 a.m.</li>
+	<li class="directoryComment" ></li>
+
+	<li class="directoryComment" >"The noise that people heard was probably due to the rapid descent," he said, adding he couldn't confirm the specific location of where the air craft was when it made its decent.</li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/biodiversite"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Biodiversitée</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/caseClosedClimategateWasManufacturedBadAstronomyDiscoverMagazine"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Case closed: "Climategate" was manufactured | Bad Astronomy | Discover Magazine</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://blogs.discovermagazine.com/badastronomy/2011/08/24/case-closed-climategate-was-manufactured/"><img class="icon" src="http://www.google.com/s2/favicons?domain=blogs.discovermagazine.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://blogs.discovermagazine.com/badastronomy/2011/08/24/case-closed-climategate-was-manufactured/">A big claim by the deniers is that researchers were using "tricks" to falsify conclusions about global warming, but the NSF report is pretty clear that's not true. The most damning thing the investigators could muster was that there was "some concern" over the statistical methods used, but that's not scandalous at all; there's always some argument in science over methodology. The vague language of the report there indicates to me this isn't a big deal, or else they would've been specific. The big point is that the data were not faked.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/cernClimateModelsWillNeedToBeSubstantiallyRevisedInYourFaceAlGoreSaysProfBrianCoxRobertleatherNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" /> CERN: 'Climate models will need to be substantially revised' - "In your face Al Gore!", says Prof. Brian Cox! (robertleather news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/cxfz"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/cxfz">CERN's 8,000 scientists have made an important contribution to climate physics, prompting climate models to be revised.'Climate models will need to be SUBSTANTIALLY revised'</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/plasticBagBanShoppersRunIntoLaCountysPlasticBagBanLatimescom"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Plastic bag ban: Shoppers run into L.A. County's plastic bag ban - latimes.com</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.latimes.com/business/la-fi-0806-grocery-bag-ban-20110806,0,3228441.story?obref=obinsite"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.latimes.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.latimes.com/business/la-fi-0806-grocery-bag-ban-20110806,0,3228441.story?obref=obinsite">Brandon Martin recalls the woman who came through his supermarket checkout line, only to find that she would have to pay a dime apiece for paper shopping bags.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Plastic bags, she was told, were no longer an option.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >The woman thought for a moment, Martin recalled, and then directed him to load the groceries in the plastic trash bags she purchased.</li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/huntingtonBeachMayBanPlasticGroceryBagsAbc7com"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Huntington Beach may ban plastic grocery bags | abc7.com</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://abclocal.go.com/kabc/story?section=news/local/orange_county&amp;id=8305947"><img class="icon" src="http://www.google.com/s2/favicons?domain=abclocal.go.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://abclocal.go.com/kabc/story?section=news/local/orange_county&amp;id=8305947">The Orange County Register reports city council will consider an ordinance that would fully replace plastic shopping bags with the reusable variety.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >To save time, officials said the proposed ordinance would largely reflect the ban recently passed into law in Long Beach.</li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/ukFalseFlag"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />UK Fal$se Flag</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/aangirfanMenWithWalkietalkies"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />aangirfan: MEN WITH WALKIE-TALKIES</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://aangirfan.blogspot.com/2011/08/men-with-walkie-talkies.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=aangirfan.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://aangirfan.blogspot.com/2011/08/men-with-walkie-talkies.html">Croydon MP, Gavin Barwell, said: "I have spoken to well into double figures of people who saw people with walkie-talkies and radios directing people around." </a></li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/trainsGoodPlanesBadWhoohoo"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Trains Good, Planes Bad (WhooHoo!)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/washingtonIsEliminatingSomeRedTapeKeepingMostOfItHitRunReasonMagazine"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Washington Is Eliminating Some Red Tape, Keeping Most of It - Hit & Run : Reason Magazine</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://reason.com/blog/2011/08/23/washington-is-eliminating-some"><img class="icon" src="http://www.google.com/s2/favicons?domain=reason.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://reason.com/blog/2011/08/23/washington-is-eliminating-some">The Department of Transportation is proposing a rule that will eliminate unnecessary regulation of the railroad industry, saving a total of $340 million or more.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/fedsWillGiveAmtraksAcelaA45MillionPersecondUpgradeDailyTickerYahooFinance"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Feds Will Give Amtrak's Acela A $4.5 Million PER-SECOND Upgrade | Daily Ticker - Yahoo! Finance</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://finance.yahoo.com/blogs/daily-ticker/feds-amtrak-acela-4-5-million-per-second-131422637.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=finance.yahoo.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://finance.yahoo.com/blogs/daily-ticker/feds-amtrak-acela-4-5-million-per-second-131422637.html">The Department of Transportation announced Monday that the government will spend $450 million upgrading a 24-mile stretch of rail between Trenton and Brunswick, New Jersey, on the busy Northeast Corridor to allow Amtrak's signature Acela trains to reach 160 miles-per-hour.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >The speed-limit increase would save about one minute and forty seconds, Bloomberg reports -- meaning the upgrade will cost about $4.5 million per-second. An additional $295 million will be spent to separate Amtrak trains from Long Island Rail Road trains in Queens -- to speed travel times north from Manhattan.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/russiaPlans65bnTunnelToAmericaTimesOnline"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Russia plans $65bn tunnel to America - Times Online</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.timesonline.co.uk/tol/news/world/europe/article1680121.ece"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.timesonline.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.timesonline.co.uk/tol/news/world/europe/article1680121.ece">Russia has unveiled an ambitious plan to build the world's longest tunnel under the Bering Strait as part of a transport corridor linking Europe and America via Siberia and Alaska.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >The 64-mile (103km) tunnel would connect the far east of Russia with Alaska, opening up the prospect of the ultimate rail trip across three quarters of the globe from London to New York. The link would be twice as long as the Channel Tunnel connecting Britain and France.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >The $65 billion (£33 billion) mega-project aims to transform trade links between Russia and its former Cold War enemies across some of the world's most desolate terrain. It would create a high-speed railway line, energy links and a fibreoptic cable network.</li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/magicNumber"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Magic Number$</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/prostitutesFloodVallejoAfterBankruptCitySlashesPolice33Businessweek"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Prostitutes Flood Vallejo After Bankrupt City Slashes Police 33% - Businessweek</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.businessweek.com/news/2011-08-22/prostitutes-flood-vallejo-after-bankrupt-city-slashes-police-33-.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.businessweek.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.businessweek.com/news/2011-08-22/prostitutes-flood-vallejo-after-bankrupt-city-slashes-police-33-.html">Vallejo's experience comes as Central Falls, Rhode Island, proposes $5.6 million in budget cuts after seeking Chapter 9 protection this month and Jefferson County, Alabama, negotiates with creditors to avoid what would be the biggest government filing in U.S. history. There have been five municipal bankruptcies this year, compared with six in 2010, according to data compiled by Bloomberg.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/copsSeizeCannabisWorthAnEstimated33MillionChicagotribunecom"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Cops seize cannabis worth an estimated $33 million - chicagotribune.com</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.chicagotribune.com/news/local/breaking/chi-seven-arrested-chicago-cannabis-drug-bust-lawndale-12000-pound-33-million-20110823,0,5779165.story"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.chicagotribune.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.chicagotribune.com/news/local/breaking/chi-seven-arrested-chicago-cannabis-drug-bust-lawndale-12000-pound-33-million-20110823,0,5779165.story">Chicago police arrested seven men and seized more than 12,000 pounds of cannabis worth an estimated $33 million in an anti-drug operation Monday, police said today in a news release.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/sugarCosTargetRs33kgUponGoodExportSimbhaoliSugarRobertleatherNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Sugar cos target Rs 33/kg upon good export: Simbhaoli Sugar (robertleather news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/bnz3"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/bnz3">Sugar prices have strengthened further by Rs 15-20 per quintal this week. Sanjay Tapriya, chief financial officer of Simbhaoli Sugar "Sugar exports have helped ease losses. Companies are now looking at price of Rs 33 per kg,"</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/updatechinaSouthernAirlinesNetProfitUp33AtCny276bRobertleatherNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />UPDATE:China Southern Airlines Net Profit Up 33% At CNY2.76B (robertleather news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/ebvp"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/ebvp">First-half net profit up 33% at CNY2.76 Bln</a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/ministryOfTruth"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Ministry of Truth</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/tomClancysDeadOrAliveDidItPredictTheOsamaRaidTheDailyBeast"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Tom Clancy's 'Dead or Alive': Did It Predict the Osama Raid? - The Daily Beast</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.thedailybeast.com/articles/2011/05/05/tom-clancys-dead-or-alive-did-it-predict-the-osama-raid.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.thedailybeast.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.thedailybeast.com/articles/2011/05/05/tom-clancys-dead-or-alive-did-it-predict-the-osama-raid.html">In December, the author of The Hunt for Red October and Patriot Games published his first novel in seven years, Dead or Alive, this one with the help of a coauthor, Grant Blackwood. In it, Clancy's version of bin Laden is finally caught--and when he is, he turns out not to be hiding in the lawless mountain regions along the Afghanistan-Pakistan border, as most of the fictional intelligence community believes. Instead, he's been biding his time in an upscale house ("must have set him back a million") that is a shortish drive from a major city, and just a few miles from a major military institution. He works only with couriers and bodyguards. A super-elite Navy SEAL is on the team that takes him down. Oh, and one of the book's rejected titles? In Plain Sight.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/hr2819StopSubsidizingHollywoodActUsCongressOpencongress"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />H.R.2819: Stop Subsidizing Hollywood Act - U.S. Congress - OpenCongress</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.opencongress.org/bill/112-h2819/show"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.opencongress.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.opencongress.org/bill/112-h2819/show">To prohibit the Secretary of Defense, the Director of the Central Intelligence Agency, and any other officer or employee of the Federal Government from providing information about the mission to kill Osama bin Laden to any person outside the Federal Government until the Inspectors General of the Department of Defense and the Central Intelligence Agency carry out an investigation and provide a briefing to Congress on the matter, and for other purposes.</a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/wikileaksJustLostABunchOfGreatSecretsForever"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Wikileaks Just Lost a Bunch of Great Secrets Forever</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://gawker.com/5833205/wikileaks-just-lost-a-bunch-of-great-secrets-forever"><img class="icon" src="http://www.google.com/s2/favicons?domain=gawker.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://gawker.com/5833205/wikileaks-just-lost-a-bunch-of-great-secrets-forever">In an interview with Der Speigel, former Wikileaks spokesman Daniel Domscheit-Berg revealed that he had deleted 3,500 unpublished Wikileaks files. According to a few tweets from Wikileaks, the documents gone forever include the mythical Bank of America leak--which Assange previously boasted "could take down a bank or two"--and the complete U.S. no-fly list. Assange is steamed, resorting to his go-to tactic when someone has pissed him off: Intuiting that DDB is working with U.S. authorities.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/whiteHouseInsiderTheObamaPlanPartThreeNewsflavor"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />White House Insider: The Obama Plan -- Part Three | Newsflavor</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://newsflavor.com/politics/us-politics/white-house-insider-the-obama-plan-part-three-2/"><img class="icon" src="http://www.google.com/s2/favicons?domain=newsflavor.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://newsflavor.com/politics/us-politics/white-house-insider-the-obama-plan-part-three-2/">"The president doesn't like the Oval Office much -- he's made that point repeatedly to more than a few at the White House. He prefers to be upstairs, no suit. No shoes. No joke --"</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/taxationWithoutRepresentationDefinition"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Taxation Without Representation Definition</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.investopedia.com/terms/t/tax_without_representation.asp#axzz1VrtPavp6"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.investopedia.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.investopedia.com/terms/t/tax_without_representation.asp#axzz1VrtPavp6">A situation in which a government imposes taxes on a particular group of its citizens, despite the citizens not consenting or having an actual representative deliver their views when the taxation decision was made. This situation was one of the triggering events that spurred the original thirteen American colonies to revolt against the British Empire.   </a></li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/eqMachine"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />EQ Machine</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/bbcNewsAmericasPerusCopperMountainInChineseHands"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />BBC NEWS | Americas | Peru's 'copper mountain' in Chinese hands</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://news.bbc.co.uk/2/hi/americas/7460364.stm"><img class="icon" src="http://www.google.com/s2/favicons?domain=news.bbc.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://news.bbc.co.uk/2/hi/americas/7460364.stm">It gets its name from its shape - The Bull With No Horns. And it is composed almost entirely of copper ore: two billion tonnes of it.</a></li>
+	<li class="directoryComment" >It could become the most productive copper mine anywhere on earth. Now it belongs, in effect, to China.</li>
+	<li class="directoryComment" >When open-cast mining begins, in three or four years, a Chinese mining company, Chinalco, will send the copper back home to be turned into electrical wire.</li>
+
+	<li class="directoryComment" >The plan is to use it to carry out the electrification of the whole of China.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/69EarthquakeInPeruUploadsByMoxnewsd0tcom"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />6.9 Earthquake In Peru (Uploads by MOXNEWSd0tCOM)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=fYdGVnxPbZk&amp;amp;feature=youtube_gdata"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=fYdGVnxPbZk&amp;amp;feature=youtube_gdata">6.9 Earthquake In Peru August 24, 2011 KING 5 News MOXNews.com From: MOXNEWSd0tCOM Views: 3 0 ratings Time: 02:46 More in News & Politics</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/afterQuakeSenateInSessionInNearbyBuilding"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />After quake, Senate in session in nearby building</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://hosted.ap.org/dynamic/stories/U/US_EAST_COAST_QUAKE_SENATE?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT"><img class="icon" src="http://www.google.com/s2/favicons?domain=hosted.ap.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://hosted.ap.org/dynamic/stories/U/US_EAST_COAST_QUAKE_SENATE?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT">WASHINGTON (AP) -- The Senate held an unusual session away from the Capitol after Tuesday's earthquake led to the evacuation of the building.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Democratic Sen. Chris Coons of Delaware presided over a 22-second technical session in a conference room in Postal Square, a building next to Union Station and two blocks northeast of the Capitol.</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >The session was necessary because Congress has not formally recessed, even though lawmakers are on a monthlong vacation.</li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/earthquakeStrikesVirginiaDangerousUsFaultLinesAbcNews"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Earthquake Strikes Virginia: Dangerous U.S. Fault Lines - ABC News</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://abcnews.go.com/Technology/earthquake-strikes-virginia-dangerous-us-fault-lines/story?id=14364861"><img class="icon" src="http://www.google.com/s2/favicons?domain=abcnews.go.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://abcnews.go.com/Technology/earthquake-strikes-virginia-dangerous-us-fault-lines/story?id=14364861">The source of earthquakes on the East Coast, like today's 5.9 temblor in eastern Virginia, can be difficult to pointpoint, unlike faults in well-studied areas of the U.S. where there are major fault lines, according to the US Geological Survey. </a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/unitedTatesOfEurope"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />United $tates of EURO-pe</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/greenspanSaysEuroBreakingDownBloomberg"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Greenspan Says Euro 'Breaking Down' - Bloomberg</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.bloomberg.com/news/2011-08-23/greenspan-says-the-euro-is-breaking-down-may-harm-stock-prices.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.bloomberg.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.bloomberg.com/news/2011-08-23/greenspan-says-the-euro-is-breaking-down-may-harm-stock-prices.html">Former Federal Reserve Chairman Alan Greenspan said fissures in Europe's common currency may lead to slowing in the U.S. economy.</a></li>
+	<li class="directoryComment" >"The euro is breaking down and the process of its breaking down is creating very considerable difficulties in the European banking system," Greenspan said today in Washington.</li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/elite"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Elite$</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/francesRichestSayTaxUsMoreBertbNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />France's richest say: Tax us more. (bertb news feed)</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/dykr"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/dykr">They had benefited from the French system and: "When the public finances deficit and the prospects of a worsening state debt threaten the future of France and Europe and when the government is asking everybody for solidarity, it seems necessary for us to contribute."</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/strausskahnNewSuspicionOfLinkBetweenDskMaidAndHotelManagerTheSlog"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />STRAUSS-KAHN: New suspicion of link between DSK maid and hotel manager | The Slog</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://hat4uk.wordpress.com/2011/07/11/strauss-kahn-new-suspicion-of-link-between-dsk-maid-and-hotel-manager/"><img class="icon" src="http://www.google.com/s2/favicons?domain=hat4uk.wordpress.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://hat4uk.wordpress.com/2011/07/11/strauss-kahn-new-suspicion-of-link-between-dsk-maid-and-hotel-manager/">As investigators determined from the records of the use of her electronic key that the DSK accuser Nafissatou Diallo had actually gone to suite 2820 after being 'attacked' by the former IMF boss, she changed her story to say that after leaving the Presidential Suite she did indeed do so. 2820 is a suite on the other side of the elevator bank that she had visited three times previously that day, according to the electronic key records. The Slog posted two weeks ago that her multiple visits to 2820 remain unexplained, but it does have an adjoining wall with the Strauss-Kahn suite. Jorge Tito, the hotel's general manager, spent time in 2820 on the day in question -- and has thus far declined to comment to the media as to what he was doing there.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/chargesAgainstStrausskahnDismissedNytimescom"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Charges Against Strauss-Kahn Dismissed - NYTimes.com</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.nytimes.com/2011/08/24/nyregion/charges-against-strauss-kahn-dismissed.html?_r=1"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.nytimes.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.nytimes.com/2011/08/24/nyregion/charges-against-strauss-kahn-dismissed.html?_r=1">A judge formally ordered the dismissal of all criminal charges against Dominique Strauss-Kahn on Tuesday, but he said his order would be stayed until an appellate court decides whether a special prosecutor should be appointed. </a></li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/technoExperts"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Techno Experts</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/idgaSocialMediaForDefense"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />IDGA Social Media for Defense</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.iqpc.com/Event.aspx?id=549416"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.iqpc.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.iqpc.com/Event.aspx?id=549416">With the introduction and adaptation of social media as a vital tool of communication in the Department of Defense, there is a constant struggle to maintain Operational Security and manage and mitigate the risks that come with it. Social media has been widely used in the military and government departments for recruitment purposes, counter media, psychological and special operations and warfare, information gathering and counter intelligence. The military, especially, has adapted an industrial approach to deal with social media, but with more resources and more needs, the military has learned to proactively leverage this new "environment" to achieve organizational goals.</a></li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/gitmoNation"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Gitmo Nation</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/londonRefusesKidsTicketsToGunrelatedOlympicEventsTheblazecom"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />London Refuses Kids Tickets to Gun-Related Olympic Events | TheBlaze.com</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.theblaze.com/stories/london-refuses-kids-tickets-to-gun-related-olympic-events/"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.theblaze.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.theblaze.com/stories/london-refuses-kids-tickets-to-gun-related-olympic-events/">Because City Hall and Olympic Organizers are afraid of an anti-gun backlash.-That's right -- the powers that be -in London won't subject kids to such bloodsports as Skeet and Trap shooting. The London Evening Standard reported yesterday on the "Ticketshare" decision, and the window it has given into current British views on guns in society.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/journalistInCelVoorNemenFotoNunlmediaHetLaatsteNieuwsHetEerstOpNunl"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Journalist in cel voor nemen foto | nu.nl/media | Het laatste nieuws het eerst op nu.nl</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.nu.nl/media/2597713/journalist-in-cel-nemen-foto.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.nu.nl" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.nu.nl/media/2597713/journalist-in-cel-nemen-foto.html">Freelance journalist Emiel Elgersma was een muzikant aan het fotograferen voor een project toen agenten hem aanspraken. Elgersma zou op die plek niet mogen fotograferen.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Elgersma wees daarop op het feit dat hij op de openbare weg stond en dat daar gefotografeerd mag worden. Toen hij zich niet direct legitimeerde werd hij aangehouden en bekeurd voor het niet tonen van zijn legitimatie. </li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/teamObamaRegulatesGoatHerdersWorkplacesHumanEvents"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Team Obama Regulates Goat Herders' Workplaces - HUMAN EVENTS</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.humanevents.com/article.php?id=45722"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.humanevents.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.humanevents.com/article.php?id=45722">These new special procedures issued by the Labor Department must be followed by employers who want to hire temporary agricultural foreign workers to perform sheep herding or goat herding activities.- It describes strict rules for sleeping quarters, lighting, food storage, bathing, laundry, cooking and new rules for the counters where food is prepared.</a></li>
+	<li class="directoryComment" >-</li>
+	<li class="directoryComment" >"A separate sleeping unit shall be provided for each person, except in a family arrangement," says the rules signed by Jane Oates, assistant secretary for employment and training administration at the Labor Department.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/philadelphiasJuvenileCurfewIsExtendedThroughLaborDayCnncom"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Philadelphia's juvenile curfew is extended through Labor Day - CNN.com</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.cnn.com/2011/US/08/23/pennsylvania.youth.curfew/index.html?hpt=us_c2"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.cnn.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.cnn.com/2011/US/08/23/pennsylvania.youth.curfew/index.html?hpt=us_c2">"We had about 70 curfew violations over the course of (the first) Friday and Saturday nights, and I am sure that young people and their parents have now gotten the message," Nutter said last week.</a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/privacyAndSecurityFanaticFutureTsaTrackAllDailyTravelsToWorkGroceryStoresSocialEvents"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Privacy and Security Fanatic: Future TSA: Track All 'Daily Travels To Work, Grocery Stores & Social Events'</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.networkworld.com/community/blog/future-tsa-track-all-daily-travels-work-groce"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.networkworld.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.networkworld.com/community/blog/future-tsa-track-all-daily-travels-work-groce">When the TSA was asked to provide legal reasons that definitely spelled out why physically invasive patdowns are legal, without any probable cause, not one TSA person had an answer. There was no legal documentation for enhanced patdowns other than it serves "the essential administrative purpose."</a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/shutUpSlave"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Shut Up Slave!</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoPrimeMinisterCameronSpeechInWitneyOxfordshireCspanVideoLibrary"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Prime Minister Cameron Speech in Witney, Oxfordshire - C-SPAN Video Library</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.c-spanvideo.org/program/Witney"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.c-spanvideo.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.c-spanvideo.org/program/Witney">Prime Minister David Cameron spoke in in Witney, Oxfordshire about the recent violence and rioting in England. </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/housePassesMandatoryNationalServiceBillAlexJonesInfowarsTheresAWarOnForYourMind"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />>> House Passes Mandatory National Service Bill Alex Jones' Infowars: There's a war on for your mind!</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.infowars.com/house-passes-mandatory-national-service-bill/"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.infowars.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.infowars.com/house-passes-mandatory-national-service-bill/">Under section 6104 of the bill, entitled "Duties," in subsection B6, the legislation states that a commission will be set up to investigate, "Whether a workable, fair, and reasonable mandatory service requirement for all able young people could be developed, and how such a requirement could be implemented in a manner that would strengthen the social fabric of the Nation and overcome civic challenges by bringing together people from diverse economic, ethnic, and educational backgrounds."</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/ronPaulTheyreSettingTheStageForViolenceInThisCountryYoutube"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Ron Paul 'They're Setting The Stage For Violence In This Country' - YouTube</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=fiCdMFB2iPw"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=fiCdMFB2iPw">HR645</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/firstRespondersNotWelcomeAt911CeremonyweAreChange"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />First Responders not welcome at 9/11 ceremony-|-We Are Change</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.wearechange.org/?p=9190"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.wearechange.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.wearechange.org/?p=9190">Only 3 weeks have passed since the first responders got cancer excluded from the financial package, but this was not enough for Bloomberg apparently.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >The first responders that carried their own and other people's family members from Ground Zero have been excluded from the 10th 9/11 ceremony Bloomberg "officially confirmed" only a few days ago.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/usMarinesServingInAfghanistanWarnedNotToFartSoAudibly"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />US Marines Serving In Afghanistan Warned Not To Fart So Audibly</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://deadspin.com/5833744/"><img class="icon" src="http://www.google.com/s2/favicons?domain=deadspin.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://deadspin.com/5833744/">So here's the news: audible farting has been banned for some Marines downrange because it offends the Afghans.</a></li>
+	<li class="directoryComment" >I know there are many things in the Afghan culture that don't seem normal to Americans and it's hard to spend seven months working in someone else's back yard. Still, the Marines I saw downrange are doing a pretty good job at trying to do the right thing around the Afghans.</li>
+	<li class="directoryComment" >[...]</li>
+	<li class="directoryComment" >But farting? That's practically a sport. Ok, it's not soccer, but a good contest could open the door for cross-cultural exchanges, jokes and other gallows humor.</li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/agenda21"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Agenda21</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoBattleForTheCaliforniaDesertWhyIsTheGovernmentDrivingFolksOffTheirLandYoutube"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Battle for the California Desert: Why is the Government Driving Folks off Their Land? - YouTube</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=yw3RiMdS7sE"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=yw3RiMdS7sE">The Antelope Valley is a vast patch of desert on the outskirts of Los Angeles County, and a segment of the few rugged individualists who live out there increasingly are finding themselves the targets of armed raids from local code enforcement agents, who've assembled into task forces called Nuisance Abatement Teams (NATs). </a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/droneNation"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Drone Nation</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/tasedFromAboveNewRobotCopterToBeginPatrollingOurSkiesVideoSingularityHub"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Tased From Above! New Robot Copter To Begin Patrolling Our Skies (video) | Singularity Hub</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://singularityhub.com/2011/08/21/tased-from-above-new-robot-copter-to-begin-patrolling-our-skies-video/"><img class="icon" src="http://www.google.com/s2/favicons?domain=singularityhub.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://singularityhub.com/2011/08/21/tased-from-above-new-robot-copter-to-begin-patrolling-our-skies-video/">Forget the idea that weaponized unmanned aerial vehicles (UAVs) are only for military operations in wars fought in far off lands. Soon they'll begin setting their sights on criminals within our borders. And they'll be packing heat, not the long-range missiles of the X-47B, but with up close and personal stun guns, 12-gauge shotguns and, believe it or not, grenade launchers.</a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/vaccine"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Vaccine$</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoTennesseeLadyVolsPatSummittHasEarlyonsetDementiaEspn"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Tennessee Lady Vols' Pat Summitt has early-onset dementia - ESPN</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://espn.go.com/womens-college-basketball/story/_/id/6888321/tennessee-lady-vols-pat-summitt-early-onset-dementia"><img class="icon" src="http://www.google.com/s2/favicons?domain=espn.go.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://espn.go.com/womens-college-basketball/story/_/id/6888321/tennessee-lady-vols-pat-summitt-early-onset-dementia">George Smith gets the reactions on campus to the news that Pat Summitt has been diagnosed with early-onset dementia</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/alzheimersDiseaseMemoryLossCouldBeReversedByArthritisProteinTelegraph"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Alzheimer's Disease memory loss 'could be reversed by arthritis protein' - Telegraph</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.telegraph.co.uk/health/healthnews/7958952/Alzheimers-Disease-memory-loss-could-be-reversed-by-arthritis-protein.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.telegraph.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.telegraph.co.uk/health/healthnews/7958952/Alzheimers-Disease-memory-loss-could-be-reversed-by-arthritis-protein.html">Alzheimer's Disease memory loss could eventually be reversed, after scientists discovered that a chemical naturally produced by the body to fight arthritis also works on the brain condition. </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/detailsOnLeukine"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Details on Leukine</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/magicalSideEffect"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Magical side effect</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" >That article talks about how a certain protein, GM-CSF, is found in people with rheumatoid arthritis, and that it helps combat dementia and Alzheimer's.  Strangely enough it is also found in a drug named Leukine.  </li>
+
+	<li class="directoryComment" >Couple of interesting things here; people with rheumatoid arthritis take medication which lowers their GM-CSF protein and increases their chances of getting dementia and Alzheimer's.  And, how weird is it that all of a sudden this drug, Leukine, which is not even currently used to treat any of these diseases, is now making news.  Coincidence?  I THINK NOT!</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/expiringPatent"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Expiring Patent</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" >Hi again Adam, sorry to bug you again (last time, I promise), but as soon as I closed my email, the Glenn Campbell Alzheimer's story appeared.  Another one!</li>
+	<li class="directoryComment" >And, I did some quick research on the drug Leukine.  Amazingly, the current patent is set to expire in Feb. 2012.  Really?  Thanks for educating me on these types of media scams.  You guys rock!</li>
+	<li class="directoryComment" >Leukine is protected by U.S. Patent Nos. 5,393,870 and 5,229,496, which are licensed from Alcafleu and expire on July 20, 2010. Leukine is also protected by U.S. Patent No. 5,391,485, which is licensed from Bayer and expires on February 21, 2012.</li>
+
+	</ul>
+	</ul>
+	<li class="directoryComment" ><a href="http://vaccinesforeveryone.com/"><img class="icon" src="http://www.google.com/s2/favicons?domain=vaccinesforeveryone.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://vaccinesforeveryone.com/">Vaccines aren't just for kids.</a></li>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/3EasyStepsForAdultsToRegisterForImmtrac"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />3 Easy Steps For Adults to Register for ImmTrac</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.dshs.state.tx.us/immunize/immtrac/3easysteps.shtm"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.dshs.state.tx.us" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.dshs.state.tx.us/immunize/immtrac/3easysteps.shtm">Adults need vaccines throughout their life. Store your immunization records in ImmTrac, the Texas immunization registry. It's a FREE, secure, confidential service that stores immunization records electronically in one centralized system. ImmTrac is available to Texans of all ages. Just follow these three easy steps to participate.</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoJaimeWinstoneWarnsOfTheHealthRisksOfOralSex"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Jaime Winstone warns of the health risks of oral sex</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.bbc.co.uk/news/health-12132676"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.bbc.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.bbc.co.uk/news/health-12132676">In a new documentary for BBC Three, actress Jaime Winstone has investigated how the human papillomavirus (HPV), which can be transmitted through oral sex, could lead to the rare oropharyngeal cancer.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >She is now calling for the government to rethink its policy and include teenage boys in its HPV vaccination programme.</li>
+	</ul>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/realNews"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Real News</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoKateWinsletRescuesRichardBransons90yearoldMomInFireRadarOnline"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Kate Winslet Rescues Richard Branson's 90-Year-Old Mom In Fire | Radar Online</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.radaronline.com/exclusives/2011/08/kate-winslet-rescues-richard-branson-90-year-old-mother-necker-island-fire"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.radaronline.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.radaronline.com/exclusives/2011/08/kate-winslet-rescues-richard-branson-90-year-old-mother-necker-island-fire">"The main house is destroyed and the fire is not yet completely out. My office was based in the house and I have lost thousands of photographs and my note books  which is very sad. But all family and friends are well - which in the end is all that really matters," The Virgin boss said on his blog.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/pornFuelsDemandForDesignerVaginasIolLifestyleIolcoza"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Porn fuels demand for designer vaginas - IOL Lifestyle | IOL.co.za</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.iol.co.za/lifestyle/style/beauty/porn-fuels-demand-for-designer-vaginas-1.1124686"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.iol.co.za" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.iol.co.za/lifestyle/style/beauty/porn-fuels-demand-for-designer-vaginas-1.1124686">The first study of 33 women seeking the operation, whose average age was 23, found they all had normal-sized labia. Only three had a significant assymetry for which surgery would be appropriate. But 40 percent of them still wanted the operation, mostly because they wanted to make their labia smaller "to improve appearance".</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/indonesiaAirlineCheckAirHostessApplicantsForBreastsImplantsDuringJobInterviewMailOnline"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Indonesia airline check air hostess applicants 'for breasts implants during job interview' | Mail Online</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.dailymail.co.uk/news/article-2029485/Indonesia-airline-check-air-hostess-applicants-breasts-implants-job-interview.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.dailymail.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.dailymail.co.uk/news/article-2029485/Indonesia-airline-check-air-hostess-applicants-breasts-implants-job-interview.html">The hand examination on breast was held since those with implants can have health issues when air pressure falls during flights,' the South Korean news agency Yonhap quoted an airline official as saying.</a></li>
+	</ul>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/bankters"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Bank$ters</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/spPresidentSharmaToLeaveReplacedByCitisPeterson"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />S&P President Sharma to Leave, Replaced by Citi's Peterson</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/08/23/bloomberg1376-LQCWXK6K50Y501-4NB7TG2CIHINMLRB4ABM7P6CI6.DTL"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.sfgate.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/08/23/bloomberg1376-LQCWXK6K50Y501-4NB7TG2CIHINMLRB4ABM7P6CI6.DTL">Standard & Poor's, the ratings company that downgraded the U.S. AAA credit ranking for the first time, will replace President Deven Sharma with Citibank NA Chief Operating Officer Douglas Peterson.</a></li>
+
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Sharma, 55, will leave at the end of the year to "pursue other opportunities," S&P's parent McGraw-Hill Cos. said in an e-mailed statement. Peterson, 53, will take over Sept. 12 and Sharma will work on the company's strategic review in the meantime.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoObamaAdministrationPressuringNyAgToAcceptBankSettlementInsteadOfProsecutingCrooksAndLiars"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] : Obama Administration Pressuring NY AG To Accept Bank Settlement Instead Of Prosecuting | Crooks and Liars</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://crooksandliars.com/susie-madrak/nyt-obama-administration-pressuring-n"><img class="icon" src="http://www.google.com/s2/favicons?domain=crooksandliars.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://crooksandliars.com/susie-madrak/nyt-obama-administration-pressuring-n">Eric T. Schneiderman, the attorney general of New York, has come under increasing pressure from the Obama administration to drop his opposition to a wide-ranging state settlement with banks over dubious foreclosure practices, according to people briefed on discussions about the deal.</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/wallStreetAristocracyGot12TrillionInFedsSecretLoansBloomberg"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Wall Street Aristocracy Got $1.2 Trillion in Fed's Secret Loans - Bloomberg</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.bloomberg.com/news/2011-08-21/wall-street-aristocracy-got-1-2-trillion-in-fed-s-secret-loans.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.bloomberg.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.bloomberg.com/news/2011-08-21/wall-street-aristocracy-got-1-2-trillion-in-fed-s-secret-loans.html">Citigroup Inc. (C) and Bank of America Corp. (BAC) were the reigning champions of finance in 2006 as home prices peaked, leading the 10 biggest U.S. banks and brokerage firms to their best year ever with $104 billion of profits.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >By 2008, the housing market's collapse forced those companies to take more than six times as much, $669 billion, in emergency loans from the U.S. Federal Reserve. The loans dwarfed the $160 billion in public bailouts the top 10 got from the U.S. Treasury, yet until now the full amounts have remained secret. </li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/marketCrashCouldHitWithinWeeksWarnBankersDadenmanNewsFeed"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Market crash 'could hit within weeks', warn bankers. (DaDenMan news feed)</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://my.butt.org/bp9f"><img class="icon" src="http://www.google.com/s2/favicons?domain=my.butt.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://my.butt.org/bp9f">"The problem is a shortage of liquidity -- that is what is causing the problems with the banks. It feels exactly as it felt in 2008," said one senior London-based bank executive. "I think we are heading for a market shock in September or October that will match...</a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/syria"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Syria</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/euSyrianSanctions"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />EU Syrian Sanctions</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://hosted.ap.org/dynamic/stories/M/ML_SYRIA?CTIME=2011-08-24-12-22-32&amp;SECTION=HOME&amp;SITE=AP&amp;TEMPLATE=DEFAULT"><img class="icon" src="http://www.google.com/s2/favicons?domain=hosted.ap.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://hosted.ap.org/dynamic/stories/M/ML_SYRIA?CTIME=2011-08-24-12-22-32&amp;SECTION=HOME&amp;SITE=AP&amp;TEMPLATE=DEFAULT">The EU's official journal, which published the statement, said the Quds Force "has provided technical assistance, equipment and support to the Syrian security services to repress civilian protest movements."</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Other new targets include several Syrian generals and close associates of Assad's younger brother, Maher, who is believed to be in command of much of the crackdown. Hassan Turkmani, a former defense minister and special envoy for Bashar Assad, also was named.</li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/sudan"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Sudan</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/afrobeatradioBlogArchiveCreatingSouthSudanGeorgeClooneyJohnPrendergastAndGeorgeBush"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />AfrobeatRadio >> Blog Archive >> Creating South Sudan: George Clooney, John Prendergast, And George Bush</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://afrobeatradio.net/2011/08/16/creating-south-sudan-george-clooney-john-prendergast-and-george-bush/"><img class="icon" src="http://www.google.com/s2/favicons?domain=afrobeatradio.net" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://afrobeatradio.net/2011/08/16/creating-south-sudan-george-clooney-john-prendergast-and-george-bush/">AfrobeatRadio Host Wuyi Jacobs: South Sudan celebrated its independence from the Northern government of Sudanese President Omar Al-Bashir on July 9th. The New York Times congratulated movie actor George Clooney, an ardent campaigner for Southern Sudanese independence, on his victory, though many African people thought that the Sudanese people might have more rightly been at the center of the South's Independence Day story. Others emphasized the U.S. and allies' interest in managing Sudan's vast oil reserves. AfrobeatRadio's Ann Garrison has more.</a></li>
+	</ul>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/carbonConvoy"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Carbon Convoy</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" >In the above attached mp3 is an interview with Anthony Albanese the Labor party's Minister for Transport.  Listen carefully at the start of the interview where they replay a snippet from question time. Because "truckies " are going to be hit hard by the carbon tax to be introduced next year they organised a protest outside parliment house. The truckies drove from all around the country and converged on the nations capital. They called it the"convoy of no confidence" (in the government) </li>
+	<li class="directoryComment" >In Question time the minister referred to it as the "convoy of no consequence" The public are able to watch Q. time  from the gallery(above the main floor). Listen to the protestors response to his comment.  It just shows how pissed off we are  here downunder</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/video"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />VIDEO</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?NR=1&amp;v=pKR_psM-Y4E"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?NR=1&amp;v=pKR_psM-Y4E">State Terror: Deadly Libya strikes 'NATO policy, not mistake' - [VIDEO] </a></li>
+
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=R_-lzI8I0_0&amp;feature=player_embedded#!"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=R_-lzI8I0_0&amp;feature=player_embedded#!">Libya / Incredible media lies - BBC shows "Green Square" in INDIA, 24 August 2011 - [VIDEO] </a></li>
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?gl=US&amp;v=DQ3hEt0EOkc"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?gl=US&amp;v=DQ3hEt0EOkc">Aeryon Scout UAV in use with the Libyan Rebels - [VIDEO] </a></li>
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=3vFkcjwZOA8&amp;amp;feature=youtube_gdata"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=3vFkcjwZOA8&amp;amp;feature=youtube_gdata">Ron Paul "I'm Afraid There Will Be People In The Streets Like In These Other Countries" - [VIDEO] </a></li>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/ronPaulTheyreSettingTheStageForViolenceInThisCountryYoutube"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Ron Paul 'They're Setting The Stage For Violence In This Country' - YouTube</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=fiCdMFB2iPw"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=fiCdMFB2iPw">HR645</a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoPrimeMinisterCameronSpeechInWitneyOxfordshireCspanVideoLibrary"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Prime Minister Cameron Speech in Witney, Oxfordshire - C-SPAN Video Library</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.c-spanvideo.org/program/Witney"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.c-spanvideo.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.c-spanvideo.org/program/Witney">Prime Minister David Cameron spoke in in Witney, Oxfordshire about the recent violence and rioting in England. </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoJaimeWinstoneWarnsOfTheHealthRisksOfOralSex"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Jaime Winstone warns of the health risks of oral sex</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.bbc.co.uk/news/health-12132676"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.bbc.co.uk" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.bbc.co.uk/news/health-12132676">In a new documentary for BBC Three, actress Jaime Winstone has investigated how the human papillomavirus (HPV), which can be transmitted through oral sex, could lead to the rare oropharyngeal cancer.</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >She is now calling for the government to rethink its policy and include teenage boys in its HPV vaccination programme.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoAtlantaGirl12SolvesCrimeFindsSuspect"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Atlanta girl, 12, solves crime, finds suspect</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://video.yahoo.com/theearlyshow-26349158/clips-26349161/atlanta-girl-12-solves-crime-finds-suspect-26377950.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=video.yahoo.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://video.yahoo.com/theearlyshow-26349158/clips-26349161/atlanta-girl-12-solves-crime-finds-suspect-26377950.html">"The Early Show" anchors speak Jessica Maple of Atlanta about how she tracked down one of the suspects, and all of the stolen furniture, after her great-grandmothers home was burglarized.</a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoAlanGreenspansUseOfFedspeak"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] alan greenspan's use of "fedspeak"</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=0liegrixknA"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=0liegrixknA">"a form of syntax destruction," greenspan refers to a way of answering questions before congress, withOUT answering the questions. from 60 minutes (aired 9/16/2007)</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoBattleForTheCaliforniaDesertWhyIsTheGovernmentDrivingFolksOffTheirLandYoutube"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Battle for the California Desert: Why is the Government Driving Folks off Their Land? - YouTube</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=yw3RiMdS7sE"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=yw3RiMdS7sE">The Antelope Valley is a vast patch of desert on the outskirts of Los Angeles County, and a segment of the few rugged individualists who live out there increasingly are finding themselves the targets of armed raids from local code enforcement agents, who've assembled into task forces called Nuisance Abatement Teams (NATs). </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/tasedFromAboveNewRobotCopterToBeginPatrollingOurSkiesVideoSingularityHub"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />Tased From Above! New Robot Copter To Begin Patrolling Our Skies (video) | Singularity Hub</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://singularityhub.com/2011/08/21/tased-from-above-new-robot-copter-to-begin-patrolling-our-skies-video/"><img class="icon" src="http://www.google.com/s2/favicons?domain=singularityhub.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://singularityhub.com/2011/08/21/tased-from-above-new-robot-copter-to-begin-patrolling-our-skies-video/">Forget the idea that weaponized unmanned aerial vehicles (UAVs) are only for military operations in wars fought in far off lands. Soon they'll begin setting their sights on criminals within our borders. And they'll be packing heat, not the long-range missiles of the X-47B, but with up close and personal stun guns, 12-gauge shotguns and, believe it or not, grenade launchers.</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoTennesseeLadyVolsPatSummittHasEarlyonsetDementiaEspn"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Tennessee Lady Vols' Pat Summitt has early-onset dementia - ESPN</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://espn.go.com/womens-college-basketball/story/_/id/6888321/tennessee-lady-vols-pat-summitt-early-onset-dementia"><img class="icon" src="http://www.google.com/s2/favicons?domain=espn.go.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://espn.go.com/womens-college-basketball/story/_/id/6888321/tennessee-lady-vols-pat-summitt-early-onset-dementia">George Smith gets the reactions on campus to the news that Pat Summitt has been diagnosed with early-onset dementia</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoLibyaBreakingNews21082011RebelAdvancesOnTripoliAFakeDisinformationCampaignRt"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Libya / Breaking News: 21/08/2011 - rebel advances on Tripoli a fake! Disinformation campaign, RT </a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=4tghoRiZ3ek"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=4tghoRiZ3ek">Libya / Breaking News: 21/08/2011 - rebel advances on Tripoli a fake! Disinformation campaign, RT</a></li>
+	</ul>
+
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoCiaAndMi6AgentsInTripoliRixosHotelAugust232011Youtube"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] CIA and MI6 Agents in Tripoli Rixos Hotel (August 23, 2011) - YouTube</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=8gcPrDlXJ9I"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=8gcPrDlXJ9I">Thierry Meyssan's (the man being interviewed in this video) website filled with nato-critical articles has been taken off the air</a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoRussiaReportsNuclearExplosionsHitVastUsMilitaryTunnelNetwork"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Russia Reports Nuclear Explosions Hit Vast US Military Tunnel Network</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.whatdoesitmean.com/index1514.htm"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.whatdoesitmean.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.whatdoesitmean.com/index1514.htm">According to this report, this unprecedented nuclear attack began on the evening of 22 August when one of the main air pressure relief tunnels for this CIA tunnel, located at MacDill Air Force Base in Tampa Florida, was forced open allowing millions of cubic feet of air to rush suddenly into the atmosphere. The unique sound of this event was captured by video [1st video left] during a baseball game being played at Tropicana Field near MacDill, though US officials blamed the "mystery noise" on a faulty sound system.</a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoLibyaFedUpWithNato"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Libya fed up with NATO</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://aangirfan.blogspot.com/2011/08/obama-on-libya.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=aangirfan.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://aangirfan.blogspot.com/2011/08/obama-on-libya.html">(More here: NATO powers have long history of massacres in Africa) </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoOsloBombingTvFakeryFalseFlag"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Oslo Bombing - TV Fakery & False Flag</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://www.youtube.com/watch?v=-ezgmt2ycjE"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.youtube.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.youtube.com/watch?v=-ezgmt2ycjE">Look deeper into every aspect of what happened, was he the only gunmen on the island when early reports suggest there were 2? Was there suspicious behaviour at the bombing location on the previous evening? Where his views entirely self originating or was he influenced in any way by people who could benefit? </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoNatoOperationsInLibyaCspanVideoLibrary"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] NATO Operations in Libya - C-SPAN Video Library</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.c-spanvideo.org/program/301182-1"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.c-spanvideo.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.c-spanvideo.org/program/301182-1">A digital archive of C-SPAN video</a></li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Feedback/Comments? FAQ Contact Us Rights & Permissions</li>
+
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Login</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Advanced Search</li>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" /></a></li>
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/congress"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />CONGRESS</a></li>
+
+	<ul class="ulDirectory">
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/schedule"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />SCHEDULE</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" >BROWSE</li>
+	<li class="directoryComment" >BLOG</li>
+	<li class="directoryComment" >STORE</li>
+	<li class="directoryComment" >ABOUT</li>
+
+	</ul>
+	</ul>
+	</ul>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >Report Video Issue</li>
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >NATO Operations in Libya</li>
+	<li class="directoryComment" >Aug 23, 2011</li>
+
+	<li class="directoryComment" ></li>
+	<li class="directoryComment" >NATO</li>
+	<li class="directoryComment" >NATO officials spoke to reporters about the situation in Libya, saying the Libya mission "isn't over" and that Libya Head of State Moammar Qadhafi's power is "severely eroded." NATO Spokesperson Colonel Roland Lavoie said that the leader's days in the country are limited.</li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoUsHomelandSecurityChallengesCspanVideoLibrary"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] U.S. Homeland Security Challenges - C-SPAN Video Library</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.c-spanvideo.org/program/301175-1"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.c-spanvideo.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.c-spanvideo.org/program/301175-1">Panelists talked about the need for new technologies to curb growing cyber security threats and the future of homeland security a decade after the terrorist attacks of September 11, 2001. </a></li>
+
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoFareedZakariaMaybeWedStillBeAaaIfWeHadAPrimeMinisterNotAPresidentNewsbustersorg"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] Fareed Zakaria: Maybe We'd Still Be AAA If We Had a Prime Minister Not a President | NewsBusters.org</a></li>
+	<ul class="ulDirectory">
+	<li class="directoryComment" ><a href="http://www.newsbusters.org/blogs/noel-sheppard/2011/08/20/fareed-zakaria-maybe-wed-still-be-aaa-if-we-had-prime-minister-not-pr"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.newsbusters.org" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.newsbusters.org/blogs/noel-sheppard/2011/08/20/fareed-zakaria-maybe-wed-still-be-aaa-if-we-had-prime-minister-not-pr">Take for example Fareed Zakaria who on the CNN program bearing his name this Sunday is going to tell viewers that America would likely still have a AAA credit rating if we had a parliamentary system of government with a prime minister rather than a president </a></li>
+	</ul>
+	<li class="directoryItem" ><a class="directoryLink" href="/shownotes/na33320110825Shownotes/expandAllTopics/videoAangirfanLibyaPsyop"><img class="directoryIcon" src="http://static.opml.org/images/folder.gif" alt="folder" width="15" height="13" border="0" align="baseline" />[VIDEO] aangirfan: LIBYA PSY-OP</a></li>
+	<ul class="ulDirectory">
+
+	<li class="directoryComment" ><a href="http://aangirfan.blogspot.com/2011/08/libya-psy-op.html"><img class="icon" src="http://www.google.com/s2/favicons?domain=aangirfan.blogspot.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://aangirfan.blogspot.com/2011/08/libya-psy-op.html">"Libyan rebel leader Gibril Elqarfally stands before the Fortune 500-funded Brookings Institution openly declaring fealty to the globalist agenda of interdependency and subservience to a Wall Street-London international order." </a></li>
+	</ul>
+	<li class="directoryComment" ><a href="http://www.msnbc.msn.com/id/21134540/vp/44231382#44231382"><img class="icon" src="http://www.google.com/s2/favicons?domain=www.msnbc.msn.com" width="16" height="16" border="0" alt="Click here to visit the site."></a>&nbsp;&nbsp;<a href="http://www.msnbc.msn.com/id/21134540/vp/44231382#44231382">[VIDEO]: Obama: US will be a friend to Libya</a></li>
+	</ul>
+	</ul>
+
+					
+<center>
+
+	<br>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://disqus.com/forums/adamcurrycomments/embed.js"></script>
+	<noscript><a href="http://adamcurrycomments.disqus.com/?url=ref">View the forum thread.</a></noscript>
+
+	</center>
+
+					<div class="divLegend">
+						<p>Editor: Adam Curry;  Updated: 8/29/11; 2 reads. 320 items.  Page build ran for 1.166 seconds.</p>
+
+						<p><a class="aOpmlSourceLink" href="http://dropbox.curry.com/ShowNotesArchive/2011/08/NA-333-2011-08-25/na333opml.opml" title="Click on this icon to view the OPML source text for this directory. More info: http://www.opml.org/spec2."><img src="http://scripting.com/images/xmlIcon2.gif" border="0" width="36" height="14" alt="XML" /></a></p>
+						<p><a href="http://127.0.0.1:5337/opmlEditor/openOpml?url=http://333.nashownotes.com/shownotes/na33320110825Shownotes/expandAllTopics">View Outline</a></p>
+						<p><a href="http://333.nashownotes.com/"><img src="http://blog.curry.com/images/2011/06/14/BigAppsRounded.jpg" width="16" height="16" border="0" alt="Home"></a></p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</body>
+
+	</html>

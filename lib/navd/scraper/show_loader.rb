@@ -1,7 +1,7 @@
 module ::Navd::Scraper
   class ShowLoader
     attr_accessor :number, :spider, :uri, :found, :published, :errors
-    attr_reader :attributes, :show_notes, :format_version
+    attr_reader :attributes, :show_notes
 
     attr_reader :p_shownotes_main # Nokogiri::HTML::Document of the main shownotes page being processed
 
@@ -50,12 +50,23 @@ module ::Navd::Scraper
       errors.empty?
     end
 
-
     # Returns an array of hashes with show note detail (:name,:meme_name,:description,:url)
     # This is probably the dodgiest bit of the parsing. If something goes wrong, exceptions are left unhandled
     def show_notes
-      return @show_notes unless @show_notes.empty?
-      # TODO: test for p_shownotes_detail_all
+      return @show_notes if @show_notes.present?
+      @show_notes = case shownotes_format
+      when :nested
+        get_nested_show_notes
+      when :flat
+        get_flat_show_notes
+      else
+        []
+      end
+    end
+
+    protected
+
+    def get_nested_show_notes
       notes = []
       current_meme = nil
       p_shownotes_detail_all.at_css('ul.ulDirectory').children.each do |n|
@@ -69,7 +80,7 @@ module ::Navd::Scraper
             elsif meme.name=='ul' && meme[:class]=='ulDirectory'
               anchor = meme.at_css('a') || {}
               notes << {
-                :name => current_title,
+                :name => current_title.truncate(255),
                 :meme_name => current_meme,
                 :description => meme.text,
                 :url => anchor[:href]
@@ -78,22 +89,56 @@ module ::Navd::Scraper
           end
         end
       end
-      @show_notes = notes
+      notes
+    end
+
+    def get_flat_show_notes
+      show_notes = []
+      # scan all the top-level li elements under the shownotes node
+      p_shownotes_menu.css('div.divOutlineBody > ul > div.hide:last > ul > li').each do |n|
+        if n.next_element && n.next_element.name=='div' && (current_meme = n.css('span').text)
+          notes = n.next_element.xpath('./ul/li') # top level li elements
+            notes.each do |note|
+            current_title = note.text
+            if (note_collection = note.next_element) && note_collection.name=='div' && (subnotes = note_collection.css('li'))
+              anchor = subnotes.at_css('a') || {}
+              description = subnotes.text
+            else
+              anchor = note.at_css('a') || {}
+              description = current_title
+            end
+            show_notes << {
+              :name => current_title.truncate(255),
+              :meme_name => current_meme,
+              :description => description,
+              :url => anchor[:href]
+            }
+          end
+        end
+      end
+      show_notes
     end
 
     # Returns a text representation of the show credits
     def credits
       @credits ||= credits_list.try(:join,'<br/>')
     end
+    # Returns an array of credit items given an Nokogiri::HTML::Document container node
+    def normalize_credit_list(collection_root)
+      nbsp = Nokogiri::HTML("&nbsp;").text
+      c = collection_root.children.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ').gsub(/\t|\n/,'') : nil }
+      c.reject!{|i| i.blank?}
+      c
+    end
+    # Returns an array of credits for the show
     def credits_list
-       @credits_list ||= if p_credits
-        nbsp = Nokogiri::HTML("&nbsp;").text
-        c = p_credits.css('.directoryComment').children.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ') : nil }
-        c.reject!{|i| i.blank?}
-        c
+      @credits_list ||= case shownotes_format
+      when :nested
+        normalize_credit_list(p_credits.css('.directoryComment'))
+      when :flat
+        normalize_credit_list(p_shownotes_menu.css('div.divOutlineBody > ul > div.hide').first.css('*'))
       end
     end
-    protected :credits, :credits_list
 
     # Returns the human name of the show
     def show_name
@@ -110,35 +155,44 @@ module ::Navd::Scraper
       @errors << e
       nil
     end
-    protected :published_date
 
     # Returns the link to audio file from the main shownotes page
     # e.g. http://m.podshow.com/media/15412/episodes/299798/noagenda-299798-10-20-2011.mp3
     def mp3_url
       @mp3_url ||= extract_nodes(p_shownotes_main,:mp3)[:href]
     end
-    protected :mp3_url
 
     # Returns the link to official show page
     # e.g. http://blog.curry.com/stories/2011/10/20/na34920111020.html
     def episode_url
       @episode_url ||= extract_nodes(p_shownotes_main,:web)[:href]
     end
-    protected :episode_url
 
     # Returns the link to cover art
     # e.g. http://dropbox.curry.com/ShowNotesArchive/2011/10/NA-349-2011-10-20/Assets/ns349art.png
     def cover_art_url
       @cover_art_url ||= extract_nodes(p_shownotes_main,:cover_art)[:href]
     end
-    protected :cover_art_url
 
     # Returns the link to show assets page
     # e.g. http://349.nashownotes.com/assets
     def assets_url
       @assets_url ||= uri.merge(extract_nodes(p_shownotes_main,:assets)[:href]).to_s
+    rescue
+      # ignore errors getting the asset url
     end
-    protected :assets_url
+
+    # Returns the URI to show credits page
+    # http://349.nashownotes.com/shownotes/na34920111020Credits
+    def credits_uri
+      @credits_uri ||= uri.merge(extract_nodes(p_shownotes_menu,:credits)[:href])
+    end
+    # Returns the nested shownotes page content
+    # e.g. http://349.nashownotes.com/shownotes ->
+    #      http://349.nashownotes.com/shownotes/na34920111020Credits
+    def p_credits
+      @p_credits ||= spider.get_page(credits_uri)
+    end
 
     # Returns the URI to show notes menu page
     # e.g. http://349.nashownotes.com/shownotes
@@ -149,38 +203,41 @@ module ::Navd::Scraper
     def p_shownotes_menu
       @p_shownotes_menu ||= spider.get_page(shownotes_menu_uri)
     end
-    protected :shownotes_menu_uri, :p_shownotes_menu
+    # Returns the shownote menu page format type.
+    # Currently supports:
+    #   :nested - as for shows ~333-361
+    #   :flat - shows 362+
+    def shownotes_format
+      @shownotes_format ||= if p_shownotes_menu.css('ul.ulDirectory').present?
+        :nested
+      else
+        :flat
+      end
+    end
 
-    # e.g. http://349.nashownotes.com/shownotes/na34920111020Shownotes
     def shownotes_detail_main_uri
-      @shownotes_detail_main_uri ||= uri.merge(extract_nodes(p_shownotes_menu,:notes)[:href])
+      uri.merge(extract_nodes(p_shownotes_menu,:notes)[:href])
     end
-    def p_shownotes_detail_main
-      @p_show_note_detail_main ||= spider.get_page(shownotes_detail_main_uri)
-    end
-    protected :shownotes_detail_main_uri, :p_shownotes_detail_main
-
-    # e.g. http://349.nashownotes.com/shownotes/na34920111020Shownotes/expandAllTopics
     def shownotes_detail_all_uri
-      @shownotes_detail_all_uri ||= uri.merge(extract_nodes(p_shownotes_detail_main,:all_notes)[:href])
+      p_shownotes_detail_main = spider.get_page(shownotes_detail_main_uri)
+      uri.merge(extract_nodes(p_shownotes_detail_main,:all_notes)[:href])
     end
+    # Returns the nested shownotes page content
+    # e.g. http://349.nashownotes.com/shownotes ->
+    #      http://349.nashownotes.com/shownotes/na34920111020Shownotes ->
+    #      http://349.nashownotes.com/shownotes/na34920111020Shownotes/expandAllTopics
+    def get_nested_shownotes_page
+      spider.get_page(shownotes_detail_all_uri)
+    end
+    # Returns the shownotes HTML
     def p_shownotes_detail_all
-      @p_shownotes_detail_all ||= spider.get_page(shownotes_detail_all_uri)
+      @p_shownotes_detail_all ||= case shownotes_format
+      when :nested
+        get_nested_shownotes_page
+      when :flat
+      end
     end
-    protected :shownotes_detail_all_uri, :p_shownotes_detail_all
 
-    # Returns the URI to show credits page
-    # http://349.nashownotes.com/shownotes/na34920111020Credits
-    def credits_uri
-      @credits_uri ||= uri.merge(extract_nodes(p_shownotes_menu,:credits)[:href])
-    end
-    def p_credits
-      @p_credits ||= spider.get_page(credits_uri)
-    end
-    protected :credits_uri, :p_credits
-
-    # http://349.nashownotes.com/shownotes/na34920111020Shownotes
-    
     # Set of algorithms to extracts parts of a page
     # +page+ is a Nokogiri::HTML::Document
     # +item+ - symbol for note type required
@@ -203,6 +260,5 @@ module ::Navd::Scraper
       end
       result || {}
     end
-    protected :extract_nodes
   end
 end

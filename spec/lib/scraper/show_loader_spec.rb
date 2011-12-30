@@ -38,9 +38,9 @@ describe "Navd::Scraper::ShowLoader" do
     its(:errors) { should_not be_empty }
   end
 
-  describe "#show_name" do
+  describe "#show_name (protected)" do
     let(:expected) { 'show name' }
-    subject { show_loader.show_name }
+    subject { show_loader.send(:show_name) }
     before { show_loader.stub(:credits_list).and_return([expected,'','']) }
     it { should eql(expected) }
   end

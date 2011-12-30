@@ -6,6 +6,7 @@ describe "Navd::Scraper::ShowLoader examples" do
   let(:show_loader) { Navd::Scraper::ShowLoader.new(show_number) }
   subject { show_loader }
 
+  # test the scanning on samples in spec/fixtures/html/<show number>
   describe "#scan_show_assets" do
     {
       '333' => {
@@ -21,20 +22,63 @@ describe "Navd::Scraper::ShowLoader examples" do
           :credits=>nil,
           :name=>nil
         },
+        :shownotes_format => :nested,
         :shownotes_menu_url => 'http://333.nashownotes.com/shownotes',
-        :shownotes_detail_main_url => 'http://333.nashownotes.com/shownotes/na33320110825Shownotes',
-        :credits_url => 'http://333.nashownotes.com/shownotes/na33320110825Credits',
-        :credits => %(Lions Stood Still<br/>Executive Producers: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel, Jrdan Wyatt<br/>Associate Executive Producers:  Scott Hankel<br/>Executive Producers and 333  Club members: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel<br/>Knighthoods: Jordan Wyatt<br/>Art By: Thoren)
+        :shownotes_count => 11,
+        :show_name => 'Lions Stood Still',
+        :credits=>%(Lions Stood Still<br/>Executive Producers: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel, Jrdan Wyatt<br/>Associate Executive Producers:  Scott Hankel<br/>),
+        :credits_url => 'http://333.nashownotes.com/shownotes/na33320110825Credits'
+      },
+      '362' => {
+        :expected_attributes => {
+          :number => 362,
+          :published => true,
+          :show_notes_url=>"http://362.nashownotes.com/",
+          :audio_url=>"http://m.podshow.com/media/15412/episodes/304727/noagenda-304727-12-04-2011.mp3",
+          :published_date=>Date.parse('2011-12-04'),
+          :cover_art_url=>"http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/na362art.jpg",
+          :assets_url=>"http://362.nashownotes.com/assets",
+          :url=>"http://blog.curry.com/stories/2011/12/04/na36220111204.html",
+          :credits=>nil,
+          :name=>nil
+        },
+        :shownotes_format => :flat,
+        :shownotes_menu_url => 'http://362.nashownotes.com/shownotes',
+        :shownotes_count => 11,
+        :show_name => 'Drone Journalism',
+        :credits=>%(Drone Journalism<br/>Executive Producers: Adam Curry & John C Dvroak<br/>),
+        :credits_url => nil
+      },
+      '364' => {
+        :expected_attributes => {
+          :number => 364,
+          :published => true,
+          :show_notes_url=>"http://364.nashownotes.com/",
+          :audio_url=>"http://m.podshow.com/media/15412/episodes/305637/noagenda-305637-12-11-2011.mp3",
+          :published_date=>Date.parse('2011-12-11'),
+          :cover_art_url=>"http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/na364art.jpg",
+          :assets_url=>nil,
+          :url=>"http://blog.curry.com/stories/2011/12/11/na36420111211.html",
+          :credits=>nil,
+          :name=>nil
+        },
+        :shownotes_format => :flat,
+        :shownotes_menu_url => 'http://364.nashownotes.com/shownotes',
+        :shownotes_count => 11,
+        :show_name => 'Katy Bar The Door, Baby!',
+        :credits=>%(Katy Bar The Door, Baby!<br/>Executive Producers: Sir Richard Scott Bagwell),
+        :credits_url => nil
       }
     }.each do |number,options|
       context "show ##{number}" do
         let(:show_number) { number.to_i }
         let(:expected_attributes) { options[:expected_attributes] }
 
-        context "parsing main page" do
+        context "excluding credits" do
           before {
             show_loader.spider.stub(:get_page).and_return(published_show_page_html(show_number))
-            show_loader.stub(:show_notes).and_return([])
+            show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html(show_number))
+            show_loader.stub(:get_nested_show_notes).and_return([])
             show_loader.stub(:credits_list).and_return(nil)
             show_loader.scan_show_assets
           }
@@ -49,32 +93,44 @@ describe "Navd::Scraper::ShowLoader examples" do
             it { should eql(expected) }
           end
           
-          context "parsing shownotes menu" do
-            before {
-              show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html(show_number))
-            }
-            describe "#shownotes_detail_main_uri [protected]" do
-              subject { show_loader.send(:shownotes_detail_main_uri) }
-              let(:expected) { URI.parse(options[:shownotes_detail_main_url]) }
-              it { should eql(expected) }
+          describe "#shownotes_format [protected]" do
+            subject { show_loader.send(:shownotes_format) }
+            it { should eql(options[:shownotes_format]) }
+          end
+
+        end
+
+        context "with credits" do
+          before {
+            show_loader.spider.stub(:get_page).and_return(published_show_page_html(show_number))
+            show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html(show_number))
+            show_loader.stub(:get_nested_show_notes).and_return([])
+            if options[:credits_url]
+              show_loader.stub(:p_credits).and_return(credits_page_html(show_number))
             end
-            describe "#credits_uri [protected]" do
-              subject { show_loader.send(:credits_uri) }
+            show_loader.scan_show_assets
+          }
+
+          describe "#show_name [protected]" do
+            subject { show_loader.send(:show_name) }
+            let(:expected) { options[:show_name] }
+            it { should eql(expected) }
+          end
+
+          describe "#credits_uri [protected]" do
+            subject { show_loader.send(:credits_uri) }
+            if options[:credits_url]
               let(:expected) { URI.parse(options[:credits_url]) }
               it { should eql(expected) }
             end
           end
-        end
 
-        context "parsing credits" do
-          before {
-            show_loader.stub(:p_credits).and_return(credits_page_html(show_number))
-          }
           describe "#credits [protected]" do
             subject { show_loader.send(:credits) }
             let(:expected) { options[:credits] }
-            it { should eql(expected) }
+            it { should include(expected) }
           end
+
         end
 
       end

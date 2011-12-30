@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Shownotes</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://static.curry.com/worldoutline/admin/rss.xml" />
+		
+		<link href="http://fonts.googleapis.com/css?family=IM Fell DW Pica SC" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<link href="http://static.scripting.com/github/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/docs.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/prettify.css" rel="stylesheet">
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.tablesorter.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-dropdown.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-twipsy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/application.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-popover.js"></script>
+
+<script>
+	$(function () {
+		$("a[rel=twipsy]").twipsy({
+			live: true
+			})
+		})
+	</script>
+<script>
+	$(function () {
+		$("a[rel=popover]")
+		.popover({
+			offset: 10
+			})
+		.click(function(e) {
+			e.preventDefault()
+			})
+		})
+	</script>
+<style>
+	body {
+		margin-top: -5px;
+		}
+	table th {
+		border: 0;
+		}
+	table {
+		border: 0px;
+		}
+	.actions {
+		border: 0;
+		background: none;
+		padding: 0;
+		}
+	</style>
+<style>
+	body {
+		color: black;
+		}
+	/* eliminate borders on tables */
+		table th {
+			border: 0;
+			}
+		table td {
+			border: 0;
+			}
+		table {
+			border: 0px;
+			}
+	.divOpmlWebpage {
+		margin-left: 12%;
+		margin-right: 12%;
+		margin-bottom: 65px;
+		color: black;
+		}
+	.divOpmlHeader {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		}
+	.divOpmlHeader h1 {
+		font-family: 'IM Fell DW Pica SC';
+		text-align: center;
+		text-shadow: 4px 4px 4px #AAA;
+		font-size: 68px;
+		padding: 0px;
+		margin: 0px;
+		}
+	.divOpmlHeader red {
+		color: red;
+		font-size: 110%;
+		}
+	.divOpmlHeader a:link {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:hover {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:visited {
+		text-decoration: none;
+		color:#000;
+		}
+	
+	.divOpmlMenubar a, .divOpmlMenubar a:link, .divOpmlMenubar a:visited {
+		color: lightgray;
+		}
+	.divOpmlMenubar white {
+		color: white;
+		}
+	.divOpmlMenubarStatus {
+		color: lightgray;
+		float: right;
+		line-height: 19px;
+		padding: 10px 0px 11px;
+		font-size: 13px;
+		}
+	
+	.divOpmlWebpageBody {
+		padding-top: 0px;
+		}
+	.divOpmlWebpageBody h3 {
+		font-family: Ubuntu;
+		font-size: 24px;
+		}
+	
+	.divIntroPgf {
+		font-size: 14px;
+		line-height: 120%;
+		color: black;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		}
+	.prefsTable th, .prefsTable td {
+		border: 0;
+		font-size: 140%;
+		line-height: 100%;
+		}
+	.prefsTable td.input: {
+		height: 100%;
+		padding: 0;
+		border: 0;
+		}
+	
+	/* sign-in form */
+		.divSigninForm .signinLabel {
+			text-align: right;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm td {
+			border: none;
+			}
+		.divSigninForm input {
+			height: 32px;
+			padding: 3px;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm table {
+			padding-top: 30px;
+			width: auto;
+			}
+	/* prefs */
+		.divPrefs {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs label {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs .row {
+			line-height: 24px;
+			margin-bottom: 12px;
+			}
+		.divPrefs red {
+			color: red;
+			}
+		.divPrefs li {
+			font-family: Ubuntu;
+			font-size: 17px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			}
+		.divPrefs h4 {
+			font-family: Ubuntu;
+			font-size: 22px;
+			padding-top: 15px;
+			padding-bottom: 5px;
+			}
+	/* log pages */
+		.logEvent {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			}
+		.logDescription {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			line-height: 120%;
+			}
+		.logDate {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.logSeconds {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.divLogPage table {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.divLogPage td {
+			border: none;
+			font-size: 16px;
+			}
+		.divLogPage th {
+			border: none;
+			font-size: 14px;
+			padding-bottom: 0px;
+			}
+	</style>
+
+		<style>
+			/* header */
+				.divGraphic {
+					margin: 0px auto;
+					}
+				.divGraphic img {
+					display: block;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:5px;
+					padding-bottom:20px;
+					}
+				.divGraphic h1 {
+					font-family: Lobster;
+					font-size: 64px;
+					line-height: 135%;
+					white-space: nowrap;
+					text-align:center;
+					padding-bottom: 10px;
+					padding-top: 0px;
+					}
+			/* directory */
+				.divDirectory {
+					width: 300px;
+					margin: 30px auto;
+					}
+				.ulDirectory {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					text-align: left;
+					list-style-type: none;
+					padding-left: 15px;
+					}
+				.directoryItem {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					}
+				.directoryComment {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					}
+				.directoryLink {
+					padding-left: 24px;
+					background: transparent url(http://static.opml.org/images/folder.gif) no-repeat top left;
+					}
+				.directoryIcon {
+					display: none;
+					padding-right: 10px;
+					}
+				.ulDirectory a:link {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectory a:hover {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectory a:visited {
+					text-decoration: underline;
+					color:#819fC7;
+					}
+				.directoryErrorMessage {
+					font-family: Arial;
+					font-size: 24;
+					padding-top: 24;
+					padding-bottom: 12;
+					}
+			/* directory additions */
+				.divDirectoryTitle {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					font-weight: bold;
+					}
+				.divLegend {
+					font-family: Arial;
+					font-size: 12px;
+					line-height: 14px;
+					color:#1E68A6;
+					}
+			/* bread crumbs */
+				.divBreadCrumbs {
+					font-family: Arial;
+					font-size: 15px;
+					line-height: 18px;
+					padding-bottom: 15px;
+					}
+				.divBreadCrumbs a:link {
+					text-decoration: underline;
+					color: #1E68A6;
+					}
+				.divBreadCrumbs a:hover {
+					text-decoration: underline;
+					color: #1E68A6;
+					}
+				.divBreadCrumbs a:visited {
+					text-decoration: underline;
+					color: #819fC7;
+					}
+				.aCurrentCrumb {
+					font-weight: bold;
+					color: black;
+					}
+			/* blogpost nodetype */
+				.divBlogPost h3 {
+					font-family: Georgia;
+					font-size: 22px;
+					line-height: 28px;
+					padding-left: 20px;
+					padding-top: 20px;
+					padding-bottom: 10px;
+					}
+				.divBlogPost p {
+					font-family: Georgia;
+					font-size: 16px;
+					line-height: 22px;
+					padding-left: 25px;
+					padding-right: 25px;
+					padding-bottom: 3px;
+					}
+			/* river nodetype */
+				.article .footer {
+					padding: 0px;
+					background-color: white;
+					border-top: 0px;
+					text-shadow: 0 0px;
+					min-width: 0px;
+					-moz-box-shadow: 0 0px 0px;
+					}
+				.article .description {
+					font-family: Arial,sans-serif;
+					font-size: 13px;
+					line-height: 17px;
+					}
+				.article h3 {
+					font-family: Arial,sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+					}
+			/* thumbList nodetype */
+				.divWorldOutlineThumbList td {
+					border: 3px red;
+					border-style: solid;
+					text-align: center;
+					padding-top: 12px;
+					padding-bottom: 8px;
+					}
+				.divWorldOutlineThumbList table {
+					border-collapse: collapse;
+					}
+				.divWorldOutlineThumbList .thumbListCaptionString {
+					font-size: 13px;
+					}
+			/* domains page */
+				.divDomains ul {
+					padding-top: 5px;
+					list-style: disc outside normal;
+					padding-left: 35px;
+					}
+				.divDomains li {
+					font-family: Ubuntu;
+					font-size: 18px;
+					line-height: 28px;
+					color: black;
+					}
+			.divLegend {
+				padding-top: 30px;
+				}
+			</style>
+		<style>html {
+  width: 980px;
+  margin: auto;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+p.blogPostPgf {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+h3.blogPostTitle {
+  font-family: georgia;
+  font-size: 28px;
+  }
+
+li.directoryComment {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+li.directoryItem {
+  font-family: arial;
+  font-size: 17px;
+  font-weight: plain;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+.divDirectory {
+  width: 680px;
+  margin: 3em auto;
+}
+
+.divFooter {
+  position: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  -mox-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  box-shadow: 0 0 8px rgba(0,0,0,.3)
+}
+</style>
+		</head>
+
+	<body>
+		
+		<div class="divOpmlWebpage">
+			<div class="divOpmlWebpageBody">
+				
+					<div class="divGraphic"><a href="/"><img src="http://blog.curry.com/images/2011/12/11/na364art.jpg" width="512" height="512" border="0" align="center" hspace="15" vspace="5" alt="A picture named na364art.jpg"></a></div>
+					<div class="divBreadCrumbs"><a class="aTopCrumb" href="/">NA-364-2011-12-11</a><span class="spnCrumbDivider"> > </span><span class="aCurrentCrumb">Shownotes</span></div>
+					<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+
+<style>
+	.divOutlineBody {
+		padding-left: 15%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+		width: 75%;
+		background-color: whitesmoke;
+		border:1px solid gainsboro;
+		}
+	.divOutlineBody ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 1em;
+		}
+	.divOutlineBody li {
+		font-family: Cardo;
+		font-size: 20px;
+		line-height: 150%;
+		color: black;
+		text-indent: -20px;
+		}
+	.opText {
+		color:black;
+		}
+	.sidebarTitle {
+		font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		margin-top: 5px;
+		margin-left: 0px;
+		margin-right: 0px;
+		font-weight: bold;
+		}
+	p.collapsedSidebarText {
+		font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		margin-left: 0px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		}
+	.show {
+		padding-left: 8px;
+		padding-right: 0px;
+		padding-bottom: 4px;
+		margin-left: 0px;
+		}
+	.hide {
+		display: none;
+		}
+	img.expandIcon {
+		padding: 0px;
+		padding-right: 4px;
+		border: 0;
+		}
+	img.expandIconx {
+		float:left;
+		position: relative;
+		left: -22px;
+		margin-right: -22px;
+		padding-top: 2px;
+		}
+	</style>
+<div class="divOutlineBody">
+	
+<ul>
+	<li><a href="javascript:expandCollapse('na36420111211Credits12822','showForOutline');"><img class="expandIcon" id="img_na36420111211Credits12822" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('na36420111211Credits12822','showForOutline');"><span class="opText">NA-364-2011-12-11 Credits</span></a></li>
+	<div class="hide" id="na36420111211Credits12822" name="na36420111211Credits12822">
+		<ul>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Katy Bar The Door, Baby!</li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Executive Producers: Sir Richard Scott Bagwell</li>
+
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Executive Producer and 364 Club members: </li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Associate Executive Producers: Kenneth Alexander, Noel Malenosky, Squire Snuffles, Fredric Gagnon, David Yeagly, Carrie Schön</li>
+			<li><a href="http://dvorak.org/na" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Become a member of the 365 Club, support the show <a href="http://dvorak.org/na">here</a></li>
+			<li><a href="javascript:expandCollapse('pr30756','showForOutline');"><img class="expandIcon" id="img_pr30756" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('pr30756','showForOutline');"><span class="opText">PR</span></a></li>
+			<div class="hide" id="pr30756" name="pr30756">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('deadwhistleblowersCom22746','showForOutline');"><img class="expandIcon" id="img_deadwhistleblowersCom22746" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('deadwhistleblowersCom22746','showForOutline');"><span class="opText">deadwhistleblowers.com</span></a></li>
+					<div class="hide" id="deadwhistleblowersCom22746" name="deadwhistleblowersCom22746">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Two new domains for this week:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">deadwhistleblowers.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">braveNWO.com</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Jaap</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('currydvorakconsultancyCom13477','showForOutline');"><img class="expandIcon" id="img_currydvorakconsultancyCom13477" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('currydvorakconsultancyCom13477','showForOutline');"><span class="opText">currydvorakconsultancy.com</span></a></li>
+					<div class="hide" id="currydvorakconsultancyCom13477" name="currydvorakconsultancyCom13477">
+						<ul>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Hey Adam,</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Eindelijk een domein gevonden waarbij mijn mede NA luisteraars mij niet te snel af waren met registreren!</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">currydvorakconsultancy.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Verwijst nu naar noagendashow.com</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Cheers,</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tristan Bethe</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('nasocialNet14496','showForOutline');"><img class="expandIcon" id="img_nasocialNet14496" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('nasocialNet14496','showForOutline');"><span class="opText">nasocial.net</span></a></li>
+					<div class="hide" id="nasocialNet14496" name="nasocialNet14496">
+
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Adam,</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Well, the spammers got the best of me. A spam-bot was able to create enough blog posts on NAsocial.net (29,000 pages in one day) that I was no longer able to delete the user because Godaddy wouldn't increase my PHP execution time limit. They then shut down my database because it was too large so I was unable to use a plugin on the site to manage the spam. I use shared hosting and have clients' sites on this account so I had to pull the plug. I had intended to send a message out to all the Good Slaves that had signed up, it would be bogative not to, but I couldn't even get into the site when the time came to send the mass email.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Long story short, I'm forwarding NAsocial.net to NoAgendaShow.com. If anyone wants to contact me they can go through my new venture, AfterTheBeepPodcast.com.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">It was fun while it lasted!</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Ramsey</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">P.S.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">If you mention this during a PR segment tell Kilo, "Thanks for everything."</li>
+							</ul>
+
+						</div>
+					</ul>
+				</div>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Knighthoods: Richard Scott Bagwell</li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Art By: <a href="http://www.twitter.com/fauxjebus">Brad Connell</a></li>
+			<li><a href="http://359.nashownotes.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ShowNotes Archive of links and Assets (clips etc) <a href="http://364.nashownotes.com/"> 364.nashownotes.com</a></li>
+
+			<li><a href="http://nawol.curry.com/noAgenda/shownotes" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>New: Directory Archive of Shownotes (includes all audio and video assets used) <a href="http://nashownotes.com">nashownotes.com</a></li>
+			<li><a href="http://noagendanewsnetwork.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('na36420111211Shownotes3798','showForOutline');"><img class="expandIcon" id="img_na36420111211Shownotes3798" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('na36420111211Shownotes3798','showForOutline');"><span class="opText">NA-364-2011-12-11  Shownotes</span></a></li>
+	<div class="hide" id="na36420111211Shownotes3798" name="na36420111211Shownotes3798">
+
+		<ul>
+			<li><a href="/shownotes/na36420111211Shownotes/search"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Search</li>
+			<li><a href="javascript:expandCollapse('bullying11957','showForOutline');"><img class="expandIcon" id="img_bullying11957" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bullying11957','showForOutline');"><span class="opText">Bullying</span></a></li>
+			<div class="hide" id="bullying11957" name="bullying11957">
+				<ul>
+					<li><a href="javascript:expandCollapse('homophobicBullyingRepresentsGraveViolationOfHumanRightsBan16317','showForOutline');"><img class="expandIcon" id="img_homophobicBullyingRepresentsGraveViolationOfHumanRightsBan16317" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('homophobicBullyingRepresentsGraveViolationOfHumanRightsBan16317','showForOutline');"><span class="opText">Homophobic bullying represents grave violation of human rights -- Ban</span></a></li>
+					<div class="hide" id="homophobicBullyingRepresentsGraveViolationOfHumanRightsBan16317" name="homophobicBullyingRepresentsGraveViolationOfHumanRightsBan16317">
+
+						<ul>
+							<li><a href="http://www.un.org/apps/news/story.asp?NewsID=40671&amp;Cr=discrimination&amp;Cr1=" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>8 December 2011 --</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"><b>Homophobic bullying of young people constitutes a "grave violation of human rights," Secretary-General Ban Ki-moon said today, urging States to take the necessary measures to protect their citizens from violence and discrimination on the grounds of sexual orientation and gender identity.</b></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"Bullying of this kind is not restricted to a few countries but goes on in schools and local communities in all parts of the world," Mr. Ban said in a message delivered by Assistant Secretary-General for Human Rights Ivan imonovic to a panel discussion on ending violence and discrimination based on sexual orientation at UN Headquarters in New York.</li>
+							</ul>
+						</div>
+
+					<li><a href="http://www.un.org/en/documents/udhr/index.shtml" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Universal Declaration of Human Rights</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('droneNation22983','showForOutline');"><img class="expandIcon" id="img_droneNation22983" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('droneNation22983','showForOutline');"><span class="opText">Drone Nation</span></a></li>
+			<div class="hide" id="droneNation22983" name="droneNation22983">
+				<ul>
+					<li><a href="javascript:expandCollapse('dr0neInsiderCommentsOnHijackedDr0ne7359','showForOutline');"><img class="expandIcon" id="img_dr0neInsiderCommentsOnHijackedDr0ne7359" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('dr0neInsiderCommentsOnHijackedDr0ne7359','showForOutline');"><span class="opText">Dr0ne Insider comments on hijacked dr0ne</span></a></li>
+
+					<div class="hide" id="dr0neInsiderCommentsOnHijackedDr0ne7359" name="dr0neInsiderCommentsOnHijackedDr0ne7359">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">About your question:  I think they are super incompetent & have too much going on when it comes to academics supporting them with intelligent solutions then they don't know how to manage it after they acquire it!  Sometimes they get this research software, get it almost free then don't update it. Also, anything leaked to the media is an inside job - I cannot even confirm if this crap is true!  If we don't know what we're doing how do the Russian? =)</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('whoGaveIranTheTechnologyForTrappingTheUsStealthDrone31726','showForOutline');"><img class="expandIcon" id="img_whoGaveIranTheTechnologyForTrappingTheUsStealthDrone31726" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whoGaveIranTheTechnologyForTrappingTheUsStealthDrone31726','showForOutline');"><span class="opText">Who Gave Iran the Technology for Trapping the US Stealth Drone?</span></a></li>
+					<div class="hide" id="whoGaveIranTheTechnologyForTrappingTheUsStealthDrone31726" name="whoGaveIranTheTechnologyForTrappingTheUsStealthDrone31726">
+
+						<ul>
+							<li><a href="http://www.debka.com/weekly/520/printversion/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Russian arms sales: Monday, Oct. 25, Moscow announced the delivery to Iran of Avtobaza truck-mounted jammers, which are portable advanced short-range electronic weapons designed for defense against attacking planes, drones and rockets.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">DEBKA-Net-Weekly's military sources report that the Avtobaza jammers are activated by Russian electronic anti-aircraft and combat systems, part of a very advanced radar system called ELINT-electronic signals intelligence which provides early warning when enemy warplanes and rockets approach targets.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The Avtobaza's range is exceptional. It can jam and disarm 60 targets simultaneously at a 150-kilometer range and through 360 degrees. Its response time is up to 20 minutes.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('policeEmployPredatorDroneSpyPlanesOnHomeFrontLatimesCom26241','showForOutline');"><img class="expandIcon" id="img_policeEmployPredatorDroneSpyPlanesOnHomeFrontLatimesCom26241" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('policeEmployPredatorDroneSpyPlanesOnHomeFrontLatimesCom26241','showForOutline');"><span class="opText">Police employ Predator drone spy planes on home front - latimes.com</span></a></li>
+
+					<div class="hide" id="policeEmployPredatorDroneSpyPlanesOnHomeFrontLatimesCom26241" name="policeEmployPredatorDroneSpyPlanesOnHomeFrontLatimesCom26241">
+						<ul>
+							<li><a href="http://www.latimes.com/news/nationworld/nation/la-na-drone-arrest-20111211,0,324348.story" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Reporting from Washington-- Armed with a search warrant, Nelson County Sheriff Kelly Janke went looking for six missing cows on the Brossart family farm in the early evening of June 23. Three men brandishing rifles chased him off, he said.
+
+Janke knew the gunmen could be anywhere on the 3,000-acre spread in eastern North Dakota. Fearful of an armed standoff, he called in reinforcements from the state Highway Patrol, a regional SWAT team, a bomb squad, ambulances and deputy sheriffs from three other counties.
+
+He also called in a Predator B drone.
+
+As the unmanned aircraft circled 2 miles overhead the next morning, sophisticated sensors under the nose helped pinpoint the three suspects and showed they were unarmed. Police rushed in and made the first known arrests of U.S. citizens with help from a Predator, the spy drone that has helped revolutionize modern warfare.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('whenWillWeHaveUnmannedCommercialAirlinersIeeeSpectrum31718','showForOutline');"><img class="expandIcon" id="img_whenWillWeHaveUnmannedCommercialAirlinersIeeeSpectrum31718" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whenWillWeHaveUnmannedCommercialAirlinersIeeeSpectrum31718','showForOutline');"><span class="opText">When Will We Have Unmanned Commercial Airliners? - IEEE Spectrum</span></a></li>
+					<div class="hide" id="whenWillWeHaveUnmannedCommercialAirlinersIeeeSpectrum31718" name="whenWillWeHaveUnmannedCommercialAirlinersIeeeSpectrum31718">
+						<ul>
+
+							<li><a href="http://spectrum.ieee.org/aerospace/aviation/when-will-we-have-unmanned-commercial-airliners" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In the sphere of commercial flight, too, automation has thinned the cockpit crew from five to just the pilot and copilot, whose jobs it has greatly simplified. Do we even need those two? Many aviation experts think not. "A pilotless airliner is going to come; it's just a question of when," said James Albaugh, the president and CEO of Boeing Commercial Airlines, in a talk he gave in August at the AIAA Modeling and Simulation Technologies Conference, in Portland, Ore. "You'll see it in freighters first, over water probably, landing very close to the shore."</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('conspiracyTheoryOnDownedDroneTheRushLimbaughShow30490','showForOutline');"><img class="expandIcon" id="img_conspiracyTheoryOnDownedDroneTheRushLimbaughShow30490" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('conspiracyTheoryOnDownedDroneTheRushLimbaughShow30490','showForOutline');"><span class="opText">Conspiracy Theory on Downed Drone - The Rush Limbaugh Show</span></a></li>
+					<div class="hide" id="conspiracyTheoryOnDownedDroneTheRushLimbaughShow30490" name="conspiracyTheoryOnDownedDroneTheRushLimbaughShow30490">
+						<ul>
+							<li><a href="http://www.rushlimbaugh.com/daily/2011/12/08/conspiracy_theory_on_downed_drone" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The first thing they say it lost its so-called tether, the communication thing. I don't believe that in the first place because, you know, it's satellite communication, and they use multichannel encryption and stuff, and I don't believe there's any way that... The next thing is if they do this --</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('whatReallyHappenedAboardAirFrance447WwwPopularmechanicsComReadability3299','showForOutline');"><img class="expandIcon" id="img_whatReallyHappenedAboardAirFrance447WwwPopularmechanicsComReadability3299" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whatReallyHappenedAboardAirFrance447WwwPopularmechanicsComReadability3299','showForOutline');"><span class="opText">What Really Happened Aboard Air France 447 -- www.popularmechanics.com -- Readability</span></a></li>
+					<div class="hide" id="whatReallyHappenedAboardAirFrance447WwwPopularmechanicsComReadability3299" name="whatReallyHappenedAboardAirFrance447WwwPopularmechanicsComReadability3299">
+						<ul>
+							<li><a href="http://www.readability.com/articles/thq1qpda" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>After this accident, the million-dollar question is whether training, instrumentation, and cockpit procedures can be modified all around the world so that no one will ever make this mistake again--or whether the inclusion of the human element will always entail the possibility of a catastrophic outcome.</li>
+							</ul>
+						</div>
+
+					<li><a href="http://www.occupydrones.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Occupy Drones</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('complaintDepartment3497','showForOutline');"><img class="expandIcon" id="img_complaintDepartment3497" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('complaintDepartment3497','showForOutline');"><span class="opText">Complaint department</span></a></li>
+			<div class="hide" id="complaintDepartment3497" name="complaintDepartment3497">
+				<ul>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I am a woman who listens to your show on a fairly regular basis now, and find many sexist comments highly irritating, BUT God help me, I love your insights and sometimes you actually make me laugh. So, I keep coming back. I deal with eye rolls. Keep it up. No, I don't mean your member.</li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('elite15689','showForOutline');"><img class="expandIcon" id="img_elite15689" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('elite15689','showForOutline');"><span class="opText">Elite$</span></a></li>
+			<div class="hide" id="elite15689" name="elite15689">
+				<ul>
+					<li><a href="javascript:expandCollapse('thePjTatlerJoinTheAustinTexasWelcomingPartyForEricHolderTuesday7977','showForOutline');"><img class="expandIcon" id="img_thePjTatlerJoinTheAustinTexasWelcomingPartyForEricHolderTuesday7977" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('thePjTatlerJoinTheAustinTexasWelcomingPartyForEricHolderTuesday7977','showForOutline');"><span class="opText">The PJ Tatler >> Join the Austin Texas "Welcoming" Party for Eric Holder Tuesday</span></a></li>
+					<div class="hide" id="thePjTatlerJoinTheAustinTexasWelcomingPartyForEricHolderTuesday7977" name="thePjTatlerJoinTheAustinTexasWelcomingPartyForEricHolderTuesday7977">
+						<ul>
+
+							<li><a href="http://pjmedia.com/tatler/2011/12/09/join-the-austin-texas-welcoming-party-for-eric-holder-tuesday/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>I'll have more about this shortly at the PJ Rule of Law blog, but Eric Holder is coming to Austin, Texas, on Tuesday, and a gathering of Patriots will take place to "greet" him.
+
+King Street Patriots is holding a rally outside the LBJ Library where Holder will be appearing.- Inside, Holder will potentially explain why DOJ isn't preclearing Texas and South Carolina Voter ID, while outside, citizens will be calling on Holder to enforce election integrity laws that he is ignoring (dead voters, black panthers, etc).
+
+Inside Holder will talk about what a great job he is doing.- Outside, King Street Patriots will be talking about the actual job he is doing.
+
+Inside will be the-Attorney-General who refuses to hold anyone accountable for Fast and Furious (such as Chief of Staff Garry Grindler or-AAG Lanny Breuer).- Outside will be Americans tired of the lies and lawlessness.-- Here is your big chance to be heard, and "greet" the most unpopular and truth-challenged member of the cabinet.- You are invited, and here is the flyer with details.-</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('proposedSKoreanTowersResembleExplodingWorldTradeCenterTheWeeklyStandard29489','showForOutline');"><img class="expandIcon" id="img_proposedSKoreanTowersResembleExplodingWorldTradeCenterTheWeeklyStandard29489" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('proposedSKoreanTowersResembleExplodingWorldTradeCenterTheWeeklyStandard29489','showForOutline');"><span class="opText">Proposed S. Korean Towers Resemble Exploding World Trade Center | The Weekly Standard</span></a></li>
+					<div class="hide" id="proposedSKoreanTowersResembleExplodingWorldTradeCenterTheWeeklyStandard29489" name="proposedSKoreanTowersResembleExplodingWorldTradeCenterTheWeeklyStandard29489">
+						<ul>
+							<li><a href="http://www.weeklystandard.com/blogs/proposed-s-korean-towers-resemble-exploding-world-trade-center_611802.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The unveiling of pictures of planned luxury residential towers scheduled to be built in Seoul, South Korea, has sparked instant controversy. The reason is obvious. The towers, which include a so-called "cloud" feature connecting them around the 27th floors, clearly resemble the World Trade Towers in the process of collapsing following the 9/11 attacks.</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('prInTheMedia13347','showForOutline');"><img class="expandIcon" id="img_prInTheMedia13347" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('prInTheMedia13347','showForOutline');"><span class="opText">PR in the Media</span></a></li>
+			<div class="hide" id="prInTheMedia13347" name="prInTheMedia13347">
+				<ul>
+					<li><a href="javascript:expandCollapse('zyngaSaysIpoPriceRangeAffectedByOtherRecentOfferingsBusinessweek25211','showForOutline');"><img class="expandIcon" id="img_zyngaSaysIpoPriceRangeAffectedByOtherRecentOfferingsBusinessweek25211" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('zyngaSaysIpoPriceRangeAffectedByOtherRecentOfferingsBusinessweek25211','showForOutline');"><span class="opText">Zynga Says IPO Price Range Affected by Other Recent Offerings - Businessweek</span></a></li>
+
+					<div class="hide" id="zyngaSaysIpoPriceRangeAffectedByOtherRecentOfferingsBusinessweek25211" name="zyngaSaysIpoPriceRangeAffectedByOtherRecentOfferingsBusinessweek25211">
+						<ul>
+							<li><a href="http://www.businessweek.com/news/2011-12-11/zynga-says-ipo-price-range-affected-by-other-recent-offerings.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>San Francisco-based Zynga's offering of 100 million shares, set to price on Dec. 15, would be the biggest by a U.S. Internet company since Google Inc. went public in 2004, Bloomberg data show. Zynga may raise about $889 million in the share sale to spend on developing new games and possibly buying companies or technologies, according to its filing.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('gitmoNation24712','showForOutline');"><img class="expandIcon" id="img_gitmoNation24712" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gitmoNation24712','showForOutline');"><span class="opText">Gitmo Nation</span></a></li>
+
+			<div class="hide" id="gitmoNation24712" name="gitmoNation24712">
+				<ul>
+					<li><a href="javascript:expandCollapse('uncoveredTheTortureChamberThatProvesTheCiaWentNutsNewsTheWeekUk31457','showForOutline');"><img class="expandIcon" id="img_uncoveredTheTortureChamberThatProvesTheCiaWentNutsNewsTheWeekUk31457" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('uncoveredTheTortureChamberThatProvesTheCiaWentNutsNewsTheWeekUk31457','showForOutline');"><span class="opText">Uncovered: the torture chamber that proves the CIA went nuts | News | The Week UK</span></a></li>
+					<div class="hide" id="uncoveredTheTortureChamberThatProvesTheCiaWentNutsNewsTheWeekUk31457" name="uncoveredTheTortureChamberThatProvesTheCiaWentNutsNewsTheWeekUk31457">
+						<ul>
+							<li><a href="http://www.theweek.co.uk/world-news/43424/uncovered-torture-chamber-proves-cia-went-nuts" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>INVESTIGATIVE journalists have finally unearthed something in Bucharest they have long suspected to be there - a secret CIA prison in the basement of a government building. The news was broken jointly by the Associated Press and German public television, ARD Panorama, yersterday.
+
+Unlike similar 'Black' locations in remote birch forests in eastern Europe, this prison was in a busy residential neighbourhood a short tram ride from the centre of the Romanian capital. -</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('georgeTakeiNeverAgainAllegiance16083','showForOutline');"><img class="expandIcon" id="img_georgeTakeiNeverAgainAllegiance16083" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('georgeTakeiNeverAgainAllegiance16083','showForOutline');"><span class="opText">George Takei: Never Again - Allegiance</span></a></li>
+					<div class="hide" id="georgeTakeiNeverAgainAllegiance16083" name="georgeTakeiNeverAgainAllegiance16083">
+						<ul>
+							<li><a href="http://www.allegiancemusical.com/video/never-again" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Nearly 70 years ago, Executive Order 9066 authorized the U.S. military to remove any person from designated "military zones" without charge, trial or any kind of due process.- This Order led to the forced evacuation and internment over over 120,000 Japanese Americans, two thirds of whom, including myself, my siblings, and my mother, were U.S. citizens.- I spent over four years in two of America's internment camps, in Rohwer, Arkansas and Tule Lake, California, simply because I and my family happen to look like the people who bombed Pearl Harbor.
+
+Now a bill proposed in the U.S. Senate, S. 1253 (McCain/Levin) would authorize a similar sweeping authority, granted to the President, to order the detention--without charge or trial--of any person even suspected of being associated with a "terrorist organization."- I could scarcely believe my eyes when I saw that we hadn't learned from the terrible lessons of the past.
+
+We are a nation of laws, and we have a Constitution that guarantees certain inalienable rights, including the right to liberty, the right to a jury trial, and the right against unlawful search and seizure.- And yet, in times of trouble, how quickly these cornerstones of our freedom are abandoned.- We must be constantly vigilant against tyranny and injustice of all forms, especially when it isn't politically expedient.
+
+Please share this article and write to your senator, telling her or him to vote against S.1253, and to say loudly and clearly:- "Never Again."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('fnf23884','showForOutline');"><img class="expandIcon" id="img_fnf23884" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('fnf23884','showForOutline');"><span class="opText">FnF</span></a></li>
+			<div class="hide" id="fnf23884" name="fnf23884">
+				<ul>
+					<li><a href="javascript:expandCollapse('johnNMitchellWikipediaTheFreeEncyclopedia31054','showForOutline');"><img class="expandIcon" id="img_johnNMitchellWikipediaTheFreeEncyclopedia31054" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('johnNMitchellWikipediaTheFreeEncyclopedia31054','showForOutline');"><span class="opText">John N. Mitchell - Wikipedia, the free encyclopedia</span></a></li>
+					<div class="hide" id="johnNMitchellWikipediaTheFreeEncyclopedia31054" name="johnNMitchellWikipediaTheFreeEncyclopedia31054">
+						<ul>
+							<li><a href="http://en.wikipedia.org/wiki/John_N._Mitchell" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>On February 21, 1975, Mitchell was found guilty of conspiracy, obstruction of justice, and perjury and sentenced to two and a half to eight years in prison for his role in the Watergate break-in and cover-up, which he dubbed the White House horrors. </li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('strongEarthquakeRattlesMexicoOneDeadTopNewsReuters18002','showForOutline');"><img class="expandIcon" id="img_strongEarthquakeRattlesMexicoOneDeadTopNewsReuters18002" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('strongEarthquakeRattlesMexicoOneDeadTopNewsReuters18002','showForOutline');"><span class="opText">Strong earthquake rattles Mexico, one dead | Top News | Reuters</span></a></li>
+					<div class="hide" id="strongEarthquakeRattlesMexicoOneDeadTopNewsReuters18002" name="strongEarthquakeRattlesMexicoOneDeadTopNewsReuters18002">
+						<ul>
+							<li><a href="http://ca.reuters.com/article/topNews/idCATRE7BA00X20111211" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A powerful 6.7 magnitude earthquake shook Mexico on Saturday, killing at least one person, knocking out lights in parts of the capital and sending people rushing into the streets.
+
+There were no immediate reports of damage or injuries in Mexico City but emergency services said one person was killed when a house collapsed in Iguala, a small city between the capital and the tourist resort of Acapulco.
+
+"I was dreadfully afraid, I thought it was never going to end," said Laura Gonzalez, who was drinking in a bar in the capital when the quake struck.</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('mayorKilledAsViolenceEscalatesInGuerreroMexico17418','showForOutline');"><img class="expandIcon" id="img_mayorKilledAsViolenceEscalatesInGuerreroMexico17418" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('mayorKilledAsViolenceEscalatesInGuerreroMexico17418','showForOutline');"><span class="opText">Mayor Killed as Violence Escalates in Guerrero, Mexico</span></a></li>
+					<div class="hide" id="mayorKilledAsViolenceEscalatesInGuerreroMexico17418" name="mayorKilledAsViolenceEscalatesInGuerreroMexico17418">
+						<ul>
+							<li><a href="http://www.insightcrime.org/criminal-groups/mexico/beltran-leyva-org/item/1444-mayor-killed-as-violence-escalates-in-guerrero-mexico" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The mayor of a small town in Guerrero state, Mexico was kidnapped and killed by unidentified perpetrators, the fifth mayor killed in Mexico so far this year.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('lameCherryOperationReggieRunner14500','showForOutline');"><img class="expandIcon" id="img_lameCherryOperationReggieRunner14500" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('lameCherryOperationReggieRunner14500','showForOutline');"><span class="opText">Lame Cherry: Operation Reggie Runner</span></a></li>
+
+					<div class="hide" id="lameCherryOperationReggieRunner14500" name="lameCherryOperationReggieRunner14500">
+						<ul>
+							<li><a href="http://lamecherry.blogspot.com/2011/12/operation-reggie-runner.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The reality in this is obvious and no one has pointed this out, in Reggie Love knows all about every Obama crime from the forged Birth Abstract to Operation Gunrunner led by Eric Holder.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('eqMachine10217','showForOutline');"><img class="expandIcon" id="img_eqMachine10217" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('eqMachine10217','showForOutline');"><span class="opText">EQ Machine</span></a></li>
+
+			<div class="hide" id="eqMachine10217" name="eqMachine10217">
+				<ul>
+					<li><a href="javascript:expandCollapse('strongEarthquakeRattlesMexicoOneDeadTopNewsReuters15588','showForOutline');"><img class="expandIcon" id="img_strongEarthquakeRattlesMexicoOneDeadTopNewsReuters15588" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('strongEarthquakeRattlesMexicoOneDeadTopNewsReuters15588','showForOutline');"><span class="opText">Strong earthquake rattles Mexico, one dead | Top News | Reuters</span></a></li>
+					<div class="hide" id="strongEarthquakeRattlesMexicoOneDeadTopNewsReuters15588" name="strongEarthquakeRattlesMexicoOneDeadTopNewsReuters15588">
+						<ul>
+							<li><a href="http://ca.reuters.com/article/topNews/idCATRE7BA00X20111211" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A powerful 6.7 magnitude earthquake shook Mexico on Saturday, killing at least one person, knocking out lights in parts of the capital and sending people rushing into the streets.
+
+There were no immediate reports of damage or injuries in Mexico City but emergency services said one person was killed when a house collapsed in Iguala, a small city between the capital and the tourist resort of Acapulco.
+
+"I was dreadfully afraid, I thought it was never going to end," said Laura Gonzalez, who was drinking in a bar in the capital when the quake struck.</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('mayorKilledAsViolenceEscalatesInGuerreroMexico4808','showForOutline');"><img class="expandIcon" id="img_mayorKilledAsViolenceEscalatesInGuerreroMexico4808" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('mayorKilledAsViolenceEscalatesInGuerreroMexico4808','showForOutline');"><span class="opText">Mayor Killed as Violence Escalates in Guerrero, Mexico</span></a></li>
+					<div class="hide" id="mayorKilledAsViolenceEscalatesInGuerreroMexico4808" name="mayorKilledAsViolenceEscalatesInGuerreroMexico4808">
+						<ul>
+							<li><a href="http://www.insightcrime.org/criminal-groups/mexico/beltran-leyva-org/item/1444-mayor-killed-as-violence-escalates-in-guerrero-mexico" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The mayor of a small town in Guerrero state, Mexico was kidnapped and killed by unidentified perpetrators, the fifth mayor killed in Mexico so far this year.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('hollywoodShooting29963','showForOutline');"><img class="expandIcon" id="img_hollywoodShooting29963" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hollywoodShooting29963','showForOutline');"><span class="opText">Hollywood Shooting</span></a></li>
+			<div class="hide" id="hollywoodShooting29963" name="hollywoodShooting29963">
+				<ul>
+					<li><a href="javascript:expandCollapse('policeIdentifyGunmanInVirginiaTechMurderSuicideBlacklistednewsCom15030','showForOutline');"><img class="expandIcon" id="img_policeIdentifyGunmanInVirginiaTechMurderSuicideBlacklistednewsCom15030" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('policeIdentifyGunmanInVirginiaTechMurderSuicideBlacklistednewsCom15030','showForOutline');"><span class="opText">Police identify gunman in Virginia Tech murder-suicide - BlackListedNews.com</span></a></li>
+					<div class="hide" id="policeIdentifyGunmanInVirginiaTechMurderSuicideBlacklistednewsCom15030" name="policeIdentifyGunmanInVirginiaTechMurderSuicideBlacklistednewsCom15030">
+						<ul>
+							<li><a href="http://www.blacklistednews.com/Police_identify_gunman_in_Virginia_Tech_murder-suicide/16946/0/38/38/Y/M.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The man who shot dead a campus police officer at Virginia Tech on Thursday before killing himself was a student at a nearby university who had stolen an SUV at gunpoint the day before, officials said.
+
+Virginia State Police on Friday identified the gunman as 22-year-old Ross Truett Ashley, a part-time student at Radford University in Radford, Va.
+
+Ashley had entered a real estate office in Radford on Wednesday and demanded the keys to an employee's white 2011 Mercedes Benz at gunpoint.
+
+He drove off in the vehicle and later dumped it on the campus of Virginia Tech some time before his deadly confrontation with 39-year-old Deriek W. Crouse, an officer with the Virginia Tech campus police.</li>
+
+							</ul>
+						</div>
+					<li><a href="http://losangeles.cbslocal.com/2011/12/09/new-video-details-emerge-in-bizarre-hollywood-shooting/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] New Video, Details Emerge In Bizarre Hollywood Shooting - CBS Los Angeles</li>
+					<li><a href="http://www.imdb.com/name/nm3726310/resumephotos" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMDb Photos for Chris Johns (III)</li>
+					<li><a href="http://www.imdb.com/name/nm3726310/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Chris Johns - IMDb</li>
+					<li><a href="http://twitter.com/#!/supportsave" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Chris Johns (supportsave) on Twitter</li>
+					<li><a href="javascript:expandCollapse('weDonTMindDotOrg14441','showForOutline');"><img class="expandIcon" id="img_weDonTMindDotOrg14441" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('weDonTMindDotOrg14441','showForOutline');"><span class="opText">We Don't Mind dot Org</span></a></li>
+
+					<div class="hide" id="weDonTMindDotOrg14441" name="weDonTMindDotOrg14441">
+						<ul>
+							<li><a href="http://wedontmind.org/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>How many times have we heard a rich person say they wouldn't mind paying a little more in taxes? We've heard Bill O'Rielly say it, We've heard Bill Maher say it, the list goes on and on. Chris Johns, a multimillionaire CEO and Movie Producer has created WeDontMind.Org as platform with premise of stimulating the economy from within, without the help of the government. </li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('whoisRecord29106','showForOutline');"><img class="expandIcon" id="img_whoisRecord29106" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whoisRecord29106','showForOutline');"><span class="opText">Whois record</span></a></li>
+					<div class="hide" id="whoisRecord29106" name="whoisRecord29106">
+						<ul>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Domain ID:D163727825-LROR</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Domain Name:WEDONTMIND.ORG</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Created On:29-Oct-2011 02:39:28 UTC</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Last Updated On:29-Oct-2011 02:39:29 UTC</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Expiration Date:29-Oct-2012 02:39:28 UTC</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Sponsoring Registrar:GoDaddy.com, Inc. (R91-LROR)</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Status:CLIENT DELETE PROHIBITED</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Status:CLIENT RENEW PROHIBITED</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Status:CLIENT TRANSFER PROHIBITED</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Status:CLIENT UPDATE PROHIBITED</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Status:TRANSFER PROHIBITED</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant ID:CR96682557</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Name:Chris Johns</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Street1:5/F Bayantel Bldg</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Street2:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Street3:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant City:Cebu</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant State/Province:Michigan</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Postal Code:48356</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Country:PH</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Phone:+248.2120298</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Phone Ext.:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant FAX:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant FAX Ext.:</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Registrant Email:seenonscreen@yahoo.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin ID:CR96682559</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Name:Chris Johns</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Street1:5/F Bayantel Bldg</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Street2:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Street3:</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin City:Cebu</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin State/Province:Michigan</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Postal Code:48356</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Country:PH</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Phone:+248.2120298</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Phone Ext.:</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin FAX:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin FAX Ext.:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Admin Email:seenonscreen@yahoo.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech ID:CR96682558</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Name:Chris Johns</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Street1:5/F Bayantel Bldg</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Street2:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Street3:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech City:Cebu</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech State/Province:Michigan</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Postal Code:48356</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Country:PH</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Phone:+248.2120298</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Phone Ext.:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech FAX:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech FAX Ext.:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tech Email:seenonscreen@yahoo.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:NS41.DOMAINCONTROL.COM</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:NS42.DOMAINCONTROL.COM</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Name Server:</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">DNSSEC:Unsigned</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('otherDomainsHeOwns8692','showForOutline');"><img class="expandIcon" id="img_otherDomainsHeOwns8692" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('otherDomainsHeOwns8692','showForOutline');"><span class="opText">Other domains he owns</span></a></li>
+					<div class="hide" id="otherDomainsHeOwns8692" name="otherDomainsHeOwns8692">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">fildate.com WhoIs Record - Chris Johns by WebTrafficAgents.com</li>
+
+							<li><a href="http://www.fildate.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Free Filipina Dating, Filipino Dating and Foreigners as well!</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">bidet4less.com | domaincrawler.com</li>
+							<li><a href="http://bidet4less.com/about-us.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Bidet4Less</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Call Center Directory Philippines</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">callcenterdirectoryph.blogspot.com/Oct 12, 2009 ­ 16/F i3 Bldg. Asiatown, IT Park, Salinas Drive, Lahug 6000 Cebu ... 488 Tipolo, Cebu 6014 Philippines Website: ... Cebu Bayantel Telecommunications Bldg. .... Posted by sundownproject at 5:56 AM 1 comments ... Michigan ...</li>
+							</ul>
+
+						</div>
+					<li><a href="http://www.youtube.com/watch?v=V6jdv5qLFfQ&amp;context=C241ceADOEgsToPDskI1X7Txc4IRdgHeCqGBPPip" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>wedontmindorg's webcam video October 28, 2011 08:05 PM - [VIDEO] </li>
+					<li><a href="javascript:expandCollapse('reportFormerCarlisleManFiresAtMotoristsInLaBeforeBeingShotAndKilledByPoliceTheYorkDailyRecord32099','showForOutline');"><img class="expandIcon" id="img_reportFormerCarlisleManFiresAtMotoristsInLaBeforeBeingShotAndKilledByPoliceTheYorkDailyRecord32099" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('reportFormerCarlisleManFiresAtMotoristsInLaBeforeBeingShotAndKilledByPoliceTheYorkDailyRecord32099','showForOutline');"><span class="opText">Report: Former Carlisle man fires at motorists in LA before being shot and killed by police - The York Daily Record</span></a></li>
+					<div class="hide" id="reportFormerCarlisleManFiresAtMotoristsInLaBeforeBeingShotAndKilledByPoliceTheYorkDailyRecord32099" name="reportFormerCarlisleManFiresAtMotoristsInLaBeforeBeingShotAndKilledByPoliceTheYorkDailyRecord32099">
+						<ul>
+							<li><a href="http://www.ydr.com/ci_19516011" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The 40-year-old male driver of a Mercedes-Benz was wounded in the face and upper torso.
+Paramedics took him to Cedars-Sinai Medical Center, and police said in a statement he was in "guarded and critical condition."</li>
+							</ul>
+
+						</div>
+					<li><a href="http://twitter.com/#!/tylerbrehm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Tyler Douglas Brehm (tylerbrehm) on Twitter</li>
+					<li><a href="http://www.facebook.com/tyler.brehm?sk=wall" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>(4) Tyler Brehm on Facebook</li>
+					<li><a href="javascript:expandCollapse('sunsetBoulevardGunmanWhoFiredAtCrowdsMistakenForActorInGangsterMovieMailOnline7500','showForOutline');"><img class="expandIcon" id="img_sunsetBoulevardGunmanWhoFiredAtCrowdsMistakenForActorInGangsterMovieMailOnline7500" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sunsetBoulevardGunmanWhoFiredAtCrowdsMistakenForActorInGangsterMovieMailOnline7500','showForOutline');"><span class="opText">Sunset Boulevard gunman who fired at crowds mistaken for actor in gangster movie | Mail Online</span></a></li>
+					<div class="hide" id="sunsetBoulevardGunmanWhoFiredAtCrowdsMistakenForActorInGangsterMovieMailOnline7500" name="sunsetBoulevardGunmanWhoFiredAtCrowdsMistakenForActorInGangsterMovieMailOnline7500">
+						<ul>
+							<li><a href="http://www.dailymail.co.uk/news/article-2072435/Sunset-Boulevard-gunman-fired-crowds-mistaken-actor-gangster-movie.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>'This was like a serious mad man. He snapped and he's going to try to kill as many people as possible,' Mr Johns said.
+
+Mr Johns told KABC-TV he saw a plain-clothes officer shoot the man.
+
+'I started shouting out to the officer, saying "take him out, that's the guy!"' he said.
+
+An off-duty police motorcycle officer working as security on a film set also rushed to the scene to join the confrontation.
+
+He shot the suspect after he ran out of bullets and produced a knife, according to witnesses.
+
+Dave Pepper told KCAL-TV that he was in his car when the gunman came at him.
+
+'This guy came running across the street and he put the gun right up to this window,' Mr Pepper said as he sat in the car. "Why he didn't pull the trigger I don't know.'
+
+The 40-year-old male driver of a Mercedes-Benz was wounded in his upper body and taken to a hospital in unknown condition. A truck and another car were struck by bullets.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('modelmayhemComAliciaAlligoodModelLosAngelesCaliforniaUs20945','showForOutline');"><img class="expandIcon" id="img_modelmayhemComAliciaAlligoodModelLosAngelesCaliforniaUs20945" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('modelmayhemComAliciaAlligoodModelLosAngelesCaliforniaUs20945','showForOutline');"><span class="opText">ModelMayhem.com - Alicia Alligood - Model - Los Angeles, California, US</span></a></li>
+					<div class="hide" id="modelmayhemComAliciaAlligoodModelLosAngelesCaliforniaUs20945" name="modelmayhemComAliciaAlligoodModelLosAngelesCaliforniaUs20945">
+						<ul>
+							<li><a href="http://www.modelmayhem.com/1850391" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>I'm a professional model living in Los Angeles, CA, USA. My main interests include fashion, glamour, commercial, promotional modeling & other live events; also acting.</li>
+							</ul>
+
+						</div>
+					<li><a href="http://www.youtube.com/watch?v=lWUnsgZk1GE" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>HOLLYWOOD, CA: Jihadist Shoots Passerbys In the Middle of the Street Yelling "ALLAHU AKBAR!" - [VIDEO] </li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('shutUpSlave16332','showForOutline');"><img class="expandIcon" id="img_shutUpSlave16332" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('shutUpSlave16332','showForOutline');"><span class="opText">Shut Up Slave!</span></a></li>
+			<div class="hide" id="shutUpSlave16332" name="shutUpSlave16332">
+				<ul>
+					<li><a href="javascript:expandCollapse('thousandsSterilizedNorthCarolinaWeighsRestitutionNytimesCom8197','showForOutline');"><img class="expandIcon" id="img_thousandsSterilizedNorthCarolinaWeighsRestitutionNytimesCom8197" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('thousandsSterilizedNorthCarolinaWeighsRestitutionNytimesCom8197','showForOutline');"><span class="opText">Thousands Sterilized, North Carolina Weighs Restitution - NYTimes.com</span></a></li>
+
+					<div class="hide" id="thousandsSterilizedNorthCarolinaWeighsRestitutionNytimesCom8197" name="thousandsSterilizedNorthCarolinaWeighsRestitutionNytimesCom8197">
+						<ul>
+							<li><a href="http://www.nytimes.com/2011/12/10/us/redress-weighed-for-forced-sterilizations-in-north-carolina.html?_r=2" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The reports begin when he was barely a teenager, fighting at school and masturbating openly. A social worker wrote that he and his parents were of "rather low mentality." Mr. Holt was sent to a state home for people with mental and emotional problems. In 1968, when he was ready to get out and start life as an adult, the Eugenics Board of North Carolina ruled that he should first have a vasectomy.
+
+A social worker convinced his mother it was for the best.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('newHaikuSignsWillMakeNycStreetsSaferThroughPowerOfPoetryGothamist18815','showForOutline');"><img class="expandIcon" id="img_newHaikuSignsWillMakeNycStreetsSaferThroughPowerOfPoetryGothamist18815" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('newHaikuSignsWillMakeNycStreetsSaferThroughPowerOfPoetryGothamist18815','showForOutline');"><span class="opText">New Haiku Signs Will Make NYC Streets Safer Through Power Of Poetry: Gothamist</span></a></li>
+					<div class="hide" id="newHaikuSignsWillMakeNycStreetsSaferThroughPowerOfPoetryGothamist18815" name="newHaikuSignsWillMakeNycStreetsSaferThroughPowerOfPoetryGothamist18815">
+						<ul>
+
+							<li><a href="http://gothamist.com/2011/11/29/new_haiku_signs_will_make_nyc_stree.php#photo-1" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The DOT hopes that the "Curbside Haiku" initiative will draw attention to "the critical importance of shared responsibility among all street users to help keep New York City's streets as safe as they can be." The series features 12 designs with accompanying haikus by poet John Morse, each one expressing a different safety message by focusing on one transportation mode. For example, our favorite one spreads this message: "Cyclist writes screenplay / Plot features bike lane drama / How pedestrian."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('haiti28944','showForOutline');"><img class="expandIcon" id="img_haiti28944" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('haiti28944','showForOutline');"><span class="opText">Haiti</span></a></li>
+			<div class="hide" id="haiti28944" name="haiti28944">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('oprahWinfreyInHaitiAndOnTourWithSweetMicky14023','showForOutline');"><img class="expandIcon" id="img_oprahWinfreyInHaitiAndOnTourWithSweetMicky14023" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('oprahWinfreyInHaitiAndOnTourWithSweetMicky14023','showForOutline');"><span class="opText">Oprah Winfrey in Haiti and On Tour with Sweet Micky</span></a></li>
+					<div class="hide" id="oprahWinfreyInHaitiAndOnTourWithSweetMicky14023" name="oprahWinfreyInHaitiAndOnTourWithSweetMicky14023">
+						<ul>
+							<li><a href="http://hosted.ap.org/dynamic/stories/C/CB_HAITI_PEOPLE_OPRAH?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT&amp;CTIME=2011-12-09-22-34-30" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Martelly, a former musician who performed under the stage name "Sweet Micky," also said he plans an ambitious world tour in an effort to raise money for an education program that seeks to ensure children attend school in Haiti. Few parents can afford tuition for his country's many private schools.
+
+"We would take the tour to Los Angeles, Korea, Japan, France to raise money for the children's education," Martelly said, adding that he understands the power of the stage.
+
+"I will get on it and dance and have great groups of entertainers to perform to help Haiti, including Wyclef (Jean) and Oprah and have others play my music and sing my songs," he said.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('euroland29688','showForOutline');"><img class="expandIcon" id="img_euroland29688" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland29688','showForOutline');"><span class="opText">EUROLand</span></a></li>
+			<div class="hide" id="euroland29688" name="euroland29688">
+				<ul>
+					<li><a href="http://blog.curry.com/stories/2011/12/09/theEuropeanScrewingMechani.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Adam Curry's Simple Weblog: The European Screwing Mechanism</li>
+					<li><a href="http://www.consilium.europa.eu/homepage/showfocus?lang=en&amp;focusID=66743" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The European Semester</li>
+					<li><a href="http://en.wikipedia.org/wiki/Euro_Plus_Pact" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Euro Plus Pact - Wikipedia, the free encyclopedia</li>
+					<li><a href="javascript:expandCollapse('euroSummitRockedByRowOverVetoPlanTelegraph1574','showForOutline');"><img class="expandIcon" id="img_euroSummitRockedByRowOverVetoPlanTelegraph1574" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroSummitRockedByRowOverVetoPlanTelegraph1574','showForOutline');"><span class="opText">Euro summit rocked by row over veto plan - Telegraph</span></a></li>
+
+					<div class="hide" id="euroSummitRockedByRowOverVetoPlanTelegraph1574" name="euroSummitRockedByRowOverVetoPlanTelegraph1574">
+						<ul>
+							<li><a href="http://www.telegraph.co.uk/finance/financialcrisis/8944323/Euro-summit-rocked-by-row-over-veto-plan.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Finland's grand committee said decisions made by the ESM -- the eurozone's permanent bail-out fund set for launch in 2012 -- had to remain unanimous, and not changed to the "qualified majority" that French president Nicolas Sarkozy and German chancellor Angela Merkel have agreed.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The Finns are backed by the Netherlands, which fears proposals to withdraw veto powers from the ESM is an erosion of democracy and would make it vulnerable to funding bail-outs without recourse. Meanwhile, the Irish want to block plans for the "convergence and harmonisation" of the eurozone's "corporate tax base". </li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('geldLenenOmSchuldenAfTeLossenCassandraclub10356','showForOutline');"><img class="expandIcon" id="img_geldLenenOmSchuldenAfTeLossenCassandraclub10356" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('geldLenenOmSchuldenAfTeLossenCassandraclub10356','showForOutline');"><span class="opText">Geld lenen om schulden af te lossen - Cassandraclub</span></a></li>
+
+					<div class="hide" id="geldLenenOmSchuldenAfTeLossenCassandraclub10356" name="geldLenenOmSchuldenAfTeLossenCassandraclub10356">
+						<ul>
+							<li><a href="http://cassandraclub.wordpress.com/2011/12/09/geld-lenen-om-schulden-af-te-lossen/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>De Europese regeringsleiders maken plannen om de begrotingstekorten voortaan onder de 3% te houden. Dat roepen ze wel, maar dit jaar gaat dat in elk geval nog niet lukken.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Alleen Estland, Finland, Duitsland en Luxemburg voldoen aan die drieprocentseis.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Nederland, Oostenrijk, Belgi�Ž, Itali�Ž en Malta zitten tussen 3 en 4,5%. Voor Frankrijk en Portugal blijft het begrotingstekort net binnen de 6%. Spanje, Griekenland en Ierland hebben een tekort tussen de 6 en 10%.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Om de begroting op orde te krijgen moeten veel Europese regeringen fors bezuinigen. Hier staat een overzichtje (in het Engels)</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">De Nederlandse regering verwacht dat het Nederlands begrotingstekort in 2012 niet onder de 3% zal komen. Daarom gaat het kabinet op zoek naar extra bezuinigen van 6 tot 10 miljard euro.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">De aanleg van nieuwe snelwegen kan worden uitgesteld. Deelname aan buitenlandse militaire of civiele vredesmissies kan stoppen. Extra bezuinigen op onderwijs en kinderopvang is ook een optie.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('austerityMeasuresInTheEuACountryByCountryTableSpecialG20IssueOnFinancialReform28261','showForOutline');"><img class="expandIcon" id="img_austerityMeasuresInTheEuACountryByCountryTableSpecialG20IssueOnFinancialReform28261" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('austerityMeasuresInTheEuACountryByCountryTableSpecialG20IssueOnFinancialReform28261','showForOutline');"><span class="opText">Austerity Measures in the EU - - A Country by Country Table | Special G-20 Issue on Financial Reform</span></a></li>
+					<div class="hide" id="austerityMeasuresInTheEuACountryByCountryTableSpecialG20IssueOnFinancialReform28261" name="austerityMeasuresInTheEuACountryByCountryTableSpecialG20IssueOnFinancialReform28261">
+						<ul>
+							<li><a href="http://www.europeaninstitute.org/Special-G-20-Issue-on-Financial-Reform/austerity-measures-in-the-eu.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>According to the European Union's Maastricht criteria, EU member states may not have a budget deficit that exceeds three percent of their Gross Domestic Product (GDP) or a national debt that exceeds of sixty percent of the GDP.  Listed below are the EU states' 2009 government budget deficits as percentages of GDP, their official predicted future government budget deficit as a percent of GDP.  Also listed is the national debt as a percentage of GDP for 2009. </li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('hetEuropeseVerdragWordtNietGewijzigdEnDatIsEssentieelSchuldencrisisVk6778','showForOutline');"><img class="expandIcon" id="img_hetEuropeseVerdragWordtNietGewijzigdEnDatIsEssentieelSchuldencrisisVk6778" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hetEuropeseVerdragWordtNietGewijzigdEnDatIsEssentieelSchuldencrisisVk6778','showForOutline');"><span class="opText">Het Europese Verdrag wordt niet gewijzigd - en dat is essentieel - Schuldencrisis - VK</span></a></li>
+					<div class="hide" id="hetEuropeseVerdragWordtNietGewijzigdEnDatIsEssentieelSchuldencrisisVk6778" name="hetEuropeseVerdragWordtNietGewijzigdEnDatIsEssentieelSchuldencrisisVk6778">
+						<ul>
+							<li><a href="http://www.volkskrant.nl/vk/nl/7264/Schuldencrisis/article/detail/3071440/2011/12/09/Het-Europese-Verdrag-wordt-niet-gewijzigd---en-dat-is-essentieel.dhtml" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In het intergouvernementele verdrag beloven alle landen plechtig zich echt aan de begrotingsafspraken te houden. Overtredingen daarvan worden niet meer door de Commissie bestraft. In plaats daarvan zullen landen, wanneer een ander land de nieuwe regels overtreedt naar het Europese Hof moeten stappen. Ofwel, als Itali�Ž de regels aan z'n laars lapt kan Nederland de gang naar het hof maken; komt Duitsland een groter begrotingstekort beter uit, dan kan Portugal dat aanvechten. </li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('update2IrishReferendumRiskHangsOverEuDealReuters26629','showForOutline');"><img class="expandIcon" id="img_update2IrishReferendumRiskHangsOverEuDealReuters26629" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('update2IrishReferendumRiskHangsOverEuDealReuters26629','showForOutline');"><span class="opText">UPDATE 2-Irish referendum risk hangs over EU deal | Reuters</span></a></li>
+					<div class="hide" id="update2IrishReferendumRiskHangsOverEuDealReuters26629" name="update2IrishReferendumRiskHangsOverEuDealReuters26629">
+						<ul>
+							<li><a href="http://www.reuters.com/article/2011/12/09/ireland-referendum-idUSL5E7N923220111209" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Europe's plans for fiscal union may require a referendum in Ireland, the country's minister for European Affairs said on Friday, which could delay or even obstruct tighter budgetary rules to preserve the euro.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('griekenlandVerkooptOlympischeInfrastructuurDeStandaard25113','showForOutline');"><img class="expandIcon" id="img_griekenlandVerkooptOlympischeInfrastructuurDeStandaard25113" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('griekenlandVerkooptOlympischeInfrastructuurDeStandaard25113','showForOutline');"><span class="opText">Griekenland verkoopt Olympische infrastructuur - De Standaard</span></a></li>
+
+					<div class="hide" id="griekenlandVerkooptOlympischeInfrastructuurDeStandaard25113" name="griekenlandVerkooptOlympischeInfrastructuurDeStandaard25113">
+						<ul>
+							<li><a href="http://www.standaard.be/artikel/detail.aspx?artikelid=DMF20111208_110" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Griekenland zet zijn Olympische infrastructuur in de etalage. Het land verkoopt zijn aandelen in Hellinikon, de onderneming die de terreinen van de Olympische Spelen in zijn bezit heeft.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">De operatie maakt deel uit het gigantische privatiseringsprogramma dat Griekenland opgelegd kreeg in ruil voor internationale steun vanwege Europa en het IMF.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Ge�Ønteresseerde kopers kunnen zich tot 30 maart 2012 aanmelden. Concreet staat een meerderheid van de aandelen van Hellinikon nv te koop, de onderneming die de terreinen van de Olympische Spelen in zijn bezit heeft. Het gaat om 620 hectare, met een kilometerslange toegang tot de zee.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('dutchnewsNlMoveHouseToFindWorkOrLoseBenefitsMinisterTellsJobless20934','showForOutline');"><img class="expandIcon" id="img_dutchnewsNlMoveHouseToFindWorkOrLoseBenefitsMinisterTellsJobless20934" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('dutchnewsNlMoveHouseToFindWorkOrLoseBenefitsMinisterTellsJobless20934','showForOutline');"><span class="opText">DutchNews.nl - Move house to find work or lose benefits, minister tells jobless</span></a></li>
+					<div class="hide" id="dutchnewsNlMoveHouseToFindWorkOrLoseBenefitsMinisterTellsJobless20934" name="dutchnewsNlMoveHouseToFindWorkOrLoseBenefitsMinisterTellsJobless20934">
+						<ul>
+							<li><a href="http://www.dutchnews.nl/news/archives/2011/12/move_house_to_find_work_or_los.php" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Social affairs minister Henk Kamp is preparing new legislation which will require people claiming welfare benefits to, if necessary, move home to find a job, the Volkskrant reports on Saturday.
+
+In an interview with the paper, Kamp says the unemployment must not only speak Dutch, but must also be prepared to travel or even move house to get a job.
+
+While people on unemployment benefits (ww) are already required to move if work is available elsewhere, sanctions are rarely enforced, the paper says. People on welfare (bijstand) do not currently have to travel to find work.
+
+Enough jobs
+
+Kamp told the paper there is enough work available for most people on benefits.
+
+'We have half a million people under the age of 65 who get benefits but are able to work,' he said. 'We have 300,000 people from other EU countries who fill jobs here and we have 100,000 vacancies. So there is plenty of work.'
+
+The unemployed must make an effort to find work, the minister said. 'If you can find a job close to home, all well and good. And if you have to travel a bit, that's also fine. But if you need to move home, then you must do that as well or lose your benefits.'</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('24OrangesPrimeMinisterRutteMisleadsWallStreetJournalAboutDutchDebtProblems262','showForOutline');"><img class="expandIcon" id="img_24OrangesPrimeMinisterRutteMisleadsWallStreetJournalAboutDutchDebtProblems262" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('24OrangesPrimeMinisterRutteMisleadsWallStreetJournalAboutDutchDebtProblems262','showForOutline');"><span class="opText">24 oranges >> Prime minister Rutte misleads Wall Street Journal about Dutch debt problems</span></a></li>
+					<div class="hide" id="24OrangesPrimeMinisterRutteMisleadsWallStreetJournalAboutDutchDebtProblems262" name="24OrangesPrimeMinisterRutteMisleadsWallStreetJournalAboutDutchDebtProblems262">
+						<ul>
+							<li><a href="http://www.24oranges.nl/2011/12/10/prime-minister-rutte-misleads-wall-street-journal-about-dutch-debt-problems/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Financial news website Z24 sorta-kinda calls Rutte out on that. "Staat genoteerd", (duly noted) writes Jeroen de Boer, i.e. "whatever". What the Wall Street Journal doesn't know, and what somebody who is such a great fan of "the whole picture" should have told them, is that mortgage interest deductions are one of the core political wedge issues in the Netherlands. Both Rutte's party VVD and their coalition partner CDA have told their constituencies time and again that they will never abandon the tax deduction.
+
+That this is a no-win situation should be clear to any neutral observer. As Z24 points out (a commenter uses a delightful Dutch expression, 'until the shore will turn the ship') mortage interest deductions are somewhat defensible as long as house prices keep rising. The money borrowers save can be put into savings accounts and life insurances, only to be released when the tax deduction term runs out. House owners can then pay off their debt. They can even make a little money by selling the house, and use the money to move into a bigger house that they otherwise would not have been able to afford.
+
+Such a way of borrowing is a gamble (you might lose the income with which to make those savings), but not typically a large one, and one that you can insure against.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('europeanCouncilThePresidentSVideos19114','showForOutline');"><img class="expandIcon" id="img_europeanCouncilThePresidentSVideos19114" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('europeanCouncilThePresidentSVideos19114','showForOutline');"><span class="opText">European Council - the President's Videos</span></a></li>
+
+					<div class="hide" id="europeanCouncilThePresidentSVideos19114" name="europeanCouncilThePresidentSVideos19114">
+						<ul>
+							<li><a href="http://vloghvr.consilium.europa.eu/?p=6549" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Extracts from the press conference by Herman VAN ROMPUY, President of the European Council, following the European Council, in Brussels.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">ESM to be ratified in days!</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('outThere29424','showForOutline');"><img class="expandIcon" id="img_outThere29424" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('outThere29424','showForOutline');"><span class="opText">Out There</span></a></li>
+			<div class="hide" id="outThere29424" name="outThere29424">
+				<ul>
+					<li><a href="javascript:expandCollapse('cernTimeTravelTweetRobertLeatherSBlog19635','showForOutline');"><img class="expandIcon" id="img_cernTimeTravelTweetRobertLeatherSBlog19635" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('cernTimeTravelTweetRobertLeatherSBlog19635','showForOutline');"><span class="opText">CERN Time Travel Tweet - Robert Leather's Blog</span></a></li>
+					<div class="hide" id="cernTimeTravelTweetRobertLeatherSBlog19635" name="cernTimeTravelTweetRobertLeatherSBlog19635">
+						<ul>
+							<li><a href="http://robertleather.wordpress.com/2011/12/08/cern-time-travel-tweet/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>You can imagine my surprise at CERN's latest time travel experiment.
+
+Tweeted at 6.47pm on 7th December 2011.
+
+@CERN
+
+LHC Page 1 18:00:39 "Thank you all for this brilliant and exciting year." Last beam of 2012 extracted, and what a year is was!
+
+Now you'll forgive me for doubting our top science boffins at CERN, but isn't it still 2011?
+
+Or have they been sending beams back from the future McFly style?</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('ndaa18290','showForOutline');"><img class="expandIcon" id="img_ndaa18290" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ndaa18290','showForOutline');"><span class="opText">NDAA</span></a></li>
+			<div class="hide" id="ndaa18290" name="ndaa18290">
+				<ul>
+					<li><a href="http://www.southernbread.org/so-the-bill-of-rights-is-only-for-americans/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Southern Bread >> So, American detainees are non-citizens?</li>
+
+					<li><a href="javascript:expandCollapse('senatorsWhoVotedForS1867DefenseAuthorizationAct21082','showForOutline');"><img class="expandIcon" id="img_senatorsWhoVotedForS1867DefenseAuthorizationAct21082" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('senatorsWhoVotedForS1867DefenseAuthorizationAct21082','showForOutline');"><span class="opText">SENATORS WHO VOTED FOR S1867 DEFENSE AUTHORIZATION ACT</span></a></li>
+					<div class="hide" id="senatorsWhoVotedForS1867DefenseAuthorizationAct21082" name="senatorsWhoVotedForS1867DefenseAuthorizationAct21082">
+						<ul>
+							<li><a href="http://www.twitlonger.com/show/elckdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>SENATORS WHO VOTED FOR S1867 DEFENSE AUTHORIZATION ACT</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('battlefieldMainStreetWwwThedailyCom21562','showForOutline');"><img class="expandIcon" id="img_battlefieldMainStreetWwwThedailyCom21562" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('battlefieldMainStreetWwwThedailyCom21562','showForOutline');"><span class="opText">BATTLEFIELD MAIN STREET - WWW.THEDAILY.COM</span></a></li>
+
+					<div class="hide" id="battlefieldMainStreetWwwThedailyCom21562" name="battlefieldMainStreetWwwThedailyCom21562">
+						<ul>
+							<li><a href="http://www.thedaily.com/page/2011/12/05/120511-news-militarized-police-1-6/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Through its little-known "1033 program," the Department of Defense gave away nearly $500 million worth of leftover military gear to law enforcement in fiscal year 2011 -- a new record for the program and a dramatic rise over past years' totals, including the $212 million in equipment distributed in 2010.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The surplus equipment includes grenade launchers, helicopters, military robots, M-16 assault rifles and armored vehicles.</li>
+							</ul>
+						</div>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('wtc73432','showForOutline');"><img class="expandIcon" id="img_wtc73432" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('wtc73432','showForOutline');"><span class="opText">WTC7</span></a></li>
+			<div class="hide" id="wtc73432" name="wtc73432">
+				<ul>
+					<li><a href="javascript:expandCollapse('bbcNewsAmericas911ThirdTowerMysterySolved27591','showForOutline');"><img class="expandIcon" id="img_bbcNewsAmericas911ThirdTowerMysterySolved27591" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bbcNewsAmericas911ThirdTowerMysterySolved27591','showForOutline');"><span class="opText">BBC NEWS | Americas | 9/11 third tower mystery 'solved'</span></a></li>
+					<div class="hide" id="bbcNewsAmericas911ThirdTowerMysterySolved27591" name="bbcNewsAmericas911ThirdTowerMysterySolved27591">
+						<ul>
+							<li><a href="http://news.bbc.co.uk/2/hi/7485331.stm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The National Institute of Standards and Technology, based near Washington DC, is expected to conclude in its long-awaited report this month that ordinary fires caused the building to collapse.
+That would make it the first and only steel skyscraper in the world to collapse because of fire.</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('technoExperts8380','showForOutline');"><img class="expandIcon" id="img_technoExperts8380" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('technoExperts8380','showForOutline');"><span class="opText">Techno Experts</span></a></li>
+			<div class="hide" id="technoExperts8380" name="technoExperts8380">
+				<ul>
+					<li><a href="javascript:expandCollapse('mpaaBossIfTheChineseCensorTheInternetWithoutAProblemWhyCanTTheUsTechdirt30915','showForOutline');"><img class="expandIcon" id="img_mpaaBossIfTheChineseCensorTheInternetWithoutAProblemWhyCanTTheUsTechdirt30915" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('mpaaBossIfTheChineseCensorTheInternetWithoutAProblemWhyCanTTheUsTechdirt30915','showForOutline');"><span class="opText">MPAA Boss: If The Chinese Censor The Internet Without A Problem, Why Can't The US? | Techdirt</span></a></li>
+
+					<div class="hide" id="mpaaBossIfTheChineseCensorTheInternetWithoutAProblemWhyCanTTheUsTechdirt30915" name="mpaaBossIfTheChineseCensorTheInternetWithoutAProblemWhyCanTTheUsTechdirt30915">
+						<ul>
+							<li><a href="http://www.techdirt.com/articles/20111208/14521817014/mpaa-boss-if-chinese-censor-internet-without-problem-why-cant-us.shtml" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The MPAA is getting pretty desperate, it seems. MPAA boss Chris Dodd was out trying to defend censoring the internet this week by using China as an example of why censorship isn't a problem. It's kind of shocking, really. </li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('vaccine5923','showForOutline');"><img class="expandIcon" id="img_vaccine5923" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('vaccine5923','showForOutline');"><span class="opText">Vaccine$</span></a></li>
+
+			<div class="hide" id="vaccine5923" name="vaccine5923">
+				<ul>
+					<li><a href="javascript:expandCollapse('hallmarkNowDistributingVaccineShotComplianceCardsTargetingNewbornsAcrossAmerica22500','showForOutline');"><img class="expandIcon" id="img_hallmarkNowDistributingVaccineShotComplianceCardsTargetingNewbornsAcrossAmerica22500" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hallmarkNowDistributingVaccineShotComplianceCardsTargetingNewbornsAcrossAmerica22500','showForOutline');"><span class="opText">Hallmark now distributing vaccine shot compliance cards targeting newborns across America</span></a></li>
+					<div class="hide" id="hallmarkNowDistributingVaccineShotComplianceCardsTargetingNewbornsAcrossAmerica22500" name="hallmarkNowDistributingVaccineShotComplianceCardsTargetingNewbornsAcrossAmerica22500">
+						<ul>
+							<li><a href="http://www.naturalnews.com/034365_Hallmark_vaccines_newborns.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Arizona Department of Health Services wants to remind parents to inject their newborn babies with neurologically-damaging chemical adjuvants found in vaccines, and to aid in this effort, they've teamed up with Hallmark, the famous greeting card company.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Hallmark has designed and provided a special "vaccine shot tracking" card -- an "Immunization Record" -- that features the following vaccine propaganda:</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Bet you're as proud</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">as you can be</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">of that new little branch</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">on your family tree!</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">One of the most important roles as a parent is to make sure your baby is immunized.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Keeping your little one healthy mean starting immunizations by two months of age.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('huhUNSaysUSBinLadenAssassinationSpreadsPolio10311','showForOutline');"><img class="expandIcon" id="img_huhUNSaysUSBinLadenAssassinationSpreadsPolio10311" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('huhUNSaysUSBinLadenAssassinationSpreadsPolio10311','showForOutline');"><span class="opText">HUH? U.N. Says U.S. Bin Laden Assassination Spreads Polio</span></a></li>
+					<div class="hide" id="huhUNSaysUSBinLadenAssassinationSpreadsPolio10311" name="huhUNSaysUSBinLadenAssassinationSpreadsPolio10311">
+						<ul>
+							<li><a href="http://www.debbieschlussel.com/44876/huh-u-n-says-u-s-bin-laden-assassination-helped-spread-polio/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The United Nations says a reportedly fake vaccination campaign conducted to help hunt down Osama bin Laden has caused a backlash against international health workers in some parts of Pakistan and has impeded efforts to wipe out polio in the country.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('eMailsQuestionedHugeContractForFirmWithTiesToObamaAdministrationCnnCom14815','showForOutline');"><img class="expandIcon" id="img_eMailsQuestionedHugeContractForFirmWithTiesToObamaAdministrationCnnCom14815" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('eMailsQuestionedHugeContractForFirmWithTiesToObamaAdministrationCnnCom14815','showForOutline');"><span class="opText">E-mails questioned huge contract for firm with ties to Obama administration - CNN.com</span></a></li>
+					<div class="hide" id="eMailsQuestionedHugeContractForFirmWithTiesToObamaAdministrationCnnCom14815" name="eMailsQuestionedHugeContractForFirmWithTiesToObamaAdministrationCnnCom14815">
+						<ul>
+							<li><a href="http://www.cnn.com/2011/12/08/politics/siga-technologies-hhs-contract/index.html?hpt=hp_t2" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A series of e-mail exchanges between officials at the Department of Health and Human Services shows growing alarm at the amount of projected profit from a government contract for a drug company whose controlling shareholder is a longtime Democratic Party activist.</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('octoberSurprise29037','showForOutline');"><img class="expandIcon" id="img_octoberSurprise29037" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('octoberSurprise29037','showForOutline');"><span class="opText">October Surprise</span></a></li>
+			<div class="hide" id="octoberSurprise29037" name="octoberSurprise29037">
+				<ul>
+					<li><a href="javascript:expandCollapse('aNewBlastAtAnIranianResearchFacilityDefenseTech11473','showForOutline');"><img class="expandIcon" id="img_aNewBlastAtAnIranianResearchFacilityDefenseTech11473" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('aNewBlastAtAnIranianResearchFacilityDefenseTech11473','showForOutline');"><span class="opText">A New Blast at an Iranian Research Facility | Defense Tech</span></a></li>
+					<div class="hide" id="aNewBlastAtAnIranianResearchFacilityDefenseTech11473" name="aNewBlastAtAnIranianResearchFacilityDefenseTech11473">
+						<ul>
+
+							<li><a href="http://defensetech.org/2011/12/09/a-new-blast-at-an-iranian-research-facility/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The situation in Iran just keeps getting weirder. An explosion apparently rocked the Middle Eastern nation's nuclear research facility at Esfahan on Nov. 28, according to Australian and Israeli news outlets. This explosion comes only a couple of weeks after a massive explosion at a missile research facility killed the founder of Iran's missile programs -- many claimed that Western and Israeli intelligence agencies were behind that blast.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('ministryOfTruth19053','showForOutline');"><img class="expandIcon" id="img_ministryOfTruth19053" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ministryOfTruth19053','showForOutline');"><span class="opText">Ministry of Truth</span></a></li>
+			<div class="hide" id="ministryOfTruth19053" name="ministryOfTruth19053">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('gopObjectsToMillionairesSurtaxMillionairesWeFoundNotSoMuchItSAllPoliticsNpr6182','showForOutline');"><img class="expandIcon" id="img_gopObjectsToMillionairesSurtaxMillionairesWeFoundNotSoMuchItSAllPoliticsNpr6182" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gopObjectsToMillionairesSurtaxMillionairesWeFoundNotSoMuchItSAllPoliticsNpr6182','showForOutline');"><span class="opText">GOP Objects To 'Millionaires Surtax'; Millionaires We Found? Not So Much : It's All Politics : NPR</span></a></li>
+					<div class="hide" id="gopObjectsToMillionairesSurtaxMillionairesWeFoundNotSoMuchItSAllPoliticsNpr6182" name="gopObjectsToMillionairesSurtaxMillionairesWeFoundNotSoMuchItSAllPoliticsNpr6182">
+						<ul>
+							<li><a href="javascript:expandCollapse('weWantedToTalkToBusinessOwnersWhoWouldBeAffectedSoNprRequestedHelpFromNumerousRepublicanCongressionalOfficesIncludingHouseAndSenateLeadershipTheyWereUnableToProduceASingleMillionaireJobCreatorForUsToInterview43','showForOutline');"><img class="expandIcon" id="img_weWantedToTalkToBusinessOwnersWhoWouldBeAffectedSoNprRequestedHelpFromNumerousRepublicanCongressionalOfficesIncludingHouseAndSenateLeadershipTheyWereUnableToProduceASingleMillionaireJobCreatorForUsToInterview43" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('weWantedToTalkToBusinessOwnersWhoWouldBeAffectedSoNprRequestedHelpFromNumerousRepublicanCongressionalOfficesIncludingHouseAndSenateLeadershipTheyWereUnableToProduceASingleMillionaireJobCreatorForUsToInterview43','showForOutline');"><span class="opText">We wanted to talk to business owners who would be affected. So, NPR requested help from numerous Republican congressional offices, including House and Senate leadership. They were unable to produce a single millionaire job creator for us to interview.</span></a></li>
+							<div class="hide" id="weWantedToTalkToBusinessOwnersWhoWouldBeAffectedSoNprRequestedHelpFromNumerousRepublicanCongressionalOfficesIncludingHouseAndSenateLeadershipTheyWereUnableToProduceASingleMillionaireJobCreatorForUsToInterview43" name="weWantedToTalkToBusinessOwnersWhoWouldBeAffectedSoNprRequestedHelpFromNumerousRepublicanCongressionalOfficesIncludingHouseAndSenateLeadershipTheyWereUnableToProduceASingleMillionaireJobCreatorForUsToInterview43">
+								<ul>
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+									</ul>
+
+								</div>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">So we went to the business groups that have been lobbying against the surtax. Again, three days after putting in a request, none of them was able to find someone for us to talk to. A group called the Tax Relief Coalition said the problem was finding someone willing to talk about their personal taxes on national radio.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">So next we put a query on Facebook. And several business owners who said they would be affected by the "millionaires surtax" responded.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('pressBriefingByPressSecretaryJayCarney1292011TheWhiteHouse26596','showForOutline');"><img class="expandIcon" id="img_pressBriefingByPressSecretaryJayCarney1292011TheWhiteHouse26596" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('pressBriefingByPressSecretaryJayCarney1292011TheWhiteHouse26596','showForOutline');"><span class="opText">Press Briefing by Press Secretary Jay Carney, 12/9/2011 | The White House</span></a></li>
+
+					<div class="hide" id="pressBriefingByPressSecretaryJayCarney1292011TheWhiteHouse26596" name="pressBriefingByPressSecretaryJayCarney1292011TheWhiteHouse26596">
+						<ul>
+							<li><a href="http://www.whitehouse.gov/the-press-office/2011/12/09/press-briefing-press-secretary-jay-carney-1292011" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>MR. CARNEY:  Good afternoon.  Welcome to the White House.  Thanks for coming to your daily briefing.  Before I get started, I just wanted to mention that I saw a report this morning that caught my attention for a couple reasons.  Throughout this payroll tax cut debate, and through the debate over the American Jobs Act, one of the consistent points that Republicans have made -- in fact, their number-one talking point about why they refuse to go along with asking millionaires and billionaires, the wealthiest Americans to pay a little bit more in order to put Americans back to work, get a tax cut for 160 million working Americans -- is because they don't want to hurt job creators.  That's their phrase; it's what they go to every time they're asked about it.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">And it's what you all write in your stories when you say, the President and Democrats support this surtax, or this way of paying for job-creating measures or tax cuts; Republicans say no because it will hurt small business.  Well, one news organization decided to ask the leadership offices of the Republicans on the Hill whether or not -- or just to give them an example of the small businesses that would be affected.  And for three days they got nothing.  And there's a reason for that.  Because, as the Treasury Department has done in its study, the simple fact of the matter is, is that less than 1 percent of all small businesses would be affected by this kind of request that millionaires and billionaires pay a little bit more.  That's just a fact.</li>
+							</ul>
+						</div>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('russianSpring11397','showForOutline');"><img class="expandIcon" id="img_russianSpring11397" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('russianSpring11397','showForOutline');"><span class="opText">Russian Spring</span></a></li>
+			<div class="hide" id="russianSpring11397" name="russianSpring11397">
+				<ul>
+					<li><a href="javascript:expandCollapse('medvedevSTwitterObscenityProvokesShockReuters19439','showForOutline');"><img class="expandIcon" id="img_medvedevSTwitterObscenityProvokesShockReuters19439" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('medvedevSTwitterObscenityProvokesShockReuters19439','showForOutline');"><span class="opText">Medvedev's Twitter obscenity provokes shock | Reuters</span></a></li>
+					<div class="hide" id="medvedevSTwitterObscenityProvokesShockReuters19439" name="medvedevSTwitterObscenityProvokesShockReuters19439">
+						<ul>
+							<li><a href="http://www.reuters.com/article/2011/12/07/us-russia-medvedev-twitter-mishap-idUSTRE7B61LY20111207" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"It has become clear that if a person writes the expression 'party of swindlers and thieves' in their blog then they are a stupid sheep getting f****d in the mouth :)" the post read.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('fakeRussianRiots20580','showForOutline');"><img class="expandIcon" id="img_fakeRussianRiots20580" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('fakeRussianRiots20580','showForOutline');"><span class="opText">Fake Russian Riots</span></a></li>
+					<div class="hide" id="fakeRussianRiots20580" name="fakeRussianRiots20580">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">ITM guys.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I'd like to clear a situation with "riots" in Russia.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">There wasn't any.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">There was:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">1) Permitted rally (i don't know, wheres it' is a proper word, may be meeting, gathering). Nobody was arrested there. But after that the payed-by-state-department politicians (Navalny, Nemtsov and others) initiated a march. March wasn't permitted. So police arrested them and 300 more. Leaders got 15 days in jail, while others got 1000 rubles (30 dollars) fines.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">2) Not permitted rallies and marches. Leaders of those was arrested immediately</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">All of this was done with one single objective - to give western media the pictures of "rights violation".</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The real opposition (Communists, Lib-Dems and couple of others) are gathering evidence for courts. They don't rally for now.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">BTW i was surprised that "human rights" meme was something new to you. Here we hear it every day. From US-driven media of course.</li>
+							</ul>
+						</div>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('video15766','showForOutline');"><img class="expandIcon" id="img_video15766" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('video15766','showForOutline');"><span class="opText">VIDEO</span></a></li>
+			<div class="hide" id="video15766" name="video15766">
+				<ul>
+					<li><a href="http://losangeles.cbslocal.com/2011/12/09/new-video-details-emerge-in-bizarre-hollywood-shooting/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] New Video, Details Emerge In Bizarre Hollywood Shooting - CBS Los Angeles</li>
+					<li><a href="http://www.youtube.com/watch?v=V6jdv5qLFfQ&amp;context=C241ceADOEgsToPDskI1X7Txc4IRdgHeCqGBPPip" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>wedontmindorg's webcam video October 28, 2011 08:05 PM - [VIDEO] </li>
+					<li><a href="javascript:expandCollapse('videoWasBlagojevichArrestedOnCorruptionChargesAfterGoingUpAgainstBankOfAmericaDisinformation28537','showForOutline');"><img class="expandIcon" id="img_videoWasBlagojevichArrestedOnCorruptionChargesAfterGoingUpAgainstBankOfAmericaDisinformation28537" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoWasBlagojevichArrestedOnCorruptionChargesAfterGoingUpAgainstBankOfAmericaDisinformation28537','showForOutline');"><span class="opText">[VIDEO] Was Blagojevich Arrested On Corruption Charges After Going Up Against Bank of America? | Disinformation</span></a></li>
+
+					<div class="hide" id="videoWasBlagojevichArrestedOnCorruptionChargesAfterGoingUpAgainstBankOfAmericaDisinformation28537" name="videoWasBlagojevichArrestedOnCorruptionChargesAfterGoingUpAgainstBankOfAmericaDisinformation28537">
+						<ul>
+							<li><a href="http://www.disinfo.com/2011/12/was-blagojevich-arrested-on-corruption-charges-after-going-up-against-bank-of-america/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Site' editor's note: Former Illinois Governor Rob Blagojevich was sentenced to 14 years this week after being convicted of a wide range of corruption charges, including the allegation that he tried to sell the Senate seat vacated by President Obama.
+
+You won't see the talking head presttitutes discussing the fact that former Governor Rob Blagojevich was arrested exactly one day after he announced he was "...asking all Illinois government agencies to suspend business with Bank of America" ...
+
+Here's Rod Blagojevich uncensored on We Are Change Chicago:</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('videoWilkersonNewMilitaryPowersTheRoadToTyranny24973','showForOutline');"><img class="expandIcon" id="img_videoWilkersonNewMilitaryPowersTheRoadToTyranny24973" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoWilkersonNewMilitaryPowersTheRoadToTyranny24973','showForOutline');"><span class="opText">[VIDEO] Wilkerson: New Military Powers the Road to Tyranny - </span></a></li>
+					<div class="hide" id="videoWilkersonNewMilitaryPowersTheRoadToTyranny24973" name="videoWilkersonNewMilitaryPowersTheRoadToTyranny24973">
+						<ul>
+
+							<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=hssNanwpYcA" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Larry Wilkerson: National Defense Authorization Act that passed the Senate giving the military power for indefinite detention without trial is a draconian violation of our rights</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('videoProofObamaWillSignNdaa1031CitizenImprisonmentLawInAFewDays26063','showForOutline');"><img class="expandIcon" id="img_videoProofObamaWillSignNdaa1031CitizenImprisonmentLawInAFewDays26063" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoProofObamaWillSignNdaa1031CitizenImprisonmentLawInAFewDays26063','showForOutline');"><span class="opText">[VIDEO] Proof Obama will sign NDAA 1031 Citizen Imprisonment Law in a few days - </span></a></li>
+					<div class="hide" id="videoProofObamaWillSignNdaa1031CitizenImprisonmentLawInAFewDays26063" name="videoProofObamaWillSignNdaa1031CitizenImprisonmentLawInAFewDays26063">
+						<ul>
+							<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=PLiKvSz_wX8#!" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>- Confusingly, Obama previously threatened a veto for 1032, but NOT 1031. 1032 is UNRELATED to imprisoning citizens without a trial. He has never suggested using a veto to stop Section 1031 citizen imprisonment. In fact, it was requested by the Obama administration. Watch the video for proof.</li>
+
+							</ul>
+						</div>
+					<li><a href="http://www.youtube.com/watch?v=p1iCY69nZ9s&amp;feature=youtube_gdata" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] "The Most Racist Statement I've Ever Seen!" - </li>
+					<li><a href="javascript:expandCollapse('videoNigelFarageEscapeEuroPrison17954','showForOutline');"><img class="expandIcon" id="img_videoNigelFarageEscapeEuroPrison17954" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoNigelFarageEscapeEuroPrison17954','showForOutline');"><span class="opText">[VIDEO] Nigel Farage: Escape Euro Prison! - </span></a></li>
+					<div class="hide" id="videoNigelFarageEscapeEuroPrison17954" name="videoNigelFarageEscapeEuroPrison17954">
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=eB8K9gLOmt0" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The UK Independence Party leader Nigel Farage believes, that Eurozone countries are now trapped inside economic prison called euro.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('videoGarySpeedFootballerSuicideHisTragicSecret13875','showForOutline');"><img class="expandIcon" id="img_videoGarySpeedFootballerSuicideHisTragicSecret13875" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoGarySpeedFootballerSuicideHisTragicSecret13875','showForOutline');"><span class="opText">[VIDEO] Gary Speed Footballer Suicide: His tragic secret? - </span></a></li>
+					<div class="hide" id="videoGarySpeedFootballerSuicideHisTragicSecret13875" name="videoGarySpeedFootballerSuicideHisTragicSecret13875">
+						<ul>
+							<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=rTT2dETNaoU#!" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Since last Sunday November 27th, the World of football has been wracking its brain to work out how a man, seemingly with everything to live for, would end his own life.</li>
+							</ul>
+						</div>
+
+					<li><a href="http://www.youtube.com/watch?v=YV9KBekAYmU&amp;feature=youtube_gdata" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Gary Johnson "In 1997 Newt Gingrich Purposed The Death Penalty For Marijuana Possession" - </li>
+					<li><a href="http://www.whitehouse.gov/photos-and-video/video/2011/12/10/weekly-address-ensuring-fair-shot-middle-class" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Weekly Address: Ensuring a Fair Shot for the Middle Class | The White House</li>
+					<li><a href="javascript:expandCollapse('videoRspcaWarnsShoppersAboutIllegalEggs23884','showForOutline');"><img class="expandIcon" id="img_videoRspcaWarnsShoppersAboutIllegalEggs23884" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoRspcaWarnsShoppersAboutIllegalEggs23884','showForOutline');"><span class="opText">[VIDEO]- RSPCA warns shoppers about 'illegal eggs'</span></a></li>
+					<div class="hide" id="videoRspcaWarnsShoppersAboutIllegalEggs23884" name="videoRspcaWarnsShoppersAboutIllegalEggs23884">
+						<ul>
+							<li><a href="http://www.bbc.co.uk/news/uk-16124516" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The RSPCA is warning shoppers they could buy eggs that fail to meet new welfare standards, without realising it. </li>
+							</ul>
+
+						</div>
+					<li><a href="http://www.cbc.ca/news/canada/story/2011/12/09/rim-execs-flight.html?cmp=rss" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Fired RIM execs 'chewed through restraints' on flight - Canada - CBC News</li>
+					<li><a href="http://rt.com/news/election-america-golos-support-393/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Emails expose watchdog's dollar deals -- RT</li>
+					<li><a href="http://www.youtube.com/watch?v=ysHNiZco6Mw" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Rand Paul on CNN 12/09/11 - </li>
+					<li><a href="http://www.youtube.com/watch?v=Rz8LcaVt8D8" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Alec Baldwin Works For Words With Friends - </li>
+					<li><a href="http://www.youtube.com/watch?v=CLjNJI54GMM&amp;feature=related" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Archie Bunker on Gun Control - </li>
+
+					<li><a href="http://www.youtube.com/watch?v=1XoKdX8L_Pg&amp;feature=player_embedded" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] KEYC Mankato Minnesota news anchor drunk on air? - </li>
+					<li><a href="javascript:expandCollapse('videoEuroCrisisUkAloneAsEuropeAgreesFiscalCompact21796','showForOutline');"><img class="expandIcon" id="img_videoEuroCrisisUkAloneAsEuropeAgreesFiscalCompact21796" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoEuroCrisisUkAloneAsEuropeAgreesFiscalCompact21796','showForOutline');"><span class="opText">[VIDEO]- Euro crisis: UK alone as Europe agrees fiscal compact</span></a></li>
+					<div class="hide" id="videoEuroCrisisUkAloneAsEuropeAgreesFiscalCompact21796" name="videoEuroCrisisUkAloneAsEuropeAgreesFiscalCompact21796">
+						<ul>
+							<li><a href="http://www.bbc.co.uk/news/world-europe-16115373" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Its main provisions include:</li>
+							<li><a href="javascript:expandCollapse('22499','showForOutline');"><img class="expandIcon" id="img_22499" src="http://scripting.com/images/2011/11/29/downWedge.gif"></a><a onclick="javascript:expandCollapse('22499','showForOutline');"><span class="opText"><b></b></span></a></li>
+							<div class="show" id="22499" name="22499">
+
+								<ul>
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">a cap of 0.5% of GDP on countries' annual structural deficits</li>
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"automatic consequences" for countries whose public deficit exceeds 3% of GDP</li>
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">the tighter rules to be enshrined in countries' constitutions</li>
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">the EU's permanent bailout facility, the European Stability Mechanism (ESM), to be accelerated and brought into force in July 2012</li>
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">the adequacy of 500bn-euro (£427bn; $666bn) limit for the ESM to be reassessed</li>
+
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">eurozone and other EU countries to provide up to 200bn euros to the International Monetary Fund (IMF) to help debt-stricken eurozone members</li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('videoDavidCameronDefendsDecisionToBlockEuWideTreaty9928','showForOutline');"><img class="expandIcon" id="img_videoDavidCameronDefendsDecisionToBlockEuWideTreaty9928" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoDavidCameronDefendsDecisionToBlockEuWideTreaty9928','showForOutline');"><span class="opText">[VIDEO]- David Cameron defends decision to block EU-wide treaty</span></a></li>
+					<div class="hide" id="videoDavidCameronDefendsDecisionToBlockEuWideTreaty9928" name="videoDavidCameronDefendsDecisionToBlockEuWideTreaty9928">
+						<ul>
+
+							<li><a href="http://www.bbc.co.uk/news/uk-politics-16116276" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>David Cameron has defended his decision to block an EU-wide treaty change to tackle the eurozone crisis, despite warnings it will leave the UK isolated.</li>
+							</ul>
+						</div>
+					<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=aRNfnFYfL0Q" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Detroit on brink of bankruptcy - </li>
+					<li><a href="http://video.state.gov/en/top-stories/video/1316962136001/ministerial-conference-on-internet-freedom/s~creationDate/p~1/?p" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Lucifer on Internet Freedom - "Co-Conspirator Eric Schmidt" Really??</li>
+					<li><a href="http://www.youtube.com/watch?v=lWUnsgZk1GE" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>HOLLYWOOD, CA: Jihadist Shoots Passerbys In the Middle of the Street Yelling "ALLAHU AKBAR!" - [VIDEO] </li>
+					</ul>
+
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('clipsStuff9002','showForOutline');"><img class="expandIcon" id="img_clipsStuff9002" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('clipsStuff9002','showForOutline');"><span class="opText">Clips & Stuff</span></a></li>
+	<div class="hide" id="clipsStuff9002" name="clipsStuff9002">
+		<ul>
+			<li><a href="javascript:expandCollapse('euroland14111','showForOutline');"><img class="expandIcon" id="img_euroland14111" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland14111','showForOutline');"><span class="opText">EUROLand</span></a></li>
+
+			<div class="hide" id="euroland14111" name="euroland14111">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/EUROLand/Fiscal Compact.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Fiscal Compact.mp3</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('holderFnf11115','showForOutline');"><img class="expandIcon" id="img_holderFnf11115" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('holderFnf11115','showForOutline');"><span class="opText">Holder FnF</span></a></li>
+			<div class="hide" id="holderFnf11115" name="holderFnf11115">
+				<ul>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Holder FnF/bar the door baby.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>bar the door baby.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Holder FnF/Holder Hearing-under oath.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Holder Hearing-under oath.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Holder FnF/international operation.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>international operation.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Holder FnF/ISSA-in comtempt-Mitchell.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ISSA-in comtempt-Mitchell.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Holder FnF/no apology to terry family.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>no apology to terry family.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Holder FnF/Ted Deutch on US weapons.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ted Deutch on US weapons.mp3</li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('hollywoodActors21091','showForOutline');"><img class="expandIcon" id="img_hollywoodActors21091" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hollywoodActors21091','showForOutline');"><span class="opText">Hollywood Actors</span></a></li>
+			<div class="hide" id="hollywoodActors21091" name="hollywoodActors21091">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Hollywood Actors/Chris Johns.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Chris Johns.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Hollywood Actors/lemon-johns.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>lemon-johns.mp3</li>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Hollywood Actors/weird actors-AA.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>weird actors-AA.mp3</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('jcdClips7765','showForOutline');"><img class="expandIcon" id="img_jcdClips7765" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jcdClips7765','showForOutline');"><span class="opText">JCD Clips</span></a></li>
+			<div class="hide" id="jcdClips7765" name="jcdClips7765">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/afghanistan transition.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>afghanistan transition.mp3</li>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/bloomberg on police.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>bloomberg on police.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/clip from they live.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>clip from they live.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/coptic christians in egypt.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>coptic christians in egypt.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/drone intel mess.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>drone intel mess.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/gingrich on palestine.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>gingrich on palestine.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/gingrich versus paul.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>gingrich versus paul.mp3</li>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/gingrich zinger.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>gingrich zinger.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/obama fair share medly.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>obama fair share medly.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/perry romney no bet.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>perry romney no bet.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/JCD Clips/ron paul defends gingrich.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ron paul defends gingrich.mp3</li>
+					</ul>
+				</div>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Lois on Baldwin.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Lois on Baldwin.mp3</li>
+
+			<li><a href="javascript:expandCollapse('lucifer16468','showForOutline');"><img class="expandIcon" id="img_lucifer16468" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('lucifer16468','showForOutline');"><span class="opText">Lucifer</span></a></li>
+			<div class="hide" id="lucifer16468" name="lucifer16468">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Lucifer/co-conspirator.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>co-conspirator.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Lucifer/financial support.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>financial support.mp3</li>
+					</ul>
+				</div>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/na364art.jpg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>na364art.jpg</li>
+			<li><a href="javascript:expandCollapse('ndaa9571','showForOutline');"><img class="expandIcon" id="img_ndaa9571" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ndaa9571','showForOutline');"><span class="opText">NDAA</span></a></li>
+			<div class="hide" id="ndaa9571" name="ndaa9571">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/NDAA/Col Wilkerson.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Col Wilkerson.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/NDAA/Obama requested 1031.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Obama requested 1031.mp3</li>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('obama12272','showForOutline');"><img class="expandIcon" id="img_obama12272" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obama12272','showForOutline');"><span class="opText">Obama</span></a></li>
+			<div class="hide" id="obama12272" name="obama12272">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Obama/Obama Ask Osama.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Obama Ask Osama.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/Obama/Obama grinch.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Obama grinch.mp3</li>
+					</ul>
+
+				</div>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/slide projector.aiff" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>slide projector.aiff</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/Assets/theEUtreaty.pdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>theEUtreaty.pdf</li>
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+					
+<center>
+
+	<br>
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://disqus.com/forums/adamcurrycomments/embed.js"></script>
+	<noscript><a href="http://adamcurrycomments.disqus.com/?url=ref">View the forum thread.</a></noscript>
+
+	</center>
+
+					<div class="divLegend">
+						<p>Editor: Adam Curry;  Updated: 12/11/11; 13 reads. 1 items.  Page build ran for 2.500 seconds.</p>
+						<p><a class="aOpmlSourceLink" href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-364-2011-12-11/na364opml.opml" title="Click on this icon to view the OPML source text for this directory. More info: http://www.opml.org/spec2."><img src="http://scripting.com/images/xmlIcon2.gif" border="0" width="36" height="14" alt="XML" /></a></p>
+						<p><a href="http://127.0.0.1:5337/opmlEditor/openOpml?url=http://364.nashownotes.com/shownotes">View Outline</a></p>
+						<p><a href="http://364.nashownotes.com/"><img src="http://blog.curry.com/images/2011/06/14/BigAppsRounded.jpg" width="16" height="16" border="0" alt="Home"></a></p>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</body>
+	</html>
