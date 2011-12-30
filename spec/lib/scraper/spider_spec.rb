@@ -40,7 +40,7 @@ describe "Navd::Scraper::Spider" do
     context "valid uri" do
       before {
         # Bypassing true integration tests that make real web calls for now ...
-        spider.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
+        spider.stub(:get_page).and_return(published_show_page_html)
       }
       it { should be_a(Nokogiri::HTML::Document) }
     end

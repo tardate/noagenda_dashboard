@@ -31,7 +31,7 @@ describe "Navd::Scraper::ShowLoader" do
         :name=>nil
       } }
       before {
-        show_loader.spider.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
+        show_loader.spider.stub(:get_page).and_return(published_show_page_html)
         show_loader.stub(:show_notes).and_return([])
         show_loader.stub(:credits_list).and_return(nil)
         show_loader.scan_show_assets
@@ -49,7 +49,7 @@ describe "Navd::Scraper::ShowLoader" do
 
       context "parsing shownotes menu" do
         before {
-          show_loader.stub(:p_shownotes_menu).and_return(Nokogiri::HTML(shownotes_menu_page_html))
+          show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html)
         }
         describe "#shownotes_detail_main_uri [protected]" do
           subject { show_loader.send(:shownotes_detail_main_uri) }
@@ -66,7 +66,7 @@ describe "Navd::Scraper::ShowLoader" do
 
     context "parsing credits" do
       before {
-        show_loader.stub(:p_credits).and_return(Nokogiri::HTML(credits_page_html))
+        show_loader.stub(:p_credits).and_return(credits_page_html)
       }
       describe "#credits [protected]" do
         subject { show_loader.send(:credits) }
@@ -80,7 +80,7 @@ describe "Navd::Scraper::ShowLoader" do
     context "unpublished show" do
       let(:show_number) { 33 }
       before {
-        show_loader.spider.stub(:get_page).and_return(Nokogiri::HTML(unpublished_show_page_html))
+        show_loader.spider.stub(:get_page).and_return(unpublished_show_page_html)
         show_loader.stub(:show_notes).and_return([])
         show_loader.scan_show_assets
       }

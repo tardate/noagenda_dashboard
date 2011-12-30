@@ -20,7 +20,7 @@ describe "Navd::Scraper::Control" do
     let(:show_number) { 333 }
     subject { scraper_control.load_show(show_number) }
     before {
-      Navd::Scraper::Spider.any_instance.stub(:get_page).and_return(Nokogiri::HTML(published_show_page_html))
+      Navd::Scraper::Spider.any_instance.stub(:get_page).and_return(published_show_page_html)
       Navd::Scraper::ShowLoader.any_instance.stub(:show_notes).and_return([])
       Navd::Scraper::ShowLoader.any_instance.stub(:credits_list).and_return(nil)
     }
