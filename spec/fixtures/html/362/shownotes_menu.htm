@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Shownotes</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://static.curry.com/worldoutline/admin/rss.xml" />
+		
+		<link href="http://fonts.googleapis.com/css?family=IM Fell DW Pica SC" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<link href="http://static.scripting.com/github/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/docs.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/prettify.css" rel="stylesheet">
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.tablesorter.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-dropdown.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-twipsy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/application.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-popover.js"></script>
+
+<script>
+	$(function () {
+		$("a[rel=twipsy]").twipsy({
+			live: true
+			})
+		})
+	</script>
+<script>
+	$(function () {
+		$("a[rel=popover]")
+		.popover({
+			offset: 10
+			})
+		.click(function(e) {
+			e.preventDefault()
+			})
+		})
+	</script>
+<style>
+	body {
+		margin-top: -5px;
+		}
+	table th {
+		border: 0;
+		}
+	table {
+		border: 0px;
+		}
+	.actions {
+		border: 0;
+		background: none;
+		padding: 0;
+		}
+	</style>
+<style>
+	body {
+		color: black;
+		}
+	/* eliminate borders on tables */
+		table th {
+			border: 0;
+			}
+		table td {
+			border: 0;
+			}
+		table {
+			border: 0px;
+			}
+	.divOpmlWebpage {
+		margin-left: 12%;
+		margin-right: 12%;
+		margin-bottom: 65px;
+		color: black;
+		}
+	.divOpmlHeader {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		}
+	.divOpmlHeader h1 {
+		font-family: 'IM Fell DW Pica SC';
+		text-align: center;
+		text-shadow: 4px 4px 4px #AAA;
+		font-size: 68px;
+		padding: 0px;
+		margin: 0px;
+		}
+	.divOpmlHeader red {
+		color: red;
+		font-size: 110%;
+		}
+	.divOpmlHeader a:link {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:hover {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:visited {
+		text-decoration: none;
+		color:#000;
+		}
+	
+	.divOpmlMenubar a, .divOpmlMenubar a:link, .divOpmlMenubar a:visited {
+		color: lightgray;
+		}
+	.divOpmlMenubar white {
+		color: white;
+		}
+	.divOpmlMenubarStatus {
+		color: lightgray;
+		float: right;
+		line-height: 19px;
+		padding: 10px 0px 11px;
+		font-size: 13px;
+		}
+	
+	.divOpmlWebpageBody {
+		padding-top: 0px;
+		}
+	.divOpmlWebpageBody h3 {
+		font-family: Ubuntu;
+		font-size: 24px;
+		}
+	
+	.divIntroPgf {
+		font-size: 14px;
+		line-height: 120%;
+		color: black;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		}
+	.prefsTable th, .prefsTable td {
+		border: 0;
+		font-size: 140%;
+		line-height: 100%;
+		}
+	.prefsTable td.input: {
+		height: 100%;
+		padding: 0;
+		border: 0;
+		}
+	
+	/* sign-in form */
+		.divSigninForm .signinLabel {
+			text-align: right;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm td {
+			border: none;
+			}
+		.divSigninForm input {
+			height: 32px;
+			padding: 3px;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm table {
+			padding-top: 30px;
+			width: auto;
+			}
+	/* prefs */
+		.divPrefs {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs label {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs .row {
+			line-height: 24px;
+			margin-bottom: 12px;
+			}
+		.divPrefs red {
+			color: red;
+			}
+		.divPrefs li {
+			font-family: Ubuntu;
+			font-size: 17px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			}
+		.divPrefs h4 {
+			font-family: Ubuntu;
+			font-size: 22px;
+			padding-top: 15px;
+			padding-bottom: 5px;
+			}
+	/* log pages */
+		.logEvent {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			}
+		.logDescription {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			line-height: 120%;
+			}
+		.logDate {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.logSeconds {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.divLogPage table {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.divLogPage td {
+			border: none;
+			font-size: 16px;
+			}
+		.divLogPage th {
+			border: none;
+			font-size: 14px;
+			padding-bottom: 0px;
+			}
+	</style>
+
+		<style>
+			/* header */
+				.divGraphic {
+					margin: 0px auto;
+					}
+				.divGraphic img {
+					display: block;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:5px;
+					padding-bottom:20px;
+					}
+				.divGraphic h1 {
+					font-family: Lobster;
+					font-size: 64px;
+					line-height: 135%;
+					white-space: nowrap;
+					text-align:center;
+					padding-bottom: 10px;
+					padding-top: 0px;
+					}
+			/* directory */
+				.divDirectory {
+					width: 300px;
+					margin: 30px auto;
+					}
+				.ulDirectory {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					text-align: left;
+					list-style-type: none;
+					padding-left: 15px;
+					}
+				.directoryItem {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					}
+				.directoryComment {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					}
+				.directoryLink {
+					padding-left: 24px;
+					background: transparent url(http://static.opml.org/images/folder.gif) no-repeat top left;
+					}
+				.directoryIcon {
+					display: none;
+					padding-right: 10px;
+					}
+				.ulDirectory a:link {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectory a:hover {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectory a:visited {
+					text-decoration: underline;
+					color:#819fC7;
+					}
+				.directoryErrorMessage {
+					font-family: Arial;
+					font-size: 24;
+					padding-top: 24;
+					padding-bottom: 12;
+					}
+			/* directory additions */
+				.divDirectoryTitle {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					font-weight: bold;
+					}
+				.divLegend {
+					font-family: Arial;
+					font-size: 12px;
+					line-height: 14px;
+					color:#1E68A6;
+					}
+			/* bread crumbs */
+				.divBreadCrumbs {
+					font-family: Arial;
+					font-size: 15px;
+					line-height: 18px;
+					padding-bottom: 15px;
+					}
+				.divBreadCrumbs a:link {
+					text-decoration: underline;
+					color: #1E68A6;
+					}
+				.divBreadCrumbs a:hover {
+					text-decoration: underline;
+					color: #1E68A6;
+					}
+				.divBreadCrumbs a:visited {
+					text-decoration: underline;
+					color: #819fC7;
+					}
+				.aCurrentCrumb {
+					font-weight: bold;
+					color: black;
+					}
+			/* blogpost nodetype */
+				.divBlogPost h3 {
+					font-family: Georgia;
+					font-size: 22px;
+					line-height: 28px;
+					padding-left: 20px;
+					padding-top: 20px;
+					padding-bottom: 10px;
+					}
+				.divBlogPost p {
+					font-family: Georgia;
+					font-size: 16px;
+					line-height: 22px;
+					padding-left: 25px;
+					padding-right: 25px;
+					padding-bottom: 3px;
+					}
+			/* river nodetype */
+				.article .footer {
+					padding: 0px;
+					background-color: white;
+					border-top: 0px;
+					text-shadow: 0 0px;
+					min-width: 0px;
+					-moz-box-shadow: 0 0px 0px;
+					}
+				.article .description {
+					font-family: Arial,sans-serif;
+					font-size: 13px;
+					line-height: 17px;
+					}
+				.article h3 {
+					font-family: Arial,sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+					}
+			/* thumbList nodetype */
+				.divWorldOutlineThumbList td {
+					border: 3px red;
+					border-style: solid;
+					text-align: center;
+					padding-top: 12px;
+					padding-bottom: 8px;
+					}
+				.divWorldOutlineThumbList table {
+					border-collapse: collapse;
+					}
+				.divWorldOutlineThumbList .thumbListCaptionString {
+					font-size: 13px;
+					}
+			/* domains page */
+				.divDomains ul {
+					padding-top: 5px;
+					list-style: disc outside normal;
+					padding-left: 35px;
+					}
+				.divDomains li {
+					font-family: Ubuntu;
+					font-size: 18px;
+					line-height: 28px;
+					color: black;
+					}
+			.divLegend {
+				padding-top: 30px;
+				}
+			</style>
+		<style>html {
+  width: 980px;
+  margin: auto;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+p.blogPostPgf {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+h3.blogPostTitle {
+  font-family: georgia;
+  font-size: 28px;
+  }
+
+li.directoryComment {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+li.directoryItem {
+  font-family: arial;
+  font-size: 17px;
+  font-weight: plain;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+.divDirectory {
+  width: 680px;
+  margin: 3em auto;
+}
+
+.divFooter {
+  position: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  -mox-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  box-shadow: 0 0 8px rgba(0,0,0,.3)
+}
+</style>
+		</head>
+
+	<body>
+		
+		<div class="divOpmlWebpage">
+			<div class="divOpmlWebpageBody">
+				
+					<div class="divGraphic"><a href="/"><img src="http://blog.curry.com/images/2011/12/04/na362art.jpg" width="512" height="512" border="0" align="center" hspace="15" vspace="5" alt="A picture named na362art.jpg"></a></div>
+					<div class="divBreadCrumbs"><a class="aTopCrumb" href="/">NA-362-2011-12-04</a><span class="spnCrumbDivider"> > </span><span class="aCurrentCrumb">Shownotes</span></div>
+					<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+
+<style>
+	.divOutlineBody {
+		padding-left: 15%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+		width: 75%;
+		background-color: whitesmoke;
+		border:1px solid gainsboro;
+		}
+	.divOutlineBody ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 1em;
+		}
+	.divOutlineBody li {
+		font-family: Cardo;
+		font-size: 20px;
+		line-height: 150%;
+		color: black;
+		text-indent: -20px;
+		}
+	.opText {
+		color:black;
+		}
+	.sidebarTitle {
+		font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		margin-top: 5px;
+		margin-left: 0px;
+		margin-right: 0px;
+		font-weight: bold;
+		}
+	p.collapsedSidebarText {
+		font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		margin-left: 0px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		}
+	.show {
+		padding-left: 8px;
+		padding-right: 0px;
+		padding-bottom: 4px;
+		margin-left: 0px;
+		}
+	.hide {
+		display: none;
+		}
+	img.expandIcon {
+		padding: 0px;
+		padding-right: 4px;
+		border: 0;
+		}
+	img.expandIconx {
+		float:left;
+		position: relative;
+		left: -22px;
+		margin-right: -22px;
+		padding-top: 2px;
+		}
+	</style>
+<div class="divOutlineBody">
+	
+<ul>
+	<li><a href="javascript:expandCollapse('na36220111204Credits19052','showForOutline');"><img class="expandIcon" id="img_na36220111204Credits19052" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('na36220111204Credits19052','showForOutline');"><span class="opText">NA-362-2011-12-04 Credits</span></a></li>
+	<div class="hide" id="na36220111204Credits19052" name="na36220111204Credits19052">
+		<ul>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Drone Journalism</li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Executive Producers: Adam Curry & John C Dvroak</li>
+
+			<li><a href="http://dvorak.org/na" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Become a member of the 363 Club, support the show <a href="http://dvorak.org/na">here</a></li>
+			<li><a href="javascript:expandCollapse('pr22453','showForOutline');"><img class="expandIcon" id="img_pr22453" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('pr22453','showForOutline');"><span class="opText">PR</span></a></li>
+			<div class="hide" id="pr22453" name="pr22453">
+				<ul>
+					<li><a href="javascript:expandCollapse('wherethedronesatCom30786','showForOutline');"><img class="expandIcon" id="img_wherethedronesatCom30786" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('wherethedronesatCom30786','showForOutline');"><span class="opText">wherethedronesat.com</span></a></li>
+					<div class="hide" id="wherethedronesatCom30786" name="wherethedronesatCom30786">
+						<ul>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Sent from my iPhone</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Begin forwarded message:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> From: Gene VanMeter <gene.vanmeter@gmail.com></li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> Date: December 4, 2011 6:36:04 AM EST</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> To: noagendadomains@gmail.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> Subject: Domain name forward</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> I have a domain forward for you the show:  wherethedronesat.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> Keep up the great work.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">> Gene VanMeter</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('thenoagendashowCom5496','showForOutline');"><img class="expandIcon" id="img_thenoagendashowCom5496" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('thenoagendashowCom5496','showForOutline');"><span class="opText">thenoagendashow.com</span></a></li>
+					<div class="hide" id="thenoagendashowCom5496" name="thenoagendashowCom5496">
+						<ul>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Hey guys,</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I was buying a domain while finishing last show and tried "thenoagendashow" and saw it was available for most TLDs. So I bought a few and forwarded them to noagendashow.com.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.com</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.net</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.org</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.co</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.info</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.biz</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">- thenoagendashow.ca</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">In the morning. Hear you tomorrow.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Harold</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('noagendabusinessCom14859','showForOutline');"><img class="expandIcon" id="img_noagendabusinessCom14859" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('noagendabusinessCom14859','showForOutline');"><span class="opText">noagendabusiness.com</span></a></li>
+					<div class="hide" id="noagendabusinessCom14859" name="noagendabusinessCom14859">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Hi adam . I emailed a few days ago regarding a website I have created for the no agenda community . The website is "www.noagendabusiness.com" and is a small business networking website for no agenda listeners with small businesses . This website is open to everyone around the world , and a portion of the proceeds will be donated weekly / monthly to the show . I would appreciate a mention on the show for this to kickstart the idea . Thank you very much </li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('conspiracyforoneCom28337','showForOutline');"><img class="expandIcon" id="img_conspiracyforoneCom28337" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('conspiracyforoneCom28337','showForOutline');"><span class="opText">conspiracyforone.com</span></a></li>
+					<div class="hide" id="conspiracyforoneCom28337" name="conspiracyforoneCom28337">
+						<ul>
+							<li><a href="javascript:expandCollapse('theFollowingDomainNowForwardToNoagendashowCom9988','showForOutline');"><img class="expandIcon" id="img_theFollowingDomainNowForwardToNoagendashowCom9988" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('theFollowingDomainNowForwardToNoagendashowCom9988','showForOutline');"><span class="opText">The following domain now forward to noagendashow.com:</span></a></li>
+							<div class="hide" id="theFollowingDomainNowForwardToNoagendashowCom9988" name="theFollowingDomainNowForwardToNoagendashowCom9988">
+								<ul>
+
+									<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">�	conspiracyforone.com</li>
+									</ul>
+								</div>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">This is regards to the conversations on episode 359.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">-- </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Pat Deery</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">HR#: 4,450,852,993</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('naJackets31762','showForOutline');"><img class="expandIcon" id="img_naJackets31762" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('naJackets31762','showForOutline');"><span class="opText">NA Jackets</span></a></li>
+					<div class="hide" id="naJackets31762" name="naJackets31762">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I sent the JCD Email to John@Dvorak.org</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Is that his email of choice?</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I'm wanting to help out the show. SO if anyone orders a Bruns Clothing jacket, for 12 dollars I will embroider a NoAgenda meme of their choice on the crest (Left chest side). All 12 dollars will be forwarded to the show. "Slave" ,"NoAgendashow.com", "Doug", "Dvorac.Org/NA" or whatever other No Agenda meme.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Knighthoods: AJ Tissier</li>
+
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Art By: <a href="http://ianaus.tumblr.com/">Sir Nussbaum</a></li>
+			<li><a href="http://359.nashownotes.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ShowNotes Archive of links and Assets (clips etc) <a href="http://362.nashownotes.com/"> 362.nashownotes.com</a></li>
+			<li><a href="http://nawol.curry.com/noAgenda/shownotes" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>New: Directory Archive of Shownotes (includes all audio and video assets used) <a href="http://nashownotes.com">nashownotes.com</a></li>
+			<li><a href="http://noagendanewsnetwork.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></li>
+
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('na36220111204Shownotes22306','showForOutline');"><img class="expandIcon" id="img_na36220111204Shownotes22306" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('na36220111204Shownotes22306','showForOutline');"><span class="opText">NA-362-2011-12-04  Shownotes</span></a></li>
+	<div class="hide" id="na36220111204Shownotes22306" name="na36220111204Shownotes22306">
+		<ul>
+			<li><a href="/shownotes/na36220111204Shownotes/search"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Search</li>
+			<li><a href="javascript:expandCollapse('bClipsStuffB25465','showForOutline');"><img class="expandIcon" id="img_bClipsStuffB25465" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bClipsStuffB25465','showForOutline');"><span class="opText"><b>Clips & Stuff</b></span></a></li>
+
+			<div class="hide" id="bClipsStuffB25465" name="bClipsStuffB25465">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Assange-screwed.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Assange-screwed.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/chiner vaccines.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>chiner vaccines.mp3</li>
+					<li><a href="javascript:expandCollapse('euroland18491','showForOutline');"><img class="expandIcon" id="img_euroland18491" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland18491','showForOutline');"><span class="opText">EUROLand</span></a></li>
+					<div class="hide" id="euroland18491" name="euroland18491">
+						<ul>
+
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/EUROLand/Euro10.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Euro10.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/EUROLand/Merkels marathon.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Merkels marathon.mp3</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('jcdClips22601','showForOutline');"><img class="expandIcon" id="img_jcdClips22601" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jcdClips22601','showForOutline');"><span class="opText">JCD Clips</span></a></li>
+					<div class="hide" id="jcdClips22601" name="jcdClips22601">
+						<ul>
+
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/approval rating bs.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>approval rating bs.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/bad bumper sticker.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>bad bumper sticker.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/getting killed in wwii.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>getting killed in wwii.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/herman cain gaffe.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>herman cain gaffe.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/lou dobbs loves ss.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>lou dobbs loves ss.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/pet peeve.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>pet peeve.mp3</li>
+
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/rogue wwebsites.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>rogue wwebsites.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/rubber bullets.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>rubber bullets.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/servers are hard to find.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>servers are hard to find.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/JCD Clips/stomp out bullying.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>stomp out bullying.mp3</li>
+							</ul>
+						</div>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/na362art.jpg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>na362art.jpg</li>
+
+					<li><a href="javascript:expandCollapse('ows7217','showForOutline');"><img class="expandIcon" id="img_ows7217" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ows7217','showForOutline');"><span class="opText">OWS</span></a></li>
+					<div class="hide" id="ows7217" name="ows7217">
+						<ul>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/OWS/bang on the drum.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>bang on the drum.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/OWS/BenSteinOnOccupy.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>BenSteinOnOccupy.mp3</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('ronPaul30887','showForOutline');"><img class="expandIcon" id="img_ronPaul30887" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ronPaul30887','showForOutline');"><span class="opText">Ron Paul</span></a></li>
+					<div class="hide" id="ronPaul30887" name="ronPaul30887">
+						<ul>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Ron Paul/attacked by fox forum.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>attacked by fox forum.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Ron Paul/Ron Paul army.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ron Paul army.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Ron Paul/Ron Paul opts out.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ron Paul opts out.mp3</li>
+							<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Ron Paul/Ron Paul Slams trump.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ron Paul Slams trump.mp3</li>
+
+							</ul>
+						</div>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Sandusky attractions.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Sandusky attractions.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/sirMatthewMelb.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>sirMatthewMelb.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/Assets/Warren Weinstein.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Warren Weinstein.mp3</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('ciaWars21517','showForOutline');"><img class="expandIcon" id="img_ciaWars21517" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ciaWars21517','showForOutline');"><span class="opText">CIA Wars</span></a></li>
+			<div class="hide" id="ciaWars21517" name="ciaWars21517">
+				<ul>
+					<li><a href="javascript:expandCollapse('americansNotImmuneIfTheyActAgainstUSCiaReuters26665','showForOutline');"><img class="expandIcon" id="img_americansNotImmuneIfTheyActAgainstUSCiaReuters26665" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('americansNotImmuneIfTheyActAgainstUSCiaReuters26665','showForOutline');"><span class="opText">Americans not immune if they act against U.S: CIA | Reuters</span></a></li>
+					<div class="hide" id="americansNotImmuneIfTheyActAgainstUSCiaReuters26665" name="americansNotImmuneIfTheyActAgainstUSCiaReuters26665">
+						<ul>
+							<li><a href="http://www.reuters.com/article/2011/12/01/us-usa-security-idUSTRE7B02ZQ20111201" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>American citizens are not immune from being treated like an enemy if they take up arms against the United States, the CIA general counsel said on Thursday.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">CIA General Counsel Stephen Preston was responding to a question at an American Bar Association national security conference about the killing of Americans overseas without presenting evidence of wrongdoing.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('theTruthAboutKosDailykosWarrenWeinsteinUsAidContractorInPakistanAndCiaRepresentativeKidnappedThere30912','showForOutline');"><img class="expandIcon" id="img_theTruthAboutKosDailykosWarrenWeinsteinUsAidContractorInPakistanAndCiaRepresentativeKidnappedThere30912" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('theTruthAboutKosDailykosWarrenWeinsteinUsAidContractorInPakistanAndCiaRepresentativeKidnappedThere30912','showForOutline');"><span class="opText">The Truth About Kos (DailyKos): Warren Weinstein, US AID Contractor in Pakistan (and CIA Representative?) Kidnapped There</span></a></li>
+					<div class="hide" id="theTruthAboutKosDailykosWarrenWeinsteinUsAidContractorInPakistanAndCiaRepresentativeKidnappedThere30912" name="theTruthAboutKosDailykosWarrenWeinsteinUsAidContractorInPakistanAndCiaRepresentativeKidnappedThere30912">
+						<ul>
+							<li><a href="http://truth-about-kos.blogspot.com/2011/08/warren-weinstein-us-contractor-in.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Warren Weinstein has been kidnapped was a country director for the US Government's USAID agency at one time, and that he was in Pakistan doing similar work when he was kidnapped, on a contract from the US Government.  But was he a CIA agent? </li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">No one has proved so as of yet, but everyone is speculating based on information about his life and work, such as the details provided by a New York Times article (with salient details highlighted in yellow below): </li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('slidewhistle13914','showForOutline');"><img class="expandIcon" id="img_slidewhistle13914" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('slidewhistle13914','showForOutline');"><span class="opText">Slidewhistle</span></a></li>
+			<div class="hide" id="slidewhistle13914" name="slidewhistle13914">
+
+				<ul>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Does John have some kind of diminished lung capacity?  His attempts on the slide whistle sound awfully pathetic..  He needs to really hit that thing with some force.  Try using your diaphragm.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">David</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('euroland7442','showForOutline');"><img class="expandIcon" id="img_euroland7442" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland7442','showForOutline');"><span class="opText">EUROLand</span></a></li>
+			<div class="hide" id="euroland7442" name="euroland7442">
+
+				<ul>
+					<li><a href="javascript:expandCollapse('banksPonderScenariosIfCountriesDropEuroWsjCom25372','showForOutline');"><img class="expandIcon" id="img_banksPonderScenariosIfCountriesDropEuroWsjCom25372" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('banksPonderScenariosIfCountriesDropEuroWsjCom25372','showForOutline');"><span class="opText">Banks Ponder Scenarios if Countries Drop Euro - WSJ.com</span></a></li>
+					<div class="hide" id="banksPonderScenariosIfCountriesDropEuroWsjCom25372" name="banksPonderScenariosIfCountriesDropEuroWsjCom25372">
+						<ul>
+							<li><a href="http://online.wsj.com/article/SB10001424052970204826704577074773960813432.html?grcc=13c06cfd25b314d2399bdd4671b24295Z1&amp;mod=WSJ_hpp_sections_business" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"No modern fiat currency monetary unions have broken up without some form of authoritarian or military government, or civil war," they said.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('portugalRaidsPensionFundsToMeetDeficitTargetsTelegraph31972','showForOutline');"><img class="expandIcon" id="img_portugalRaidsPensionFundsToMeetDeficitTargetsTelegraph31972" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('portugalRaidsPensionFundsToMeetDeficitTargetsTelegraph31972','showForOutline');"><span class="opText">Portugal raids pension funds to meet deficit targets - Telegraph</span></a></li>
+
+					<div class="hide" id="portugalRaidsPensionFundsToMeetDeficitTargetsTelegraph31972" name="portugalRaidsPensionFundsToMeetDeficitTargetsTelegraph31972">
+						<ul>
+							<li><a href="http://www.telegraph.co.uk/finance/financialcrisis/8932687/Portugal-raids-pension-funds-to-meet-deficit-targets.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Portugal has raided �Çš5.6bn (¬£4.8bn) of pension fund assets in a controversial scramble to meet its deficit targets.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('elite7380','showForOutline');"><img class="expandIcon" id="img_elite7380" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('elite7380','showForOutline');"><span class="opText">Elite$</span></a></li>
+
+			<div class="hide" id="elite7380" name="elite7380">
+				<ul>
+					<li><a href="javascript:expandCollapse('ethiopiaTanzaniaZambiaArrestFormerPresidentBushForTortureHumanRightsNowAmnestyInternationalUsaBlog25795','showForOutline');"><img class="expandIcon" id="img_ethiopiaTanzaniaZambiaArrestFormerPresidentBushForTortureHumanRightsNowAmnestyInternationalUsaBlog25795" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ethiopiaTanzaniaZambiaArrestFormerPresidentBushForTortureHumanRightsNowAmnestyInternationalUsaBlog25795','showForOutline');"><span class="opText">Ethiopia, Tanzania & Zambia: Arrest Former President Bush for Torture | Human Rights Now - Amnesty International USA Blog</span></a></li>
+					<div class="hide" id="ethiopiaTanzaniaZambiaArrestFormerPresidentBushForTortureHumanRightsNowAmnestyInternationalUsaBlog25795" name="ethiopiaTanzaniaZambiaArrestFormerPresidentBushForTortureHumanRightsNowAmnestyInternationalUsaBlog25795">
+						<ul>
+							<li><a href="http://blog.amnestyusa.org/waronterror/ethiopia-tanzania-zambia-arrest-former-president-bush-for-torture/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Yesterday, Amnesty International urged the governments of Ethiopia, Tanzania and Zambia to arrest former US President George W. Bush for crimes under international law, including torture, when he visits this week. (Amnesty International has made the same request of Switzerland and Canada during the former President's trips to those countries.)</li>
+							</ul>
+
+						</div>
+					<li><a href="javascript:expandCollapse('corzineToBeSubpoenaedByHouseAgricultureCommitteeInMfGlobalProbeBloomberg5091','showForOutline');"><img class="expandIcon" id="img_corzineToBeSubpoenaedByHouseAgricultureCommitteeInMfGlobalProbeBloomberg5091" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('corzineToBeSubpoenaedByHouseAgricultureCommitteeInMfGlobalProbeBloomberg5091','showForOutline');"><span class="opText">Corzine to Be Subpoenaed by House Agriculture Committee in MF Global Probe- Bloomberg</span></a></li>
+					<div class="hide" id="corzineToBeSubpoenaedByHouseAgricultureCommitteeInMfGlobalProbeBloomberg5091" name="corzineToBeSubpoenaedByHouseAgricultureCommitteeInMfGlobalProbeBloomberg5091">
+						<ul>
+							<li><a href="http://mobile.bloomberg.com/news/2011-12-02/corzine-subpoenaed-by-house-panel-for-mf-global-hearing.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The U.S. House Agriculture Committee voted to subpoena Jon S. Corzine, former chairman and chief executive officer of MF Global Holdings Ltd., for a Dec. 8 hearing on the collapse of the New York-based brokerage.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">House lawmakers on the panel voted by voice without opposition today in Washington to issue the subpoena. The Senate Agriculture Committee and the House Financial Services Oversight and Investigations subcommittee separately announced plans to consider Corzine subpoenas next week.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Congress has joined federal regulators in seeking answers about the steps that led to MF Global seeking bankruptcy protection on Oct. 31 after wrong-way bets on European sovereign debt. The Commodity Futures Trading Commission, Securities and Exchange Commission and Justice Department are investigating as much as $1.2 billion in missing customer funds.</li>
+
+							</ul>
+						</div>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Holder on Dec 8th in Hearing</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('gitmoNation12688','showForOutline');"><img class="expandIcon" id="img_gitmoNation12688" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gitmoNation12688','showForOutline');"><span class="opText">Gitmo Nation</span></a></li>
+			<div class="hide" id="gitmoNation12688" name="gitmoNation12688">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('needMoreGearForBritCops25812','showForOutline');"><img class="expandIcon" id="img_needMoreGearForBritCops25812" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('needMoreGearForBritCops25812','showForOutline');"><span class="opText">Need more gear for brit cops!</span></a></li>
+					<div class="hide" id="needMoreGearForBritCops25812" name="needMoreGearForBritCops25812">
+						<ul>
+							<li><a href="http://m.guardian.co.uk/uk/2011/dec/03/police-summer-riots-hours?cat=uk&amp;type=article" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Frontline police had to use their own mobile phones during the August riots, after the official radio system collapsed and some forces lost control of the situation to the extent that they had no idea how many officers were on duty, according to a withering internal appraisal of the response to the disorder.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The Police Federation review, which has been leaked to the Observer, reveals that policing failures during the disorder were so serious that the body set up to co-ordinate the response to a national emergency was ineffective for the "first 48 hours of the disturbance". During that period the violence spread from the capital across the country.</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('technoExperts19105','showForOutline');"><img class="expandIcon" id="img_technoExperts19105" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('technoExperts19105','showForOutline');"><span class="opText">Techno Experts</span></a></li>
+			<div class="hide" id="technoExperts19105" name="technoExperts19105">
+				<ul>
+					<li><a href="javascript:expandCollapse('uSSpent200mOnEgyptElection5714','showForOutline');"><img class="expandIcon" id="img_uSSpent200mOnEgyptElection5714" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('uSSpent200mOnEgyptElection5714','showForOutline');"><span class="opText">U.S. Spent $200M on Egypt Election</span></a></li>
+					<div class="hide" id="uSSpent200mOnEgyptElection5714" name="uSSpent200mOnEgyptElection5714">
+						<ul>
+
+							<li><a href="http://www.newsmax.com/Newsfront/us-money-egypt-elections/2011/12/02/id/419829#ixzz1fV2nH7t4" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Obama administration spent some $200 million on democracy building in the lead-up to the elections this week in Egypt.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">But with 65 percent of the vote going to Islamist candidates, it doesn't appear the money was well spent. </li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Stephen McInerney, executive director of the Project on Middle East Democracy, told Campaigns & Elections magazine that $65 million went to Egypt after the uprising that toppled President Hosni Mubarak and an additional $100 million was earmarked for economic development but also to train Egypt's nascent political parties.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The money is going through the State Department, the U.S. Agency for International Development (USAID), the International Republican Institute and the National Democratic Institute. </li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('oneOfBiggestItCompaniesInWorldToAbolishEmailsMailOnline10657','showForOutline');"><img class="expandIcon" id="img_oneOfBiggestItCompaniesInWorldToAbolishEmailsMailOnline10657" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('oneOfBiggestItCompaniesInWorldToAbolishEmailsMailOnline10657','showForOutline');"><span class="opText">One of biggest IT companies in world to abolish emails | Mail Online</span></a></li>
+					<div class="hide" id="oneOfBiggestItCompaniesInWorldToAbolishEmailsMailOnline10657" name="oneOfBiggestItCompaniesInWorldToAbolishEmailsMailOnline10657">
+						<ul>
+							<li><a href="http://www.dailymail.co.uk/news/article-2067520/One-biggest-IT-companies-world-abolish-emails.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>One of the largest information technology companies in the world is to ban e-mails -- because it says 90 per cent of them are a waste of time.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The extraordinary measure was announced by Atos, which employs almost 80,000 people in 42 countries including Britain.</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('luciferClipityClop27060','showForOutline');"><img class="expandIcon" id="img_luciferClipityClop27060" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('luciferClipityClop27060','showForOutline');"><span class="opText">Lucifer Clipity Clop</span></a></li>
+			<div class="hide" id="luciferClipityClop27060" name="luciferClipityClop27060">
+				<ul>
+					<li><a href="javascript:expandCollapse('witnessWhatNotToWearInMyanmarClintonSBurmaRoad549','showForOutline');"><img class="expandIcon" id="img_witnessWhatNotToWearInMyanmarClintonSBurmaRoad549" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('witnessWhatNotToWearInMyanmarClintonSBurmaRoad549','showForOutline');"><span class="opText">Witness: What not to wear in Myanmar: Clinton's Burma road</span></a></li>
+
+					<div class="hide" id="witnessWhatNotToWearInMyanmarClintonSBurmaRoad549" name="witnessWhatNotToWearInMyanmarClintonSBurmaRoad549">
+						<ul>
+							<li><a href="http://mobile.reuters.com/article/idUSTRE7B11LO20111202?irpc=932" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>It wasn't exactly Nixon in China, but Hillary Clinton's visit to Myanmar this week had that slight touch of the surreal that sometimes marks the beginning of unexpected diplomatic change.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">First, it had to be color coordinated.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Officials traveling with Clinton are always given instructions by the State Department on accompanying the secretary of state, but this time they came with an added set of suggestions on what not to wear for the first high-level U.S. mission to Myanmar in more than 50 years.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Blacks, whites and pinks were out. Rust and saffron were discouraged. Those of us meeting at the Washington-area airbase to get on Clinton's plane on Monday traded notes: were blues ok? What if black is all you have?</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The mysterious list of ins-and-outs for Myanmar fashion was never fully explained, although an official later said it appeared to be an effort to avoid the traditional colors of mourning, or those associated with Buddhist monks, who have protested against the government.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Clinton, bounding off the plane in Myanmar's tiny capital airport, went for a pink blazer anyway.</li>
+							</ul>
+
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('droneNation13518','showForOutline');"><img class="expandIcon" id="img_droneNation13518" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('droneNation13518','showForOutline');"><span class="opText">Drone Nation</span></a></li>
+			<div class="hide" id="droneNation13518" name="droneNation13518">
+				<ul>
+					<li><a href="javascript:expandCollapse('droneJournalism6055','showForOutline');"><img class="expandIcon" id="img_droneJournalism6055" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('droneJournalism6055','showForOutline');"><span class="opText">Drone Journalism</span></a></li>
+					<div class="hide" id="droneJournalism6055" name="droneJournalism6055">
+
+						<ul>
+							<li><a href="http://dronejournalism.tumblr.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>That's a question we want to try and answer at the Drone Journalism Lab at the University of Nebraska-Lincoln's College of Journalism and Mass Communications. We've just started the lab and will have our first drone to start testing soon.¬Ý</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">So what is drone journalism? Here's a first crack at trying to define it: Drone journalism is the use of unmanned aircraft to gather photos, video and data for reporting. Between inexpensive RC aircraft with high-definition video cameras mounted to them to sophisticated autonomous aircraft with high-resolution imaging hardware onboard, the applications for reporting on disasters, mass protests and other news events with a large geographic extent are wide open.¬Ý</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('syria6467','showForOutline');"><img class="expandIcon" id="img_syria6467" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('syria6467','showForOutline');"><span class="opText">Syria</span></a></li>
+			<div class="hide" id="syria6467" name="syria6467">
+				<ul>
+					<li><a href="javascript:expandCollapse('zakariaWhyINowThinkAssadWillFallGlobalPublicSquareCnnComBlogs31594','showForOutline');"><img class="expandIcon" id="img_zakariaWhyINowThinkAssadWillFallGlobalPublicSquareCnnComBlogs31594" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('zakariaWhyINowThinkAssadWillFallGlobalPublicSquareCnnComBlogs31594','showForOutline');"><span class="opText">Zakaria: Why I now think Assad will fall -- Global Public Square - CNN.com Blogs</span></a></li>
+					<div class="hide" id="zakariaWhyINowThinkAssadWillFallGlobalPublicSquareCnnComBlogs31594" name="zakariaWhyINowThinkAssadWillFallGlobalPublicSquareCnnComBlogs31594">
+						<ul>
+							<li><a href="http://globalpublicsquare.blogs.cnn.com/2011/12/01/zakaria-why-i-now-think-assad-will-fall/?hpt=hp_t2" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Remember, Syria is not an oil regime. It doesn't have that much cash.¬ÝIt has always relied on trade and smuggling and some money from Iran. The United Nations sanctions are actually quite¬Ýeffective in cutting down trade. And Turkey is now going to¬Ýimpose its own sanctions on Syria, which is very significant. It will squeeze Assad even tighter.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Assad leads a minority regime that has been able to stay in¬Ýpower by bribing key members of the Sunni elite in both the business¬Ýcommunity and the military. At the end of the day, that game¬Ýbecomes much more difficult to play once the money runs out.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">For this reason, I think we are now seeing the beginning of the end of Assad's rule.¬Ý It may still take a year to run its course. But I now think this¬Ýregime is going to collapse after all.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('acta8583','showForOutline');"><img class="expandIcon" id="img_acta8583" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('acta8583','showForOutline');"><span class="opText">ACTA</span></a></li>
+
+			<div class="hide" id="acta8583" name="acta8583">
+				<ul>
+					<li><a href="javascript:expandCollapse('copyrightCorruptionScandalSurroundsAntiPiracyCampaignTorrentfreak29812','showForOutline');"><img class="expandIcon" id="img_copyrightCorruptionScandalSurroundsAntiPiracyCampaignTorrentfreak29812" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('copyrightCorruptionScandalSurroundsAntiPiracyCampaignTorrentfreak29812','showForOutline');"><span class="opText">Copyright Corruption Scandal Surrounds Anti-Piracy Campaign | TorrentFreak</span></a></li>
+					<div class="hide" id="copyrightCorruptionScandalSurroundsAntiPiracyCampaignTorrentfreak29812" name="copyrightCorruptionScandalSurroundsAntiPiracyCampaignTorrentfreak29812">
+						<ul>
+							<li><a href="http://torrentfreak.com/copyright-corruption-scandal-surrounds-anti-piracy-campaign-111201/?_=" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Anti-piracy group BREIN is caught up in a huge copyright scandal in the Netherlands. A musician who composed a track for use at a local film festival later found it being used without permission in an anti-piracy campaign. He is now claiming at least a million euros for the unauthorized distribution of his work on DVDs. To make matters even worse, a board member of a royalty collection agency offered to help the composer to recoup the money, but only if he received 33% of the loot.</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('ministryOfTruth1376','showForOutline');"><img class="expandIcon" id="img_ministryOfTruth1376" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ministryOfTruth1376','showForOutline');"><span class="opText">Ministry of Truth</span></a></li>
+			<div class="hide" id="ministryOfTruth1376" name="ministryOfTruth1376">
+				<ul>
+					<li><a href="javascript:expandCollapse('republicanJewishCoalitionBarsRonPaulFromPresidentialDebateSaysHeSTooMisguidedAndExtreme27293','showForOutline');"><img class="expandIcon" id="img_republicanJewishCoalitionBarsRonPaulFromPresidentialDebateSaysHeSTooMisguidedAndExtreme27293" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('republicanJewishCoalitionBarsRonPaulFromPresidentialDebateSaysHeSTooMisguidedAndExtreme27293','showForOutline');"><span class="opText">Republican Jewish Coalition Bars Ron Paul From Presidential Debate, Says He's Too "Misguided and Extreme" :</span></a></li>
+					<div class="hide" id="republicanJewishCoalitionBarsRonPaulFromPresidentialDebateSaysHeSTooMisguidedAndExtreme27293" name="republicanJewishCoalitionBarsRonPaulFromPresidentialDebateSaysHeSTooMisguidedAndExtreme27293">
+						<ul>
+
+							<li><a href="http://theintelhub.com/2011/12/02/republican-jewish-coalition-bars-ron-paul-from-presidential-debate-says-hes-too-misguided-and-extreme/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Paul was not invited to attend the RJC's candidates forum because the organization -- as it has stated numerous times in the past -- "rejects his misguided and extreme views," said [RJC Executive Director Matt] Brooks.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"He's just so far outside of the mainstream of the Republican party and this organization," Brooks said. Inviting Paul to attend would be "like inviting Barack Obama to speak."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('s18671910','showForOutline');"><img class="expandIcon" id="img_s18671910" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('s18671910','showForOutline');"><span class="opText">S.1867</span></a></li>
+
+			<div class="hide" id="s18671910" name="s18671910">
+				<ul>
+					<li><a href="javascript:expandCollapse('obamaRegimeWarnsAllAmericansIfYouFightUsYouWillDie615','showForOutline');"><img class="expandIcon" id="img_obamaRegimeWarnsAllAmericansIfYouFightUsYouWillDie615" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obamaRegimeWarnsAllAmericansIfYouFightUsYouWillDie615','showForOutline');"><span class="opText">Obama Regime Warns All Americans: "IF YOU FIGHT US YOU WILL DIE!"</span></a></li>
+					<div class="hide" id="obamaRegimeWarnsAllAmericansIfYouFightUsYouWillDie615" name="obamaRegimeWarnsAllAmericansIfYouFightUsYouWillDie615">
+						<ul>
+							<li><a href="http://www.whatdoesitmean.com/index1543.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>General Counsel Stephen Preston in responding to a question at an American Bar Association national security conference bluntly stated that "American citizens are not immune from being treated like an enemy if they take up arms against the United States."</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('bankTers29531','showForOutline');"><img class="expandIcon" id="img_bankTers29531" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bankTers29531','showForOutline');"><span class="opText">Bank$ters</span></a></li>
+			<div class="hide" id="bankTers29531" name="bankTers29531">
+				<ul>
+					<li><a href="javascript:expandCollapse('hankPaulsonSInsideJobsFelixSalmon23072','showForOutline');"><img class="expandIcon" id="img_hankPaulsonSInsideJobsFelixSalmon23072" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hankPaulsonSInsideJobsFelixSalmon23072','showForOutline');"><span class="opText">Hank Paulson's inside jobs | Felix Salmon</span></a></li>
+					<div class="hide" id="hankPaulsonSInsideJobsFelixSalmon23072" name="hankPaulsonSInsideJobsFelixSalmon23072">
+						<ul>
+
+							<li><a href="http://blogs.reuters.com/felix-salmon/2011/11/29/hank-paulsons-inside-jobs/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Given that it's taken two years since the release of Sorkin's book for the Eton Park meeting to be made public, it's fair to assume that there were other meetings, too �Äî possibly many others. Paulson was giving inside tips to Wall Street in general, and to Goldman types in particular: exactly the kind of behavior that "Government Sachs" conspiracy theorists have been speculating about for years. Turns out, they were right.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('weCanTWait12054','showForOutline');"><img class="expandIcon" id="img_weCanTWait12054" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('weCanTWait12054','showForOutline');"><span class="opText">We Can't Wait</span></a></li>
+			<div class="hide" id="weCanTWait12054" name="weCanTWait12054">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('weCanTWaitPresidentObamaAnnouncesNearly4BillionInvestmentInEnergyUpgradesToPublicAndPrivateBuildingsTheWhiteHouse14710','showForOutline');"><img class="expandIcon" id="img_weCanTWaitPresidentObamaAnnouncesNearly4BillionInvestmentInEnergyUpgradesToPublicAndPrivateBuildingsTheWhiteHouse14710" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('weCanTWaitPresidentObamaAnnouncesNearly4BillionInvestmentInEnergyUpgradesToPublicAndPrivateBuildingsTheWhiteHouse14710','showForOutline');"><span class="opText">We Can't Wait: President Obama Announces Nearly $4 Billion Investment in Energy Upgrades to Public and Private Buildings | The White House</span></a></li>
+					<div class="hide" id="weCanTWaitPresidentObamaAnnouncesNearly4BillionInvestmentInEnergyUpgradesToPublicAndPrivateBuildingsTheWhiteHouse14710" name="weCanTWaitPresidentObamaAnnouncesNearly4BillionInvestmentInEnergyUpgradesToPublicAndPrivateBuildingsTheWhiteHouse14710">
+						<ul>
+							<li><a href="http://m.whitehouse.gov/the-press-office/2011/12/02/we-cant-wait-president-obama-announces-nearly-4-billion-investment-energ" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>President Obama today announced nearly $4 billion in combined federal and private sector energy upgrades to buildings over the next 2 years. These investments will save billions in energy costs, promote energy independence, and, according to independent estimates, create tens of thousands of jobs in the hard-hit construction sector. The $4 billion investment announced today includes a $2 billion commitment, made through the issuance of a Presidential Memorandum, to energy upgrades of federal buildings using long term energy savings to pay for up-front costs, at no cost to taxpayers. In addition, 60 CEOs, mayors, university presidents, and labor leaders today committed to invest nearly $2 billion of private capital into energy efficiency projects; and to upgrade energy performance by a minimum of 20% by 2020 in 1.6 billion square feet of office, industrial, municipal, hospital, university, community college and school buildings. This announcement builds on a commitment made by 14 partners at the Clinton Global Initiative America meeting in June to make energy upgrades across 300 million square feet, and to invest $500 million in private sector financing in energy efficiency projects.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('presidentialProclamationCriticalInfrastructureProtectionMonth2011TheWhiteHouse1291','showForOutline');"><img class="expandIcon" id="img_presidentialProclamationCriticalInfrastructureProtectionMonth2011TheWhiteHouse1291" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('presidentialProclamationCriticalInfrastructureProtectionMonth2011TheWhiteHouse1291','showForOutline');"><span class="opText">Presidential Proclamation -- Critical Infrastructure Protection Month, 2011 | The White House</span></a></li>
+
+					<div class="hide" id="presidentialProclamationCriticalInfrastructureProtectionMonth2011TheWhiteHouse1291" name="presidentialProclamationCriticalInfrastructureProtectionMonth2011TheWhiteHouse1291">
+						<ul>
+							<li><a href="http://www.whitehouse.gov/the-press-office/2011/11/30/presidential-proclamation-critical-infrastructure-protection-month-2011" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>President of the United States of America, by virtue of the authority vested in me by the Constitution and the laws of the United States, do hereby proclaim December 2011 as Critical Infrastructure Protection Month.  I call upon the people of the United States to recognize the importance of protecting our Nation's critical resources and to observe this month with appropriate events and training to enhance our national security and resilience.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('eqMachines13185','showForOutline');"><img class="expandIcon" id="img_eqMachines13185" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('eqMachines13185','showForOutline');"><span class="opText">EQ Machines</span></a></li>
+
+			<div class="hide" id="eqMachines13185" name="eqMachines13185">
+				<ul>
+					<li><a href="javascript:expandCollapse('jimstonefreelanceComDidTheDimonaDozenMurderTheFukushima5013026','showForOutline');"><img class="expandIcon" id="img_jimstonefreelanceComDidTheDimonaDozenMurderTheFukushima5013026" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jimstonefreelanceComDidTheDimonaDozenMurderTheFukushima5013026','showForOutline');"><span class="opText">Jimstonefreelance.com - Did the Dimona Dozen murder the Fukushima 50?</span></a></li>
+					<div class="hide" id="jimstonefreelanceComDidTheDimonaDozenMurderTheFukushima5013026" name="jimstonefreelanceComDidTheDimonaDozenMurderTheFukushima5013026">
+						<ul>
+							<li><a href="http://www.jimstonefreelance.com/fukushima.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Fukushima may in fact have been caused by an act of war under the cover of an environmental disaster.</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('britishDrillersTrustUsFrackingOnlyCausesMinorEarthquakesCrooksAndLiars26620','showForOutline');"><img class="expandIcon" id="img_britishDrillersTrustUsFrackingOnlyCausesMinorEarthquakesCrooksAndLiars26620" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('britishDrillersTrustUsFrackingOnlyCausesMinorEarthquakesCrooksAndLiars26620','showForOutline');"><span class="opText">British Drillers: Trust Us, Fracking Only Causes Minor Earthquakes! | Crooks and Liars</span></a></li>
+					<div class="hide" id="britishDrillersTrustUsFrackingOnlyCausesMinorEarthquakesCrooksAndLiars26620" name="britishDrillersTrustUsFrackingOnlyCausesMinorEarthquakesCrooksAndLiars26620">
+						<ul>
+							<li><a href="http://crooksandliars.com/susie-madrak/british-drillers-trust-us-fracking-on" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A press release from Cuadrilla Resources, who were responsible for exploration in the region, reported that:</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"The hydraulic fracturing of Cuadrilla's Preese Hall-1 well did trigger a number of minor seismic events.""The seismic events were due to an unusual combination of geology at the well site coupled with the pressure exerted by water injection as part of operations."</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The company did add that the chances of such an occurrence happening again would be slim. It predicted that a worse case scenario would result in an earthquake measuring no more than 3.0 on the Richter Scale.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('fedBazookaAimedAtTheEurozoneGavynDaviesInsightIntoMacroeconomicsAndTheFinancialMarketsFromTheFinancialTimesFtCom22447','showForOutline');"><img class="expandIcon" id="img_fedBazookaAimedAtTheEurozoneGavynDaviesInsightIntoMacroeconomicsAndTheFinancialMarketsFromTheFinancialTimesFtCom22447" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('fedBazookaAimedAtTheEurozoneGavynDaviesInsightIntoMacroeconomicsAndTheFinancialMarketsFromTheFinancialTimesFtCom22447','showForOutline');"><span class="opText">Fed bazooka aimed at the eurozone | Gavyn Davies | Insight into macroeconomics and the financial markets from the Financial Times -- FT.com</span></a></li>
+			<div class="hide" id="fedBazookaAimedAtTheEurozoneGavynDaviesInsightIntoMacroeconomicsAndTheFinancialMarketsFromTheFinancialTimesFtCom22447" name="fedBazookaAimedAtTheEurozoneGavynDaviesInsightIntoMacroeconomicsAndTheFinancialMarketsFromTheFinancialTimesFtCom22447">
+				<ul>
+
+					<li><a href="http://blogs.ft.com/gavyndavies/2011/12/02/fed-bazooka-aimed-at-eurozone/?ftcamp=crm/email/2011122/nbe/ExclusiveComment/product#axzz1fOaIvVDp" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The announcement of co-ordinated central bank action to boost foreign exchange swap lines on Wednesday has boosted market sentiment. The central banks have become extremely alarmed about the deterioration in the funding market for eurozone banks, and the consequent deleveraging of bank balance sheets which this is causing, and have decided to inject a great deal more liquidity into the system to bring this back under control. </li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('hadowPuppetTheatre27422','showForOutline');"><img class="expandIcon" id="img_hadowPuppetTheatre27422" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hadowPuppetTheatre27422','showForOutline');"><span class="opText">$hadow Puppet Theatre</span></a></li>
+			<div class="hide" id="hadowPuppetTheatre27422" name="hadowPuppetTheatre27422">
+				<ul>
+					<li><a href="javascript:expandCollapse('trumpToModerateRepublicanDebateNytimesCom32657','showForOutline');"><img class="expandIcon" id="img_trumpToModerateRepublicanDebateNytimesCom32657" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('trumpToModerateRepublicanDebateNytimesCom32657','showForOutline');"><span class="opText">Trump to Moderate Republican Debate - NYTimes.com</span></a></li>
+
+					<div class="hide" id="trumpToModerateRepublicanDebateNytimesCom32657" name="trumpToModerateRepublicanDebateNytimesCom32657">
+						<ul>
+							<li><a href="http://thecaucus.blogs.nytimes.com/2011/12/02/trump-to-moderate-republican-debate/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>It's officially a reality television Republican primary now.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Donald Trump is pairing up with Newsmax, the conservative magazine and news Web site, to moderate a presidential debate in Des Moines on Dec. 27.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"Our readers and the grass roots really love Trump," said Christopher Ruddy, chief executive of Newsmax Media. "They may not agree with</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">him on everything, but they don't see him as owned by the Washington establishment, the media establishment."</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('ronPaulSkippingTrumpDebateUpiCom5192','showForOutline');"><img class="expandIcon" id="img_ronPaulSkippingTrumpDebateUpiCom5192" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ronPaulSkippingTrumpDebateUpiCom5192','showForOutline');"><span class="opText">Ron Paul skipping Trump debate - UPI.com</span></a></li>
+					<div class="hide" id="ronPaulSkippingTrumpDebateUpiCom5192" name="ronPaulSkippingTrumpDebateUpiCom5192">
+						<ul>
+							<li><a href="http://www.upi.com/Top_News/US/2011/12/03/Ron-Paul-skipping-Trump-debate/UPI-99021322959775/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>on Paul will skip a Republican debate in Iowa because having Donald Trump as moderator would be "wildly inappropriate," a Paul spokesman said Saturday.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The Texas congressman is the second GOP presidential aspirant to say he won't be part of the Dec. 27 debate. Former Utah Gov. Jon Huntsman also has declined, with his spokesman saying the Republican Party "deserves a serious discussion of the issues."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('video13445','showForOutline');"><img class="expandIcon" id="img_video13445" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('video13445','showForOutline');"><span class="opText">VIDEO</span></a></li>
+			<div class="hide" id="video13445" name="video13445">
+
+				<ul>
+					<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=yepO257zWDE" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] The Newest Product To Be Made In China.... VACCINES</li>
+					<li><a href="javascript:expandCollapse('videoMerkelWarnsOfMarathonToSolveEuroCrisisEuronewsWorldNews14996','showForOutline');"><img class="expandIcon" id="img_videoMerkelWarnsOfMarathonToSolveEuroCrisisEuronewsWorldNews14996" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoMerkelWarnsOfMarathonToSolveEuroCrisisEuronewsWorldNews14996','showForOutline');"><span class="opText">[VIDEO] Merkel warns of 'marathon' to solve euro crisis | euronews, world news</span></a></li>
+					<div class="hide" id="videoMerkelWarnsOfMarathonToSolveEuroCrisisEuronewsWorldNews14996" name="videoMerkelWarnsOfMarathonToSolveEuroCrisisEuronewsWorldNews14996">
+						<ul>
+							<li><a href="http://www.euronews.net/2011/12/02/merkel-warns-of-marathon-to-solve-euro-crisis/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The German Chancellor Angela Merkel has told the country's parliament, the Bundestag, that there is a need for more fiscal union in the euro zone.</li>
+							</ul>
+
+						</div>
+					<li><a href="http://www.youtube.com/watch?v=0bTC8vorQLQ&amp;feature=channel_video_title" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] The Plan To Collapse Iran's Central Bank</li>
+					<li><a href="http://www.youtube.com/watch?v=OsF3oc7vMHA&amp;feature=channel_video_title" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] CNN Says Phone Hackers MAY Be Funding Large Terrorist Event</li>
+					<li><a href="javascript:expandCollapse('videoWhoIsWarrenWeinstein7188','showForOutline');"><img class="expandIcon" id="img_videoWhoIsWarrenWeinstein7188" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoWhoIsWarrenWeinstein7188','showForOutline');"><span class="opText">[VIDEO] Who is Warren Weinstein?</span></a></li>
+					<div class="hide" id="videoWhoIsWarrenWeinstein7188" name="videoWhoIsWarrenWeinstein7188">
+						<ul>
+							<li><a href="http://www.youtube.com/user/MOXNEWSd0tC0M#p/u/20/YOAH38MBCyY" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Al Qaeda Takes American Hostage Demanding An End To Bombing In Pakistan Yemen & Afghanistan</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('videoRonPaulOptsOut27361','showForOutline');"><img class="expandIcon" id="img_videoRonPaulOptsOut27361" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoRonPaulOptsOut27361','showForOutline');"><span class="opText">[VIDEO] Ron Paul opts out</span></a></li>
+					<div class="hide" id="videoRonPaulOptsOut27361" name="videoRonPaulOptsOut27361">
+						<ul>
+							<li><a href="http://www.youtube.com/user/MOXNEWSd0tC0M#p/u/1/X97GtNUIbyY" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ron Paul Refusing To Attend Debate Hosted By "Reality Television Personality"</li>
+							</ul>
+						</div>
+
+					<li><a href="http://www.youtube.com/watch?v=gBDt2Sh9Vqo" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>[VIDEO] Ron Paul - Huckabee Presidential Forum</li>
+					<li><a href="javascript:expandCollapse('videoJulianAssangeIphoneBlackberryAndGmailUsersAreScrewedVideoMediaGuardianCoUk12076','showForOutline');"><img class="expandIcon" id="img_videoJulianAssangeIphoneBlackberryAndGmailUsersAreScrewedVideoMediaGuardianCoUk12076" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoJulianAssangeIphoneBlackberryAndGmailUsersAreScrewedVideoMediaGuardianCoUk12076','showForOutline');"><span class="opText">[VIDEO] Julian Assange: iPhone, Blackberry and Gmail users are 'screwed' - video | Media | guardian.co.uk</span></a></li>
+					<div class="hide" id="videoJulianAssangeIphoneBlackberryAndGmailUsersAreScrewedVideoMediaGuardianCoUk12076" name="videoJulianAssangeIphoneBlackberryAndGmailUsersAreScrewedVideoMediaGuardianCoUk12076">
+						<ul>
+							<li><a href="http://www.guardian.co.uk/media/video/2011/dec/02/julian-assange-iphone-blackberry-gmail-surveillance-screwed-video" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>WikilLeaks founder Julian Assange tells smartphone and Gmail users 'you're all screwed' by intelligence contractors who sell mass surveillance devices for such technologies in the post 9/11 world. He also announced that his whistleblowing organisation was embarking on a new 'source protection platform'</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('video2012TheFirstTenYearsOfTheEuroBanknotesAndCoins5612','showForOutline');"><img class="expandIcon" id="img_video2012TheFirstTenYearsOfTheEuroBanknotesAndCoins5612" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('video2012TheFirstTenYearsOfTheEuroBanknotesAndCoins5612','showForOutline');"><span class="opText">[VIDEO] 2012: The first ten years of the euro banknotes and coins</span></a></li>
+					<div class="hide" id="video2012TheFirstTenYearsOfTheEuroBanknotesAndCoins5612" name="video2012TheFirstTenYearsOfTheEuroBanknotesAndCoins5612">
+						<ul>
+							<li><a href="http://www.youtube.com/watch?feature=youtube_gdata_player&amp;v=o0YrRM7yee0" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ten years ago, on 1 January 2002, euro banknotes and coins were introduced in 12 Member States of the European Union. Since then, five more Member States have adopted the euro in recent years.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+					
+<center>
+
+	<br>
+	<div id="disqus_thread"></div>
+
+	<script type="text/javascript" src="http://disqus.com/forums/adamcurrycomments/embed.js"></script>
+	<noscript><a href="http://adamcurrycomments.disqus.com/?url=ref">View the forum thread.</a></noscript>
+
+	</center>
+
+					<div class="divLegend">
+						<p>Editor: Adam Curry;  Updated: 12/6/11; 13 reads. 1 items.  Page build ran for 1.650 seconds.</p>
+						<p><a class="aOpmlSourceLink" href="http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-362-2011-12-04/na362opml.opml" title="Click on this icon to view the OPML source text for this directory. More info: http://www.opml.org/spec2."><img src="http://scripting.com/images/xmlIcon2.gif" border="0" width="36" height="14" alt="XML" /></a></p>
+
+						<p><a href="http://127.0.0.1:5337/opmlEditor/openOpml?url=http://362.nashownotes.com/shownotes">View Outline</a></p>
+						<p><a href="http://362.nashownotes.com/"><img src="http://blog.curry.com/images/2011/06/14/BigAppsRounded.jpg" width="16" height="16" border="0" alt="Home"></a></p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</body>
+	</html>
