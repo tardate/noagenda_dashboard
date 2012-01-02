@@ -51,7 +51,11 @@ describe "Navd::Scraper::Control" do
       it "should create show notes" do
         expect { subject }.to change { Note.count }.from(0).to(1)
       end
-      context "when attempting to reload" do
+      it "should attempt to tweet" do
+        scraper_control.should_receive(:notify_new_show).once
+        subject
+      end
+      context "when attempting to load the show again" do
         before { scraper_control.load_show(show_number) }
         it "should not update the show details" do
           Show.any_instance.should_receive(:update_attributes!).never
@@ -63,6 +67,10 @@ describe "Navd::Scraper::Control" do
       before { scraper_control.load_show(show_number,true) }
       it "should update the show details" do
         Show.any_instance.should_receive(:update_attributes!).once
+        scraper_control.load_show(show_number,true)
+      end
+      it "should not attempt to tweet" do
+        scraper_control.should_receive(:notify_new_show).never
         scraper_control.load_show(show_number,true)
       end
     end

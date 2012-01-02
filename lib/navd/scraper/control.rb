@@ -46,7 +46,7 @@ module ::Navd::Scraper
               :description => show_note[:description]
             )
           end
-          notify_new_show(show)
+          notify_new_show(show) unless reload
           return true
         else
           log "#{number}: show already published - cannot reload"
