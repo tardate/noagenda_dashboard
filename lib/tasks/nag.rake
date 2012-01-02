@@ -11,4 +11,16 @@ namespace :nag do
     control.load_show(options[:show_number],options[:reload])
   	puts "nag:load: Done."
   end
+
+  namespace :meme do
+    desc "Merge a meme (from=name to=name)"
+    task :merge => :environment do |t|
+      from_meme = ENV['from'].present? ? ENV['from'] : nil
+      to_meme = ENV['to'].present? ? ENV['to'] : nil
+      
+      puts "nag:meme:merge: Processing task..."
+      Meme.merge(from_meme,to_meme)
+    	puts "nag:meme:merge: Done."
+    end
+  end
 end

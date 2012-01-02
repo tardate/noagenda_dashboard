@@ -50,6 +50,17 @@ class Meme < ActiveRecord::Base
       where(m[:trending].eq(false))
     end
 
+    # Merge +from_meme_name+ to +to_meme_name+
+    def merge(from_meme_name,to_meme_name)
+      to_meme = Meme.factory(to_meme_name)
+      from_meme = Meme.find_by_name(from_meme_name)
+      return unless to_meme && from_meme
+      # move existing notes to the new meme
+      from_meme.notes.update_all(:meme_id => to_meme.id)
+      # remove the old meme
+      from_meme.destroy
+    end
+
     # Tries to coalesce different spellings to one standard form
     def normalize_name(value)
       case value
