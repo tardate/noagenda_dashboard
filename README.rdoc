@@ -1,4 +1,5 @@
-== NoAgenda Attack Vector Dashboard
+== NoAgenda Attack Vector Dashboard {<img src="https://secure.travis-ci.org/tardate/noagenda_dashboard.png" />}[http://travis-ci.org/tardate/noagenda_dashboard]
+
 
 This is the complete source for the
 link:http://noagendadashboard.com
