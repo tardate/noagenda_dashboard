@@ -69,7 +69,7 @@ module ::Navd::Scraper
     def get_nested_show_notes
       notes = []
       current_meme = nil
-      p_shownotes_detail_all.at_css('ul.ulDirectory').children.each do |n|
+      show_notes_collection(:nested).each do |n|
         if n.name=='li' && n[:class]=='directoryItem'
           current_meme = n.text
         elsif n.name=='ul' && n[:class]=='ulDirectory'
@@ -95,54 +95,86 @@ module ::Navd::Scraper
     def get_flat_show_notes
       show_notes = []
       # scan all the top-level li elements under the shownotes node
-      p_shownotes_menu.css('div.divOutlineBody > ul > div.hide:last > ul > li').each do |n|
+      show_notes_collection(:flat).each do |n|
         if n.next_element && n.next_element.name=='div' && (current_meme = n.css('span').text)
           notes = n.next_element.xpath('./ul/li') # top level li elements
-            notes.each do |note|
+          notes.each do |note|
             current_title = note.text
+            name = current_title.truncate(255)
+            partial_description = current_title == name ? nil : current_title
             if (note_collection = note.next_element) && note_collection.name=='div' && (subnotes = note_collection.css('li'))
-              anchor = subnotes.at_css('a') || {}
-              description = subnotes.text
+              subnotes.each do |subnote|
+                anchor = (subnote.at_css('a') || {})[:href]
+                description = [partial_description,subnote.text].compact.join(': ')
+                show_notes << {
+                  :name => name,
+                  :meme_name => current_meme,
+                  :description => description,
+                  :url => anchor
+                }
+              end
             else
-              anchor = note.at_css('a') || {}
-              description = current_title
+              anchor = (note.at_css('a') || {})[:href]
+              show_notes << {
+                :name => name,
+                :meme_name => current_meme,
+                :description => partial_description,
+                :url => anchor
+              }
             end
-            show_notes << {
-              :name => current_title.truncate(255),
-              :meme_name => current_meme,
-              :description => description,
-              :url => anchor[:href]
-            }
           end
         end
       end
       show_notes
     end
 
+    def show_notes_collection(format = :flat)
+      case format
+      when :nested
+        p_shownotes_detail_all.at_css('ul.ulDirectory').children
+      when :flat
+        p_shownotes_menu.css('div.divOutlineBody > ul > li').map{|n| n.at_css('span').text =~ /notes/i ? n.next_element : nil }.compact.first.xpath('./ul/li')
+      else
+        []
+      end
+    end
+
+    def show_credits_collection(format = :flat)
+      case format
+      when :nested
+        p_credits.css('.directoryComment').children
+      when :flat
+        p_shownotes_menu.css('div.divOutlineBody > ul > li').map{|n| n.at_css('span').text =~ /credit/i ? n.next_element : nil }.compact.first.css('*').children
+      else
+        []
+      end
+    end
+
+    # Returns an array of credit items given an Nokogiri::HTML::Document container node
+    def normalize_credit_list(collection_root)
+      nbsp = Nokogiri::HTML("&nbsp;").text
+      c = collection_root.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ').gsub(/\t|\n/,'') : nil }
+      c.reject!{|i| i.blank?}
+      c
+    end
+
     # Returns a text representation of the show credits
     def credits
       @credits ||= credits_list.try(:join,'<br/>')
     end
-    # Returns an array of credit items given an Nokogiri::HTML::Document container node
-    def normalize_credit_list(collection_root)
-      nbsp = Nokogiri::HTML("&nbsp;").text
-      c = collection_root.children.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ').gsub(/\t|\n/,'') : nil }
-      c.reject!{|i| i.blank?}
-      c
-    end
     # Returns an array of credits for the show
     def credits_list
-      @credits_list ||= case shownotes_format
-      when :nested
-        normalize_credit_list(p_credits.css('.directoryComment'))
-      when :flat
-        normalize_credit_list(p_shownotes_menu.css('div.divOutlineBody > ul > div.hide').first.css('*'))
-      end
+      @credits_list ||= normalize_credit_list(show_credits_collection(shownotes_format))
     end
 
     # Returns the human name of the show
     def show_name
-      credits_list.try(:first)
+      case number
+      when 368 # special case
+        'Too Many Clips'
+      else
+        credits_list.try(:first)
+      end
     end
 
     # Returns the show date (as extracted from the audio file name)
@@ -186,6 +218,8 @@ module ::Navd::Scraper
     # http://349.nashownotes.com/shownotes/na34920111020Credits
     def credits_uri
       @credits_uri ||= uri.merge(extract_nodes(p_shownotes_menu,:credits)[:href])
+    rescue
+      # ignore errors getting the asset url
     end
     # Returns the nested shownotes page content
     # e.g. http://349.nashownotes.com/shownotes ->
@@ -198,20 +232,26 @@ module ::Navd::Scraper
     # e.g. http://349.nashownotes.com/shownotes
     def shownotes_menu_uri
       @shownotes_menu_uri ||= uri.merge(extract_nodes(p_shownotes_main,:notes)[:href])
+    rescue
+      # ignore errors getting the asset url
     end
     # Returns Nokogiri::HTML::Document of the main shownotes menu page being processed
     def p_shownotes_menu
-      @p_shownotes_menu ||= spider.get_page(shownotes_menu_uri)
+      @p_shownotes_menu ||= shownotes_menu_uri && spider.get_page(shownotes_menu_uri)
     end
     # Returns the shownote menu page format type.
     # Currently supports:
-    #   :nested - as for shows ~333-361
+    #   :nested - as for shows ~325-361
     #   :flat - shows 362+
     def shownotes_format
-      @shownotes_format ||= if p_shownotes_menu.css('ul.ulDirectory').present?
-        :nested
+      @shownotes_format ||= if p_shownotes_menu
+        if p_shownotes_menu.css('ul.ulDirectory').present?
+          :nested
+        else
+          :flat
+        end
       else
-        :flat
+        nil
       end
     end
 

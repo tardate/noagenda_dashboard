@@ -24,7 +24,7 @@ describe "Navd::Scraper::ShowLoader examples" do
         },
         :shownotes_format => :nested,
         :shownotes_menu_url => 'http://333.nashownotes.com/shownotes',
-        :shownotes_count => 11,
+        :shownotes_count => 94, # will only load 86,
         :show_name => 'Lions Stood Still',
         :credits=>%(Lions Stood Still<br/>Executive Producers: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel, Jrdan Wyatt<br/>Associate Executive Producers:  Scott Hankel<br/>),
         :credits_url => 'http://333.nashownotes.com/shownotes/na33320110825Credits'
@@ -44,7 +44,7 @@ describe "Navd::Scraper::ShowLoader examples" do
         },
         :shownotes_format => :flat,
         :shownotes_menu_url => 'http://362.nashownotes.com/shownotes',
-        :shownotes_count => 11,
+        :shownotes_count => 100, # will only load 57,
         :show_name => 'Drone Journalism',
         :credits=>%(Drone Journalism<br/>Executive Producers: Adam Curry & John C Dvroak<br/>),
         :credits_url => nil
@@ -64,9 +64,29 @@ describe "Navd::Scraper::ShowLoader examples" do
         },
         :shownotes_format => :flat,
         :shownotes_menu_url => 'http://364.nashownotes.com/shownotes',
-        :shownotes_count => 11,
+        :shownotes_count => 217, # will only load 81,
         :show_name => 'Katy Bar The Door, Baby!',
         :credits=>%(Katy Bar The Door, Baby!<br/>Executive Producers: Sir Richard Scott Bagwell),
+        :credits_url => nil
+      },
+      '368' => {
+        :expected_attributes => {
+          :number => 368,
+          :published => true,
+          :show_notes_url=>"http://xmas2011.nashownotes.com/",
+          :audio_url=>"http://m.podshow.com/media/15412/episodes/307185/noagenda-307185-12-25-2011.mp3",
+          :published_date=>Date.parse('2011-12-25'),
+          :cover_art_url=>"http://dropbox.curry.com/ShowNotesArchive/2011/12/NA-Christmas%20Cliptacular/NA_CLIP_REEL.png",
+          :assets_url=>nil,
+          :url=>"http://blog.curry.com/stories/2011/12/25/naChristmasCliptacular.html",
+          :credits=>nil,
+          :name=>'Too Many Clips'
+        },
+        :shownotes_format => nil,
+        :shownotes_menu_url => nil,
+        :shownotes_count => 0,
+        :show_name => 'Too Many Clips',
+        :credits=> "",
         :credits_url => nil
       }
     }.each do |number,options|
@@ -78,7 +98,7 @@ describe "Navd::Scraper::ShowLoader examples" do
           before {
             show_loader.spider.stub(:get_page).and_return(published_show_page_html(show_number))
             show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html(show_number))
-            show_loader.stub(:get_nested_show_notes).and_return([])
+            show_loader.stub(:p_shownotes_detail_all).and_return(shownotes_detail_page_html(show_number))
             show_loader.stub(:credits_list).and_return(nil)
             show_loader.scan_show_assets
           }
@@ -89,13 +109,18 @@ describe "Navd::Scraper::ShowLoader examples" do
           
           describe "#shownotes_menu_uri [protected]" do
             subject { show_loader.send(:shownotes_menu_uri) }
-            let(:expected) { URI.parse(options[:shownotes_menu_url]) }
+            let(:expected) { options[:shownotes_menu_url] ? URI.parse(options[:shownotes_menu_url]) : nil }
             it { should eql(expected) }
           end
           
           describe "#shownotes_format [protected]" do
             subject { show_loader.send(:shownotes_format) }
             it { should eql(options[:shownotes_format]) }
+          end
+
+          describe "#show_notes" do
+            subject { show_loader.show_notes }
+            its(:count) { should eql(options[:shownotes_count]) }
           end
 
         end
@@ -105,9 +130,7 @@ describe "Navd::Scraper::ShowLoader examples" do
             show_loader.spider.stub(:get_page).and_return(published_show_page_html(show_number))
             show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html(show_number))
             show_loader.stub(:get_nested_show_notes).and_return([])
-            if options[:credits_url]
-              show_loader.stub(:p_credits).and_return(credits_page_html(show_number))
-            end
+            show_loader.stub(:p_credits).and_return(credits_page_html(show_number))
             show_loader.scan_show_assets
           }
 
@@ -122,13 +145,19 @@ describe "Navd::Scraper::ShowLoader examples" do
             if options[:credits_url]
               let(:expected) { URI.parse(options[:credits_url]) }
               it { should eql(expected) }
+            else
+              it { should be_nil }
             end
           end
 
           describe "#credits [protected]" do
             subject { show_loader.send(:credits) }
-            let(:expected) { options[:credits] }
-            it { should include(expected) }
+            if options[:credits].present?
+              let(:expected) { options[:credits] }
+              it { should include(expected) }
+            else
+              it { should be_empty }
+            end
           end
 
         end

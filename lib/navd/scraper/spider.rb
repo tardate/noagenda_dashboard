@@ -9,8 +9,13 @@ module ::Navd::Scraper
 
     # Returns the url for the specific show
     def get_uri_for_show(show_number)
-      # TODO: prior to 301, this didn't work - need alternative method'
-      url = "http://#{show_number}.nashownotes.com/"
+      url = case show_number
+      when 368
+        "http://xmas2011.nashownotes.com/"
+      else
+        # TODO: prior to 301, this didn't work - need alternative method
+        "http://#{show_number}.nashownotes.com/"
+      end
       normalize_uri(url)
     rescue Exception => e
       self.errors << e

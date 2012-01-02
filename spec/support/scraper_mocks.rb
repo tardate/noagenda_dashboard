@@ -7,9 +7,15 @@ module ScraperMocksHelper
   end
   def mock_text(*path_elements)
     IO.read(html_mock_path.join(*path_elements))
+  rescue
+    nil
   end
   def mock_html(*path_elements)
-    Nokogiri::HTML(mock_text(*path_elements))
+    if doc = mock_text(*path_elements)
+      Nokogiri::HTML(doc)
+    else
+      nil
+    end
   end
 
   def unpublished_show_page_html
@@ -22,6 +28,10 @@ module ScraperMocksHelper
   
   def shownotes_menu_page_html(show_number=333)
     mock_html(show_number.to_s,'shownotes_menu.htm')
+  end
+
+  def shownotes_detail_page_html(show_number=333)
+    mock_html(show_number.to_s,'shownotes_detail.htm')
   end
 
   def credits_page_html(show_number=333)

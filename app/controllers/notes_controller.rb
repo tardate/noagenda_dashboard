@@ -12,7 +12,7 @@ class NotesController < InheritedResources::Base
       @notes ||= if search_params.present?
         end_of_association_chain.search(search_params)
       else
-        end_of_association_chain.scoped
+        end_of_association_chain.show_meme_note_order
       end
     end
 

@@ -53,6 +53,8 @@ class Meme < ActiveRecord::Base
     # Tries to coalesce different spellings to one standard form
     def normalize_name(value)
       case value
+      when /2tth/i
+        '2TTH'
       when /arab.+prin/i
         'Arab Spring'
       when /agen.+21/i
@@ -63,22 +65,38 @@ class Meme < ActiveRecord::Base
         'Biodiversitée'
       when /cyb.+war/i
         'CyberWar$'
+      when /devil.+weed/i
+        'Devil Weed & Powder'
       when /eq.+chine/i
         'EQ Machine$'
-      when /fal[s\$]e.*flag/i
+      when /fal[s\$]{1,2}e.*flag/i
         'Fal$e Flag'
-      when /hollywood.+whack/i
+      when /hiker/i
+        'Hikers'
+      when /hollywood.+whack|hollywood.+shoot/i
         'Hollywood Whacker$'
       when /l.b.*a/i
         'Libya'
+      when /lone.+wolf/i
+        'Lone Wolf'
+      when /lucifer/i
+        'Lucifer'
       when /magic.*number/i
         'Magic Numbers'
       when /military.+industrial.+compl/i
         'Military Industrial Complex'
       when /minist.*truth/i
         'Ministry of Truth'
-      when /monsant/i
+      when /monsa.*t/i
         'Monsantooo'
+      when /^pedo|pedo.*bear/i
+        'PedoBear'
+      when /ron.+paul/i
+        'Ron Paul'
+      when /science/i
+        'The Science Is In!'
+      when /hadow.*puppet.*thea/i
+        'Shadow Puppet Theatre'
       when /shut.*up.*slave/i
         'Shut Up Slave!'
       when /squirrel/i
@@ -89,12 +107,20 @@ class Meme < ActiveRecord::Base
         'Trains Good, Planes Bad (Whoo Hoo!)'
       when /united.*tate.*euro/i
         'United $tates of EUROpe'
+      when /vaccin/i
+        'Vaccine$'
       when /vagina/i
         'Vagina'
+      when /we.+can.+wait/i
+        "We Can't Wait!"
       when /word.+matter/i
         'Words Matter'
+      when /zombie/i
+        'Zombie Nation'
+      when /clip|stuff/i
+        'Clips'
       else
-        value
+        value.length > 60 ? 'Other' : value
       end
     end
 
@@ -104,7 +130,7 @@ class Meme < ActiveRecord::Base
     def factory(name)
       normalized_name = normalize_name(name)
       meme = find_or_create_by_name(normalized_name)
-      if meme && name == 'VIDEO'
+      if meme && name =~ /VIDEO|Clips/
         meme.update_attribute(:trending,false)
       end
       meme
