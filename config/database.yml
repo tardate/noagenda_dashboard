@@ -3,7 +3,7 @@
 development:
   adapter: postgresql
   database: navd_development
-  username: navd
+  username: postgres
   pool: 5
   min_messages: WARNING
 
@@ -20,6 +20,6 @@ test:
 production:
   adapter: postgresql
   database: navd_production
-  username: navd
+  username: postgres
   pool: 5
   min_messages: WARNING

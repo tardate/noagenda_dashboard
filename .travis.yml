@@ -2,4 +2,7 @@
 # see http://travis-ci.org/tardate/noagenda_dashboard
 rvm: 1.9.2
 before_script:
-  - "psql -c 'create database navd_test;' -U postgres"
+  - "bundle exec rake db:drop"
+  - "bundle exec rake db:create"
+  - "bundle exec rake db:migrate"
+  - "bundle exec rake db:test:prepare"
