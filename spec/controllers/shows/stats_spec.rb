@@ -5,7 +5,7 @@ describe ShowsController do
   let(:resource) { Factory(:show) }
 
   describe "GET :stat.json" do
-    subject { get :stat, :id => resource.id, :format => 'json' }
+    subject { get :stat, :id => resource.number, :format => 'json' }
     it { should be_success }
   end
 

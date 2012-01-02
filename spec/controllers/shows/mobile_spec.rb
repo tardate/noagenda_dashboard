@@ -17,7 +17,7 @@ describe ShowsController do
   end
 
   describe "GET show" do
-    subject { get :show, :id => resource.id }
+    subject { get :show, :id => resource.number }
     it { should be_success }
   end
 
