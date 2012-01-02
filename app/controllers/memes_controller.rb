@@ -6,7 +6,8 @@ class MemesController < InheritedResources::Base
   include Navd::Chartable
   
   def stats
-    render :json => to_chartable_structure(Meme.stats_over_time,Meme::STAT_CHART_TEMPLATE).to_json
+    over_all_time = !(params[:over_all_time] && params[:over_all_time] =~ /^f/i)
+    render :json => to_chartable_structure(Meme.stats_over_time(nil,over_all_time),Meme::STAT_CHART_TEMPLATE).to_json
   end
 
   def stat

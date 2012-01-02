@@ -57,7 +57,7 @@ describe Meme do
 
     context "with trending history limit" do
       let(:trending_history_limit) { AppConstants.number_of_shows_for_trending_history || 10 }
-      subject { Meme.stats_over_time }
+      subject { Meme.stats_over_time(nil,false) }
       its(:to_sql) { should include( %("shows"."id" IN (SELECT  "shows"."id" FROM "shows" ORDER BY "shows"."number" DESC LIMIT #{trending_history_limit})) ) }
     end
 

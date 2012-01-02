@@ -10,14 +10,13 @@ class Meme < ActiveRecord::Base
     unscoped.where(Meme.arel_table[:id].in(topn_arel(limit)))
   }
 
-  scope :stats_over_time, lambda { |meme_id=nil|
-    unscoped.
-    select("memes.name AS meme_name, shows.number as number, count(notes.id) as note_count").
-    joins(:shows).
-    where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel))).
-    where(Show.arel_table[:id].in(Show.shows_for_trending_history_arel)).
-    group(:"memes.name", :"shows.number").
-    reorder('memes.name, shows.number')
+  scope :stats_over_time, lambda { |meme_id=nil,over_all_time=true|
+    query = unscoped.
+      select("memes.name AS meme_name, shows.number as number, count(notes.id) as note_count").
+      joins(:shows).
+      where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel)))
+    query = query.where(Show.arel_table[:id].in(Show.shows_for_trending_history_arel)) unless over_all_time
+    query.group(:"memes.name", :"shows.number").reorder('memes.name, shows.number')
   }
 
   # Gets the stats over time for the current meme
