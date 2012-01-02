@@ -39,11 +39,11 @@ module ::Navd::Scraper
           show.notes.destroy_all # we'll reload if they already exist
           show_loader.show_notes.each do |show_note|
             meme = Meme.factory(show_note[:meme_name])
-            note = Note.find_or_initialize_by_show_id_and_url(show.id,show_note[:url])
+            note = Note.find_or_initialize_by_show_id_and_name(show.id,show_note[:name])
             note.update_attributes!(
-            :name => show_note[:name],
-            :meme_id => meme.try(:id),
-            :description => show_note[:description]
+              :url => show_note[:url],
+              :meme_id => meme.try(:id),
+              :description => show_note[:description]
             )
           end
           return true

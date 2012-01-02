@@ -24,7 +24,7 @@ describe "Navd::Scraper::ShowLoader examples" do
         },
         :shownotes_format => :nested,
         :shownotes_menu_url => 'http://333.nashownotes.com/shownotes',
-        :shownotes_count => 94, # will only load 86,
+        :shownotes_count => 94,
         :show_name => 'Lions Stood Still',
         :credits=>%(Lions Stood Still<br/>Executive Producers: Bryan Raley, Alan Thompson, Michael Kearns, Oscar Nadal, Richard Hyde, Robert Claeson, Scott Hankel, Jrdan Wyatt<br/>Associate Executive Producers:  Scott Hankel<br/>),
         :credits_url => 'http://333.nashownotes.com/shownotes/na33320110825Credits'
@@ -44,7 +44,7 @@ describe "Navd::Scraper::ShowLoader examples" do
         },
         :shownotes_format => :flat,
         :shownotes_menu_url => 'http://362.nashownotes.com/shownotes',
-        :shownotes_count => 100, # will only load 57,
+        :shownotes_count => 59,
         :show_name => 'Drone Journalism',
         :credits=>%(Drone Journalism<br/>Executive Producers: Adam Curry & John C Dvroak<br/>),
         :credits_url => nil
@@ -64,7 +64,7 @@ describe "Navd::Scraper::ShowLoader examples" do
         },
         :shownotes_format => :flat,
         :shownotes_menu_url => 'http://364.nashownotes.com/shownotes',
-        :shownotes_count => 217, # will only load 81,
+        :shownotes_count => 90,
         :show_name => 'Katy Bar The Door, Baby!',
         :credits=>%(Katy Bar The Door, Baby!<br/>Executive Producers: Sir Richard Scott Bagwell),
         :credits_url => nil

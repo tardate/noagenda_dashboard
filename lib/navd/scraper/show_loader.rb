@@ -103,16 +103,29 @@ module ::Navd::Scraper
             name = current_title.truncate(255)
             partial_description = current_title == name ? nil : current_title
             if (note_collection = note.next_element) && note_collection.name=='div' && (subnotes = note_collection.css('li'))
+              note_count = 0
+              note_template = {
+                :name => name,
+                :meme_name => current_meme,
+                :description => partial_description,
+                :url => nil
+              }
+              note_array = []
               subnotes.each do |subnote|
-                anchor = (subnote.at_css('a') || {})[:href]
-                description = [partial_description,subnote.text].compact.join(': ')
-                show_notes << {
-                  :name => name,
-                  :meme_name => current_meme,
-                  :description => description,
-                  :url => anchor
-                }
+                if anchor = (subnote.at_css('a') || {})[:href]
+                  note_count += 1
+                  note_array << note_template.merge(:url => anchor)
+                end
+                if subnote.text.present?
+                  if note_count == 0
+                    note_count += 1
+                    note_array << note_template.merge(:url => anchor)
+                  end
+                  note_array[note_count-1][:description] =
+                    [note_array[note_count-1][:description],subnote.text].compact.join('<br/>')
+                end
               end
+              show_notes += note_array
             else
               anchor = (note.at_css('a') || {})[:href]
               show_notes << {
