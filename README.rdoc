@@ -13,6 +13,7 @@ Some technologies it demonstrates in combination:
 * web scraping with {Nokogiri}[http://nokogiri.org/]
 * Test-first with {RSpec}[http://relishapp.com/rspec]
 * iPhone/Android support using {Web 2.0 Touch}[https://github.com/web20boom/Web-2.0-Touch]
+* posting updates to twitter using the {grackle gem}[https://github.com/hayesdavis/grackle]
 
 
 == The NoAgenda Show?
@@ -36,9 +37,18 @@ translate all the definitions and send it/push it back. Please keep it in UTF-8 
 The site will tweet when new shows are loaded. It requires twitter oauth settings to be set
 with these environment variables:
 * navd_consumer_key
-* consumer_secret
+* navd_consumer_secret
 * navd_token
 * navd_token_secret
+
+Set these locally as normal environment variables e.g.:
+
+  $ export navd_consumer_key="the_consumer_key_from_twitter"
+
+To set these on heroku:
+
+  $ heroku config:add navd_consumer_key=".." navd_consumer_secret=".." navd_token=".." navd_token_secret=".."
+
 
 == Contributing
 
