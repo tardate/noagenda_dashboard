@@ -31,6 +31,10 @@ class Show < ActiveRecord::Base
       s.project(s[:id]).
       order(s[:number].desc).take(limit)
     end
+    # Returns the arel fragment to get the show ids for the number_of_shows_for_trending_history
+    def shows_for_trending_history_arel
+      lastn_arel(AppConstants.number_of_shows_for_trending_history || 10)
+    end
   end
 
   STAT_CHART_TEMPLATE = {

@@ -7,6 +7,8 @@ development: &default
   number_of_trending_memes: 5
   # number of shows back to look to calculate trending stat
   number_of_shows_for_trending: 6
+  # number of shows to display trending meme history
+  number_of_shows_for_trending_history: 16
 
 production:
   <<: *default

@@ -55,6 +55,12 @@ describe Meme do
       subject.last[:note_count].should eql("#{seed_limit}")
     end
 
+    context "with trending history limit" do
+      let(:trending_history_limit) { AppConstants.number_of_shows_for_trending_history || 10 }
+      subject { Meme.stats_over_time }
+      its(:to_sql) { should include( %("shows"."id" IN (SELECT  "shows"."id" FROM "shows" ORDER BY "shows"."number" DESC LIMIT #{trending_history_limit})) ) }
+    end
+
     describe "#stat_over_time" do
       let(:meme) { Meme.first }
       subject { meme.stat_over_time }

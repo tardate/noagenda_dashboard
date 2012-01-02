@@ -36,7 +36,7 @@ module ::Navd::Scraper
         show = Show.find_or_initialize_by_number(number)
         if reload || show.new_record?
           show.update_attributes!(show_loader.attributes)
-          show.notes.destroy # we'll reload if they already exist
+          show.notes.destroy_all # we'll reload if they already exist
           show_loader.show_notes.each do |show_note|
             meme = Meme.factory(show_note[:meme_name])
             note = Note.find_or_initialize_by_show_id_and_url(show.id,show_note[:url])

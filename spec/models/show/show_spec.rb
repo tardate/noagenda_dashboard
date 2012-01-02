@@ -45,6 +45,15 @@ describe Show do
     its(:count) { should eql(limit) }
   end
 
+  describe "##shows_for_trending_history_arel" do
+    let(:limit) { AppConstants.number_of_shows_for_trending_history }
+    before do
+      (limit * 2).times { Factory.create(:show) }
+    end
+    subject { Show.where(:id => Show.shows_for_trending_history_arel) }
+    its(:count) { should eql(limit) }
+  end
+
   describe "#short_title" do
     let(:expected) { "33 - #{published_date}" }
     subject { resource }

@@ -15,6 +15,7 @@ class Meme < ActiveRecord::Base
     select("memes.name AS meme_name, shows.number as number, count(notes.id) as note_count").
     joins(:shows).
     where(Meme.arel_table[:id].in((meme_id ? meme_id : topn_arel))).
+    where(Show.arel_table[:id].in(Show.shows_for_trending_history_arel)).
     group(:"memes.name", :"shows.number").
     reorder('memes.name, shows.number')
   }
