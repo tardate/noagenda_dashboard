@@ -587,6 +587,12 @@ ul.tabbed_info li:hover, ul.tabbed_info li.selected {
 #footer .player .health .level {
   float: left;
 }
+/* line 141, ../../../app/stylesheets/_footer.scss */
+#footer .followme {
+  margin-left: -5px;
+  max-width: 130px;
+  padding-top: 50px;
+}
 
 /*
 * qTip2 - Pretty powerful tooltips
