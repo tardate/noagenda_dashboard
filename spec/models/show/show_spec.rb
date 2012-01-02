@@ -86,6 +86,12 @@ describe Show do
     end
   end
 
+  describe "#twitter_publish_message" do
+    let(:expected) { "#NoAgenda show ##{resource.number} attack vectors now at http://noagendadashboard.com" }
+    subject { resource.twitter_publish_message }
+    it { should eql(expected) }
+  end
+
   describe "#destroy" do
     let!(:meme) { Factory(:meme) }
     let!(:show) { Factory(:show) }

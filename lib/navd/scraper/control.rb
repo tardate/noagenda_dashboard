@@ -46,6 +46,7 @@ module ::Navd::Scraper
               :description => show_note[:description]
             )
           end
+          notify_new_show(show)
           return true
         else
           log "#{number}: show already published - cannot reload"
@@ -57,5 +58,32 @@ module ::Navd::Scraper
       end
     end
 
+    protected
+
+    # Post notification of new show.
+    # Currently posts to twitter.
+    def notify_new_show(show)
+      if config = twitter_oauth_config
+        client = Grackle::Client.new(config)
+        client.statuses.update! :status=>show.twitter_publish_message
+      else
+        log "#{show.try(:number)}: cannot post to twitter - missing config"
+      end
+    rescue => e
+      log "#{show.try(:number)}: failed to post to twitter #{e}"
+    end
+
+    # Returns twitter oauth config. Gets settings from ENV vars.
+    # Returns nil if no config available.
+    def twitter_oauth_config
+      if (consumer_key = ENV['navd_consumer_key']) && (consumer_secret = ENV['navd_consumer_secret']) &&
+        (token = ENV['navd_token']) && (token_secret = ENV['navd_token_secret'])
+        {:auth=>{
+          :type=>:oauth,
+          :consumer_key=>consumer_key, :consumer_secret=>consumer_secret,
+          :token=>token, :token_secret=>token_secret}
+        }
+      end
+    end
   end
 end

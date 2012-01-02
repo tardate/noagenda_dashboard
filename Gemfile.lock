@@ -47,6 +47,10 @@ GEM
       factory_girl (~> 2.1.0)
       railties (>= 3.0.0)
     fssm (0.2.7)
+    grackle (0.1.10)
+      json
+      mime-types
+      oauth
     haml (3.1.3)
     has_scope (0.5.1)
     i18n (0.5.0)
@@ -66,6 +70,7 @@ GEM
       arel (~> 2.0.2)
     mime-types (1.16)
     nokogiri (1.5.0)
+    oauth (0.4.5)
     pg (0.11.0)
     polyglot (0.3.2)
     rack (1.2.4)
@@ -122,6 +127,7 @@ DEPENDENCIES
   browser
   compass
   factory_girl_rails
+  grackle
   haml
   inherited_resources
   meta_search

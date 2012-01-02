@@ -6,6 +6,7 @@ describe "Navd::Scraper::Control" do
   let(:scraper_control) { Navd::Scraper::Control.new }
   before {
     scraper_control.stub(:log) # silence the logging messages when testing
+    scraper_control.stub(:notify_new_show) # silence the tweeting of show posts when testing
   }
 
   context "init" do

@@ -58,4 +58,8 @@ class Show < ActiveRecord::Base
     self.class.meme_stats(self.id)
   end
 
+  # Returns an announcement message formated for posting to twitter
+  def twitter_publish_message
+    "#NoAgenda show ##{number} attack vectors now at http://noagendadashboard.com"
+  end
 end

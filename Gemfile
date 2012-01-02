@@ -20,6 +20,8 @@ gem 'meta_search'
 gem 'compass'
 # browser detection
 gem 'browser'
+# twitter api
+gem 'grackle'
 
 group :test, :development do
   # rspec for all testing

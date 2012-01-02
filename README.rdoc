@@ -31,6 +31,15 @@ link:noagenda_dashboard/blob/master/config/locales/en.yml
 To provide a tranlsation for a given language, just grab a copy of this file, rename is <language-code>.yml,
 translate all the definitions and send it/push it back. Please keep it in UTF-8 character set though.
 
+== Enabling Twitter Notifications
+
+The site will tweet when new shows are loaded. It requires twitter oauth settings to be set
+with these environment variables:
+* navd_consumer_key
+* consumer_secret
+* navd_token
+* navd_token_secret
+
 == Contributing
 
 Yes please! If you have any ideas, or can help with design, development or translation, you are most welcome.
