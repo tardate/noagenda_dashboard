@@ -23,9 +23,9 @@ module ::Navd::Scraper
     end
 
     # +number+ - show number to load
-    # TODO: support reload operations
-    def load_show(number)
-      log "#{number}: loading show"
+    # +reload+ - will do a fresh load of the show if true
+    def load_show(number,reload=false)
+      log "#{number}: loading show#{ reload ? ' [reload enabled]' : ' [reload disabled]'}"
       show_loader = Navd::Scraper::ShowLoader.new(number)
       show_loader.scan_show_assets
       if show_loader.errors.present?
@@ -34,17 +34,23 @@ module ::Navd::Scraper
       end
       if show_loader.published
         show = Show.find_or_initialize_by_number(number)
-        show.update_attributes!(show_loader.attributes)
-        show_loader.show_notes.each do |show_note|
-          meme = Meme.factory(show_note[:meme_name])
-          note = Note.find_or_initialize_by_show_id_and_url(show.id,show_note[:url])
-          note.update_attributes!(
+        if reload || show.new_record?
+          show.update_attributes!(show_loader.attributes)
+          show.notes.destroy # we'll reload if they already exist
+          show_loader.show_notes.each do |show_note|
+            meme = Meme.factory(show_note[:meme_name])
+            note = Note.find_or_initialize_by_show_id_and_url(show.id,show_note[:url])
+            note.update_attributes!(
             :name => show_note[:name],
             :meme_id => meme.try(:id),
             :description => show_note[:description]
-          )
+            )
+          end
+          return true
+        else
+          log "#{number}: show already published - cannot reload"
+          return false
         end
-        return true
       else
         log "#{number}: show not published yet"
         return false
