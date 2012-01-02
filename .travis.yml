@@ -1,3 +1,5 @@
 # These are specific configuration settings required for travis-ci
 # see http://travis-ci.org/tardate/noagenda_dashboard
 rvm: 1.9.2
+before_script:
+  - "psql -c 'create database navd_test;' -U postgres"

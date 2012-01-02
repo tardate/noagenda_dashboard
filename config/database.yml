@@ -13,7 +13,7 @@ development:
 test:
   adapter: postgresql
   database: navd_test
-  username: navd
+  username: postgres
   pool: 5
   min_messages: WARNING
 
