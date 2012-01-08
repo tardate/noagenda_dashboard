@@ -121,6 +121,8 @@ class Meme < ActiveRecord::Base
         'Vaccine$'
       when /vagina/i
         'Vagina'
+      when /video/i
+        'VIDEO'
       when /we.+can.+wait/i
         "We Can't Wait!"
       when /word.+matter/i

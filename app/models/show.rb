@@ -1,5 +1,6 @@
 class Show < ActiveRecord::Base
   has_many :notes, :dependent => :destroy
+  delegate :videos, :to => :notes
   has_many :memes, :through => :notes, :uniq => true, :order => :name
 
   default_scope order('shows.number desc')
@@ -44,6 +45,10 @@ class Show < ActiveRecord::Base
 
   def short_title
     "#{number} - #{published_date.to_s}"
+  end
+
+  def short_id
+    "NA#{number}"
   end
 
   def full_title

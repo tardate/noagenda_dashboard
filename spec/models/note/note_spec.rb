@@ -20,4 +20,13 @@ describe Note do
       expect { subject }.not_to change { Meme.count }
     end
   end
+
+  describe "##videos" do
+    let!(:video_meme) { Factory(:meme, :name => 'VIDEO') }
+    let!(:video_note) { Factory(:note, :meme => video_meme) }
+    let!(:nonvideo_note) { Factory(:note) }
+    subject { Note.videos }
+    it { should include(video_note) }
+    it { should_not include(nonvideo_note) }
+  end
 end

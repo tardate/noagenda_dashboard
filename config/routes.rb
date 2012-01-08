@@ -17,7 +17,9 @@ Navd::Application.routes.draw do
   resources :shows, :only => [:index,:show] do
     resources :notes, :only => [:index,:show]
     resources :memes, :only => [:index,:show]
+    resources :videos, :only => [:index]
     get :mediawidget, :on => :member
     get :stat, :on => :member
   end
+  resources :videos, :only => [:index]
 end

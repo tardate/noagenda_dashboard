@@ -60,6 +60,12 @@ describe Show do
     its(:short_title) { should eql(expected) }
   end
 
+  describe "#short_id" do
+    let(:expected) { "NA33" }
+    subject { resource }
+    its(:short_id) { should eql(expected) }
+  end
+
   describe "#full_title" do
     let(:expected) { "33 - #{published_date} #{resource.name}" }
     subject { resource }
@@ -103,5 +109,14 @@ describe Show do
     it "should not remove all related memes" do
       expect { subject }.not_to change { Meme.count }
     end
+  end
+
+  describe "#videos" do
+    let!(:video_meme) { Factory(:meme, :name => 'VIDEO') }
+    let!(:video_note) { Factory(:note, :show => resource, :meme => video_meme) }
+    let!(:nonvideo_note) { Factory(:note, :show => resource) }
+    subject { resource.videos }
+    it { should include(video_note) }
+    it { should_not include(nonvideo_note) }
   end
 end
