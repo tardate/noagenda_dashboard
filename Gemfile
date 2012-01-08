@@ -25,5 +25,5 @@ gem 'grackle'
 
 group :test, :development do
   # rspec for all testing
-  gem 'rspec-rails', '~> 2.4'
+  gem 'rspec-rails', '~> 2.8'
 end
