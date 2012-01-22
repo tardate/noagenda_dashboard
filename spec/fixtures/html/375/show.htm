@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>World Outline: No Agenda Episode 375</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://static.curry.com/worldoutline/admin/rss.xml" />
+		<link href="http://fonts.googleapis.com/css?family=Cardo" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+		
+		<link href="http://fonts.googleapis.com/css?family=IM Fell DW Pica SC" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<link href="http://static.scripting.com/github/bootstrap/bootstrap.css" rel="stylesheet">
+
+<link href="http://static.scripting.com/github/bootstrap/docs.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/prettify.css" rel="stylesheet">
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.min.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/jquery.tablesorter.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-dropdown.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-twipsy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-scrollspy.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/application.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-popover.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-modal.js"></script> <!-- 1/11/12 by DW -->
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-tabs.js"></script> <!-- 1/12/12 by DW -->
+<script>
+	$(function () {
+		$("a[rel=twipsy]").twipsy({
+			live: true
+			})
+		})
+	</script>
+<script>
+	$(function () {
+		$("a[rel=popover]")
+		.popover({
+			offset: 10
+			})
+		.click(function(e) {
+			e.preventDefault()
+			})
+		})
+	</script>
+<style>
+	body {
+		margin-top: -5px;
+		}
+	table th {
+		border: 0;
+		}
+	table {
+		border: 0px;
+		}
+	.actions {
+		border: 0;
+		background: none;
+		padding: 0;
+		}
+	</style>
+<style>
+	body {
+		color: black;
+		}
+	/* eliminate borders on tables */
+		table th {
+			border: 0;
+			}
+		table td {
+			border: 0;
+			}
+		table {
+			border: 0px;
+			}
+	.divOpmlWebpage {
+		margin-left: 12%;
+		margin-right: 12%;
+		margin-bottom: 65px;
+		color: black;
+		}
+	.divOpmlHeader {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		}
+	.divOpmlHeader h1 {
+		font-family: 'IM Fell DW Pica SC';
+		text-align: center;
+		text-shadow: 4px 4px 4px #AAA;
+		font-size: 68px;
+		padding: 0px;
+		margin: 0px;
+		}
+	.divOpmlHeader red {
+		color: red;
+		font-size: 110%;
+		}
+	.divOpmlHeader a:link {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:hover {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:visited {
+		text-decoration: none;
+		color:#000;
+		}
+	
+	.divOpmlMenubar a, .divOpmlMenubar a:link, .divOpmlMenubar a:visited {
+		color: lightgray;
+		}
+	.divOpmlMenubar white {
+		color: white;
+		}
+	.divOpmlMenubarStatus {
+		color: lightgray;
+		float: right;
+		line-height: 19px;
+		padding: 10px 0px 11px;
+		font-size: 13px;
+		}
+	
+	.divOpmlWebpageBody {
+		padding-top: 0px;
+		}
+	.divOpmlWebpageBody h3 {
+		font-family: Ubuntu;
+		font-size: 24px;
+		}
+	
+	.divIntroPgf {
+		font-size: 14px;
+		line-height: 120%;
+		color: black;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		}
+	.prefsTable th, .prefsTable td {
+		border: 0;
+		font-size: 140%;
+		line-height: 100%;
+		}
+	.prefsTable td.input: {
+		height: 100%;
+		padding: 0;
+		border: 0;
+		}
+	
+	/* sign-in form */
+		.divSigninForm .signinLabel {
+			text-align: right;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm td {
+			border: none;
+			}
+		.divSigninForm input {
+			height: 32px;
+			padding: 3px;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm table {
+			padding-top: 30px;
+			width: auto;
+			}
+	/* prefs */
+		.divPrefs {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs label {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs .row {
+			line-height: 24px;
+			margin-bottom: 12px;
+			}
+		.divPrefs red {
+			color: red;
+			}
+		.divPrefs li {
+			font-family: Ubuntu;
+			font-size: 17px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			}
+		.divPrefs h4 {
+			font-family: Ubuntu;
+			font-size: 22px;
+			padding-top: 15px;
+			padding-bottom: 5px;
+			}
+	/* log pages */
+		.logEvent {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			}
+		.logDescription {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			line-height: 120%;
+			}
+		.logDate {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.logSeconds {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.divLogPage table {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.divLogPage td {
+			border: none;
+			font-size: 16px;
+			}
+		.divLogPage th {
+			border: none;
+			font-size: 14px;
+			padding-bottom: 0px;
+			}
+	</style>
+
+		<style>
+			/* header */
+				.divGraphic {
+					margin: 0px auto;
+					}
+				.divGraphic img {
+					display: block;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:5px;
+					padding-bottom:20px;
+					}
+				.divGraphic h1 {
+					font-family: Cardo;
+					font-size: 48px;
+					line-height: 135%;
+					white-space: nowrap;
+					text-align: left;
+					padding-top: 60px;
+					}
+			/* bread crumbs */
+				.divBreadCrumbs {
+					font-family: Arial;
+					font-size: 16px;
+					line-height: 140%;
+					padding-bottom: 20px;
+					}
+				.divBreadCrumbs a {
+					color: #1E68A6;
+					font-weight: bold;
+					}
+				.divBreadCrumbs .aCurrentCrumb {
+					font-weight: bold;
+					color: black;
+					}
+			/* directory */
+				.divDirectory {
+					}
+				.ulDirectory {
+					font-family: Arial;
+					list-style-type: none;
+					margin: 0;
+					font-size: 18px;
+					}
+				.directoryItem {
+					font-weight: bold;
+					line-height: 150%;
+					}
+				.directoryItem a {
+					color: #1E68A6;
+					}
+				.directoryItem img {
+					}
+				.directoryComment {
+					line-height: 150%;
+					color: black;
+					}
+				.directoryLinkx {
+					padding-left: 24px;
+					background: transparent url(http://static.opml.org/images/folder.gif) no-repeat top left;
+					}
+				.directoryIcon {
+					display: none;
+					padding-right: 10px;
+					}
+				.ulDirectoryx a:link {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectoryxa:hover {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectoryx a:visited {
+					text-decoration: underline;
+					color:#819fC7;
+					}
+				.directoryErrorMessage {
+					font-family: Arial;
+					font-size: 24;
+					padding-top: 24;
+					padding-bottom: 12;
+					}
+			/* directory additions */
+				.divDirectoryTitle {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					font-weight: bold;
+					}
+				.divLegend {
+					font-family: Arial;
+					font-size: 12px;
+					line-height: 14px;
+					color:#1E68A6;
+					}
+			/* blogpost nodetype */
+				.divBlogPost {
+					}
+				.divBlogPost p {
+					font-family: Georgia;
+					font-size: 20px;
+					line-height: 140%;
+					padding-left: 0px;
+					padding-right: 0px;
+					padding-bottom: 3px;
+					}
+			/* river nodetype */
+				.article .footer {
+					padding: 0px;
+					background-color: white;
+					border-top: 0px;
+					text-shadow: 0 0px;
+					min-width: 0px;
+					-moz-box-shadow: 0 0px 0px;
+					}
+				.article .description {
+					font-family: Arial,sans-serif;
+					font-size: 13px;
+					line-height: 17px;
+					}
+				.article h3 {
+					font-family: Arial,sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+					}
+			/* domains page */
+				.divDomains ul {
+					padding-top: 5px;
+					list-style: disc outside normal;
+					padding-left: 35px;
+					}
+				.divDomains li {
+					font-family: Ubuntu;
+					font-size: 18px;
+					line-height: 28px;
+					color: black;
+					}
+			/* rss nodetype */
+				.feedTitle {
+					font-size: 32px;
+					line-height: 180%;
+					margin-bottom: 10px;
+					}
+				.feedList {
+					list-style-type: none;
+					margin-left: 3em;
+					}
+				.feedItemTitle {
+					font-size: 24px;
+					line-height: 140%;
+					margin-bottom: 10px;
+					}
+				.feedItemDescription p {
+					font-size: 18px;
+					line-height: 180%;
+					color: black;
+					}
+				.feedItemDescription {
+					margin-bottom: 30px;
+					margin-right: 15%;
+					margin-left: 0;
+					}
+			/* thumbList nodetype */
+				.divWorldOutlineThumbList td {
+					border: 1px lightgray;
+					border-style: dashed;
+					text-align: center;
+					padding-top: 12px;
+					padding-bottom: 8px;
+					}
+				.divWorldOutlineThumbList table {
+					border-collapse: collapse;
+					}
+				.divWorldOutlineThumbList .thumbListCaptionString {
+					font-size: 13px;
+					}
+			/* disqus */
+				#disqus_thread {
+					width: 700px;
+					}
+			/* outline nodetype -- 1/2/12 by DW*/
+				.divOutlineBody {
+					padding-left: 6%;
+					padding-top: 3%;
+					padding-bottom: 3%;
+					}
+				.divOutlineBody ul {
+					list-style: none;
+					margin-left: 0;
+					padding-left: 1em;
+					}
+				.divOutlineBody li {
+					font-family: Cardo;
+					font-size: 20px;
+					line-height: 150%;
+					color: black;
+					text-indent: -20px;
+					}
+				.divOutlineBody .opText {
+					color:black;
+					}
+				.sidebarTitle {
+					font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+					margin-top: 5px;
+					margin-left: 0px;
+					margin-right: 0px;
+					font-weight: bold;
+					}
+				p.collapsedSidebarText {
+					font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+					margin-left: 0px;
+					margin-top: 8px;
+					margin-bottom: 8px;
+					}
+				.show {
+					padding-left: 8px;
+					padding-right: 0px;
+					padding-bottom: 4px;
+					margin-left: 0px;
+					}
+				.hide {
+					display: none;
+					}
+				img.expandIcon {
+					padding: 0px;
+					padding-right: 4px;
+					border: 0;
+					}
+			/* page content wrapper -- 1/2/12 by DW*/
+				.divOpmlWebpageBody {
+					padding-top: 30px;
+					}
+				.divOpmlNavigation {
+					height: 25px;
+					}
+				.divOpmlContent {
+					padding-top: 15px;
+					padding-bottom: 35px;
+					}
+				.divOpmlTitle {
+					padding-top: 7px;
+					padding-bottom: 5px;
+					}
+				.divOpmlTitle h3 {
+					font-family: Cardo;
+					font-size: 46px;
+					line-height: 110%;
+					padding-bottom: 0;
+					}
+				.divOpmlWebpageBody span {
+					margin-left: 0;
+					color: black;
+					}
+				.divOpmlWebpageBody .divByline {
+					padding-top: 7px;
+					}
+				.divOpmlWebpageBody .divDescription {
+					font-family: Cardo;
+					font-size: 20px;
+					font-style: bold;
+					line-height: 120%;
+					color: black;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					}
+				.divOpmlWebpageBody .spanByline {
+					}
+				.divOpmlWebpageBody .spanByline a {
+					color: black;
+					}
+				.divOpmlPageFooterBox {
+					border-top:1px dashed;
+					border-radius: 3px;
+					border-color: gainsboro;
+					-moz-border-radius: 3px; /* Firefox 3.6 and earlier */
+					padding-top: 3px;
+					}
+				.divOpmlPageFooter {
+					}
+				.divOpmlPageFooter .imgXmlIcon {
+					float: right;
+					padding-right: 3px;
+					}
+				.divComments {
+					}
+				.divComments h3 {
+					font-size: 18px;
+					}
+			</style>
+		<style>html {
+  width: 980px;
+  margin: auto;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+p.blogPostPgf {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+h3.blogPostTitle {
+  font-family: georgia;
+  font-size: 28px;
+  }
+
+li.directoryComment {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+li.directoryItem {
+  font-family: arial;
+  font-size: 17px;
+  font-weight: plain;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+.divDirectory {
+  width: 680px;
+  margin: 3em auto;
+}
+
+.divFooter {
+  position: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  -mox-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  box-shadow: 0 0 8px rgba(0,0,0,.3)
+}
+</style>
+		</head>
+	<body>
+		
+		<div class="divOpmlWebpage">
+			<div class="divOpmlWebpageBody">
+				<div class="divOpmlHeaderGraphic">
+
+					
+					</div>
+				<div class="divOpmlNavigation">
+					
+					</div>
+				<div class="divOpmlContent">
+					<style>
+	.divTabsFromOutline {
+		font-size: 18px;
+		}
+	.divTabsFromOutline p {
+		font-size: 18px;
+		line-height: 140%;
+		padding-bottom: 5px;
+		}
+	.divTabsFromOutline textarea {
+		font-size: 18px;
+		line-height: 140%;
+		}
+	.divTabsFromOutline label {
+		font-size: 18px;
+		}
+	.divTabsFromOutline input {
+		}
+	.divTabsFromOutline .xlarge {
+		font-size: 18px;
+		line-height: 140%;
+		height: 140%;
+		width: 450px;
+		}
+	.divTabsFromOutline .uneditable-input {
+		font-size: 18px;
+		line-height: 140%;
+		height: 140%;
+		width: 450px;
+		}
+	</style>
+<div class="divTabs">
+	<div class="divTabsFromOutline">
+	<ul class="tabs" data-tabs="tabs">
+		<li><a class="active" href="#noAgendaEpisode375">No Agenda episode 375</a></li>
+
+		<li><a href="#coverArt">Cover Art</a></li>
+		<li><a href="#credits">Credits</a></li>
+		<li><a href="#shownotes">Shownotes</a></li>
+		<li><a href="#clipsAndStuff">Clips and Stuff</a></li>
+		</ul>
+	<div id="my-tab-content" class="tab-content">
+		<div class="active tab-pane" id="noAgendaEpisode375">
+
+			<style>
+	.divBlogpostByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		padding-top: 8px;
+		color: gray;
+		}
+	.divBlogpostByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divBlogPostTitle h3 {
+		font-family: Georgia;
+		font-size: 42px;
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 0px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divBlogPostDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	.divBlogPost p {
+		font-family: Georgia;
+		font-size: 20px;
+		line-height: 140%;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 3px;
+		}
+	</style>
+<div class="divBlogPost">
+	<div class="divBlogPostTitle">
+		<h3>No Agenda episode 375</h3>
+		</div>
+	<div class="divBlogPostDescription">
+		
+		</div>
+	<div class="divBlogpostByline">
+
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 15, 2012 at 2:37 PM.
+		</div>
+	<p class="blogPostPgf"><a name="p1045"></a><embed type="application/x-shockwave-flash" src="http://www.dvorak.org/blog/wp-content/uploads/2008/01/playersingle.swf" id="mymovie" name="mymovie" quality="high" flashvars="autoPlay=no&amp;soundPath=http://m.podshow.com/media/15412/episodes/309141/noagenda-309141-01-19-2012.mp3&overColor=#ff0000" height="80" ></embed><img src="http://blog.curry.com/images/2012/01/19/na375art.jpg" width="256" height="256" border="0" align="right" hspace="15" vspace="5" alt="A picture named na375art.jpg">&nbsp;<a href="#p1045"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a name="p241"></a><b>"Problematic Woman"</b>&nbsp;<a href="#p241"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a name="p286"></a><a href="http://m.podshow.com/media/15412/episodes/309141/noagenda-309141-01-19-2012.mp3">Direct link to the mp3 file</a>&nbsp;<a href="#p286"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a href="http://dvorak.org/na"><a href="http://dvorak.org/na"></a><a href="http://dvorak.org/na">Support our work and the show</a></a></p><p class="blogPostPgf"><a name="p1313"></a><a href="http://mevio.com/feeds/noagenda.xml">Subscribe to our <a href="http://mevio.com/feeds/noagenda.xml">Podcast Feed</a></a>&nbsp;<a href="#p1313"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a href="http://noagendanewsnetwork.com/">The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></a></p><p class="blogPostPgf"><a href="http://podcasts.nashownotes.com/">All the No Agenda Stream Podcasts and Feeds on One Page</a></p><p class="blogPostPgf"><a name="p1590"></a><a href="http://www.dvorak.org/blog/no-agenda-mailing-list-signup-here/">Join</a> the Mailing List!&nbsp;<a href="#p1590"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="coverArt">
+			<style>
+	.divBlogpostByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		padding-top: 8px;
+		color: gray;
+		}
+	.divBlogpostByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divBlogPostTitle h3 {
+		font-family: Georgia;
+		font-size: 42px;
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 0px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divBlogPostDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	.divBlogPost p {
+		font-family: Georgia;
+		font-size: 20px;
+		line-height: 140%;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 3px;
+		}
+	</style>
+<div class="divBlogPost">
+	<div class="divBlogPostTitle">
+		<h3>Cover Art</h3>
+
+		</div>
+	<div class="divBlogPostDescription">
+		
+		</div>
+	<div class="divBlogpostByline">
+		By <a href="">Adam Curry</a>.
+		Posted Thursday, January 19, 2012 at 1:37 PM.
+		</div>
+	<p class="blogPostPgf"><a name="p288"></a><img src="http://blog.curry.com/images/2012/01/19/na375art_big.jpg" alt="na375art_big">&nbsp;<a href="#p288"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf">Art By: <a href="http://adiosmofos.com./">Thoren</a></p>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="credits">
+			<style>
+	.divBlogpostByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		padding-top: 8px;
+		color: gray;
+		}
+	.divBlogpostByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divBlogPostTitle h3 {
+		font-family: Georgia;
+		font-size: 42px;
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 0px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divBlogPostDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	.divBlogPost p {
+		font-family: Georgia;
+		font-size: 20px;
+		line-height: 140%;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 3px;
+		}
+	</style>
+<div class="divBlogPost">
+	<div class="divBlogPostTitle">
+		<h3>Credits</h3>
+
+		</div>
+	<div class="divBlogPostDescription">
+		
+		</div>
+	<div class="divBlogpostByline">
+		By <a href="">Adam Curry</a>.
+		Posted Thursday, January 19, 2012 at 1:38 PM.
+		</div>
+	<p class="blogPostPgf"><b>Problematic Woman</b></p><p class="blogPostPgf">Executive Producers: Sir Michael Miller "On behalf of Sir Gitmo Slave", Peter Gill [375 Club Member]</p><p class="blogPostPgf">Associate Executive Producers: Brian, Sir Norman McDonough, Austin Voss, Robert Burgess</p><p class="blogPostPgf"><a href="http://dvorak.org/na">Become a member of the 376 Club, support the show <a href="http://dvorak.org/na">here</a></a></p><p class="blogPostPgf">Knighthoods: Frank Roe</p><p class="blogPostPgf">Art By: <a href="http://adiosmofos.com./">Thoren</a></p><p class="blogPostPgf"><a href="http://359.nashownotes.com/">ShowNotes Archive of links and Assets (clips etc) <a href="http://375.nashownotes.com/"> 375.nashownotes.com</a></a></p><p class="blogPostPgf"><a href="http://nawol.curry.com/noAgenda/shownotes">New: Directory Archive of Shownotes (includes all audio and video assets used) <a href="http://nashownotes.com">nashownotes.com</a></a></p><p class="blogPostPgf"><a href="http://noagendanewsnetwork.com/">The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></a></p>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="shownotes">
+			<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+<style>
+	.divOutlineByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		color: gray;
+		}
+	.divOutlineByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divOutlineTitle h3 {
+		font-family: Cardo;
+		font-size: 46px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divOutlineDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	</style>
+<div class="divOutlineBody">
+	<div class="divOutlineTitle">
+
+		<h3>Shownotes</h3>
+		</div>
+	<div class="divOutlineDescription">
+		
+		</div>
+	<div class="divOutlineByline">
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 15, 2012 at 2:37 PM.
+		</div>
+	
+
+<ul>
+	<li><a href="/search"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Search</li>
+	<li><a href="javascript:expandCollapse('radiation25396','showForOutline');"><img class="expandIcon" id="img_radiation25396" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('radiation25396','showForOutline');"><span class="opText">Radiation</span></a></li>
+	<div class="hide" id="radiation25396" name="radiation25396">
+		<ul>
+			<li><a href="javascript:expandCollapse('fedsSayContaminatedTissueHoldersMayHaveBeenSentToMoreThan20StatesIncludingNyTheWashingtonPost21767','showForOutline');"><img class="expandIcon" id="img_fedsSayContaminatedTissueHoldersMayHaveBeenSentToMoreThan20StatesIncludingNyTheWashingtonPost21767" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('fedsSayContaminatedTissueHoldersMayHaveBeenSentToMoreThan20StatesIncludingNyTheWashingtonPost21767','showForOutline');"><span class="opText">Feds say contaminated tissue holders may have been sent to more than 20 states, including NY - The Washington Post</span></a></li>
+			<div class="hide" id="fedsSayContaminatedTissueHoldersMayHaveBeenSentToMoreThan20StatesIncludingNyTheWashingtonPost21767" name="fedsSayContaminatedTissueHoldersMayHaveBeenSentToMoreThan20StatesIncludingNyTheWashingtonPost21767">
+				<ul>
+
+					<li><a href="http://www.washingtonpost.com/business/feds-say-contaminated-tissue-holders-may-have-been-sent-to-more-than-20-states-including-ny/2012/01/12/gIQAlPDquP_story.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"If someone has one of these, they could receive a small radiation dose from it," he said. For example, he said someone keeping one of the boxes on a vanity in the bathroom and spending about 30 minutes a day near it for a year would receive the equivalent of a couple of chest x-rays.</li>
+					</ul>
+				</div>
+			<li><a href="http://www.ebay.com/itm/RADIATION-DETECTION-KIT-CD-V-777-2-Geiger-Counter-Civil-Defence-Fallout-Shelter-/220931227284?pt=BI_Security_Fire_Protection&amp;hash=item337086fe94" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>RADIATION DETECTION KIT CD V-777-2 Geiger Counter Civil Defence Fallout Shelter | eBay</li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('vaccine31427','showForOutline');"><img class="expandIcon" id="img_vaccine31427" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('vaccine31427','showForOutline');"><span class="opText">Vaccine$</span></a></li>
+
+	<div class="hide" id="vaccine31427" name="vaccine31427">
+		<ul>
+			<li><a href="javascript:expandCollapse('conversionDisorderPubmedHealth3928','showForOutline');"><img class="expandIcon" id="img_conversionDisorderPubmedHealth3928" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('conversionDisorderPubmedHealth3928','showForOutline');"><span class="opText">Conversion disorder - PubMed Health</span></a></li>
+			<div class="hide" id="conversionDisorderPubmedHealth3928" name="conversionDisorderPubmedHealth3928">
+				<ul>
+					<li><a href="http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001950/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Conversion disorder is a condition in which a person has blindness, paralysis, or other nervous system (neurologic) symptoms that cannot be explained by medical evaluation.
+Causes, incidence, and risk factors
+
+Conversion disorder symptoms may occur because of a psychological conflict.
+
+Symptoms usually begin suddenly after a stressful experience. People are more at risk for a conversion disorder if they also have a medical illness, dissociative disorder, or a personality disorder.
+
+It is important to understand that patients are not making up their symptoms (malingering). Some doctors falsely believe that conversion disorder is not a real condition, and may tell patients the problem is all in their head. However, these conditions are real. They cause distress and cannot be turned on and off at will.
+
+The physical symptoms are thought to be an attempt to resolve the conflict the person feels inside. For example, a woman who believes it is not acceptable to have violent feelings may suddenly feel numbness in her arms after becoming so angry that she wanted to hit someone. Instead of allowing herself to have violent thoughts about hitting someone, she may experience the physical symptom of numbness in her arms.</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('causeOfEpidemicInLeRoyIsHushHushAreTheLeRoyTwelveReallyVictimsOfVaccineInjuryVaxtruthOrg6350','showForOutline');"><img class="expandIcon" id="img_causeOfEpidemicInLeRoyIsHushHushAreTheLeRoyTwelveReallyVictimsOfVaccineInjuryVaxtruthOrg6350" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('causeOfEpidemicInLeRoyIsHushHushAreTheLeRoyTwelveReallyVictimsOfVaccineInjuryVaxtruthOrg6350','showForOutline');"><span class="opText">Cause of Epidemic in Le Roy is Hush-Hush. Are "The Le Roy Twelve" Really Victims of Vaccine-Injury? | VaxTruth.org</span></a></li>
+			<div class="hide" id="causeOfEpidemicInLeRoyIsHushHushAreTheLeRoyTwelveReallyVictimsOfVaccineInjuryVaxtruthOrg6350" name="causeOfEpidemicInLeRoyIsHushHushAreTheLeRoyTwelveReallyVictimsOfVaccineInjuryVaxtruthOrg6350">
+				<ul>
+					<li><a href="http://vaxtruth.org/2012/01/cause-of-epidemic-in-leroy-is-hush-hush-are-the-leroy-twelve-really-victims-of-vaccine-injury/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a> It is entirely possible that those health department officials have "ruled out" Gardasil because adverse reactions to this vaccine have been "shown to be no more frequent in those who received the vaccine than in those who received the placebo in clinical trials.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('otLeroy12GardasilMuchNoneSelectDelayedVaccinationsBabycenter16319','showForOutline');"><img class="expandIcon" id="img_otLeroy12GardasilMuchNoneSelectDelayedVaccinationsBabycenter16319" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('otLeroy12GardasilMuchNoneSelectDelayedVaccinationsBabycenter16319','showForOutline');"><span class="opText">OT - Leroy 12.. Gardasil much!?? - None/Select/Delayed Vaccinations - BabyCenter</span></a></li>
+
+			<div class="hide" id="otLeroy12GardasilMuchNoneSelectDelayedVaccinationsBabycenter16319" name="otLeroy12GardasilMuchNoneSelectDelayedVaccinationsBabycenter16319">
+				<ul>
+					<li><a href="http://community.babycenter.com/post/a31196949/ot_-_leroy_12.._gardasil_much" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>My cousin is one of the girls. Once I heard what was going on with her I asked my dad if he knew if she had received the gardasil shot recently. He knew nothing about the shot or what it can do. So he called my Uncle and guess what? She had just had the third dose when her symptoms were so bad she could no longer walk. So far all of her doctors and specialists have denied that there could be any relationship. Rediculous. and worse her parents, according to my dad, had no idea that gardasil could lead to any of those symptoms. Sooo glad I looked into vaxing when I did and stopped with my ODS and do not vax my other children. I can't believe this is news you all have heard of! </li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('sopaIcann10925','showForOutline');"><img class="expandIcon" id="img_sopaIcann10925" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sopaIcann10925','showForOutline');"><span class="opText">SOPA/ICANN</span></a></li>
+
+	<div class="hide" id="sopaIcann10925" name="sopaIcann10925">
+		<ul>
+			<li><a href="javascript:expandCollapse('icannChiefBeckstromSaysHeWillGoInJuly2012TheRegister7037','showForOutline');"><img class="expandIcon" id="img_icannChiefBeckstromSaysHeWillGoInJuly2012TheRegister7037" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('icannChiefBeckstromSaysHeWillGoInJuly2012TheRegister7037','showForOutline');"><span class="opText">ICANN chief Beckstrom says he will go in July 2012 * The Register</span></a></li>
+			<div class="hide" id="icannChiefBeckstromSaysHeWillGoInJuly2012TheRegister7037" name="icannChiefBeckstromSaysHeWillGoInJuly2012TheRegister7037">
+				<ul>
+					<li><a href="http://www.theregister.co.uk/2011/08/17/icann_chief_quits/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>He notably presided over the launch of the "internationalized domain names" programme, which gives top-level domains in non-Latin scripts, such as Arabic and Chinese, to various national authorities.
+
+He also oversaw the introduction of the DNSSEC security standard to the domain name system's root system a year ago, and the approval of the new generic top-level domains programme this June.
+
+But Beckstrom regularly came under fire for the way in which ICANN was perceived to have been managed, in particular for the fact that many senior staffers quit or were fired over the last two years.
+
+ICANN was seen as tardy in replacing key personnel, while at the same time making a few curious hires, such as the secret appointment of a self-help guru as vice president, which did not go down well in the ICANN community.
+
+This criticism came to a head at ICANN's public meeting in San Francisco this March, during which its staffing priorities were questioned by, among others, .uk chief Lesley Cowley, who has made the topic one of her pet policy peeves.</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('icannCeoJobAdInTheEconomistImageDomaininciteDomainNameNewsOpinion27835','showForOutline');"><img class="expandIcon" id="img_icannCeoJobAdInTheEconomistImageDomaininciteDomainNameNewsOpinion27835" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('icannCeoJobAdInTheEconomistImageDomaininciteDomainNameNewsOpinion27835','showForOutline');"><span class="opText">ICANN CEO job ad in The Economist [image] | DomainIncite - Domain Name News & Opinion</span></a></li>
+			<div class="hide" id="icannCeoJobAdInTheEconomistImageDomaininciteDomainNameNewsOpinion27835" name="icannCeoJobAdInTheEconomistImageDomaininciteDomainNameNewsOpinion27835">
+				<ul>
+					<li><a href="http://domainincite.com/icann-ceo-job-ad-in-the-economist-image/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ICANN says it is looking for "public interest-minded individual with a combination of financial management, diplomatic and organizational skills".
+
+The successful candidate will have "excellent management and leadership skills, positive and steady personality" and a "solid record of public, corporate, and/or academic experience at high international level".
+
+He or she will have to be committed to "integrity, trust, humility, technical excellence and public service".
+
+The salary is described as "commensurate with the scope and importance of the position".
+
+Rod Beckstrom, who intends to leave ICANN in July, is known to receive a base salary of $750,000 and bonuses that have bumped his total take-home to over $800,000.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('icannHiresWeightLossGuruAsVicePresidentDomaininciteDomainNameNewsOpinion30168','showForOutline');"><img class="expandIcon" id="img_icannHiresWeightLossGuruAsVicePresidentDomaininciteDomainNameNewsOpinion30168" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('icannHiresWeightLossGuruAsVicePresidentDomaininciteDomainNameNewsOpinion30168','showForOutline');"><span class="opText">ICANN hires weight-loss guru as vice president | DomainIncite - Domain Name News & Opinion</span></a></li>
+
+			<div class="hide" id="icannHiresWeightLossGuruAsVicePresidentDomaininciteDomainNameNewsOpinion30168" name="icannHiresWeightLossGuruAsVicePresidentDomaininciteDomainNameNewsOpinion30168">
+				<ul>
+					<li><a href="http://domainincite.com/icann-hires-weight-loss-guru-as-vice-president/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Elad Levinson, a psychotherapist with a distinctly Buddhist bent who has previously specialized in weight loss, joined the organization in early January as Vice President for Organization Effectiveness.
+
+He's been on the payroll as a consultant since May 2010, according to his LinkedIn profile and other sources, but only joined ICANN as a full-time VP two months ago.
+
+ICANN currently has only about a half dozen vice presidents. The most recent to be officially announced (pdf) was noted cryptographer Whitfield Diffie, now VP of information security.
+
+Unlike Diffie, Levinson did not get an announcement when he joined ICANN. Two months after joining the organization, he's still not even listed on the ICANN staff web page.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('euroland29398','showForOutline');"><img class="expandIcon" id="img_euroland29398" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland29398','showForOutline');"><span class="opText">EUROLand</span></a></li>
+
+	<div class="hide" id="euroland29398" name="euroland29398">
+		<ul>
+			<li><a href="javascript:expandCollapse('rentTheAcropolisForJust2000ADayGadlingCom28628','showForOutline');"><img class="expandIcon" id="img_rentTheAcropolisForJust2000ADayGadlingCom28628" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('rentTheAcropolisForJust2000ADayGadlingCom28628','showForOutline');"><span class="opText">Rent the Acropolis for just $2000 a day | Gadling.com</span></a></li>
+			<div class="hide" id="rentTheAcropolisForJust2000ADayGadlingCom28628" name="rentTheAcropolisForJust2000ADayGadlingCom28628">
+				<ul>
+					<li><a href="http://www.gadling.com/2012/01/18/rent-the-acropolis-for-just-2000-a-day/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Desperate times require desperate measures. That seems to be the mantra coming out of Greece these days, where the country has gone from debating whether or not it should lease out the Acropolis to just how much they should charge. Yesterday, the Greek cultural ministry announced that it will begin renting some of its most well known, and iconic, archeological sites, starting with the Acropolis itself, for about $2000 per day.</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('dutchnewsNlFinanceMinisterToOpenInternationalFinancialTribunal6315','showForOutline');"><img class="expandIcon" id="img_dutchnewsNlFinanceMinisterToOpenInternationalFinancialTribunal6315" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('dutchnewsNlFinanceMinisterToOpenInternationalFinancialTribunal6315','showForOutline');"><span class="opText">DutchNews.nl - Finance minister to open international financial tribunal</span></a></li>
+			<div class="hide" id="dutchnewsNlFinanceMinisterToOpenInternationalFinancialTribunal6315" name="dutchnewsNlFinanceMinisterToOpenInternationalFinancialTribunal6315">
+				<ul>
+					<li><a href="http://www.dutchnews.nl/news/archives/2012/01/finance_minister_to_open_inter.php" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Finance minister Jan Kees de Jager will on Monday open the new international financial tribunal in The Hague which will mediate in disputes about complicated financial products.
+
+The tribunal's secretary-general Gerard Meijer told Nos television there is great demand for an independent body to examine financial differences of opinion involving financial firms and investors.
+
+Both sides in a dispute must agree to let the panel take a case before it can be considered. The aim is to 'facilitate dispute settlement, reduce legal uncertainty and foster stability in the global financial markets,' according to the organisation's website.
+
+The panel's official name is Prime Finance - Panel of Recognised International Market Experts - and it will be hosted at the Peace Palace. The tribunal will be able to call on 100 experts to arbitrate or mediate in cases involving derivatives and financial products. </li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('riotingInRomaniaTheBattleOfBucharestTheEconomist6693','showForOutline');"><img class="expandIcon" id="img_riotingInRomaniaTheBattleOfBucharestTheEconomist6693" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('riotingInRomaniaTheBattleOfBucharestTheEconomist6693','showForOutline');"><span class="opText">Rioting in Romania: The battle of Bucharest | The Economist</span></a></li>
+
+			<div class="hide" id="riotingInRomaniaTheBattleOfBucharestTheEconomist6693" name="riotingInRomaniaTheBattleOfBucharestTheEconomist6693">
+				<ul>
+					<li><a href="http://www.economist.com/blogs/easternapproaches/2012/01/rioting-romania" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"POLENTA doesn't explode" is the gnomic phrase Romanians use to describe the attitude of resigned acceptance typical to the country. But this weekend something snapped. Thousands of people took to the streets in Bucharest and 40 other towns, venting their anger at their leaders' perceived incompetence in dealing with Romania's economic crisis.
+
+The centre of Bucharest was hit by violence on a scale unseen in two decades. Traian BÄ�sescu, the centre-right president, is the main target of the protesters' ire. "Get out, you miserable dog" they chanted, as they hurled paving stones and smoke bombs at riot police. Water cannons and tear gas were used to dispel the crowds.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('londonProtestWithoutBordersRomaniansTookToTheStreetsPreparingCanada18657','showForOutline');"><img class="expandIcon" id="img_londonProtestWithoutBordersRomaniansTookToTheStreetsPreparingCanada18657" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('londonProtestWithoutBordersRomaniansTookToTheStreetsPreparingCanada18657','showForOutline');"><span class="opText">LONDON PROTEST WITHOUT BORDERS Romanians took to the streets, preparing CANADA</span></a></li>
+			<div class="hide" id="londonProtestWithoutBordersRomaniansTookToTheStreetsPreparingCanada18657" name="londonProtestWithoutBordersRomaniansTookToTheStreetsPreparingCanada18657">
+				<ul>
+
+					<li><a href="http://translate.google.com/translate?sl=ro&amp;tl=en&amp;js=n&amp;prev=_t&amp;hl=ro&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;u=http%3A%2F%2Fwww.realitatea.net%2Fproteste-fara-granite-romanii-din-londra-au-iesit-in-strada-se-pregateste-canada_905393.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Google Traducere</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"The Romans in Britain against a manifest powers has never been so cynical and so much directed against its own people. This power has never asked the people if he wants to have the largest debt in the history of the country, public and private debt over 100 billion euros borrowed money in most of the last 3-4 years. If Romania has failed to rebuild with such a hefty sum, it is logical to believe is that people who lead the destinies of the country are incompetent or stole the money. In both cases the solution is only one: Government resignation and the resignation of President who endorsed all measures of austerity that bring people to the streets today. </li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Citeste mai mult pe REALITATEA.NET: http://www.realitatea.net/proteste-fara-granite-romanii-din-londra-au-iesit-in-strada-se-pregateste-canada_905393.html#ixzz1jv4zcCay</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('contantBetalenWordtVeelMoeilijkerDeStandaard22785','showForOutline');"><img class="expandIcon" id="img_contantBetalenWordtVeelMoeilijkerDeStandaard22785" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('contantBetalenWordtVeelMoeilijkerDeStandaard22785','showForOutline');"><span class="opText">Contant betalen wordt veel moeilijker - De Standaard</span></a></li>
+
+			<div class="hide" id="contantBetalenWordtVeelMoeilijkerDeStandaard22785" name="contantBetalenWordtVeelMoeilijkerDeStandaard22785">
+				<ul>
+					<li><a href="http://www.standaard.be/artikel/detail.aspx?_section=60488034&amp;artikelid=313KQD9A" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>'Dit is een stap in de goede richting, maar 5.000 euro of zelfs 3.000 euro is nog altijd veel te hoog', zegt Geert Noels. 'Er is toch geen reden voor iemand die in het officiÃ«le circuit zit, om grote bedragen in cash te betalen. Ik zie niet in waarom bedragen hoger dan 400 euro niet altijd elektronisch betaald zouden moeten worden.'
+
+Volgens Noels is het cashgeld-circuit voor een groot stuk het spiegelbeeld van de 'zwarte' economie. En die coulante houding van ons land tegenover cash geld is volgens hem nog altijd de reden waarom BelgiÃ« hoog scoort in de lijstjes van de Oeso over zwartwerk.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('croatiaEuSundayReferendumOnMembershipYesVoteAhead20171','showForOutline');"><img class="expandIcon" id="img_croatiaEuSundayReferendumOnMembershipYesVoteAhead20171" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('croatiaEuSundayReferendumOnMembershipYesVoteAhead20171','showForOutline');"><span class="opText">Croatia-EU: Sunday referendum on membership,'yes' vote ahead</span></a></li>
+			<div class="hide" id="croatiaEuSundayReferendumOnMembershipYesVoteAhead20171" name="croatiaEuSundayReferendumOnMembershipYesVoteAhead20171">
+				<ul>
+
+					<li><a href="http://www.ansamed.info/ansamed/en/news/nations/europe/2012/01/17/visualizza_new.html_45959348.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ZAGREB, JANUARY 17 - In preparation for Sunday's referendum on Croatia's EU membership treaty, most political and social forces within the country are in favour of the country's becoming part of the EU, scheduled for July 1 2013. ''Croatia's membership will ensure a solid base to fully use the creative potential of our young country,'' said the country's president Ivo Josipovic, urging citizens to vote in favour of it and noting that exactly twenty years ago on January 15 1992, it had been the European Community of the time to first recognise Zagreb's independence from Belgrade.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('imfSeeksToRaiseLendingPowerByUpTo500BillionAmidEuropeCrisisBlacklistednewsCom7960','showForOutline');"><img class="expandIcon" id="img_imfSeeksToRaiseLendingPowerByUpTo500BillionAmidEuropeCrisisBlacklistednewsCom7960" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('imfSeeksToRaiseLendingPowerByUpTo500BillionAmidEuropeCrisisBlacklistednewsCom7960','showForOutline');"><span class="opText">IMF Seeks to Raise Lending Power by Up to $500 Billion Amid Europe Crisis - BlackListedNews.com</span></a></li>
+			<div class="hide" id="imfSeeksToRaiseLendingPowerByUpTo500BillionAmidEuropeCrisisBlacklistednewsCom7960" name="imfSeeksToRaiseLendingPowerByUpTo500BillionAmidEuropeCrisisBlacklistednewsCom7960">
+				<ul>
+					<li><a href="http://www.blacklistednews.com/IMF_Seeks_to_Raise_Lending_Power_by_Up_to_%24500_Billion_Amid_Europe_Crisis/17467/0/38/38/Y/M.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The International Monetary Fund is proposing to raise its lending capacity by as much as $500 billion to insulate the global economy against any worsening of Europe's debt crisis.
+
+The Washington-based lender is aiming to increase its resources after identifying a potential need for $1 trillion in financing in coming years, an IMF spokesman said in a statement. The IMF is studying options and will not comment further until it has consulted its members, the fund said. To incorporate a cash buffer, the lender is seeking a total $600 billion.
+
+IMF Managing Director Christine Lagarde said yesterday her staff is looking at ways to expand the fund's war-chest, which currently has about $385 billion available. While euro-region nations have already pledged to contribute 150 billion euros ($192 billion), the U.S. has said it has no plans to make new bilateral loans and leaders of Group of 20 nations ended last year at odds over the issue.</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('elite6427','showForOutline');"><img class="expandIcon" id="img_elite6427" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('elite6427','showForOutline');"><span class="opText">Elite$</span></a></li>
+	<div class="hide" id="elite6427" name="elite6427">
+		<ul>
+			<li><a href="javascript:expandCollapse('whitehouseInsider12507','showForOutline');"><img class="expandIcon" id="img_whitehouseInsider12507" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whitehouseInsider12507','showForOutline');"><span class="opText">Whitehouse Insider</span></a></li>
+
+			<div class="hide" id="whitehouseInsider12507" name="whitehouseInsider12507">
+				<ul>
+					<li><a href="javascript:expandCollapse('youDonTEverWannaDoTheThingsIVeDoneTheulstermanreportComReadability9425','showForOutline');"><img class="expandIcon" id="img_youDonTEverWannaDoTheThingsIVeDoneTheulstermanreportComReadability9425" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('youDonTEverWannaDoTheThingsIVeDoneTheulstermanreportComReadability9425','showForOutline');"><span class="opText">You Don't Ever Wanna Do The Things I've Done... -- theulstermanreport.com -- Readability</span></a></li>
+					<div class="hide" id="youDonTEverWannaDoTheThingsIVeDoneTheulstermanreportComReadability9425" name="youDonTEverWannaDoTheThingsIVeDoneTheulstermanreportComReadability9425">
+						<ul>
+							<li><a href="http://www.readability.com/articles/q34w5slj" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>We got the death of a longtimer...an operative.- Good solid party guy.- Fifty somethin' years old.- Natural causes. No investigation.- He sees something about the current United States president...says it...shares it with some others, including this Senator.- They are tight.- Go way back a ways.- She's got power.- If she has...if she gets some kind of information... that makes her a threat.- It makes him a threat.- There's a business partner...he...well wouldn't you know it...he has a serious legal threat brought down on him around the same time!- Imagine that?- Bet he was told something too, right?- No accident there.- Warnings is what was going on there.- Back the f-ck off -- and it was comin' right from the White House boys.- Or worse yet...back to f-cking Chicago.- The unions.- That vote that pissed 'em off so much.- And then they killed him.- And now they are taking on the Senator herself.- Right on it.- Theft?- And the fu--ing thief is...I sh-t you not...she headed up an Obama group.- That's either ballsy or stupid...or both...or just fu--ing insane.- The Senator...she knew something.- That vote...how she bypassed Obama on the Bin Laden announcement.- That wasn't his call and she knew it.- She knew it.- Her words that night.- "No one knows when. No one knows how. No one knows why."- She was warning them to back off...the White House.- Back the f-ck off.- The public face...all smiles and nods.- That's how it's always done...but there's what's said off to the side, if you know what to hear...you catch it.- It's there.- You just gotta wait for it.</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('friendsColleaguesGatherToRememberDemocraticStrategistKamKuwataLatimesCom731','showForOutline');"><img class="expandIcon" id="img_friendsColleaguesGatherToRememberDemocraticStrategistKamKuwataLatimesCom731" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('friendsColleaguesGatherToRememberDemocraticStrategistKamKuwataLatimesCom731','showForOutline');"><span class="opText">Friends, colleagues gather to remember Democratic strategist Kam Kuwata - latimes.com</span></a></li>
+					<div class="hide" id="friendsColleaguesGatherToRememberDemocraticStrategistKamKuwataLatimesCom731" name="friendsColleaguesGatherToRememberDemocraticStrategistKamKuwataLatimesCom731">
+						<ul>
+							<li><a href="http://latimesblogs.latimes.com/california-politics/2011/05/kam-kuwata.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Feinstein, speaking off the cuff, described Kuwata as "a happy warrior, a smiling Buddha," and chastised herself and others for not paying closer heed to his circumstances; Kuwata died alone, of an apparent heart attack, and his body was not discovered at his Venice Beach condominium until about two weeks later.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"No one knows how. No one knows when. No one knows why," Feinstein said, suggesting that if people had paid closer attention, there may have been some warning sign before Kuwata was stricken.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The Bin Laden bombshell came at the end of her remarks, drawing audible gasps. Unknown to those in attendance was that President Obama had called a hasty late-night news conference in Washington to deliver the news. When Feinstein spoke, however, Obama had yet to address the nation.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Feinstein, as head of the Senate Intelligence Committee, is privy to some of the nation's most important secrets. She was apparently among the top congressional members briefed by administration officials before the president spoke on live TV from the East Room of the White House.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('feinsteinAnnouncesAheadOfObama26212','showForOutline');"><img class="expandIcon" id="img_feinsteinAnnouncesAheadOfObama26212" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('feinsteinAnnouncesAheadOfObama26212','showForOutline');"><span class="opText">Feinstein announces ahead of Obama</span></a></li>
+					<div class="hide" id="feinsteinAnnouncesAheadOfObama26212" name="feinsteinAnnouncesAheadOfObama26212">
+						<ul>
+							<li><a href="http://www.foxandhoundsdaily.com/2011/05/8940-feinstein-announces-bin-ladens-death/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Speaking to an audience gathered in Santa Monica last night to commemorate the life of late political consultant Kam Kuwata, U.S. Senator Dianne Feinstein concluded her praise for her long time friend with a surprise announcement. She said she had to keep a lot of secrets as the chairwoman of the Intelligence Committee, but she added, she was going to share one secret. At 7:30 pm tonight, she went on, the president is going to come on television to announce Osama Bin Laden had been killed.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">There were gasps from the audience, and after another sentence or two from the senator, applause. About 200 people attended the event including a number of state and local officials such as Former Governor Gray Davis and state Controller John Chiang.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Her announcement actually occurred a little after 7:30 pm by my watch, but the president would not get to make his speech for another hour or so.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('rachelMaddowMsnbcColleaguesScoreFaceTimeWithObamaTheDailyCaller24039','showForOutline');"><img class="expandIcon" id="img_rachelMaddowMsnbcColleaguesScoreFaceTimeWithObamaTheDailyCaller24039" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('rachelMaddowMsnbcColleaguesScoreFaceTimeWithObamaTheDailyCaller24039','showForOutline');"><span class="opText">Rachel Maddow, MSNBC colleagues score face time with Obama | The Daily Caller</span></a></li>
+			<div class="hide" id="rachelMaddowMsnbcColleaguesScoreFaceTimeWithObamaTheDailyCaller24039" name="rachelMaddowMsnbcColleaguesScoreFaceTimeWithObamaTheDailyCaller24039">
+				<ul>
+
+					<li><a href="http://dailycaller.com/2012/01/17/rachel-maddow-msnbc-colleagues-score-face-time-with-obama/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>MSNBC's Rachel Maddow is the president's favorite media hack, judging from official White House visitors log records.
+
+The liberal talking head has been cleared to enter the White House seven times. During three of those visits, she met with President Barack Obama in his residence or in the West Wing, usually for TV interviews.
+
+She was also cleared to attend a holiday reception, and to sit down for a discussion with Robert Gibbs while he was the White House press secretary.
+
+Another record reflects her attendance at a "Biden Beach Boardwalk Bash" last September. The visitors logs offer no mention of whether she got to drive the Veep's Camaro, however.
+
+One of her personal visits with Obama was part of a December 2010 cattle call with other left-wing journalists including E.J. Dionne, Eugene Robinson, Ed Schultz, Frank Rich, Ezra Klein and Arianna Huffington.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('gitmoNation9161','showForOutline');"><img class="expandIcon" id="img_gitmoNation9161" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gitmoNation9161','showForOutline');"><span class="opText">Gitmo Nation</span></a></li>
+	<div class="hide" id="gitmoNation9161" name="gitmoNation9161">
+		<ul>
+
+			<li><a href="javascript:expandCollapse('nypdTestingGunScanningTechnologyCbsNewYork12592','showForOutline');"><img class="expandIcon" id="img_nypdTestingGunScanningTechnologyCbsNewYork12592" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('nypdTestingGunScanningTechnologyCbsNewYork12592','showForOutline');"><span class="opText">NYPD Testing Gun-Scanning Technology - CBS New York</span></a></li>
+			<div class="hide" id="nypdTestingGunScanningTechnologyCbsNewYork12592" name="nypdTestingGunScanningTechnologyCbsNewYork12592">
+				<ul>
+					<li><a href="http://newyork.cbslocal.com/2012/01/17/nypd-testing-gun-scanning-technology/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The NYPD is stepping up their war against illegal guns, with a new tool that could detect weapons on someone as they walk down the street.
+
+But is it violating your right to privacy?
+
+Police, along with the U.S. Department of Defense, are researching new technology in a scanner placed on police vehicles that can detect concealed weapons.
+
+"You could use it at a specific event. You could use it at a shooting-prone location," NYPD Commissioner Ray Kelly told CBS 2â�²s Hazel Sanchez on Tuesday.
+
+It's called Terahertz Imaging Detection. It measures the energy radiating from a body up to 16 feet away, and can detect anything blocking it, like a gun.
+
+And the idea is causing quite the uproar on both sides of the privacy issue.</li>
+					</ul>
+				</div>
+			<li><a href="http://www.technologyreview.com/blog/arxiv/24331/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>How Terahertz Waves Tear Apart DNA - Technology Review</li>
+
+			<li><a href="javascript:expandCollapse('politieNeemtVingerafdrukAfOpStraatNederlandTrouw31973','showForOutline');"><img class="expandIcon" id="img_politieNeemtVingerafdrukAfOpStraatNederlandTrouw31973" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('politieNeemtVingerafdrukAfOpStraatNederlandTrouw31973','showForOutline');"><span class="opText">Politie neemt vingerafdruk af op straat - Nederland - TROUW</span></a></li>
+			<div class="hide" id="politieNeemtVingerafdrukAfOpStraatNederlandTrouw31973" name="politieNeemtVingerafdrukAfOpStraatNederlandTrouw31973">
+				<ul>
+					<li><a href="http://www.trouw.nl/tr/nl/4492/Nederland/article/detail/2810726/2011/07/20/Politie-neemt-vingerafdruk-af-op-straat.dhtml" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>De politie kan binnenkort met een speciaal apparaatje vingerafdrukken afnemen op straat. Dat moet het politiewerk vergemakkelijken en is in eerste plaats bedoeld voor intensievere controle op illegale vreemdelingen.
+Bij wijze van proef krijgen ongeveer 125 agenten bij verscheidene regiokorpsen zo'n scanner, een soort smartphone, zo heeft het ministerie van veiligheid en justitie besloten. De proef is al begonnen en agenten kunnen via hun Blackberry bepaalde informatie opvragen ter controle van iemands identiteit.
+
+In de loop van het najaar zal de vingerafdrukscan in fases daaraan worden toegevoegd.
+
+Het apparaatje controleert via een beveiligde koppeling met de zogeheten basisvoorziening vreemdelingenketen, waar vingerafdrukken zijn opgeslagen, of iemand legaal in Nederland verblijft.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('debateSwirlsAsParisEmbracesVideoSurveillanceFranceFrance2420122','showForOutline');"><img class="expandIcon" id="img_debateSwirlsAsParisEmbracesVideoSurveillanceFranceFrance2420122" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('debateSwirlsAsParisEmbracesVideoSurveillanceFranceFrance2420122','showForOutline');"><span class="opText">Debate swirls as Paris embraces video surveillance - FRANCE - FRANCE 24</span></a></li>
+
+			<div class="hide" id="debateSwirlsAsParisEmbracesVideoSurveillanceFranceFrance2420122" name="debateSwirlsAsParisEmbracesVideoSurveillanceFranceFrance2420122">
+				<ul>
+					<li><a href="http://mobile.france24.com/en/20120117-debate-swirls-around-paris-new-high-surveillance-system-cameras-cctv-police" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A debate over surveillance cameras is raging in Paris, where police are in the process of establishing a widespread system of "video protection". Is it a necessary security measure or a needless infringement of civil liberties?</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('usPrivatizesWarOnDrugs2205','showForOutline');"><img class="expandIcon" id="img_usPrivatizesWarOnDrugs2205" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('usPrivatizesWarOnDrugs2205','showForOutline');"><span class="opText">US privatizes war on drugs</span></a></li>
+			<div class="hide" id="usPrivatizesWarOnDrugs2205" name="usPrivatizesWarOnDrugs2205">
+				<ul>
+
+					<li><a href="http://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;u=http%3A%2F%2Fwww.bbc.co.uk%2Fmundo%2Fnoticias%2F2012%2F01%2F111208_eeuu_pentagono_guerra_drogas_mercenarios_wbm.shtml&amp;act=url" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Department of Defense United States, the Pentagon is delegating its fight against drug trafficking through multimillion-dollar contracts with private companies that are responsible for providing advice, training and conducting operations to drug producing countries and with links to so-called "narco-terrorism" including Latin America.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('bankTers9993','showForOutline');"><img class="expandIcon" id="img_bankTers9993" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bankTers9993','showForOutline');"><span class="opText">Bank$ters</span></a></li>
+	<div class="hide" id="bankTers9993" name="bankTers9993">
+		<ul>
+
+			<li><a href="javascript:expandCollapse('vatInTheUsa9072','showForOutline');"><img class="expandIcon" id="img_vatInTheUsa9072" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('vatInTheUsa9072','showForOutline');"><span class="opText">VAT in the USA</span></a></li>
+			<div class="hide" id="vatInTheUsa9072" name="vatInTheUsa9072">
+				<ul>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">ITM Adam/John,</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Ê</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I very good friend of mine who works for http://www.pwc.ch/ in Zurich and is on assignment in their London office constructing VAT for the US. They are contracted by the US GOV. As depressing as this is I thought best to pass it onto you and the listeners. I am guessing you will start to dig around for VAT in the US. So I will listen for your feedback on the Podcast.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Ê</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Tricky Nicky from Zurich</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('directionsAndAccessToImfHeadquarters27723','showForOutline');"><img class="expandIcon" id="img_directionsAndAccessToImfHeadquarters27723" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('directionsAndAccessToImfHeadquarters27723','showForOutline');"><span class="opText">Directions and Access to IMF Headquarters</span></a></li>
+			<div class="hide" id="directionsAndAccessToImfHeadquarters27723" name="directionsAndAccessToImfHeadquarters27723">
+				<ul>
+					<li><a href="http://www.imf.org/external/np/exr/visit/eng/index.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Visitors to IMF headquarters must present a photo identification and go through security screening to receive a guest pass. Visitors will be escorted by IMF staff while in the building. Please note that IMF Headquarters consists of two buildings, HQ1 and HQ2, with separate visitors' entrances described below:</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('iran357','showForOutline');"><img class="expandIcon" id="img_iran357" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('iran357','showForOutline');"><span class="opText">Iran</span></a></li>
+	<div class="hide" id="iran357" name="iran357">
+		<ul>
+			<li><a href="javascript:expandCollapse('activistPostWhatIaeaReportsOnIranSNuclearEnergyMedicineHowUsWarCriminal1Lie13287','showForOutline');"><img class="expandIcon" id="img_activistPostWhatIaeaReportsOnIranSNuclearEnergyMedicineHowUsWarCriminal1Lie13287" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('activistPostWhatIaeaReportsOnIranSNuclearEnergyMedicineHowUsWarCriminal1Lie13287','showForOutline');"><span class="opText">Activist Post: What IAEA reports on Iran's nuclear energy/medicine: how US War Criminal 1% lie</span></a></li>
+
+			<div class="hide" id="activistPostWhatIaeaReportsOnIranSNuclearEnergyMedicineHowUsWarCriminal1Lie13287" name="activistPostWhatIaeaReportsOnIranSNuclearEnergyMedicineHowUsWarCriminal1Lie13287">
+				<ul>
+					<li><a href="http://www.activistpost.com/2012/01/what-iaea-reports-on-irans-nuclear.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The International Atomic Energy Agency (IAEA) in their inspection role for compliance of the Non-Proliferation Treaty (NPT) has their November 2011 report in similar misleading language as their February 2010 report.
+
+IAEA appears to be under the same political pressure to make a case for war on Iran that we witnessed before US armed attack of Iraq.
+
+US corporate media and US political "leadership" will not remind Americans that the US eliminated the UN agency director who would have resolved concerns of alleged Iraq weapons: </li>
+					<li><a href="javascript:expandCollapse('reportDetails30645','showForOutline');"><img class="expandIcon" id="img_reportDetails30645" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('reportDetails30645','showForOutline');"><span class="opText">Report details</span></a></li>
+					<div class="hide" id="reportDetails30645" name="reportDetails30645">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">B. Credibility of Information</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">12.	As indicated in paragraph 6 above, among the information available to the Agency is the alleged studies documentation: a large volume of documentation (including correspondence, reports, view graphs from presentations, videos and engineering drawings), amounting to over a thousand pages. The information reflected in that documentation is of a technically complex and interconnected nature, showing research, development and testing activities over time. It also contains working level correspondence consistent with the day to day implementation of a formal programme. Consistent with the AgencyÕs practice, that information has been carefully and critically examined. The Agency has also had several meetings with the Member State to clarify the information it had provided, to question the Member State about the forensics it had carried out on the documentation and the information reflected in it, and to obtain more information on the underlying sources.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">13.	In addition to the alleged studies documentation, the Agency has received information from more than ten Member States. This has included procurement information, information on international travel by individuals said to have been involved in the alleged activities, financial records, documents reflecting health and safety arrangements, and other documents demonstrating manufacturing techniques for certain high explosive components. This information reinforces and tends to corroborate the information reflected in the alleged studies documentation, and relates to activities substantially beyond those identified in that documentation.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">14.	In addition to the information referred to in paragraphs 12 and 13 above, the Agency has acquired information as a result of its own efforts, including publications and articles acquired through open source research, satellite imagery, the results of Agency verification activities and information provided by Iran in the context of those verification activities.22 Importantly, the Agency has also had direct discussions with a number of individuals who were involved in relevant activities in Iran, including, for example, an interview with a leading figure in the clandestine nuclear supply network (see paragraph 35 below). The information obtained by the Agency from the discussions with these individuals is consistent with the</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('lybia16890','showForOutline');"><img class="expandIcon" id="img_lybia16890" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('lybia16890','showForOutline');"><span class="opText">Lybia</span></a></li>
+	<div class="hide" id="lybia16890" name="lybia16890">
+		<ul>
+			<li><a href="javascript:expandCollapse('libyaAndTheNtc12000USTroopsToLibya29556','showForOutline');"><img class="expandIcon" id="img_libyaAndTheNtc12000USTroopsToLibya29556" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('libyaAndTheNtc12000USTroopsToLibya29556','showForOutline');"><span class="opText">LIBYA and the NTC: 12,000 U.S. troops to Libya</span></a></li>
+			<div class="hide" id="libyaAndTheNtc12000USTroopsToLibya29556" name="libyaAndTheNtc12000USTroopsToLibya29556">
+				<ul>
+
+					<li><a href="http://www.globalresearch.ca/index.php?aid=28645&amp;context=va" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>It is with great disappointment that I receive the news from foreign media publications and Libyan sources that our President now has 12,000 U.S. troops stationed in Malta and they are about to make their descent into Libya.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('bbcNewsInsideStoryOfTheUkSSecretMissionToBeatGaddafi29939','showForOutline');"><img class="expandIcon" id="img_bbcNewsInsideStoryOfTheUkSSecretMissionToBeatGaddafi29939" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bbcNewsInsideStoryOfTheUkSSecretMissionToBeatGaddafi29939','showForOutline');"><span class="opText">BBC News - Inside story of the UK's secret mission to beat Gaddafi</span></a></li>
+			<div class="hide" id="bbcNewsInsideStoryOfTheUkSSecretMissionToBeatGaddafi29939" name="bbcNewsInsideStoryOfTheUkSSecretMissionToBeatGaddafi29939">
+				<ul>
+					<li><a href="http://www.bbc.co.uk/news/magazine-16573516" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>British efforts to help topple Colonel Gaddafi were not limited to air strikes. On the ground - and on the quiet - special forces soldiers were blending in with rebel fighters. This is the previously untold account of the crucial part they played.
+
+The British campaign to overthrow Muammar Gaddafi's regime had its public face - with aircraft dropping bombs, or Royal Navy ships appearing in Libyan waters, but it also had a secret aspect.
+
+My investigations into that covert effort reveal a story of practically minded people trying to get on with the job, while all the time facing political and legal constraints imposed from London. </li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('shutUpSlave24875','showForOutline');"><img class="expandIcon" id="img_shutUpSlave24875" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('shutUpSlave24875','showForOutline');"><span class="opText">Shut Up Slave!</span></a></li>
+	<div class="hide" id="shutUpSlave24875" name="shutUpSlave24875">
+		<ul>
+			<li><a href="javascript:expandCollapse('tsaToTestItsAirportScannerOperatorsForRadiationExposureLatimesCom21187','showForOutline');"><img class="expandIcon" id="img_tsaToTestItsAirportScannerOperatorsForRadiationExposureLatimesCom21187" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('tsaToTestItsAirportScannerOperatorsForRadiationExposureLatimesCom21187','showForOutline');"><span class="opText">TSA to test its airport scanner operators for radiation exposure - latimes.com</span></a></li>
+
+			<div class="hide" id="tsaToTestItsAirportScannerOperatorsForRadiationExposureLatimesCom21187" name="tsaToTestItsAirportScannerOperatorsForRadiationExposureLatimesCom21187">
+				<ul>
+					<li><a href="http://www.latimes.com/business/la-fi-travel-briefcase-20120116,0,7082529.story" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>After years of rebuffing health concerns over airport scanners, the Transportation Security Administration plans to conduct new tests on the potential radiation exposure from the machines at more than 100 airports nationwide.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('uSNewsInsideTheSecretIndustryOfInmateStaffedCallCenters5662','showForOutline');"><img class="expandIcon" id="img_uSNewsInsideTheSecretIndustryOfInmateStaffedCallCenters5662" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('uSNewsInsideTheSecretIndustryOfInmateStaffedCallCenters5662','showForOutline');"><span class="opText">U.S. News - Inside the secret industry of inmate-staffed call centers</span></a></li>
+			<div class="hide" id="uSNewsInsideTheSecretIndustryOfInmateStaffedCallCenters5662" name="uSNewsInsideTheSecretIndustryOfInmateStaffedCallCenters5662">
+				<ul>
+
+					<li><a href="http://usnews.msnbc.msn.com/_news/2012/01/12/10140493-inside-the-secret-industry-of-inmate-staffed-call-centers" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>When you call a company or government agency for help, there's a good chance the person on the other end of the line is a prison inmate.
+
+The federal government calls it "the best-kept secret in outsourcing" -- providing inmates to staff call centers and other services in both the private and public sectors.
+
+The U.S. government, through a 75-year-old program called Federal Prison Industries, makes about $750 million a year providing prison labor, federal records show. The great majority of those contracts are with other federal agencies for services as diverse as laundry, construction, data conversion and manufacture of emergency equipment.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('spaceWars26077','showForOutline');"><img class="expandIcon" id="img_spaceWars26077" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('spaceWars26077','showForOutline');"><span class="opText">Space Wars</span></a></li>
+	<div class="hide" id="spaceWars26077" name="spaceWars26077">
+		<ul>
+
+			<li><a href="javascript:expandCollapse('uSRadarMayHaveDamagedRussianMarsProbePaperRussiaRiaNovosti18104','showForOutline');"><img class="expandIcon" id="img_uSRadarMayHaveDamagedRussianMarsProbePaperRussiaRiaNovosti18104" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('uSRadarMayHaveDamagedRussianMarsProbePaperRussiaRiaNovosti18104','showForOutline');"><span class="opText">U.S. Radar May Have Damaged Russian Mars Probe - Paper | Russia | RIA Novosti</span></a></li>
+			<div class="hide" id="uSRadarMayHaveDamagedRussianMarsProbePaperRussiaRiaNovosti18104" name="uSRadarMayHaveDamagedRussianMarsProbePaperRussiaRiaNovosti18104">
+				<ul>
+					<li><a href="http://en.rian.ru/russia/20120117/170793805.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"Experts do not dismiss the possibility that the probe could have accidentally come under the impact of emissions [from a U.S. radar stationed on the Marshall Islands], whose megawatt impulse triggered the malfunctioning of on-board electronics," the source said.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('internationalCodeOfConductForOuterSpaceActivities23584','showForOutline');"><img class="expandIcon" id="img_internationalCodeOfConductForOuterSpaceActivities23584" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('internationalCodeOfConductForOuterSpaceActivities23584','showForOutline');"><span class="opText">International Code of Conduct for Outer Space Activities</span></a></li>
+
+			<div class="hide" id="internationalCodeOfConductForOuterSpaceActivities23584" name="internationalCodeOfConductForOuterSpaceActivities23584">
+				<ul>
+					<li><a href="http://www.state.gov/secretary/rm/2012/01/180969.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The long-term sustainability of our space environment is at serious risk from space debris and irresponsible actors. Ensuring the stability, safety, and security of our space systems is of vital interest to the United States and the global community. These systems allow the free flow of information across platforms that open up our global markets, enhance weather forecasting and environmental monitoring, and enable global navigation and transportation.
+
+Unless the international community addresses these challenges, the environment around our planet will become increasingly hazardous to human spaceflight and satellite systems, which would create damaging consequences for all of us.
+
+In response to these challenges, the United States has decided to join with the European Union and other nations to develop an International Code of Conduct for Outer Space Activities. A Code of Conduct will help maintain the long-term sustainability, safety, stability, and security of space by establishing guidelines for the responsible use of space.
+
+As we begin this work, the United States has made clear to our partners that we will not enter into a code of conduct that in any way constrains our national security-related activities in space or our ability to protect the United States and our allies. We are, however, committed to working together to reverse the troubling trends that are damaging our space environment and to preserve the limitless benefits and promise of space for future generations.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('australiaJoinsRaceToDefendSpace28235','showForOutline');"><img class="expandIcon" id="img_australiaJoinsRaceToDefendSpace28235" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('australiaJoinsRaceToDefendSpace28235','showForOutline');"><span class="opText">Australia joins race to defend space</span></a></li>
+			<div class="hide" id="australiaJoinsRaceToDefendSpace28235" name="australiaJoinsRaceToDefendSpace28235">
+				<ul>
+
+					<li><a href="http://www.smh.com.au/technology/sci-tech/australia-joins-race-to-defend-space-20120118-1q6k2.html?id=2" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>AUSTRALIA has announced it is backing a European Union push for a new international code of conduct for behaviour in space, following a rise in space junk and the clandestine development of satellite-destroying weapons.
+
+The Foreign Minister, Kevin Rudd, made the announcement yesterday, on the same day the US Secretary of State, Hillary Clinton, declared humankind's involvement in space was at risk from ''irresponsible actors''.
+
+While neither Australia nor the US named those actors, secret US diplomatic cables obtained by WikiLeaks reveal a half-decade war of words between Beijing and Washington over what the US describes as China's ''anti-satellite weapons testing program''.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('technoExperts9080','showForOutline');"><img class="expandIcon" id="img_technoExperts9080" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('technoExperts9080','showForOutline');"><span class="opText">Techno Experts</span></a></li>
+	<div class="hide" id="technoExperts9080" name="technoExperts9080">
+		<ul>
+
+			<li><a href="javascript:expandCollapse('pgpboardPgpEncryptedMessageBoardForwardingViewTopicUsStateDepartmentIncreasesFundingForTorProject29478','showForOutline');"><img class="expandIcon" id="img_pgpboardPgpEncryptedMessageBoardForwardingViewTopicUsStateDepartmentIncreasesFundingForTorProject29478" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('pgpboardPgpEncryptedMessageBoardForwardingViewTopicUsStateDepartmentIncreasesFundingForTorProject29478','showForOutline');"><span class="opText">PGPBOARD PGP ENCRYPTED MESSAGE BOARD & FORWARDING * View topic - US State Department Increases Funding For Tor Project</span></a></li>
+			<div class="hide" id="pgpboardPgpEncryptedMessageBoardForwardingViewTopicUsStateDepartmentIncreasesFundingForTorProject29478" name="pgpboardPgpEncryptedMessageBoardForwardingViewTopicUsStateDepartmentIncreasesFundingForTorProject29478">
+				<ul>
+					<li><a href="http://eta.securesslhost.net/~pgpboar/viewtopic.php?f=2&amp;start=0&amp;t=563" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>1) There has been a very vigorous response to a piece submitted by "Anon" concerning security aspects of the EFF's Firefox plug-in Decentralized SSL Observatory and the Convergence Firefox plug-in. See: http://www.pgpboard.com/viewtopic.php?f=2&t=559 Anon contends that these are no more that applications that gather user data without their knowledge, and that they are a security risk. Anon describes them as spy tools.</li>
+					</ul>
+				</div>
+			</ul>
+
+		</div>
+	<li><a href="javascript:expandCollapse('gopXfactor32737','showForOutline');"><img class="expandIcon" id="img_gopXfactor32737" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gopXfactor32737','showForOutline');"><span class="opText">GOP XFactor</span></a></li>
+	<div class="hide" id="gopXfactor32737" name="gopXfactor32737">
+		<ul>
+			<li><a href="javascript:expandCollapse('iowaRepublicansToCallCaucusResultSplitDecisionReuters30397','showForOutline');"><img class="expandIcon" id="img_iowaRepublicansToCallCaucusResultSplitDecisionReuters30397" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('iowaRepublicansToCallCaucusResultSplitDecisionReuters30397','showForOutline');"><span class="opText">Iowa Republicans to call caucus result split decision | Reuters</span></a></li>
+			<div class="hide" id="iowaRepublicansToCallCaucusResultSplitDecisionReuters30397" name="iowaRepublicansToCallCaucusResultSplitDecisionReuters30397">
+				<ul>
+					<li><a href="http://www.reuters.com/article/2012/01/19/us-usa-campaign-iowa-idUSTRE80I0SJ20120119?feedType=RSS&amp;feedName=politicsNews&amp;utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+Reuters%2FPoliticsNews+%28News+%2F+US+%2F+Politics+News%29" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Register said the new count put Santorum ahead by 34 votes. However, results from any one of the eight precincts with "missing data" could hold an advantage for Romney, the Register reported.
+
+"It's a split decision," the newspaper said, citing a party official in the state. There are too many holes in the certified total from the caucuses to know for certain who won, it said.
+
+GOP officials discovered inaccuracies in 131 precincts, although not all the changes affected Romney or Santorum, the newspaper reported.</li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('blackBoxVotingUsa112GlobalInternetVotingFirmBuysUSElectionResultsReportingFirm15378','showForOutline');"><img class="expandIcon" id="img_blackBoxVotingUsa112GlobalInternetVotingFirmBuysUSElectionResultsReportingFirm15378" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('blackBoxVotingUsa112GlobalInternetVotingFirmBuysUSElectionResultsReportingFirm15378','showForOutline');"><span class="opText">Black Box Voting : (USA) 1/12 - GLOBAL INTERNET VOTING FIRM BUYS U.S. ELECTION RESULTS REPORTING FIRM -</span></a></li>
+			<div class="hide" id="blackBoxVotingUsa112GlobalInternetVotingFirmBuysUSElectionResultsReportingFirm15378" name="blackBoxVotingUsa112GlobalInternetVotingFirmBuysUSElectionResultsReportingFirm15378">
+				<ul>
+					<li><a href="http://www.bbvforums.org/cgi-bin/forums/board-auth.cgi?file=/8/81816.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>
+In a major step towards global centralization of election processes, the world's dominant Internet voting company has purchased the USA's dominant election results reporting company.
+
+When you view your local or state election results on the Internet, on portals which often appear to be owned by the county elections division, in over 525 US jurisdictions you are actually redirected to a private corporate site controlled by SOE software, which operates under the name ClarityElections.com.
+
+The good news is that this firm promptly reports precinct-level detail in downloadable spreadsheet format. As reported by BlackBoxVoting.org in 2008, the bad news is that this centralizes one middleman access point for over 525 jurisdictions in AL, AZ, CA, CO, DC, FL, KY, MI, KS, IL, IN, NC, NM, MN, NY, SC, TX, UT, WA. And growing.
+
+As local election results funnel through SOE's servers (typically before they reach the public elsewhere), those who run the computer servers for SOE essentially get "first look" at results and the ability to immediately and privately examine vote details throughout the USA. </li>
+					</ul>
+
+				</div>
+			<li><a href="http://www.soesoftware.com/company/leadership.aspx" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>SOE Software - e-Goverment Solutions</li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('outThere21574','showForOutline');"><img class="expandIcon" id="img_outThere21574" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('outThere21574','showForOutline');"><span class="opText">Out There</span></a></li>
+	<div class="hide" id="outThere21574" name="outThere21574">
+		<ul>
+			<li><a href="javascript:expandCollapse('eilandDuiktOpUitHetNietsDeStandaard4589','showForOutline');"><img class="expandIcon" id="img_eilandDuiktOpUitHetNietsDeStandaard4589" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('eilandDuiktOpUitHetNietsDeStandaard4589','showForOutline');"><span class="opText">Eiland duikt op uit het niets - De Standaard</span></a></li>
+
+			<div class="hide" id="eilandDuiktOpUitHetNietsDeStandaard4589" name="eilandDuiktOpUitHetNietsDeStandaard4589">
+				<ul>
+					<li><a href="http://www.standaard.be/artikel/detail.aspx?_section=60488034&amp;artikelid=DMF20120116_087" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In de Rode Zee, voor de westkust van Jemen, is een eiland opgedoken na een onderzeese vulkaanuitbarsting. Dat meldt de Amerikaanse ruimtevaartorganisatie NASA.
+
+Eind vorig jaar merkte de NASA-satelliet Earth Observing-1 op dat er een mysterieuze rookwolk uit de zee kwam. Amper een week later, op zeven januari, was er al een volledig vulkanisch eiland te zien. Het is niet de eerste keer dat dit fenomeen voorkomt. "Elke paar jaar ontstaat er een nieuw eiland op deze manier", weten experts. Het is echter wel opvallend dat het nieuwe eiland zich zo snel heeft gevormd.
+
+De ruimtevaartorganisatie meent dat de landstrook inmiddels 530 bij 710 meter groot is. Het blijft voorlopig gissen hoe lang het eiland het zal volhouden. De meeste eilanden die ontstaan na een onderzeese vulkaanuitbarsting zijn namelijk geen lang leven beschoren. </li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('breivikBekentOplichtingVanMeerDanEenMiljoenDollarDeStandaard289','showForOutline');"><img class="expandIcon" id="img_breivikBekentOplichtingVanMeerDanEenMiljoenDollarDeStandaard289" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('breivikBekentOplichtingVanMeerDanEenMiljoenDollarDeStandaard289','showForOutline');"><span class="opText">Breivik bekent oplichting van meer dan een miljoen dollar - De Standaard</span></a></li>
+			<div class="hide" id="breivikBekentOplichtingVanMeerDanEenMiljoenDollarDeStandaard289" name="breivikBekentOplichtingVanMeerDanEenMiljoenDollarDeStandaard289">
+				<ul>
+
+					<li><a href="http://www.standaard.be/artikel/detail.aspx?artikelid=DMF20120117_095" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Een van Breiviks ondervragers verklaarde aan de Noorse omroep NRK dat Breivik zijn diploma's naar eigen zeggen 'zichtbaar vals' maakte. 'Iedereen kon volgens Breivik zien dat ze vals waren. Ze moesten dienen als een plezierig geschenk dat vrienden aan elkaar konden geven', klonk het.
+
+Desalniettemin zou Breivik meer dan 1 miljoen dollar aan de vervalsingen verdiend hebben. De Noorse politie vermoedt dat  Breivik deze inkomsten gebruikte om te reizen en om zijn aanslagen van 22 juli 2011 voor te bereiden.
+
+Noorwegen wacht nu de start af van het proces tegen Breivik. Dat zou op 16 april van start moeten gaan. Eerst moet echter nog een nieuw psychiatrisch onderzoek afgewacht worden dat zal oordelen of Breivik toerekeningsvatbaar is.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('falEFlag10645','showForOutline');"><img class="expandIcon" id="img_falEFlag10645" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('falEFlag10645','showForOutline');"><span class="opText">Fal$e Flag</span></a></li>
+	<div class="hide" id="falEFlag10645" name="falEFlag10645">
+		<ul>
+
+			<li><a href="javascript:expandCollapse('reportUKPoliceOfficerLosesOlympicSecurityDocumentsTheCourierJournalCourierJournalCom226','showForOutline');"><img class="expandIcon" id="img_reportUKPoliceOfficerLosesOlympicSecurityDocumentsTheCourierJournalCourierJournalCom226" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('reportUKPoliceOfficerLosesOlympicSecurityDocumentsTheCourierJournalCourierJournalCom226','showForOutline');"><span class="opText">Report: U.K. police officer loses Olympic security documents | The Courier-Journal | courier-journal.com</span></a></li>
+			<div class="hide" id="reportUKPoliceOfficerLosesOlympicSecurityDocumentsTheCourierJournalCourierJournalCom226" name="reportUKPoliceOfficerLosesOlympicSecurityDocumentsTheCourierJournalCourierJournalCom226">
+				<ul>
+					<li><a href="http://www.courier-journal.com/usatoday/article/52614632?odyssey=mod%7Cnewswell%7Ctext%7CHome%7Cp" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A British tabloid reported Tuesday that it had been handed documents about security arrangements for the London Olympics that were left on a train by a police officer, the latest in a series of embarrassing mishaps involving British authorities misplacing government documents.
+
+London police confirmed Tuesday that one of its officers lost a bag containing documents on Jan. 5 and reported it to his bosses, but downplayed the incident, adding that the papers were not "operationally sensitive."
+
+"Obviously the loss of restricted material is a matter for concern, but we are satisfied that this does not compromise our security operation for the Olympics," police said in a statement.
+
+The Sun newspaper said it received the documents from a passenger who found them on the train, and that it returned them to the police. It says the papers contain accounts of meetings where security measures were discussed, and details of contingency plans for the Olympics.
+
+The Sun published an image of some of the documents in its print edition, and described in sweeping terms some of the complaints police had about communications systems.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+
+	<li><a href="javascript:expandCollapse('haiti1462','showForOutline');"><img class="expandIcon" id="img_haiti1462" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('haiti1462','showForOutline');"><span class="opText">Haiti</span></a></li>
+	<div class="hide" id="haiti1462" name="haiti1462">
+		<ul>
+			<li><a href="javascript:expandCollapse('seanPennNamedAmbassadorAtLargeToHaitiTheMarqueeBlogCnnComBlogs7127','showForOutline');"><img class="expandIcon" id="img_seanPennNamedAmbassadorAtLargeToHaitiTheMarqueeBlogCnnComBlogs7127" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('seanPennNamedAmbassadorAtLargeToHaitiTheMarqueeBlogCnnComBlogs7127','showForOutline');"><span class="opText">Sean Penn named ambassador at large to Haiti -- The Marquee Blog - CNN.com Blogs</span></a></li>
+			<div class="hide" id="seanPennNamedAmbassadorAtLargeToHaitiTheMarqueeBlogCnnComBlogs7127" name="seanPennNamedAmbassadorAtLargeToHaitiTheMarqueeBlogCnnComBlogs7127">
+				<ul>
+					<li><a href="http://marquee.blogs.cnn.com/2012/01/16/sean-penn-named-ambassador-at-large-to-haiti/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Before the Golden Globes this weekend, there was another fete with A-listers in attendance: A fundraiser gala for Sean Penn's J/P Haitian Relief Organization.
+
+Penn, who has been assisting with earthquake relief for Haiti since the disaster struck in January of 2010, was honored on Saturday night at the event and officially named the ambassador at large to Haiti by the country's Minister of Foreign and Religious Affairs, Laurent Lamothe.</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('ministryOfTruth20831','showForOutline');"><img class="expandIcon" id="img_ministryOfTruth20831" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ministryOfTruth20831','showForOutline');"><span class="opText">Ministry of Truth</span></a></li>
+	<div class="hide" id="ministryOfTruth20831" name="ministryOfTruth20831">
+		<ul>
+			<li><a href="javascript:expandCollapse('presidentialMemorandumImplementingProvisionsOfTheTemporaryPayrollTaxCutContinuationActOf2011RelatingToTheKeystoneXlPipelinePermitTheWhiteHouse12644','showForOutline');"><img class="expandIcon" id="img_presidentialMemorandumImplementingProvisionsOfTheTemporaryPayrollTaxCutContinuationActOf2011RelatingToTheKeystoneXlPipelinePermitTheWhiteHouse12644" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('presidentialMemorandumImplementingProvisionsOfTheTemporaryPayrollTaxCutContinuationActOf2011RelatingToTheKeystoneXlPipelinePermitTheWhiteHouse12644','showForOutline');"><span class="opText">Presidential Memorandum -- Implementing Provisions of the Temporary Payroll Tax Cut Continuation Act of 2011 Relating to the Keystone XL Pipeline Permit | The White House</span></a></li>
+
+			<div class="hide" id="presidentialMemorandumImplementingProvisionsOfTheTemporaryPayrollTaxCutContinuationActOf2011RelatingToTheKeystoneXlPipelinePermitTheWhiteHouse12644" name="presidentialMemorandumImplementingProvisionsOfTheTemporaryPayrollTaxCutContinuationActOf2011RelatingToTheKeystoneXlPipelinePermitTheWhiteHouse12644">
+				<ul>
+					<li><a href="http://www.whitehouse.gov/the-press-office/2012/01/18/presidential-memorandum-implementing-provisions-temporary-payroll-tax-cu" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>I have determined, based upon your recommendation, including the State Department's view that 60 days is an insufficient period to obtain and assess the necessary information, that the Keystone XL pipeline project, as presented and analyzed at this time, would not serve the national interest.
+
+Accordingly, by the authority vested in me as President by the Constitution and the laws of the United States including section 301 of title 3, United States Code, and in furtherance of Executive Order 13337 of April 30, 2004 to the extent compatible with this memorandum, I direct you to submit the report to the Congress as specified in section 501(b)(2) of the Temporary Payroll Tax Cut Continuation Act of 2011 and to issue a denial of the Keystone XL pipeline permit application.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('video14205','showForOutline');"><img class="expandIcon" id="img_video14205" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('video14205','showForOutline');"><span class="opText">VIDEO</span></a></li>
+
+	<div class="hide" id="video14205" name="video14205">
+		<ul>
+			<li><a href="javascript:expandCollapse('videoRonPaulTiedWithObama2177','showForOutline');"><img class="expandIcon" id="img_videoRonPaulTiedWithObama2177" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoRonPaulTiedWithObama2177','showForOutline');"><span class="opText">[VIDEO]Ron Paul Tied with Obama?</span></a></li>
+			<div class="hide" id="videoRonPaulTiedWithObama2177" name="videoRonPaulTiedWithObama2177">
+				<ul>
+					<li><a href="http://yapstream.com/?p=169" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a> Jan 17
+
+In this video, the Council of Foreign Relations representative Erin Burnett of CNN asks some people why young people are voting for the oldest candidate. The last question she even asks how they feel about Ron Paul being the oldest President. Is this discriminating against Older people? This would not be allowed in the workplace against Older OR younger people. It's the only thing the Main Stream media can say against him because he is honest and doesn't flip flop.</li>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('videoValerieJarrettUsesEbenezerBaptistChurchToGivePoliticalSpeech9697','showForOutline');"><img class="expandIcon" id="img_videoValerieJarrettUsesEbenezerBaptistChurchToGivePoliticalSpeech9697" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('videoValerieJarrettUsesEbenezerBaptistChurchToGivePoliticalSpeech9697','showForOutline');"><span class="opText">[VIDEO] Valerie Jarrett Uses Ebenezer Baptist Church To Give Political Speech - </span></a></li>
+			<div class="hide" id="videoValerieJarrettUsesEbenezerBaptistChurchToGivePoliticalSpeech9697" name="videoValerieJarrettUsesEbenezerBaptistChurchToGivePoliticalSpeech9697">
+				<ul>
+					<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=Pr4eNqUcOXw" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>On January 15, 2012, the day before the Martin Luther King, Jr., holiday, Obama Senior Advisor Valerie Jarrett spoke at a church service at Ebenezer Baptist and used it as a platform to campaign for Barack Obama.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('visitToSpainExtractOnEfsfDowngradeThePresidentSVideos5959','showForOutline');"><img class="expandIcon" id="img_visitToSpainExtractOnEfsfDowngradeThePresidentSVideos5959" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('visitToSpainExtractOnEfsfDowngradeThePresidentSVideos5959','showForOutline');"><span class="opText">Visit to Spain: Extract on EFSF downgrade - the President's Videos</span></a></li>
+
+			<div class="hide" id="visitToSpainExtractOnEfsfDowngradeThePresidentSVideos5959" name="visitToSpainExtractOnEfsfDowngradeThePresidentSVideos5959">
+				<ul>
+					<li><a href="http://vloghvr.consilium.europa.eu/?p=6847" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Extract on the recent EFSF downgrade by Herman VAN ROMPUY, President of the European Council, during the press conference that followed his meeting with Mariano RAJOY, Prime Minister of Spain, on 17 January in Madrid.</li>
+					</ul>
+				</div>
+			<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=ucMs7MljhBI" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ASK ME: "United states of Europe" - not a political reality (to Leonardo's Van de Wiele, Antwerp) - [VIDEO] </li>
+			<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=juhUQcDGp0o" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ASK ME: Is the euro dead? (a question from debatingeurope.eu) - [VIDEO] </li>
+
+			<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=2Rv-3bwYlA4" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ASK ME: On the Eurozone (A question from Keith Adams) - [VIDEO] </li>
+			<li><a href="http://crooksandliars.com/karoli/president-obama-sends-betty-white-90th-birt" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>President Obama Asks to See Betty White's Long Form Birth Certificate | Crooks and Liars</li>
+			<li><a href="javascript:expandCollapse('extractOnPossibleIncreaseOfImfResourcesThePresidentSVideos3403','showForOutline');"><img class="expandIcon" id="img_extractOnPossibleIncreaseOfImfResourcesThePresidentSVideos3403" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('extractOnPossibleIncreaseOfImfResourcesThePresidentSVideos3403','showForOutline');"><span class="opText">Extract on possible increase of IMF resources - the President's Videos</span></a></li>
+			<div class="hide" id="extractOnPossibleIncreaseOfImfResourcesThePresidentSVideos3403" name="extractOnPossibleIncreaseOfImfResourcesThePresidentSVideos3403">
+				<ul>
+					<li><a href="http://vloghvr.consilium.europa.eu/?p=6841" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Extract from the press statements by Herman VAN ROMPUY, President of the European Counicl, on the possibility of increasing IMF resources.</li>
+					</ul>
+
+				</div>
+			<li><a href="http://www.youtube.com/watch?v=X-z7HGnt1Pc&amp;context=C30bdcc2ADOEgsToPDskJlrnz7ibzFienqIglYBAY1" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Wise Intelligent - ILLUMINATI (Anti-Illuminati, Lyrics in Description) - [VIDEO] </li>
+			<li><a href="http://www.euronews.net/2012/01/17/greeks-protest-as-euimf-bailout-officials-return/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Greeks protest as EU/IMF bailout officials return | euronews, world news</li>
+			<li><a href="http://revolutionarypolitics.tv//video/viewVideo.php?title=bill-o-really-gets-owned-by-ron-paul&amp;video_id=17396" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Revolutionary Politics::Revolutionary Politics : Bill O'Really gets owned by Ron Paul</li>
+			<li><a href="javascript:expandCollapse('lawyerInWikileaksCaseWantsToDeposeClintonAbcNews3917','showForOutline');"><img class="expandIcon" id="img_lawyerInWikileaksCaseWantsToDeposeClintonAbcNews3917" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('lawyerInWikileaksCaseWantsToDeposeClintonAbcNews3917','showForOutline');"><span class="opText">Lawyer in WikiLeaks Case Wants to Depose Clinton - ABC News</span></a></li>
+			<div class="hide" id="lawyerInWikileaksCaseWantsToDeposeClintonAbcNews3917" name="lawyerInWikileaksCaseWantsToDeposeClintonAbcNews3917">
+				<ul>
+
+					<li><a href="http://abcnews.go.com/US/wireStory/lawyer-wikileaks-case-depose-clinton-15373416#.Txg2AyOdvE4" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A lawyer for an intelligence analyst charged with leaking classified information to the anti-secrecy website WikiLeaks wants to question Secretary of State Hillary Clinton before his client is tried.
+
+David Coombs, a lawyer for Pfc. Bradley Manning, included a request to question Clinton as part of a redacted document posted Monday on his website and also sent to Army officials. Clinton's name is obscured in the document, but it is clear from context that she is the person he wants to question.
+
+Coombs failed in his attempt to call Clinton as a witness at Manning's preliminary hearing last month. The Army is still deciding whether the 24-year-old Manning, who is accused of causing the biggest leak of classified information in U.S. history, should stand trial.</li>
+					</ul>
+				</div>
+			<li><a href="http://www.youtube.com/watch?v=grXmxxrxKb0&amp;feature=youtube_gdata" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ron Paul Moves To Repeal Indefinite Detention Of American Citizens Without Trial! - [VIDEO] </li>
+			<li><a href="javascript:expandCollapse('outgoingGovernorHaleyBarbourSPardonsShockMississippiLatimesCom17913','showForOutline');"><img class="expandIcon" id="img_outgoingGovernorHaleyBarbourSPardonsShockMississippiLatimesCom17913" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('outgoingGovernorHaleyBarbourSPardonsShockMississippiLatimesCom17913','showForOutline');"><span class="opText">Outgoing Governor Haley Barbour's pardons shock Mississippi - latimes.com</span></a></li>
+			<div class="hide" id="outgoingGovernorHaleyBarbourSPardonsShockMississippiLatimesCom17913" name="outgoingGovernorHaleyBarbourSPardonsShockMississippiLatimesCom17913">
+				<ul>
+
+					<li><a href="http://www.latimes.com/news/nationworld/nation/la-na-barbour-pardons-20120113,0,1151044.story" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Two others were from well-known families: Earnest Scott Favre, who pleaded guilty to killing his friend in a 1996 drunk driving incident, is the brother of former NFL star and Mississippi native Brett Favre, according to the Jackson Clarion-Ledger. Karen Irby, whom the Clarion-Ledger refers to as a "former Jackson socialite," was granted conditional clemency for two manslaughter charges stemming from an alcohol-related 2009 auto wreck.</li>
+					</ul>
+				</div>
+			<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=t2eoR128LKE#" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>-The Roman Empire Rules Today - [VIDEO] </li>
+			<li><a href="http://videocafe.crooksandliars.com/heather/bill-kristol-it-would-be-better-republican" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Bill Kristol: It Would be Better for the Republican Party if Ron Paul Left the Party | Video Cafe</li>
+			<li><a href="http://www.youtube.com/watch?v=8VDlEebl9vI&amp;feature=youtube_gdata" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>White House Goes Into Lockdown After "Smoke Bomb-Like Devices" Were Thrown Over Fence - [VIDEO] </li>
+			<li><a href="http://www.youtube.com/watch?v=TjQyuS8Qckg&amp;feature=youtube_gdata" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>50 Dolphin Wash Ashore In The Last Week In Cape Cod - [VIDEO] </li>
+
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="clipsAndStuff">
+			<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+<style>
+	.divOutlineByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		color: gray;
+		}
+	.divOutlineByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divOutlineTitle h3 {
+		font-family: Cardo;
+		font-size: 46px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divOutlineDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	</style>
+<div class="divOutlineBody">
+	<div class="divOutlineTitle">
+		<h3>Clips and Stuff</h3>
+		</div>
+	<div class="divOutlineDescription">
+		
+		</div>
+	<div class="divOutlineByline">
+
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 15, 2012 at 2:37 PM.
+		</div>
+	
+<ul>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/greeks on streets.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>greeks on streets.mp3</li>
+	<li><a href="javascript:expandCollapse('haikuHerman16193','showForOutline');"><img class="expandIcon" id="img_haikuHerman16193" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('haikuHerman16193','showForOutline');"><span class="opText">Haiku Herman</span></a></li>
+	<div class="hide" id="haikuHerman16193" name="haikuHerman16193">
+		<ul>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Haiku Herman/forced politicians out.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>forced politicians out.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Haiku Herman/id the euro dead.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>id the euro dead.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Haiku Herman/on downgrade.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>on downgrade.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Haiku Herman/united states of europe.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>united states of europe.mp3</li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('jcdClips11179','showForOutline');"><img class="expandIcon" id="img_jcdClips11179" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jcdClips11179','showForOutline');"><span class="opText">JCD Clips</span></a></li>
+
+	<div class="hide" id="jcdClips11179" name="jcdClips11179">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/bray attacks hartman.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>bray attacks hartman.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/hartman and bray go at it.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>hartman and bray go at it.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/john the ten year old.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>john the ten year old.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/michelle obama blows line.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>michelle obama blows line.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/mitt romney on tax returns.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>mitt romney on tax returns.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/romney joke writer.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>romney joke writer.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/wear earbuds and get killed.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>wear earbuds and get killed.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/JCD Clips/will obama veto the bill.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>will obama veto the bill.mp3</li>
+			</ul>
+		</div>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/McCain-Romney.pdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>McCain-Romney.pdf</li>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/mypd gun scanner.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>mypd gun scanner.mp3</li>
+
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/na375art.png" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>na375art.png</li>
+	<li><a href="javascript:expandCollapse('obama15107','showForOutline');"><img class="expandIcon" id="img_obama15107" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obama15107','showForOutline');"><span class="opText">Obama</span></a></li>
+	<div class="hide" id="obama15107" name="obama15107">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Obama/jarrett has secret service.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>jarrett has secret service.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Obama/Obama betty white.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Obama betty white.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Obama/whitehouse smoke bomb.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>whitehouse smoke bomb.mp3</li>
+
+			</ul>
+		</div>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/pooper gupta gardasil.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>pooper gupta gardasil.mp3</li>
+	<li><a href="javascript:expandCollapse('ronPaul13840','showForOutline');"><img class="expandIcon" id="img_ronPaul13840" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ronPaul13840','showForOutline');"><span class="opText">Ron Paul</span></a></li>
+	<div class="hide" id="ronPaul13840" name="ronPaul13840">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Ron Paul/bill kristol on rp.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>bill kristol on rp.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Ron Paul/borger signals plan.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>borger signals plan.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Ron Paul/burnett-on plan.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>burnett-on plan.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Ron Paul/RP repeal 1021 of ndaa.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>RP repeal 1021 of ndaa.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-375-2012-01-19/Assets/Ron Paul/se cups on RP douchette.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>se cups on RP douchette.mp3</li>
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+					</div>
+
+				<div class="divComments">
+					
+<center>
+
+	<br>
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://disqus.com/forums/adamcurrycomments/embed.js"></script>
+	<noscript><a href="http://adamcurrycomments.disqus.com/?url=ref">View the forum thread.</a></noscript>
+
+	</center>
+
+					</div>
+				<div class="divOpmlPageFooter">
+					<div class="divOpmlPageFooterBox">
+						<!-- XML icon -->
+							<a href="http://static.curry.com/worldoutline/admin/2012/01/15/archive178.opml" title="Click on this icon to view the OPML source text for this directory. More info: http://www.opml.org/spec2."><img class="imgXmlIcon" src="http://scripting.com/images/xmlIcon2.gif" border="0" width="36" height="14" alt="XML" /></a>
+						<!-- stats & atts -->
+							<a href="#" rel="popover" title="Node Stats" data-content="Editor: Adam Curry;  Updated: 1/19/12; 1415 reads. 1 items.  Page build ran for 0.033 seconds.">Stats</a> & <a href="#" rel="popover" title="Node Attributes" data-content="disqusShortname=adamcurrycomments, domain=375.nashownotes.com, flDirectoryIcons=false, flDisqusComments=xxx, headerEnabled=false, iconImageHtml=140 chars, menuEnabled=false, outlineCreatedDate=Sunday, January 15, 2012, outlineCreatedTime=2:37 PM, outlineDateCreated=Thu, 19 Jan 2012 20:32:08 GMT, outlineDateModified=Thu, 19 Jan 2012 21:24:21 GMT, outlineDescription=0 chars, outlineModDate=Thursday, January 19, 2012, outlineModTime=2:24 PM, outlineOwnerBioUrl=, outlineOwnerEmail=adam@curry.com, outlineOwnerName=Adam Curry, outlineTitle=No Agenda Episode 375, text=No Agenda Episode 375, type=tabs.">Atts</a>.
+						<br><br>Reallll soooon now...
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>

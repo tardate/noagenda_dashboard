@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>World Outline: No Agenda Episode 374</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://static.curry.com/worldoutline/admin/rss.xml" />
+		<link href="http://fonts.googleapis.com/css?family=Cardo" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=IM Fell DW Pica SC" rel="stylesheet" type="text/css">
+
+<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<link href="http://static.scripting.com/github/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/docs.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/prettify.css" rel="stylesheet">
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.min.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/jquery.tablesorter.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-dropdown.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-twipsy.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/application.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-popover.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-modal.js"></script> <!-- 1/11/12 by DW -->
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-tabs.js"></script> <!-- 1/12/12 by DW -->
+<script>
+	$(function () {
+		$("a[rel=twipsy]").twipsy({
+			live: true
+			})
+		})
+	</script>
+<script>
+	$(function () {
+		$("a[rel=popover]")
+		.popover({
+			offset: 10
+			})
+		.click(function(e) {
+			e.preventDefault()
+			})
+		})
+	</script>
+<style>
+	body {
+		margin-top: -5px;
+		}
+	table th {
+		border: 0;
+		}
+	table {
+		border: 0px;
+		}
+	.actions {
+		border: 0;
+		background: none;
+		padding: 0;
+		}
+	</style>
+
+<style>
+	body {
+		color: black;
+		}
+	/* eliminate borders on tables */
+		table th {
+			border: 0;
+			}
+		table td {
+			border: 0;
+			}
+		table {
+			border: 0px;
+			}
+	.divOpmlWebpage {
+		margin-left: 12%;
+		margin-right: 12%;
+		margin-bottom: 65px;
+		color: black;
+		}
+	.divOpmlHeader {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		}
+	.divOpmlHeader h1 {
+		font-family: 'IM Fell DW Pica SC';
+		text-align: center;
+		text-shadow: 4px 4px 4px #AAA;
+		font-size: 68px;
+		padding: 0px;
+		margin: 0px;
+		}
+	.divOpmlHeader red {
+		color: red;
+		font-size: 110%;
+		}
+	.divOpmlHeader a:link {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:hover {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:visited {
+		text-decoration: none;
+		color:#000;
+		}
+	
+	.divOpmlMenubar a, .divOpmlMenubar a:link, .divOpmlMenubar a:visited {
+		color: lightgray;
+		}
+	.divOpmlMenubar white {
+		color: white;
+		}
+	.divOpmlMenubarStatus {
+		color: lightgray;
+		float: right;
+		line-height: 19px;
+		padding: 10px 0px 11px;
+		font-size: 13px;
+		}
+	
+	.divOpmlWebpageBody {
+		padding-top: 0px;
+		}
+	.divOpmlWebpageBody h3 {
+		font-family: Ubuntu;
+		font-size: 24px;
+		}
+	
+	.divIntroPgf {
+		font-size: 14px;
+		line-height: 120%;
+		color: black;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		}
+	.prefsTable th, .prefsTable td {
+		border: 0;
+		font-size: 140%;
+		line-height: 100%;
+		}
+	.prefsTable td.input: {
+		height: 100%;
+		padding: 0;
+		border: 0;
+		}
+	
+	/* sign-in form */
+		.divSigninForm .signinLabel {
+			text-align: right;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm td {
+			border: none;
+			}
+		.divSigninForm input {
+			height: 32px;
+			padding: 3px;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm table {
+			padding-top: 30px;
+			width: auto;
+			}
+	/* prefs */
+		.divPrefs {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs label {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs .row {
+			line-height: 24px;
+			margin-bottom: 12px;
+			}
+		.divPrefs red {
+			color: red;
+			}
+		.divPrefs li {
+			font-family: Ubuntu;
+			font-size: 17px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			}
+		.divPrefs h4 {
+			font-family: Ubuntu;
+			font-size: 22px;
+			padding-top: 15px;
+			padding-bottom: 5px;
+			}
+	/* log pages */
+		.logEvent {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			}
+		.logDescription {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			line-height: 120%;
+			}
+		.logDate {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.logSeconds {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.divLogPage table {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.divLogPage td {
+			border: none;
+			font-size: 16px;
+			}
+		.divLogPage th {
+			border: none;
+			font-size: 14px;
+			padding-bottom: 0px;
+			}
+	</style>
+
+		<style>
+			/* header */
+				.divGraphic {
+					margin: 0px auto;
+					}
+				.divGraphic img {
+					display: block;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:5px;
+					padding-bottom:20px;
+					}
+				.divGraphic h1 {
+					font-family: Cardo;
+					font-size: 48px;
+					line-height: 135%;
+					white-space: nowrap;
+					text-align: left;
+					padding-top: 60px;
+					}
+			/* bread crumbs */
+				.divBreadCrumbs {
+					font-family: Arial;
+					font-size: 16px;
+					line-height: 140%;
+					padding-bottom: 20px;
+					}
+				.divBreadCrumbs a {
+					color: #1E68A6;
+					font-weight: bold;
+					}
+				.divBreadCrumbs .aCurrentCrumb {
+					font-weight: bold;
+					color: black;
+					}
+			/* directory */
+				.divDirectory {
+					}
+				.ulDirectory {
+					font-family: Arial;
+					list-style-type: none;
+					margin: 0;
+					font-size: 18px;
+					}
+				.directoryItem {
+					font-weight: bold;
+					line-height: 150%;
+					}
+				.directoryItem a {
+					color: #1E68A6;
+					}
+				.directoryItem img {
+					}
+				.directoryComment {
+					line-height: 150%;
+					color: black;
+					}
+				.directoryLinkx {
+					padding-left: 24px;
+					background: transparent url(http://static.opml.org/images/folder.gif) no-repeat top left;
+					}
+				.directoryIcon {
+					display: none;
+					padding-right: 10px;
+					}
+				.ulDirectoryx a:link {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectoryxa:hover {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectoryx a:visited {
+					text-decoration: underline;
+					color:#819fC7;
+					}
+				.directoryErrorMessage {
+					font-family: Arial;
+					font-size: 24;
+					padding-top: 24;
+					padding-bottom: 12;
+					}
+			/* directory additions */
+				.divDirectoryTitle {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					font-weight: bold;
+					}
+				.divLegend {
+					font-family: Arial;
+					font-size: 12px;
+					line-height: 14px;
+					color:#1E68A6;
+					}
+			/* blogpost nodetype */
+				.divBlogPost {
+					}
+				.divBlogPost p {
+					font-family: Georgia;
+					font-size: 20px;
+					line-height: 140%;
+					padding-left: 0px;
+					padding-right: 0px;
+					padding-bottom: 3px;
+					}
+			/* river nodetype */
+				.article .footer {
+					padding: 0px;
+					background-color: white;
+					border-top: 0px;
+					text-shadow: 0 0px;
+					min-width: 0px;
+					-moz-box-shadow: 0 0px 0px;
+					}
+				.article .description {
+					font-family: Arial,sans-serif;
+					font-size: 13px;
+					line-height: 17px;
+					}
+				.article h3 {
+					font-family: Arial,sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+					}
+			/* domains page */
+				.divDomains ul {
+					padding-top: 5px;
+					list-style: disc outside normal;
+					padding-left: 35px;
+					}
+				.divDomains li {
+					font-family: Ubuntu;
+					font-size: 18px;
+					line-height: 28px;
+					color: black;
+					}
+			/* rss nodetype */
+				.feedTitle {
+					font-size: 32px;
+					line-height: 180%;
+					margin-bottom: 10px;
+					}
+				.feedList {
+					list-style-type: none;
+					margin-left: 3em;
+					}
+				.feedItemTitle {
+					font-size: 24px;
+					line-height: 140%;
+					margin-bottom: 10px;
+					}
+				.feedItemDescription p {
+					font-size: 18px;
+					line-height: 180%;
+					color: black;
+					}
+				.feedItemDescription {
+					margin-bottom: 30px;
+					margin-right: 15%;
+					margin-left: 0;
+					}
+			/* thumbList nodetype */
+				.divWorldOutlineThumbList td {
+					border: 1px lightgray;
+					border-style: dashed;
+					text-align: center;
+					padding-top: 12px;
+					padding-bottom: 8px;
+					}
+				.divWorldOutlineThumbList table {
+					border-collapse: collapse;
+					}
+				.divWorldOutlineThumbList .thumbListCaptionString {
+					font-size: 13px;
+					}
+			/* disqus */
+				#disqus_thread {
+					width: 700px;
+					}
+			/* outline nodetype -- 1/2/12 by DW*/
+				.divOutlineBody {
+					padding-left: 6%;
+					padding-top: 3%;
+					padding-bottom: 3%;
+					}
+				.divOutlineBody ul {
+					list-style: none;
+					margin-left: 0;
+					padding-left: 1em;
+					}
+				.divOutlineBody li {
+					font-family: Cardo;
+					font-size: 20px;
+					line-height: 150%;
+					color: black;
+					text-indent: -20px;
+					}
+				.divOutlineBody .opText {
+					color:black;
+					}
+				.sidebarTitle {
+					font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+					margin-top: 5px;
+					margin-left: 0px;
+					margin-right: 0px;
+					font-weight: bold;
+					}
+				p.collapsedSidebarText {
+					font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+					margin-left: 0px;
+					margin-top: 8px;
+					margin-bottom: 8px;
+					}
+				.show {
+					padding-left: 8px;
+					padding-right: 0px;
+					padding-bottom: 4px;
+					margin-left: 0px;
+					}
+				.hide {
+					display: none;
+					}
+				img.expandIcon {
+					padding: 0px;
+					padding-right: 4px;
+					border: 0;
+					}
+			/* page content wrapper -- 1/2/12 by DW*/
+				.divOpmlWebpageBody {
+					padding-top: 30px;
+					}
+				.divOpmlNavigation {
+					height: 25px;
+					}
+				.divOpmlContent {
+					padding-top: 15px;
+					padding-bottom: 35px;
+					}
+				.divOpmlTitle {
+					padding-top: 7px;
+					padding-bottom: 5px;
+					}
+				.divOpmlTitle h3 {
+					font-family: Cardo;
+					font-size: 46px;
+					line-height: 110%;
+					padding-bottom: 0;
+					}
+				.divOpmlWebpageBody span {
+					margin-left: 0;
+					color: black;
+					}
+				.divOpmlWebpageBody .divByline {
+					padding-top: 7px;
+					}
+				.divOpmlWebpageBody .divDescription {
+					font-family: Cardo;
+					font-size: 20px;
+					font-style: bold;
+					line-height: 120%;
+					color: black;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					}
+				.divOpmlWebpageBody .spanByline {
+					}
+				.divOpmlWebpageBody .spanByline a {
+					color: black;
+					}
+				.divOpmlPageFooterBox {
+					border-top:1px dashed;
+					border-radius: 3px;
+					border-color: gainsboro;
+					-moz-border-radius: 3px; /* Firefox 3.6 and earlier */
+					padding-top: 3px;
+					}
+				.divOpmlPageFooter {
+					}
+				.divOpmlPageFooter .imgXmlIcon {
+					float: right;
+					padding-right: 3px;
+					}
+				.divComments {
+					}
+				.divComments h3 {
+					font-size: 18px;
+					}
+			</style>
+		<style>html {
+  width: 980px;
+  margin: auto;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+p.blogPostPgf {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+h3.blogPostTitle {
+  font-family: georgia;
+  font-size: 28px;
+  }
+
+li.directoryComment {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+li.directoryItem {
+  font-family: arial;
+  font-size: 17px;
+  font-weight: plain;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+.divDirectory {
+  width: 680px;
+  margin: 3em auto;
+}
+
+.divFooter {
+  position: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  -mox-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  box-shadow: 0 0 8px rgba(0,0,0,.3)
+}
+</style>
+		</head>
+	<body>
+		
+		<div class="divOpmlWebpage">
+			<div class="divOpmlWebpageBody">
+
+				<div class="divOpmlHeaderGraphic">
+					<div class="divGraphic"><a href="/"><h1>NA-374-2012-01-15</h1></a></div>
+					</div>
+				<div class="divOpmlNavigation">
+					
+					</div>
+				<div class="divOpmlContent">
+					<style>
+	.divTabsFromOutline {
+		font-size: 18px;
+		}
+	.divTabsFromOutline p {
+		font-size: 18px;
+		line-height: 140%;
+		padding-bottom: 5px;
+		}
+	.divTabsFromOutline textarea {
+		font-size: 18px;
+		line-height: 140%;
+		}
+	.divTabsFromOutline label {
+		font-size: 18px;
+		}
+	.divTabsFromOutline input {
+		}
+	.divTabsFromOutline .xlarge {
+		font-size: 18px;
+		line-height: 140%;
+		height: 140%;
+		width: 450px;
+		}
+	.divTabsFromOutline .uneditable-input {
+		font-size: 18px;
+		line-height: 140%;
+		height: 140%;
+		width: 450px;
+		}
+	</style>
+<div class="divTabs">
+
+	<div class="divTabsFromOutline">
+	<ul class="tabs" data-tabs="tabs">
+		<li><a class="active" href="#noAgendaEpisode374">No Agenda episode 374</a></li>
+		<li><a href="#coverArt">Cover Art</a></li>
+		<li><a href="#credits">Credits</a></li>
+		<li><a href="#shownotes">Shownotes</a></li>
+		<li><a href="#clipsAndStuff">Clips and Stuff</a></li>
+
+		</ul>
+	<div id="my-tab-content" class="tab-content">
+		<div class="active tab-pane" id="noAgendaEpisode374">
+			<style>
+	.divBlogpostByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		padding-top: 8px;
+		color: gray;
+		}
+	.divBlogpostByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divBlogPostTitle h3 {
+		font-family: Georgia;
+		font-size: 42px;
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 0px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divBlogPostDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	.divBlogPost p {
+		font-family: Georgia;
+		font-size: 20px;
+		line-height: 140%;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 3px;
+		}
+	</style>
+<div class="divBlogPost">
+	<div class="divBlogPostTitle">
+		<h3>No Agenda episode 374</h3>
+		</div>
+
+	<div class="divBlogPostDescription">
+		
+		</div>
+	<div class="divBlogpostByline">
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 15, 2012 at 1:36 PM.
+		</div>
+	<p class="blogPostPgf"><a name="p1045"></a><embed type="application/x-shockwave-flash" src="http://www.dvorak.org/blog/wp-content/uploads/2008/01/playersingle.swf" id="mymovie" name="mymovie" quality="high" flashvars="autoPlay=no&amp;soundPath=http://m.podshow.com/media/15412/episodes/308814/noagenda-308814-01-15-2012.mp3&overColor=#ff0000" height="80" ></embed><img src="http://blog.curry.com/images/2012/01/15/na374art_sm4.jpg" width="256" height="256" border="0" align="right" hspace="15" vspace="5" alt="A picture named na374art_sm4.jpg">&nbsp;<a href="#p1045"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a name="p241"></a><b>"Fractals on the Bone"</b>&nbsp;<a href="#p241"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a name="p239"></a><a href="http://m.podshow.com/media/15412/episodes/308814/noagenda-308814-01-15-2012.mp3">Direct link to the mp3 file</a>&nbsp;<a href="#p239"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a href="http://dvorak.org/na"><a href="http://dvorak.org/na"></a><a href="http://dvorak.org/na">Support our work and the show</a></a></p><p class="blogPostPgf"><a name="p1313"></a><a href="http://mevio.com/feeds/noagenda.xml">Subscribe to our <a href="http://mevio.com/feeds/noagenda.xml">Podcast Feed</a></a>&nbsp;<a href="#p1313"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf"><a href="http://noagendanewsnetwork.com/">The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></a></p><p class="blogPostPgf"><a href="http://podcasts.nashownotes.com/">All the No Agenda Stream Podcasts and Feeds on One Page</a></p><p class="blogPostPgf"><a name="p1590"></a><a href="http://www.dvorak.org/blog/no-agenda-mailing-list-signup-here/">Join</a> the Mailing List!&nbsp;<a href="#p1590"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="coverArt">
+			<style>
+	.divBlogpostByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		padding-top: 8px;
+		color: gray;
+		}
+	.divBlogpostByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divBlogPostTitle h3 {
+		font-family: Georgia;
+		font-size: 42px;
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 0px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divBlogPostDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	.divBlogPost p {
+		font-family: Georgia;
+		font-size: 20px;
+		line-height: 140%;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 3px;
+		}
+	</style>
+<div class="divBlogPost">
+	<div class="divBlogPostTitle">
+		<h3>Cover Art</h3>
+
+		</div>
+	<div class="divBlogPostDescription">
+		
+		</div>
+	<div class="divBlogpostByline">
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 15, 2012 at 1:39 PM.
+		</div>
+	<p class="blogPostPgf"><a name="p240"></a><img src="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/na374art.jpg" alt="na374 art">&nbsp;<a href="#p240"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf">Art By: <a href="http://ianaus.tumblr.com/">Sir Nussbaum</a></p>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="credits">
+			<style>
+	.divBlogpostByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		padding-top: 8px;
+		color: gray;
+		}
+	.divBlogpostByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divBlogPostTitle h3 {
+		font-family: Georgia;
+		font-size: 42px;
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 0px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divBlogPostDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	.divBlogPost p {
+		font-family: Georgia;
+		font-size: 20px;
+		line-height: 140%;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 3px;
+		}
+	</style>
+<div class="divBlogPost">
+	<div class="divBlogPostTitle">
+		<h3>Credits</h3>
+
+		</div>
+	<div class="divBlogPostDescription">
+		
+		</div>
+	<div class="divBlogpostByline">
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 15, 2012 at 1:37 PM.
+		</div>
+	<p class="blogPostPgf"><a name="p241"></a><b>"Fractals on the Bone"</b>&nbsp;<a href="#p241"><img src="http://scripting.com/images/2001/09/20/sharpPermaLink3.gif" class="imgBlogpostPermalink" width="6" height="9" border="0" alt="permalink"></a></p><p class="blogPostPgf">Executive Producers: Sir Martin Anderson, Andrew</p><p class="blogPostPgf">Associate Executive Producer: Andrew Soos</p><p class="blogPostPgf"><a href="http://dvorak.org/na">Become a member of the 375 Club, support the show <a href="http://dvorak.org/na">here</a></a></p><p class="blogPostPgf">Knighthoods: Martin Andersen, James Pearce</p><p class="blogPostPgf">Art By: <a href="http://ianaus.tumblr.com/">Sir Nussbaum</a></p><p class="blogPostPgf"><a href="http://359.nashownotes.com/">ShowNotes Archive of links and Assets (clips etc) <a href="http://374.nashownotes.com/"> 374.nashownotes.com</a></a></p><p class="blogPostPgf"><a href="http://nawol.curry.com/noAgenda/shownotes">New: Directory Archive of Shownotes (includes all audio and video assets used) <a href="http://nashownotes.com">nashownotes.com</a></a></p><p class="blogPostPgf"><a href="http://noagendanewsnetwork.com/">The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></a></p>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="shownotes">
+			<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+<style>
+	.divOutlineByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		color: gray;
+		}
+	.divOutlineByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divOutlineTitle h3 {
+		font-family: Cardo;
+		font-size: 46px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divOutlineDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	</style>
+<div class="divOutlineBody">
+	<div class="divOutlineTitle">
+
+		<h3>Shownotes</h3>
+		</div>
+	<div class="divOutlineDescription">
+		
+		</div>
+	<div class="divOutlineByline">
+		By <a href="">Adam Curry</a>.
+		Posted Thursday, January 12, 2012 at 1:33 PM.
+		</div>
+	
+
+<ul>
+	<li><a href="/search"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Search</li>
+	<li><a href="javascript:expandCollapse('obamaWeeklyAddressArticles20631','showForOutline');"><img class="expandIcon" id="img_obamaWeeklyAddressArticles20631" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obamaWeeklyAddressArticles20631','showForOutline');"><span class="opText">Obama Weekly Address articles</span></a></li>
+	<div class="hide" id="obamaWeeklyAddressArticles20631" name="obamaWeeklyAddressArticles20631">
+		<ul>
+			<li><a href="javascript:expandCollapse('insourcingWikipediaTheFreeEncyclopedia18639','showForOutline');"><img class="expandIcon" id="img_insourcingWikipediaTheFreeEncyclopedia18639" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('insourcingWikipediaTheFreeEncyclopedia18639','showForOutline');"><span class="opText">Insourcing - Wikipedia, the free encyclopedia</span></a></li>
+			<div class="hide" id="insourcingWikipediaTheFreeEncyclopedia18639" name="insourcingWikipediaTheFreeEncyclopedia18639">
+				<ul>
+
+					<li><a href="http://en.wikipedia.org/wiki/Insourcing" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Insourcing may be done by "onshoring." Insourcing delegates certain work to a different company, which may come from a different country in the case of onshoring.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('governmentReorganizationFactSheetTheWhiteHouse19160','showForOutline');"><img class="expandIcon" id="img_governmentReorganizationFactSheetTheWhiteHouse19160" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('governmentReorganizationFactSheetTheWhiteHouse19160','showForOutline');"><span class="opText">Government Reorganization Fact Sheet | The White House</span></a></li>
+			<div class="hide" id="governmentReorganizationFactSheetTheWhiteHouse19160" name="governmentReorganizationFactSheetTheWhiteHouse19160">
+				<ul>
+					<li><a href="http://www.whitehouse.gov/the-press-office/2012/01/13/government-reorganization-fact-sheet" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a> Looking to make our government leaner, smarter and more consumer-friendly, the President will call on Congress to reinstate the authority that past Presidents had, over decades, to reorganize the government.  With the exception of President Ford, every President from Herbert Hoover to Ronald Reagan had reorganization authority.  Presidents had this sort of authority for almost the entire period from 1932 through 1984.Unlike the authority granted in the past, the President's proposal would initiate new accountability by mandating that any plan must consolidate government - reducing the number of agencies or saving taxpayer dollars. </li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('karenMillsWikipediaTheFreeEncyclopedia22159','showForOutline');"><img class="expandIcon" id="img_karenMillsWikipediaTheFreeEncyclopedia22159" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('karenMillsWikipediaTheFreeEncyclopedia22159','showForOutline');"><span class="opText">Karen Mills - Wikipedia, the free encyclopedia</span></a></li>
+			<div class="hide" id="karenMillsWikipediaTheFreeEncyclopedia22159" name="karenMillsWikipediaTheFreeEncyclopedia22159">
+				<ul>
+					<li><a href="http://en.wikipedia.org/wiki/Karen_Mills" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Mills is the daughter of Mr. Melvin and Ellen Gordon, the CEO and President of Tootsie Roll Industries, respectively. She is married to Barry Mills, the president of Bowdoin College, and has three sons. She has a B.A. in economics from Harvard University, and an MBA from Harvard Business School.[4]</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('businessusa28092','showForOutline');"><img class="expandIcon" id="img_businessusa28092" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('businessusa28092','showForOutline');"><span class="opText">BusinessUSA</span></a></li>
+			<div class="hide" id="businessusa28092" name="businessusa28092">
+				<ul>
+					<li><a href="http://businessusa.gov/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The goal is to make it easier for businesses to search the full range of government information, programs, and services they need to compete globally -- without having to navigate their way through an overwhelming bureaucracy.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">At BusinessUSA, you'll be able to find a wide range of relevant and timely federal government data, services, and programs -- wherever, whenever, on your terms.</li>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('obamaSeeksNewConsolidationAuthorityPowerGrabAmericanVisionNews1090','showForOutline');"><img class="expandIcon" id="img_obamaSeeksNewConsolidationAuthorityPowerGrabAmericanVisionNews1090" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obamaSeeksNewConsolidationAuthorityPowerGrabAmericanVisionNews1090','showForOutline');"><span class="opText">Obama seeks new "consolidation authority" power grab-|-American Vision News</span></a></li>
+			<div class="hide" id="obamaSeeksNewConsolidationAuthorityPowerGrabAmericanVisionNews1090" name="obamaSeeksNewConsolidationAuthorityPowerGrabAmericanVisionNews1090">
+				<ul>
+					<li><a href="http://americanvisionnews.com/1192/obama-seeks-new-consolidation-authority-power-grab" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>To persuade them to relinquish such power, certainly, Obama must not at first appear to have too radical of an agenda for using it. Thus, the White House's only proposal so far is being portrayed as "streamlining" and "shrinking the federal government." Associated Press announced that the president's first plan will consolidate six Commerce agencies, take burdens off of businesses, cut 1,000 government jobs (albeit only through attrition), and save $3 billion (albeit only stretched across 10 years).</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">While any proposal too radical could easily be squashed in the current House by a simple up-or-down vote in principle, the political pressure against voting down any measure that alleges to cut spending and shrink government up front will likely be problematic even for conservatives.</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">For all his deviousness, this move is very cunning on Obama's part. If Congress agrees, then it relinquishes power and submits to Obama's leadership and authority. Obama comes out looking good. If Congress balks, it can be accused of not wanting to cut government size and spending after all. Congress looks bad. Heads he wins, tails they lose.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('sopaPipaOpenIcann19062','showForOutline');"><img class="expandIcon" id="img_sopaPipaOpenIcann19062" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sopaPipaOpenIcann19062','showForOutline');"><span class="opText">SOPA/PIPA/OPEN/ICANN</span></a></li>
+	<div class="hide" id="sopaPipaOpenIcann19062" name="sopaPipaOpenIcann19062">
+
+		<ul>
+			<li><a href="javascript:expandCollapse('obamaAdministrationRespondsToWeThePeoplePetitionsOnSopaAndOnlinePiracyTheWhiteHouse25454','showForOutline');"><img class="expandIcon" id="img_obamaAdministrationRespondsToWeThePeoplePetitionsOnSopaAndOnlinePiracyTheWhiteHouse25454" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obamaAdministrationRespondsToWeThePeoplePetitionsOnSopaAndOnlinePiracyTheWhiteHouse25454','showForOutline');"><span class="opText">Obama Administration Responds to We the People Petitions on SOPA and Online Piracy | The White House</span></a></li>
+			<div class="hide" id="obamaAdministrationRespondsToWeThePeoplePetitionsOnSopaAndOnlinePiracyTheWhiteHouse25454" name="obamaAdministrationRespondsToWeThePeoplePetitionsOnSopaAndOnlinePiracyTheWhiteHouse25454">
+				<ul>
+					<li><a href="javascript:expandCollapse('anyEffortToCombatOnlinePiracyMustGuardAgainstTheRiskOfOnlineCensorshipOfLawfulActivityAndMustNotInhibitInnovationByOurDynamicBusinessesLargeAndSmallAcrossTheGlobeTheOpennessOfTheInternetIsIncreasinglyCentralToInnovationInBusinessGovernmentAndSocietyAndItMustBeProtectedToMinimizeThisRiskNewLegislationMustBeNarrowlyTargetedOnlyAtSitesBeyondTheReachOfCurrentUSLawCoverActivityClearlyProhibitedUnderExistingUSLawsAndBeEffectivelyTailoredWithStrongDueProcessAndFocusedOnCriminalActivityAnyProvisionCoveringInternetIntermediariesSuchAsOnlineAdvertisingNetworksPaymentProcessorsOrSearchEnginesMustBeTransparentAndDesignedToPreventOverlyBroadPrivateRightsOfActionThatCouldEncourageUnjustifiedLitigationThatCouldDiscourageStartupBusinessesAndInnovativeFirmsFromGrowing17901','showForOutline');"><img class="expandIcon" id="img_anyEffortToCombatOnlinePiracyMustGuardAgainstTheRiskOfOnlineCensorshipOfLawfulActivityAndMustNotInhibitInnovationByOurDynamicBusinessesLargeAndSmallAcrossTheGlobeTheOpennessOfTheInternetIsIncreasinglyCentralToInnovationInBusinessGovernmentAndSocietyAndItMustBeProtectedToMinimizeThisRiskNewLegislationMustBeNarrowlyTargetedOnlyAtSitesBeyondTheReachOfCurrentUSLawCoverActivityClearlyProhibitedUnderExistingUSLawsAndBeEffectivelyTailoredWithStrongDueProcessAndFocusedOnCriminalActivityAnyProvisionCoveringInternetIntermediariesSuchAsOnlineAdvertisingNetworksPaymentProcessorsOrSearchEnginesMustBeTransparentAndDesignedToPreventOverlyBroadPrivateRightsOfActionThatCouldEncourageUnjustifiedLitigationThatCouldDiscourageStartupBusinessesAndInnovativeFirmsFromGrowing17901" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('anyEffortToCombatOnlinePiracyMustGuardAgainstTheRiskOfOnlineCensorshipOfLawfulActivityAndMustNotInhibitInnovationByOurDynamicBusinessesLargeAndSmallAcrossTheGlobeTheOpennessOfTheInternetIsIncreasinglyCentralToInnovationInBusinessGovernmentAndSocietyAndItMustBeProtectedToMinimizeThisRiskNewLegislationMustBeNarrowlyTargetedOnlyAtSitesBeyondTheReachOfCurrentUSLawCoverActivityClearlyProhibitedUnderExistingUSLawsAndBeEffectivelyTailoredWithStrongDueProcessAndFocusedOnCriminalActivityAnyProvisionCoveringInternetIntermediariesSuchAsOnlineAdvertisingNetworksPaymentProcessorsOrSearchEnginesMustBeTransparentAndDesignedToPreventOverlyBroadPrivateRightsOfActionThatCouldEncourageUnjustifiedLitigationThatCouldDiscourageStartupBusinessesAndInnovativeFirmsFromGrowing17901','showForOutline');"><span class="opText">Any effort to combat online piracy must guard against the risk of online censorship of lawful activity and must not inhibit innovation by our dynamic businesses large and small. Across the globe, the openness of the Internet is increasingly central to innovation in business, government, and society and it must be protected. To minimize this risk, new legislation must be narrowly targeted only at sites beyond the reach of current U.S. law, cover activity clearly prohibited under existing U.S. laws, and be effectively tailored, with strong due process and focused on criminal activity. Any provision covering Internet intermediaries such as online advertising networks, payment processors, or search engines must be transparent and designed to prevent overly broad private rights of action that could encourage unjustified litigation that could discourage startup businesses and innovative firms from growing.</span></a></li>
+					<div class="hide" id="anyEffortToCombatOnlinePiracyMustGuardAgainstTheRiskOfOnlineCensorshipOfLawfulActivityAndMustNotInhibitInnovationByOurDynamicBusinessesLargeAndSmallAcrossTheGlobeTheOpennessOfTheInternetIsIncreasinglyCentralToInnovationInBusinessGovernmentAndSocietyAndItMustBeProtectedToMinimizeThisRiskNewLegislationMustBeNarrowlyTargetedOnlyAtSitesBeyondTheReachOfCurrentUSLawCoverActivityClearlyProhibitedUnderExistingUSLawsAndBeEffectivelyTailoredWithStrongDueProcessAndFocusedOnCriminalActivityAnyProvisionCoveringInternetIntermediariesSuchAsOnlineAdvertisingNetworksPaymentProcessorsOrSearchEnginesMustBeTransparentAndDesignedToPreventOverlyBroadPrivateRightsOfActionThatCouldEncourageUnjustifiedLitigationThatCouldDiscourageStartupBusinessesAndInnovativeFirmsFromGrowing17901" name="anyEffortToCombatOnlinePiracyMustGuardAgainstTheRiskOfOnlineCensorshipOfLawfulActivityAndMustNotInhibitInnovationByOurDynamicBusinessesLargeAndSmallAcrossTheGlobeTheOpennessOfTheInternetIsIncreasinglyCentralToInnovationInBusinessGovernmentAndSocietyAndItMustBeProtectedToMinimizeThisRiskNewLegislationMustBeNarrowlyTargetedOnlyAtSitesBeyondTheReachOfCurrentUSLawCoverActivityClearlyProhibitedUnderExistingUSLawsAndBeEffectivelyTailoredWithStrongDueProcessAndFocusedOnCriminalActivityAnyProvisionCoveringInternetIntermediariesSuchAsOnlineAdvertisingNetworksPaymentProcessorsOrSearchEnginesMustBeTransparentAndDesignedToPreventOverlyBroadPrivateRightsOfActionThatCouldEncourageUnjustifiedLitigationThatCouldDiscourageStartupBusinessesAndInnovativeFirmsFromGrowing17901">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('weMustAvoidCreatingNewCybersecurityRisksOrDisruptingTheUnderlyingArchitectureOfTheInternetProposedLawsMustNotTamperWithTheTechnicalArchitectureOfTheInternetThroughManipulationOfTheDomainNameSystemDnsAFoundationOfInternetSecurityOurAnalysisOfTheDnsFilteringProvisionsInSomeProposedLegislationSuggestsThatTheyPoseARealRiskToCybersecurityAndYetLeaveContrabandGoodsAndServicesAccessibleOnlineWeMustAvoidLegislationThatDrivesUsersToDangerousUnreliableDnsServersAndPutsNextGenerationSecurityPoliciesSuchAsTheDeploymentOfDnssecAtRisk13654','showForOutline');"><img class="expandIcon" id="img_weMustAvoidCreatingNewCybersecurityRisksOrDisruptingTheUnderlyingArchitectureOfTheInternetProposedLawsMustNotTamperWithTheTechnicalArchitectureOfTheInternetThroughManipulationOfTheDomainNameSystemDnsAFoundationOfInternetSecurityOurAnalysisOfTheDnsFilteringProvisionsInSomeProposedLegislationSuggestsThatTheyPoseARealRiskToCybersecurityAndYetLeaveContrabandGoodsAndServicesAccessibleOnlineWeMustAvoidLegislationThatDrivesUsersToDangerousUnreliableDnsServersAndPutsNextGenerationSecurityPoliciesSuchAsTheDeploymentOfDnssecAtRisk13654" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('weMustAvoidCreatingNewCybersecurityRisksOrDisruptingTheUnderlyingArchitectureOfTheInternetProposedLawsMustNotTamperWithTheTechnicalArchitectureOfTheInternetThroughManipulationOfTheDomainNameSystemDnsAFoundationOfInternetSecurityOurAnalysisOfTheDnsFilteringProvisionsInSomeProposedLegislationSuggestsThatTheyPoseARealRiskToCybersecurityAndYetLeaveContrabandGoodsAndServicesAccessibleOnlineWeMustAvoidLegislationThatDrivesUsersToDangerousUnreliableDnsServersAndPutsNextGenerationSecurityPoliciesSuchAsTheDeploymentOfDnssecAtRisk13654','showForOutline');"><span class="opText">We must avoid creating new cybersecurity risks or disrupting the underlying architecture of the Internet. Proposed laws must not tamper with the technical architecture of the Internet through manipulation of the Domain Name System (DNS), a foundation of Internet security. Our analysis of the DNS filtering provisions in some proposed legislation suggests that they pose a real risk to cybersecurity and yet leave contraband goods and services accessible online. We must avoid legislation that drives users to dangerous, unreliable DNS servers and puts next-generation security policies, such as the deployment of DNSSEC, at risk.</span></a></li>
+					<div class="hide" id="weMustAvoidCreatingNewCybersecurityRisksOrDisruptingTheUnderlyingArchitectureOfTheInternetProposedLawsMustNotTamperWithTheTechnicalArchitectureOfTheInternetThroughManipulationOfTheDomainNameSystemDnsAFoundationOfInternetSecurityOurAnalysisOfTheDnsFilteringProvisionsInSomeProposedLegislationSuggestsThatTheyPoseARealRiskToCybersecurityAndYetLeaveContrabandGoodsAndServicesAccessibleOnlineWeMustAvoidLegislationThatDrivesUsersToDangerousUnreliableDnsServersAndPutsNextGenerationSecurityPoliciesSuchAsTheDeploymentOfDnssecAtRisk13654" name="weMustAvoidCreatingNewCybersecurityRisksOrDisruptingTheUnderlyingArchitectureOfTheInternetProposedLawsMustNotTamperWithTheTechnicalArchitectureOfTheInternetThroughManipulationOfTheDomainNameSystemDnsAFoundationOfInternetSecurityOurAnalysisOfTheDnsFilteringProvisionsInSomeProposedLegislationSuggestsThatTheyPoseARealRiskToCybersecurityAndYetLeaveContrabandGoodsAndServicesAccessibleOnlineWeMustAvoidLegislationThatDrivesUsersToDangerousUnreliableDnsServersAndPutsNextGenerationSecurityPoliciesSuchAsTheDeploymentOfDnssecAtRisk13654">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('letUsBeClearOnlinePiracyIsARealProblemThatHarmsTheAmericanEconomyThreatensJobsForSignificantNumbersOfMiddleClassWorkersAndHurtsSomeOfOurNationSMostCreativeAndInnovativeCompaniesAndEntrepreneursItHarmsEveryoneFromStrugglingArtistsToProductionCrewsAndFromStartupSocialMediaCompaniesToLargeMovieStudiosWhileWeAreStronglyCommittedToTheVigorousEnforcementOfIntellectualPropertyRightsExistingToolsAreNotStrongEnoughToRootOutTheWorstOnlinePiratesBeyondOurBordersThatIsWhyTheAdministrationCallsOnAllSidesToWorkTogetherToPassSoundLegislationThisYearThatProvidesProsecutorsAndRightsHoldersNewLegalToolsToCombatOnlinePiracyOriginatingBeyondUSBordersWhileStayingTrueToThePrinciplesOutlinedAboveInThisResponseWeShouldNeverLetCriminalsHideBehindAHollowEmbraceOfLegitimateAmericanValues26547','showForOutline');"><img class="expandIcon" id="img_letUsBeClearOnlinePiracyIsARealProblemThatHarmsTheAmericanEconomyThreatensJobsForSignificantNumbersOfMiddleClassWorkersAndHurtsSomeOfOurNationSMostCreativeAndInnovativeCompaniesAndEntrepreneursItHarmsEveryoneFromStrugglingArtistsToProductionCrewsAndFromStartupSocialMediaCompaniesToLargeMovieStudiosWhileWeAreStronglyCommittedToTheVigorousEnforcementOfIntellectualPropertyRightsExistingToolsAreNotStrongEnoughToRootOutTheWorstOnlinePiratesBeyondOurBordersThatIsWhyTheAdministrationCallsOnAllSidesToWorkTogetherToPassSoundLegislationThisYearThatProvidesProsecutorsAndRightsHoldersNewLegalToolsToCombatOnlinePiracyOriginatingBeyondUSBordersWhileStayingTrueToThePrinciplesOutlinedAboveInThisResponseWeShouldNeverLetCriminalsHideBehindAHollowEmbraceOfLegitimateAmericanValues26547" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('letUsBeClearOnlinePiracyIsARealProblemThatHarmsTheAmericanEconomyThreatensJobsForSignificantNumbersOfMiddleClassWorkersAndHurtsSomeOfOurNationSMostCreativeAndInnovativeCompaniesAndEntrepreneursItHarmsEveryoneFromStrugglingArtistsToProductionCrewsAndFromStartupSocialMediaCompaniesToLargeMovieStudiosWhileWeAreStronglyCommittedToTheVigorousEnforcementOfIntellectualPropertyRightsExistingToolsAreNotStrongEnoughToRootOutTheWorstOnlinePiratesBeyondOurBordersThatIsWhyTheAdministrationCallsOnAllSidesToWorkTogetherToPassSoundLegislationThisYearThatProvidesProsecutorsAndRightsHoldersNewLegalToolsToCombatOnlinePiracyOriginatingBeyondUSBordersWhileStayingTrueToThePrinciplesOutlinedAboveInThisResponseWeShouldNeverLetCriminalsHideBehindAHollowEmbraceOfLegitimateAmericanValues26547','showForOutline');"><span class="opText">Let us be clear--online piracy is a real problem that harms the American economy, threatens jobs for significant numbers of middle class workers and hurts some of our nation's most creative and innovative companies and entrepreneurs.  It harms everyone from struggling artists to production crews, and from startup social media companies to large movie studios. While we are strongly committed to the vigorous enforcement of intellectual property rights, existing tools are not strong enough to root out the worst online pirates beyond our borders. That is why the Administration calls on all sides to work together to pass sound legislation this year that provides prosecutors and rights holders new legal tools to combat online piracy originating beyond U.S. borders while staying true to the principles outlined above in this response.  We should never let criminals hide behind a hollow embrace of legitimate American values.</span></a></li>
+					<div class="hide" id="letUsBeClearOnlinePiracyIsARealProblemThatHarmsTheAmericanEconomyThreatensJobsForSignificantNumbersOfMiddleClassWorkersAndHurtsSomeOfOurNationSMostCreativeAndInnovativeCompaniesAndEntrepreneursItHarmsEveryoneFromStrugglingArtistsToProductionCrewsAndFromStartupSocialMediaCompaniesToLargeMovieStudiosWhileWeAreStronglyCommittedToTheVigorousEnforcementOfIntellectualPropertyRightsExistingToolsAreNotStrongEnoughToRootOutTheWorstOnlinePiratesBeyondOurBordersThatIsWhyTheAdministrationCallsOnAllSidesToWorkTogetherToPassSoundLegislationThisYearThatProvidesProsecutorsAndRightsHoldersNewLegalToolsToCombatOnlinePiracyOriginatingBeyondUSBordersWhileStayingTrueToThePrinciplesOutlinedAboveInThisResponseWeShouldNeverLetCriminalsHideBehindAHollowEmbraceOfLegitimateAmericanValues26547" name="letUsBeClearOnlinePiracyIsARealProblemThatHarmsTheAmericanEconomyThreatensJobsForSignificantNumbersOfMiddleClassWorkersAndHurtsSomeOfOurNationSMostCreativeAndInnovativeCompaniesAndEntrepreneursItHarmsEveryoneFromStrugglingArtistsToProductionCrewsAndFromStartupSocialMediaCompaniesToLargeMovieStudiosWhileWeAreStronglyCommittedToTheVigorousEnforcementOfIntellectualPropertyRightsExistingToolsAreNotStrongEnoughToRootOutTheWorstOnlinePiratesBeyondOurBordersThatIsWhyTheAdministrationCallsOnAllSidesToWorkTogetherToPassSoundLegislationThisYearThatProvidesProsecutorsAndRightsHoldersNewLegalToolsToCombatOnlinePiracyOriginatingBeyondUSBordersWhileStayingTrueToThePrinciplesOutlinedAboveInThisResponseWeShouldNeverLetCriminalsHideBehindAHollowEmbraceOfLegitimateAmericanValues26547">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							</ul>
+						</div>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">This is not just a matter for legislation. We expect and encourage all private parties, including both content creators and Internet platform providers working together, to adopt voluntary measures and best practices to reduce online piracy.</li>
+					</ul>
+
+				</div>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">OPEN-Online Protection and Enforcement of Digital Trade Act</li>
+			<li><a href="javascript:expandCollapse('doesObamaEndorseWhoisPrivacyDomaininciteDomainNameNewsOpinion1166','showForOutline');"><img class="expandIcon" id="img_doesObamaEndorseWhoisPrivacyDomaininciteDomainNameNewsOpinion1166" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('doesObamaEndorseWhoisPrivacyDomaininciteDomainNameNewsOpinion1166','showForOutline');"><span class="opText">Does Obama endorse Whois privacy? | DomainIncite - Domain Name News & Opinion</span></a></li>
+			<div class="hide" id="doesObamaEndorseWhoisPrivacyDomaininciteDomainNameNewsOpinion1166" name="doesObamaEndorseWhoisPrivacyDomaininciteDomainNameNewsOpinion1166">
+				<ul>
+					<li><a href="http://domainincite.com/does-obama-endorse-whois-privacy/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In this future, individuals and businesses can quickly and easily obtain the tools necessary to set up their own presence online; domain names and addresses are available, secure, and properly maintained, without onerous licenses or unreasonable disclosures of personal information.</li>
+					</ul>
+
+				</div>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">VIDEO</li>
+			<li><a href="javascript:expandCollapse('rodBeckstromWikipediaTheFreeEncyclopedia5209','showForOutline');"><img class="expandIcon" id="img_rodBeckstromWikipediaTheFreeEncyclopedia5209" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('rodBeckstromWikipediaTheFreeEncyclopedia5209','showForOutline');"><span class="opText">Rod Beckstrom - Wikipedia, the free encyclopedia</span></a></li>
+			<div class="hide" id="rodBeckstromWikipediaTheFreeEncyclopedia5209" name="rodBeckstromWikipediaTheFreeEncyclopedia5209">
+				<ul>
+					<li><a href="http://en.wikipedia.org/wiki/Rod_Beckstrom" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Rod Beckstrom is an author, high-tech entrepreneur, and CEO and President of ICANN.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">He previously served as Director of the National Cyber Security Center. Prior to that Beckstrom was Chairman and Chief Catalyst of TWIKI.NET, a company which supports TWiki, an open source wiki. He was also co-founder, Chairman and CEO of CATS Software Inc., a derivatives and risk management software company which went public on NASDAQ and later was sold to Misys PLC.</li>
+					</ul>
+				</div>
+			<li><a href="http://newgtlds.icann.org/en/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Home | ICANN New gTLDs</li>
+			<li><a href="javascript:expandCollapse('coalitionForResponsibleInternetDomainOversightCridoAna23409','showForOutline');"><img class="expandIcon" id="img_coalitionForResponsibleInternetDomainOversightCridoAna23409" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('coalitionForResponsibleInternetDomainOversightCridoAna23409','showForOutline');"><span class="opText">Coalition for Responsible Internet Domain Oversight (CRIDO) | ANA</span></a></li>
+			<div class="hide" id="coalitionForResponsibleInternetDomainOversightCridoAna23409" name="coalitionForResponsibleInternetDomainOversightCridoAna23409">
+				<ul>
+
+					<li><a href="http://www.ana.net/content/show/id/crido" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>On behalf of its many constituencies and industries, CRIDO is committed to aggressively fighting ICANN's proposed program, citing its deeply flawed justification, excessive cost and harm to brand owners, likelihood of predatory cyber harm to consumers and failure to act in the public interest, a core requirement of its commitment to the U.S. Department of Commerce.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('icannPublishesWhoisReformWishListDomaininciteDomainNameNewsOpinion19207','showForOutline');"><img class="expandIcon" id="img_icannPublishesWhoisReformWishListDomaininciteDomainNameNewsOpinion19207" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('icannPublishesWhoisReformWishListDomaininciteDomainNameNewsOpinion19207','showForOutline');"><span class="opText">ICANN publishes Whois reform wish-list | DomainIncite - Domain Name News & Opinion</span></a></li>
+			<div class="hide" id="icannPublishesWhoisReformWishListDomaininciteDomainNameNewsOpinion19207" name="icannPublishesWhoisReformWishListDomaininciteDomainNameNewsOpinion19207">
+				<ul>
+					<li><a href="http://domainincite.com/icann-publishes-whois-reform-wish-list/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Create a public, machine-readable directory of Whois servers.</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Standardize query, response and error message structure.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Oblige Whois services to let users search not just by domain, but also by other data elements, such as name and address.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Add more data, such as IM handles, abuse contacts, and the history of a domain's ownership (Whowas?), to Whois records.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Create a way to authenticate Whois users. This could support more standardized privacy services, with only police, for example, able to access the private data of individual registrants.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Make all new gTLD registries host a "fat" Whois and encourage VeriSign to migrate away from its "thin" .com database.</li>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('whoisVerificationRulesComingThisYearDomaininciteDomainNameNewsOpinion3685','showForOutline');"><img class="expandIcon" id="img_whoisVerificationRulesComingThisYearDomaininciteDomainNameNewsOpinion3685" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whoisVerificationRulesComingThisYearDomaininciteDomainNameNewsOpinion3685','showForOutline');"><span class="opText">Whois verification rules coming this year | DomainIncite - Domain Name News & Opinion</span></a></li>
+			<div class="hide" id="whoisVerificationRulesComingThisYearDomaininciteDomainNameNewsOpinion3685" name="whoisVerificationRulesComingThisYearDomaininciteDomainNameNewsOpinion3685">
+				<ul>
+					<li><a href="http://domainincite.com/whois-verification-rules-coming-this-year/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ICANN expects that the RAA will incorporate -- for the first time -- Registrar commitments to verify WHOIS data. ICANN is actively considering incentives for Registrars to adopt the anticipated amendments to the RAA prior to the rollout of the first TLD in 2013.</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('cyberCopWantsWhoisPrivacyShakeUpDomaininciteDomainNameNewsOpinion7656','showForOutline');"><img class="expandIcon" id="img_cyberCopWantsWhoisPrivacyShakeUpDomaininciteDomainNameNewsOpinion7656" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('cyberCopWantsWhoisPrivacyShakeUpDomaininciteDomainNameNewsOpinion7656','showForOutline');"><span class="opText">Cyber cop wants Whois privacy shake-up | DomainIncite - Domain Name News & Opinion</span></a></li>
+			<div class="hide" id="cyberCopWantsWhoisPrivacyShakeUpDomaininciteDomainNameNewsOpinion7656" name="cyberCopWantsWhoisPrivacyShakeUpDomaininciteDomainNameNewsOpinion7656">
+				<ul>
+					<li><a href="http://domainincite.com/cyber-cop-wants-whois-privacy-shake-up/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Registrars should be obliged to vet registrants' Whois details for accuracy, and ICANN should be obliged to vet registrars, he said.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Proxy privacy services could continue, he said, but police want a single, global agreement that ICANN would sign with registries and registrars, modelled on the existing RAA contract.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Such an agreement would make it easier for police to quickly have sites taken down based on breaches in the terms and conditions.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Hoare said he was speaking not for the UK but on behalf of "global law enforcement", which he said wants "mandatory minimum standards" rather than voluntary codes of conduct.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"The price of domains may rise to cover this cost," he said.</li>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('icannTakesChargeOfInternetTimeZoneMasterListPcworldBusinessCenter5554','showForOutline');"><img class="expandIcon" id="img_icannTakesChargeOfInternetTimeZoneMasterListPcworldBusinessCenter5554" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('icannTakesChargeOfInternetTimeZoneMasterListPcworldBusinessCenter5554','showForOutline');"><span class="opText">ICANN Takes Charge of Internet Time Zone Master List | PCWorld Business Center</span></a></li>
+			<div class="hide" id="icannTakesChargeOfInternetTimeZoneMasterListPcworldBusinessCenter5554" name="icannTakesChargeOfInternetTimeZoneMasterListPcworldBusinessCenter5554">
+				<ul>
+					<li><a href="http://www.pcworld.com/businesscenter/article/242028/icann_takes_charge_of_internet_time_zone_master_list.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The TZ Database, as it is known, keeps track of all the different time zones of the world as an offset of Greenwich Mean Time, including leap seconds, various regional modifications for daylight saving time, and other temporal variances.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Operating systems such as Unix, Linux and Apple's MacOS rely on this database to coordinate times across different geographic regions, as do the Oracle and MySQL databases and many programs written in Java, Perl and PHP.</li>
+					</ul>
+
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('hadowPuppetTheatre8903','showForOutline');"><img class="expandIcon" id="img_hadowPuppetTheatre8903" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hadowPuppetTheatre8903','showForOutline');"><span class="opText">$hadow Puppet Theatre</span></a></li>
+	<div class="hide" id="hadowPuppetTheatre8903" name="hadowPuppetTheatre8903">
+		<ul>
+			<li><a href="javascript:expandCollapse('mohamedElbaradeiQuitsEgyptianPresidentialRaceWorldNewsGuardianCoUk25939','showForOutline');"><img class="expandIcon" id="img_mohamedElbaradeiQuitsEgyptianPresidentialRaceWorldNewsGuardianCoUk25939" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('mohamedElbaradeiQuitsEgyptianPresidentialRaceWorldNewsGuardianCoUk25939','showForOutline');"><span class="opText">Mohamed ElBaradei quits Egyptian presidential race | World news | guardian.co.uk</span></a></li>
+			<div class="hide" id="mohamedElbaradeiQuitsEgyptianPresidentialRaceWorldNewsGuardianCoUk25939" name="mohamedElbaradeiQuitsEgyptianPresidentialRaceWorldNewsGuardianCoUk25939">
+
+				<ul>
+					<li><a href="http://www.guardian.co.uk/world/2012/jan/14/elbaradei-quits-egyptian-presidential-race" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Nobel laureate, regarded as a driving force behind the movement that forced the former president Hosni Mubarak to step down, said the conditions for a fair election were not in place.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">At a press conference on Saturday, ElBaradei said the Supreme Council of the Armed Forces, which took over from Mubarak, had governed "as if no revolution took place and no regime has fallen".</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"My conscience does not permit me to run for the presidency or any other official position unless it is within a democratic framework," the former head of the UN nuclear watchdog said.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Although widely respected, ElBaradei was considered unlikely to secure the presidency later this year.</li>
+					</ul>
+				</div>
+			<li><a href="http://www.readability.com/read?url=http://www.weeklystandard.com/articles/worst-white-house-aide_616736.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Worst White House Aide -- www.weeklystandard.com -- Readability</li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('bankTers29939','showForOutline');"><img class="expandIcon" id="img_bankTers29939" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bankTers29939','showForOutline');"><span class="opText">Bank$ters</span></a></li>
+
+	<div class="hide" id="bankTers29939" name="bankTers29939">
+		<ul>
+			<li><a href="javascript:expandCollapse('sonOfBossCrackdownLandsInSupremeCourtReuters16902','showForOutline');"><img class="expandIcon" id="img_sonOfBossCrackdownLandsInSupremeCourtReuters16902" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sonOfBossCrackdownLandsInSupremeCourtReuters16902','showForOutline');"><span class="opText">Son of Boss crackdown lands in Supreme Court | Reuters</span></a></li>
+			<div class="hide" id="sonOfBossCrackdownLandsInSupremeCourtReuters16902" name="sonOfBossCrackdownLandsInSupremeCourtReuters16902">
+				<ul>
+					<li><a href="http://www.reuters.com/article/2012/01/13/us-usa-tax-court-idUSTRE80C1UC20120113?feedName=topNews&amp;feedType=RSS" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Home Concrete was not the only Son of Boss case where the IRS was pressed for time during its crackdown. So in 2009, the agency, interpreting a precedent-setting 1958 Supreme Court decision, made a controversial move: it wrote a regulation giving itself authority to use a six-year statute of limitations period and appealed some of the cases it had lost.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"The IRS didn't like existing law so it changed the law," said the NFIB's Gaudio.</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('iran833','showForOutline');"><img class="expandIcon" id="img_iran833" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('iran833','showForOutline');"><span class="opText">Iran</span></a></li>
+	<div class="hide" id="iran833" name="iran833">
+		<ul>
+			<li><a href="javascript:expandCollapse('unitedStatesCoastGuardWikipediaTheFreeEncyclopedia29072','showForOutline');"><img class="expandIcon" id="img_unitedStatesCoastGuardWikipediaTheFreeEncyclopedia29072" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('unitedStatesCoastGuardWikipediaTheFreeEncyclopedia29072','showForOutline');"><span class="opText">United States Coast Guard - Wikipedia, the free encyclopedia</span></a></li>
+
+			<div class="hide" id="unitedStatesCoastGuardWikipediaTheFreeEncyclopedia29072" name="unitedStatesCoastGuardWikipediaTheFreeEncyclopedia29072">
+				<ul>
+					<li><a href="http://en.wikipedia.org/wiki/United_States_Coast_Guard" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a> It operates under the Department of Homeland Security during peacetime, and can be transferred to the Department of the Navy by the President at any time, or by Congress during time of war.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('italianCruiseShipReportedTorpedoedByIranianSubmarine15557','showForOutline');"><img class="expandIcon" id="img_italianCruiseShipReportedTorpedoedByIranianSubmarine15557" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('italianCruiseShipReportedTorpedoedByIranianSubmarine15557','showForOutline');"><span class="opText">Italian Cruise Ship Reported Torpedoed By Iranian Submarine</span></a></li>
+			<div class="hide" id="italianCruiseShipReportedTorpedoedByIranianSubmarine15557" name="italianCruiseShipReportedTorpedoedByIranianSubmarine15557">
+
+				<ul>
+					<li><a href="http://www.whatdoesitmean.com/index1554.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A "flash" message received in the Kremlin today from the Northern Fleet Command, whose Russian Navy flotilla is in the Mediterranean Sea after having just left their Syrian port of call, reports that the anti-submarine ship Admiral Chabanenko has detected the firing of a torpedo having the "unmistakable signature" of one fired from a kilo-class submarine near Isola del Giglio a popular vacation island about 18 miles off the Italian Tuscan coast.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Most disturbing about this ÒflashÓ message, however, is its stating that the only known submarine currently suspected to be in the Mediterranean Sea is one, or possibly two, possessing kilo-class torpedoes belong to the Islamic Republic of Iran Navy (IRIN).</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('poppieTan234','showForOutline');"><img class="expandIcon" id="img_poppieTan234" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('poppieTan234','showForOutline');"><span class="opText">Poppie$tan</span></a></li>
+
+	<div class="hide" id="poppieTan234" name="poppieTan234">
+		<ul>
+			<li><a href="javascript:expandCollapse('afghanOpiumPricesSoarAsProductionRises11419','showForOutline');"><img class="expandIcon" id="img_afghanOpiumPricesSoarAsProductionRises11419" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('afghanOpiumPricesSoarAsProductionRises11419','showForOutline');"><span class="opText">Afghan opium prices soar as production rises</span></a></li>
+			<div class="hide" id="afghanOpiumPricesSoarAsProductionRises11419" name="afghanOpiumPricesSoarAsProductionRises11419">
+				<ul>
+					<li><a href="http://www.unodc.org/unodc/en/frontpage/2012/January/afghan-opium-prices-soar-as-production-rises.html?ref=fs1" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The full Afghan Opium Survey for 2011 points to a dramatic increase of 133 per cent in the farm-gate value of opium compared with 2010 (the summary findings of the survey were issued in September 2011).  Released today by the Ministry of Counter-Narcotics of Afghanistan and the United Nations Office on Drugs and Crime (UNODC), the survey reveals that the farm-gate income generated by opium probably amounted to $1.4 billion, equivalent to 9 per cent of the GDP of Afghanistan in 2011.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Even more striking is the potential income derived from opium production. Export earnings from Afghan opiates may be worth $2.4 billion - equivalent to 15 per cent of GDP. Such vast sums cannot easily be earned in other ways. "Opium is therefore a significant part of the Afghan economy and provides considerable funding to the insurgency and fuels corruption," said Yury Fedotov, Executive Director of UNODC.</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('shutUpSlave26067','showForOutline');"><img class="expandIcon" id="img_shutUpSlave26067" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('shutUpSlave26067','showForOutline');"><span class="opText">Shut Up Slave!</span></a></li>
+	<div class="hide" id="shutUpSlave26067" name="shutUpSlave26067">
+		<ul>
+			<li><a href="javascript:expandCollapse('owsProtestersChargedWithFelonyForMicCheckingMayorCare2Causes10454','showForOutline');"><img class="expandIcon" id="img_owsProtestersChargedWithFelonyForMicCheckingMayorCare2Causes10454" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('owsProtestersChargedWithFelonyForMicCheckingMayorCare2Causes10454','showForOutline');"><span class="opText">OWS Protesters Charged With Felony For Mic-Checking Mayor | Care2 Causes</span></a></li>
+
+			<div class="hide" id="owsProtestersChargedWithFelonyForMicCheckingMayorCare2Causes10454" name="owsProtestersChargedWithFelonyForMicCheckingMayorCare2Causes10454">
+				<ul>
+					<li><a href="http://www.care2.com/causes/ows-protesters-charged-with-felony-for-mic-checking-mayor.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A few days ago, members of Occupy San Diego cleverly mic-checked Mayor Jerry Sanders during his State of the City address.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Now mic-checking, while intentionally disruptive, is an completely peaceful tactic that has been employed in a wide-variety of settings during the Occupy Wall Street movement.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The CEO of Wells Fargo, representatives of JP Morgan Chase, Newt Gingrich, and even President Obama have been targets of this practice. But not even President Obama responded with as much aggression and ignorance as the San Diego police officers in attendance (with full blessing of the Mayor).</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Not content to simply escort the OWS protesters out of the venue, at least three were arrested and charged with felony conspiracy for their actions.</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('gopXfactor10749','showForOutline');"><img class="expandIcon" id="img_gopXfactor10749" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gopXfactor10749','showForOutline');"><span class="opText">GOP XFactor</span></a></li>
+	<div class="hide" id="gopXfactor10749" name="gopXfactor10749">
+
+		<ul>
+			<li><a href="javascript:expandCollapse('perryGingrichLoseLawsuitToGetOnVirginiaPrimaryBallotTheWashingtonPost21100','showForOutline');"><img class="expandIcon" id="img_perryGingrichLoseLawsuitToGetOnVirginiaPrimaryBallotTheWashingtonPost21100" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('perryGingrichLoseLawsuitToGetOnVirginiaPrimaryBallotTheWashingtonPost21100','showForOutline');"><span class="opText">Perry, Gingrich lose lawsuit to get on Virginia primary ballot - The Washington Post</span></a></li>
+			<div class="hide" id="perryGingrichLoseLawsuitToGetOnVirginiaPrimaryBallotTheWashingtonPost21100" name="perryGingrichLoseLawsuitToGetOnVirginiaPrimaryBallotTheWashingtonPost21100">
+				<ul>
+					<li><a href="http://www.washingtonpost.com/local/dc-politics/perry-gingrich-lose-lawsuit-to-get-on-virginia-primary-ballot/2012/01/13/gIQANoIExP_story.html?hpid=z4" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Santorum and Huntsman did not submit signatures and failed to qualify for the ballot. Officials testified Friday that Santorum's campaign collected 8,000 but did not turn them in because campaign officials knew they fell short. Huntsman's campaign officials said they did not want to pay $100,000 to a firm to collect the signatures.</li>
+					</ul>
+				</div>
+			</ul>
+
+		</div>
+	<li><a href="javascript:expandCollapse('euroland17607','showForOutline');"><img class="expandIcon" id="img_euroland17607" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland17607','showForOutline');"><span class="opText">EUROLand</span></a></li>
+	<div class="hide" id="euroland17607" name="euroland17607">
+		<ul>
+			<li><a href="javascript:expandCollapse('greekCrisisHedgeFundsWalkOutTheSlog13249','showForOutline');"><img class="expandIcon" id="img_greekCrisisHedgeFundsWalkOutTheSlog13249" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('greekCrisisHedgeFundsWalkOutTheSlog13249','showForOutline');"><span class="opText">GREEK CRISIS: HEDGE FUNDS WALK OUT | The Slog</span></a></li>
+			<div class="hide" id="greekCrisisHedgeFundsWalkOutTheSlog13249" name="greekCrisisHedgeFundsWalkOutTheSlog13249">
+				<ul>
+					<li><a href="http://hat4uk.wordpress.com/2012/01/14/greek-crisis-hedge-funds-walk-out/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Talks over Greece's debt restructuring broke down on Friday, an unexpected blow that makes it increasingly likely that Athens will become the first government of a developed country in more than 60 years to suffer a full-scale default on its debt....'</li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('sPCreditFaqFactorsBehindOurRatingActionsOnEurozoneSovereignGovernmentsAmericas32077','showForOutline');"><img class="expandIcon" id="img_sPCreditFaqFactorsBehindOurRatingActionsOnEurozoneSovereignGovernmentsAmericas32077" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sPCreditFaqFactorsBehindOurRatingActionsOnEurozoneSovereignGovernmentsAmericas32077','showForOutline');"><span class="opText">S&P | Credit FAQ: Factors Behind Our Rating Actions On Eurozone Sovereign Governments | Americas</span></a></li>
+			<div class="hide" id="sPCreditFaqFactorsBehindOurRatingActionsOnEurozoneSovereignGovernmentsAmericas32077" name="sPCreditFaqFactorsBehindOurRatingActionsOnEurozoneSovereignGovernmentsAmericas32077">
+				<ul>
+					<li><a href="http://www.standardandpoors.com/ratings/articles/en/us/?articleType=HTML&amp;assetID=1245327305715" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>We have lowered the long-term ratings on Cyprus, Italy, Portugal, and Spain by two notches; lowered the long-term ratings on Austria, France, Malta, the Slovak Republic, and Slovenia, by one notch; and affirmed the long-term ratings on Belgium, Estonia, Finland, Germany, Ireland, Luxembourg, and the Netherlands. All ratings on the 16 sovereigns have been removed from CreditWatch where they were placed with negative implications on Dec. 5, 2011 (except for Cyprus, which was first placed on CreditWatch on Aug. 12, 2011).</li>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('flandersnewsBeCashPaymentsOver5000EuroToBeBanned16663','showForOutline');"><img class="expandIcon" id="img_flandersnewsBeCashPaymentsOver5000EuroToBeBanned16663" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('flandersnewsBeCashPaymentsOver5000EuroToBeBanned16663','showForOutline');"><span class="opText">flandersnews.be: Cash payments over 5,000 Euro to be banned</span></a></li>
+			<div class="hide" id="flandersnewsBeCashPaymentsOver5000EuroToBeBanned16663" name="flandersnewsBeCashPaymentsOver5000EuroToBeBanned16663">
+				<ul>
+					<li><a href="http://www.deredactie.be/cm/vrtnieuws.english/news/120114_Cash_Payments" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Several of Saturday morning's newspapers report that the legal limit for payments in cash is to be reduced from 15,000 to 5,000 Euro. The new measures are intended to help in the battle against money laundering. The Federal Secretary of State responsible for tackling fraud John Crombez (Flemish socialist) told journalists that "There is evidence that payment by bank transfer reduces the risk of fraud".</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Within the next few years, the maximum limit for cash payments will be further reduced. Mr Crombez hopes that by the end of the current legislature the limit will stand at 3,000 Euro.</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The government is to adopt a phased approach to reducing the limit, as it wants to ensure that it will be respected.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"As far as I'm concerned, if we are successful in ensuring the limit is respected, it can be reduced still further in the future, as has been the case in some other countries."</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Concrete plans for a control mechanism are being discussed within the federal cabinet. The measures currently only apply to goods. Services such as those offered by the liberal professions like solicitors are currently exempt.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Mr Crombez is considering extending the limit to cover services as well.</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('romaniaGovtWithdrawsControversialHealthcareBillReuters20783','showForOutline');"><img class="expandIcon" id="img_romaniaGovtWithdrawsControversialHealthcareBillReuters20783" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('romaniaGovtWithdrawsControversialHealthcareBillReuters20783','showForOutline');"><span class="opText">Romania govt withdraws controversial healthcare bill | Reuters</span></a></li>
+			<div class="hide" id="romaniaGovtWithdrawsControversialHealthcareBillReuters20783" name="romaniaGovtWithdrawsControversialHealthcareBillReuters20783">
+				<ul>
+					<li><a href="http://www.reuters.com/article/2012/01/13/romania-healthcare-idUSL6E8CD46620120113" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Romania's government pulled its controversial draft healthcare reform bill on Friday after street protests and criticism from experts who say it lacked detail on private sector involvement and risked further damaging the outdated medical system.</li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('dutchnewsNlCouncilPlansHigherParkingForBigCarsInAmsterdam18955','showForOutline');"><img class="expandIcon" id="img_dutchnewsNlCouncilPlansHigherParkingForBigCarsInAmsterdam18955" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('dutchnewsNlCouncilPlansHigherParkingForBigCarsInAmsterdam18955','showForOutline');"><span class="opText">DutchNews.nl - Council plans higher parking for big cars in Amsterdam</span></a></li>
+			<div class="hide" id="dutchnewsNlCouncilPlansHigherParkingForBigCarsInAmsterdam18955" name="dutchnewsNlCouncilPlansHigherParkingForBigCarsInAmsterdam18955">
+				<ul>
+					<li><a href="http://www.dutchnews.nl/news/archives/2012/01/council_plans_higher_parking_f.php" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The owners of large cars in the Amsterdam borough council of West will soon have to pay more to park their cars, the Parool reports on Saturday.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Next year, the borough council plans to introduce parking fees based on the length of the car. This means the owners of large cars will end up paying twice as much to park than the owners of small runabouts, the paper says.</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('monsantooo7518','showForOutline');"><img class="expandIcon" id="img_monsantooo7518" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('monsantooo7518','showForOutline');"><span class="opText">Monsantooo</span></a></li>
+	<div class="hide" id="monsantooo7518" name="monsantooo7518">
+		<ul>
+			<li><a href="javascript:expandCollapse('wholeStoryBlogArchiveUrgentActionNeededToSupportOrganicsAndNonGeCrops31980','showForOutline');"><img class="expandIcon" id="img_wholeStoryBlogArchiveUrgentActionNeededToSupportOrganicsAndNonGeCrops31980" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('wholeStoryBlogArchiveUrgentActionNeededToSupportOrganicsAndNonGeCrops31980','showForOutline');"><span class="opText">Whole Story >> Blog Archive >> Urgent Action Needed to Support Organics and Non-GE Crops</span></a></li>
+
+			<div class="hide" id="wholeStoryBlogArchiveUrgentActionNeededToSupportOrganicsAndNonGeCrops31980" name="wholeStoryBlogArchiveUrgentActionNeededToSupportOrganicsAndNonGeCrops31980">
+				<ul>
+					<li><a href="http://blog.wholefoodsmarket.com/2011/01/urgent-action-needed-to-support-organics-and-non-ge-crops/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>1) fully deregulate GE alfalfa OR</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">2) conditionally deregulate it by placing certain rules and restrictions on growing GE alfalfa that would minimize or limit contamination of non-GE crops (including organic).</li>
+					</ul>
+				</div>
+			</ul>
+
+		</div>
+	<li><a href="javascript:expandCollapse('ministryOfTruth21715','showForOutline');"><img class="expandIcon" id="img_ministryOfTruth21715" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ministryOfTruth21715','showForOutline');"><span class="opText">Ministry of Truth</span></a></li>
+	<div class="hide" id="ministryOfTruth21715" name="ministryOfTruth21715">
+		<ul>
+			<li><a href="javascript:expandCollapse('letterFromThePresidentToTheSpeakerOfTheHouseOfRepresentativesAndThePresidentOfTheSenateRegardingTheDebtLimitTheWhiteHouse25746','showForOutline');"><img class="expandIcon" id="img_letterFromThePresidentToTheSpeakerOfTheHouseOfRepresentativesAndThePresidentOfTheSenateRegardingTheDebtLimitTheWhiteHouse25746" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('letterFromThePresidentToTheSpeakerOfTheHouseOfRepresentativesAndThePresidentOfTheSenateRegardingTheDebtLimitTheWhiteHouse25746','showForOutline');"><span class="opText">Letter from the President to the Speaker of the House of Representatives and the President of the Senate Regarding the Debt Limit | The White House</span></a></li>
+			<div class="hide" id="letterFromThePresidentToTheSpeakerOfTheHouseOfRepresentativesAndThePresidentOfTheSenateRegardingTheDebtLimitTheWhiteHouse25746" name="letterFromThePresidentToTheSpeakerOfTheHouseOfRepresentativesAndThePresidentOfTheSenateRegardingTheDebtLimitTheWhiteHouse25746">
+				<ul>
+					<li><a href="http://www.whitehouse.gov/the-press-office/2012/01/12/letter-president-speaker-house-representatives-and-president-senate-rega" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Pursuant to section 3101A(a)(2)(A) of title 31, United States Code, I hereby certify that the debt subject to limit is within $100,000,000,000 of the limit in 31 U.S.C. 3101(b) and that further borrowing is required to meet existing commitments.</li>
+
+					</ul>
+				</div>
+			<li><a href="http://www.dailypaul.com/204233/adam-curry-now-skeptical-of-doug-wead" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Adam Curry is a horrible horrible person for ever suggesting Doug was anything other than awesome | Ron Paul 2012 | Peace . Gold . Liberty</li>
+			<li><a href="javascript:expandCollapse('votersStruggleToAnswerBasicQuestionsAboutGopFieldLatimesCom7673','showForOutline');"><img class="expandIcon" id="img_votersStruggleToAnswerBasicQuestionsAboutGopFieldLatimesCom7673" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('votersStruggleToAnswerBasicQuestionsAboutGopFieldLatimesCom7673','showForOutline');"><span class="opText">Voters struggle to answer basic questions about GOP field - latimes.com</span></a></li>
+			<div class="hide" id="votersStruggleToAnswerBasicQuestionsAboutGopFieldLatimesCom7673" name="votersStruggleToAnswerBasicQuestionsAboutGopFieldLatimesCom7673">
+				<ul>
+					<li><a href="http://www.latimes.com/news/politics/la-pn-voters-struggle-to-answer-basic-questions-about-gop-field-20120113,0,6306494.story?track=rss" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Forty-three percent of voters answered at least three of the questions correctly, compared with just 16% of non-voters. Voters were least able to name the candidate who opposes U.S. involvement in Afghanistan (Ron Paul), and to name the (upcoming) primary that follows nominating contests in Iowa and New Hampshire (South Carolina).</li>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('manyVotersUnawareOfBasicFactsAboutGopCandidatesPewResearchCenter14077','showForOutline');"><img class="expandIcon" id="img_manyVotersUnawareOfBasicFactsAboutGopCandidatesPewResearchCenter14077" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('manyVotersUnawareOfBasicFactsAboutGopCandidatesPewResearchCenter14077','showForOutline');"><span class="opText">Many Voters Unaware of Basic Facts about GOP Candidates - Pew Research Center</span></a></li>
+			<div class="hide" id="manyVotersUnawareOfBasicFactsAboutGopCandidatesPewResearchCenter14077" name="manyVotersUnawareOfBasicFactsAboutGopCandidatesPewResearchCenter14077">
+				<ul>
+					<li><a href="http://pewresearch.org/pubs/2169/republican-candidates-voter-knowledge-mitt-romney-newt-gingrich-ron-paul" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Fewer than half of registered voters (45%) identify South Carolina as the state with the next primary after Iowa and New Hampshire (the survey was conducted Jan. 4-8, before New Hampshire's Jan. 10 primary). And while Ron Paul fared well in the early GOP contests, just 44% of voters identify Paul as the Republican candidate who opposes U.S. military involvement in Afghanistan.</li>
+					</ul>
+				</div>
+
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('technoExperts27186','showForOutline');"><img class="expandIcon" id="img_technoExperts27186" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('technoExperts27186','showForOutline');"><span class="opText">Techno Experts</span></a></li>
+	<div class="hide" id="technoExperts27186" name="technoExperts27186">
+		<ul>
+			<li><a href="javascript:expandCollapse('usEmbassyInThailandWarnsOfPossibleTerroristThreatWorldRiaNovosti20182','showForOutline');"><img class="expandIcon" id="img_usEmbassyInThailandWarnsOfPossibleTerroristThreatWorldRiaNovosti20182" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('usEmbassyInThailandWarnsOfPossibleTerroristThreatWorldRiaNovosti20182','showForOutline');"><span class="opText">US Embassy in Thailand warns of possible terrorist threat | World | RIA Novosti</span></a></li>
+			<div class="hide" id="usEmbassyInThailandWarnsOfPossibleTerroristThreatWorldRiaNovosti20182" name="usEmbassyInThailandWarnsOfPossibleTerroristThreatWorldRiaNovosti20182">
+				<ul>
+
+					<li><a href="http://en.rian.ru/world/20120113/170737467.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The United States Embassy in Thailand alerted U.S. citizens that terrorists may be planning to conduct attacks in tourist areas in Bangkok in the near future.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"U.S. citizens are urged to exercise caution when visiting public areas where large groups of Western tourists gather in Bangkok," the embassy said in an emergency message.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"U.S. citizens are encouraged to maintain a heightened awareness when out in public."</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Americans are encouraged to be alert for unattended packages in crowded places and report any suspicious behavior to the nearest law enforcement personnel.</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">They are also encouraged to "keep a low profile in public areas, particularly areas frequented by foreign tourists."</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('gitmoNation13243','showForOutline');"><img class="expandIcon" id="img_gitmoNation13243" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gitmoNation13243','showForOutline');"><span class="opText">Gitmo Nation</span></a></li>
+	<div class="hide" id="gitmoNation13243" name="gitmoNation13243">
+
+		<ul>
+			<li><a href="javascript:expandCollapse('fbiCarrierIqFilesUsedForLawEnforcementPurposesMuckrock13248','showForOutline');"><img class="expandIcon" id="img_fbiCarrierIqFilesUsedForLawEnforcementPurposesMuckrock13248" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('fbiCarrierIqFilesUsedForLawEnforcementPurposesMuckrock13248','showForOutline');"><span class="opText">FBI: Carrier IQ files used for "law enforcement purposes" | Muckrock</span></a></li>
+			<div class="hide" id="fbiCarrierIqFilesUsedForLawEnforcementPurposesMuckrock13248" name="fbiCarrierIqFilesUsedForLawEnforcementPurposesMuckrock13248">
+				<ul>
+					<li><a href="http://www.muckrock.com/news/archives/2011/dec/12/fbi-carrier-iq-files-used-law-enforcement-purposes/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A recent FOIA request to the Federal Bureau of Investigation for "manuals, documents or other written guidance used to access or analyze data gathered by programs developed or deployed by Carrier IQ" was met with a telling denial. In it, the FBI stated it did have responsive documents - but they were exempt under a provision that covers materials that, if disclosed, might reasonably interfere with an ongoing investigation. </li>
+					</ul>
+				</div>
+			</ul>
+
+		</div>
+	<li><a href="javascript:expandCollapse('elite13542','showForOutline');"><img class="expandIcon" id="img_elite13542" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('elite13542','showForOutline');"><span class="opText">Elite$</span></a></li>
+	<div class="hide" id="elite13542" name="elite13542">
+		<ul>
+			<li><a href="javascript:expandCollapse('usForNewTimeStandardChinaBritainSayNoScienceTechChinadailyComCn5355','showForOutline');"><img class="expandIcon" id="img_usForNewTimeStandardChinaBritainSayNoScienceTechChinadailyComCn5355" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('usForNewTimeStandardChinaBritainSayNoScienceTechChinadailyComCn5355','showForOutline');"><span class="opText">US for new time standard, China, Britain say no|Science-Tech|chinadaily.com.cn</span></a></li>
+			<div class="hide" id="usForNewTimeStandardChinaBritainSayNoScienceTechChinadailyComCn5355" name="usForNewTimeStandardChinaBritainSayNoScienceTechChinadailyComCn5355">
+				<ul>
+					<li><a href="http://europe.chinadaily.com.cn/china/2012-01/06/content_14390615.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>BEIJING - One night, several thousand years later, you might wake up to find your digital clock showing it's 8 am in the morning.</li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Your clock is accurate and you're not caught in a science fiction. Clock time might not signify a particular time of the day, as we know it, if a proposal to amend the global standard of timekeeping is passed at a conference in the International Telecommunication Union (ITU) in Geneva in mid-January.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The proposal, put forward by the United States, suggests a switch to International Atomic Time (TAI) from Coordinated Universal Time (UTC), the timekeeping standard currently followed across the world.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"The proposal is backed by most developed countries, and a vote is likely at a conference of the ITU in mid-January," said Dong Shaowu, a senior researcher of the National Time Service Center under the Chinese Academy of Sciences, and a member of the Chinese delegation to the conference.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The more precise TAI might bring technical benefits to some industries, such as satellite navigation and air-traffic control systems, according to Dong.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"Even if this proposal is approved, it will not impact public life in the short term in a big way. However, some industries that require high precision of time will be affected," said Liu Changhong, a senior engineer at the National Time Service Center.</li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+					<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The decision to be made in Geneva may be the most important since 1961, when the world adopted UTC, based on Greenwich Mean Time - the cornerstone of international timekeeping since 1884. </li>
+					</ul>
+				</div>
+
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('video20569','showForOutline');"><img class="expandIcon" id="img_video20569" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('video20569','showForOutline');"><span class="opText">VIDEO</span></a></li>
+	<div class="hide" id="video20569" name="video20569">
+		<ul>
+			<li><a href="http://www.c-spanvideo.org/appearance/601140307" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>White House Seeks Power to Trim Government Agencies - C-SPAN Video Library</li>
+			<li><a href="http://www.youtube.com/watch?v=SbR9zhdr-po&amp;feature=youtu.be&amp;t=2m50s" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ian Schuler speaks at a New America Foundation Future Tense Event - [VIDEO] </li>
+
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+
+			</div>
+		<div class="tab-pane" id="clipsAndStuff">
+			<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+<style>
+	.divOutlineByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		color: gray;
+		}
+	.divOutlineByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divOutlineTitle h3 {
+		font-family: Cardo;
+		font-size: 46px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divOutlineDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	</style>
+<div class="divOutlineBody">
+	<div class="divOutlineTitle">
+		<h3>Clips and Stuff</h3>
+		</div>
+	<div class="divOutlineDescription">
+		
+		</div>
+	<div class="divOutlineByline">
+
+		By <a href="">Adam Curry</a>.
+		Posted Thursday, January 12, 2012 at 1:33 PM.
+		</div>
+	
+<ul>
+	<li><a href="javascript:expandCollapse('consolidationAutority32617','showForOutline');"><img class="expandIcon" id="img_consolidationAutority32617" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('consolidationAutority32617','showForOutline');"><span class="opText">consolidation autority</span></a></li>
+	<div class="hide" id="consolidationAutority32617" name="consolidationAutority32617">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/consolidation autority/consolidation authroity act.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>consolidation authroity act.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/consolidation autority/Obama New website.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Obama New website.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/consolidation autority/Obama show and tell.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Obama show and tell.mp3</li>
+			</ul>
+		</div>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/DHS monitor list.pdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>DHS monitor list.pdf</li>
+	<li><a href="javascript:expandCollapse('droneZonePics13525','showForOutline');"><img class="expandIcon" id="img_droneZonePics13525" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('droneZonePics13525','showForOutline');"><span class="opText">Drone Zone Pics</span></a></li>
+	<div class="hide" id="droneZonePics13525" name="droneZonePics13525">
+
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1246.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1246.jpeg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1247.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1247.jpeg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1264.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1264.jpeg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1278.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1278.jpeg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1282.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1282.jpeg</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1289.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1289.jpeg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1292.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1292.jpeg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Drone Zone Pics/IMG_1301.jpeg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>IMG_1301.jpeg</li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('euroland21818','showForOutline');"><img class="expandIcon" id="img_euroland21818" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland21818','showForOutline');"><span class="opText">EUROLand</span></a></li>
+	<div class="hide" id="euroland21818" name="euroland21818">
+
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/EUROLand/greek debt running out.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>greek debt running out.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/EUROLand/S&amp;P euro downgrades.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>S&P euro downgrades.mp3</li>
+			</ul>
+		</div>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/gardasil tourette.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>gardasil tourette.mp3</li>
+
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/ICANN-guidebook.pdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ICANN-guidebook.pdf</li>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/internet in a suitcase.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>internet in a suitcase.mp3</li>
+	<li><a href="javascript:expandCollapse('iran14260','showForOutline');"><img class="expandIcon" id="img_iran14260" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('iran14260','showForOutline');"><span class="opText">Iran</span></a></li>
+	<div class="hide" id="iran14260" name="iran14260">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Iran/Barbara Starr-SHILL.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Barbara Starr-SHILL.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Iran/battleship.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>battleship.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Iran/captain arrested.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>captain arrested.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Iran/panetta red line.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>panetta red line.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Iran/titantic 3d.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>titantic 3d.mp3</li>
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('jcdClips3077','showForOutline');"><img class="expandIcon" id="img_jcdClips3077" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jcdClips3077','showForOutline');"><span class="opText">JCD Clips</span></a></li>
+	<div class="hide" id="jcdClips3077" name="jcdClips3077">
+
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/BONES SHOW HACKTIVIST.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>BONES SHOW HACKTIVIST.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/disney what.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>disney what.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/douchebad judge.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>douchebad judge.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/fractals on bone.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>fractals on bone.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/hey citizen.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>hey citizen.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/jim crow lives.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>jim crow lives.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/manipulate the media.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>manipulate the media.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/miss new york.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>miss new york.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/miss wisconsin tell.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>miss wisconsin tell.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/ron paul on bubble.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ron paul on bubble.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/santorum on natural gas.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>santorum on natural gas.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/scalia ginsburg free speech.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>scalia ginsburg free speech.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/time supreme court.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>time supreme court.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/JCD Clips/what passes for education.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>what passes for education.mp3</li>
+			</ul>
+		</div>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/na374art.jpg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>na374art.jpg</li>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Open Act.pdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Open Act.pdf</li>
+
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/opium booming.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>opium booming.mp3</li>
+	<li><a href="javascript:expandCollapse('ronPaul8220','showForOutline');"><img class="expandIcon" id="img_ronPaul8220" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ronPaul8220','showForOutline');"><span class="opText">Ron Paul</span></a></li>
+	<div class="hide" id="ronPaul8220" name="ronPaul8220">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/ROn Paul/dana bash gets snowballed.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>dana bash gets snowballed.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/ROn Paul/Hookers for Ron Paul.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Hookers for Ron Paul.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/ROn Paul/Ron Paul kicks msnbc.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Ron Paul kicks msnbc.mp3</li>
+
+			</ul>
+		</div>
+	<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/SOPA is to sell new gTLDs.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>SOPA is to sell new gTLDs.mp3</li>
+	<li><a href="javascript:expandCollapse('whipIt29179','showForOutline');"><img class="expandIcon" id="img_whipIt29179" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('whipIt29179','showForOutline');"><span class="opText">Whip It</span></a></li>
+	<div class="hide" id="whipIt29179" name="whipIt29179">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Whip It/devo-whip it.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>devo-whip it.mp3</li>
+
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Whip It/manning-whip it ron.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>manning-whip it ron.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/Whip It/whip it ron.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>whip it ron.mp3</li>
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+					</div>
+				<div class="divComments">
+					
+<center>
+
+	<br>
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://disqus.com/forums/adamcurrycomments/embed.js"></script>
+	<noscript><a href="http://adamcurrycomments.disqus.com/?url=ref">View the forum thread.</a></noscript>
+
+	</center>
+
+					</div>
+				<div class="divOpmlPageFooter">
+
+					<div class="divOpmlPageFooterBox">
+						<!-- XML icon -->
+							<a href="http://static.curry.com/worldoutline/admin/2012/01/12/archive173.opml" title="Click on this icon to view the OPML source text for this directory. More info: http://www.opml.org/spec2."><img class="imgXmlIcon" src="http://scripting.com/images/xmlIcon2.gif" border="0" width="36" height="14" alt="XML" /></a>
+						<!-- stats & atts -->
+							<a href="#" rel="popover" title="Node Stats" data-content="Editor: Adam Curry;  Updated: 1/15/12; 3861 reads. 1 items.  Page build ran for 1.616 seconds.">Stats</a> & <a href="#" rel="popover" title="Node Attributes" data-content="disqusShortname=adamcurrycomments, domain=374.nashownotes.com, flDirectoryIcons=false, flDisqusComments=xxx, headerText=NA-374-2012-01-15, iconImageHtml=140 chars, menuEnabled=false, outlineCreatedDate=Thursday, January 12, 2012, outlineCreatedTime=1:33 PM, outlineDateCreated=Sun, 15 Jan 2012 21:47:05 GMT, outlineDateModified=Sun, 15 Jan 2012 21:53:06 GMT, outlineDescription=0 chars, outlineModDate=Sunday, January 15, 2012, outlineModTime=2:53 PM, outlineOwnerBioUrl=, outlineOwnerEmail=adam@curry.com, outlineOwnerName=Adam Curry, outlineTitle=No Agenda Episode 374, text=No Agenda Episode 374, type=tabs.">Atts</a>.
+						<br><br>Only steal from the best.
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</body>
+	</html>

@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>World Outline: No Agenda Episode 373</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://static.curry.com/worldoutline/admin/rss.xml" />
+		<link href="http://fonts.googleapis.com/css?family=Cardo" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+		
+		<link href="http://fonts.googleapis.com/css?family=IM Fell DW Pica SC" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<link href="http://static.scripting.com/github/bootstrap/bootstrap.css" rel="stylesheet">
+
+<link href="http://static.scripting.com/github/bootstrap/docs.css" rel="stylesheet">
+<link href="http://static.scripting.com/github/bootstrap/prettify.css" rel="stylesheet">
+
+<script src="http://static.scripting.com/github/bootstrap/jquery.min.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/jquery.tablesorter.min.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-dropdown.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-twipsy.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-scrollspy.js"></script>
+
+<script src="http://static.scripting.com/github/bootstrap/application.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-popover.js"></script>
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-modal.js"></script> <!-- 1/11/12 by DW -->
+<script src="http://static.scripting.com/github/bootstrap/bootstrap-tabs.js"></script> <!-- 1/12/12 by DW -->
+<script>
+	$(function () {
+		$("a[rel=twipsy]").twipsy({
+			live: true
+			})
+		})
+	</script>
+<script>
+	$(function () {
+		$("a[rel=popover]")
+		.popover({
+			offset: 10
+			})
+		.click(function(e) {
+			e.preventDefault()
+			})
+		})
+	</script>
+<style>
+	body {
+		margin-top: -5px;
+		}
+	table th {
+		border: 0;
+		}
+	table {
+		border: 0px;
+		}
+	.actions {
+		border: 0;
+		background: none;
+		padding: 0;
+		}
+	</style>
+<style>
+	body {
+		color: black;
+		}
+	/* eliminate borders on tables */
+		table th {
+			border: 0;
+			}
+		table td {
+			border: 0;
+			}
+		table {
+			border: 0px;
+			}
+	.divOpmlWebpage {
+		margin-left: 12%;
+		margin-right: 12%;
+		margin-bottom: 65px;
+		color: black;
+		}
+	.divOpmlHeader {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		}
+	.divOpmlHeader h1 {
+		font-family: 'IM Fell DW Pica SC';
+		text-align: center;
+		text-shadow: 4px 4px 4px #AAA;
+		font-size: 68px;
+		padding: 0px;
+		margin: 0px;
+		}
+	.divOpmlHeader red {
+		color: red;
+		font-size: 110%;
+		}
+	.divOpmlHeader a:link {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:hover {
+		text-decoration: none;
+		color:#000;
+		}
+	.divOpmlHeader a:visited {
+		text-decoration: none;
+		color:#000;
+		}
+	
+	.divOpmlMenubar a, .divOpmlMenubar a:link, .divOpmlMenubar a:visited {
+		color: lightgray;
+		}
+	.divOpmlMenubar white {
+		color: white;
+		}
+	.divOpmlMenubarStatus {
+		color: lightgray;
+		float: right;
+		line-height: 19px;
+		padding: 10px 0px 11px;
+		font-size: 13px;
+		}
+	
+	.divOpmlWebpageBody {
+		padding-top: 0px;
+		}
+	.divOpmlWebpageBody h3 {
+		font-family: Ubuntu;
+		font-size: 24px;
+		}
+	
+	.divIntroPgf {
+		font-size: 14px;
+		line-height: 120%;
+		color: black;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		}
+	.prefsTable th, .prefsTable td {
+		border: 0;
+		font-size: 140%;
+		line-height: 100%;
+		}
+	.prefsTable td.input: {
+		height: 100%;
+		padding: 0;
+		border: 0;
+		}
+	
+	/* sign-in form */
+		.divSigninForm .signinLabel {
+			text-align: right;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm td {
+			border: none;
+			}
+		.divSigninForm input {
+			height: 32px;
+			padding: 3px;
+			font-family: Ubuntu;
+			font-size: 18px;
+			}
+		.divSigninForm table {
+			padding-top: 30px;
+			width: auto;
+			}
+	/* prefs */
+		.divPrefs {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs label {
+			font-family: Ubuntu;
+			font-size: 17px;
+			}
+		.divPrefs .row {
+			line-height: 24px;
+			margin-bottom: 12px;
+			}
+		.divPrefs red {
+			color: red;
+			}
+		.divPrefs li {
+			font-family: Ubuntu;
+			font-size: 17px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			}
+		.divPrefs h4 {
+			font-family: Ubuntu;
+			font-size: 22px;
+			padding-top: 15px;
+			padding-bottom: 5px;
+			}
+	/* log pages */
+		.logEvent {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			}
+		.logDescription {
+			vertical-align: top;
+			text-align: left;
+			color: black;
+			line-height: 120%;
+			}
+		.logDate {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.logSeconds {
+			vertical-align: top;
+			text-align: right;
+			color: black;
+			font-size: 14px;
+			}
+		.divLogPage table {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.divLogPage td {
+			border: none;
+			font-size: 16px;
+			}
+		.divLogPage th {
+			border: none;
+			font-size: 14px;
+			padding-bottom: 0px;
+			}
+	</style>
+
+		<style>
+			/* header */
+				.divGraphic {
+					margin: 0px auto;
+					}
+				.divGraphic img {
+					display: block;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:5px;
+					padding-bottom:20px;
+					}
+				.divGraphic h1 {
+					font-family: Cardo;
+					font-size: 48px;
+					line-height: 135%;
+					white-space: nowrap;
+					text-align: left;
+					padding-top: 60px;
+					}
+			/* bread crumbs */
+				.divBreadCrumbs {
+					font-family: Arial;
+					font-size: 16px;
+					line-height: 140%;
+					padding-bottom: 20px;
+					}
+				.divBreadCrumbs a {
+					color: #1E68A6;
+					font-weight: bold;
+					}
+				.divBreadCrumbs .aCurrentCrumb {
+					font-weight: bold;
+					color: black;
+					}
+			/* directory */
+				.divDirectory {
+					}
+				.ulDirectory {
+					font-family: Arial;
+					list-style-type: none;
+					margin: 0;
+					font-size: 18px;
+					}
+				.directoryItem {
+					font-weight: bold;
+					line-height: 150%;
+					}
+				.directoryItem a {
+					color: #1E68A6;
+					}
+				.directoryItem img {
+					}
+				.directoryComment {
+					line-height: 150%;
+					color: black;
+					}
+				.directoryLinkx {
+					padding-left: 24px;
+					background: transparent url(http://static.opml.org/images/folder.gif) no-repeat top left;
+					}
+				.directoryIcon {
+					display: none;
+					padding-right: 10px;
+					}
+				.ulDirectoryx a:link {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectoryxa:hover {
+					text-decoration: underline;
+					color:#1E68A6;
+					}
+				.ulDirectoryx a:visited {
+					text-decoration: underline;
+					color:#819fC7;
+					}
+				.directoryErrorMessage {
+					font-family: Arial;
+					font-size: 24;
+					padding-top: 24;
+					padding-bottom: 12;
+					}
+			/* directory additions */
+				.divDirectoryTitle {
+					font-family: Arial;
+					font-size: 22px;
+					line-height: 28px;
+					font-weight: bold;
+					}
+				.divLegend {
+					font-family: Arial;
+					font-size: 12px;
+					line-height: 14px;
+					color:#1E68A6;
+					}
+			/* blogpost nodetype */
+				.divBlogPost {
+					}
+				.divBlogPost p {
+					font-family: Georgia;
+					font-size: 20px;
+					line-height: 140%;
+					padding-left: 0px;
+					padding-right: 0px;
+					padding-bottom: 3px;
+					}
+			/* river nodetype */
+				.article .footer {
+					padding: 0px;
+					background-color: white;
+					border-top: 0px;
+					text-shadow: 0 0px;
+					min-width: 0px;
+					-moz-box-shadow: 0 0px 0px;
+					}
+				.article .description {
+					font-family: Arial,sans-serif;
+					font-size: 13px;
+					line-height: 17px;
+					}
+				.article h3 {
+					font-family: Arial,sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+					}
+			/* domains page */
+				.divDomains ul {
+					padding-top: 5px;
+					list-style: disc outside normal;
+					padding-left: 35px;
+					}
+				.divDomains li {
+					font-family: Ubuntu;
+					font-size: 18px;
+					line-height: 28px;
+					color: black;
+					}
+			/* rss nodetype */
+				.feedTitle {
+					font-size: 32px;
+					line-height: 180%;
+					margin-bottom: 10px;
+					}
+				.feedList {
+					list-style-type: none;
+					margin-left: 3em;
+					}
+				.feedItemTitle {
+					font-size: 24px;
+					line-height: 140%;
+					margin-bottom: 10px;
+					}
+				.feedItemDescription p {
+					font-size: 18px;
+					line-height: 180%;
+					color: black;
+					}
+				.feedItemDescription {
+					margin-bottom: 30px;
+					margin-right: 15%;
+					margin-left: 0;
+					}
+			/* thumbList nodetype */
+				.divWorldOutlineThumbList td {
+					border: 1px lightgray;
+					border-style: dashed;
+					text-align: center;
+					padding-top: 12px;
+					padding-bottom: 8px;
+					}
+				.divWorldOutlineThumbList table {
+					border-collapse: collapse;
+					}
+				.divWorldOutlineThumbList .thumbListCaptionString {
+					font-size: 13px;
+					}
+			/* disqus */
+				#disqus_thread {
+					width: 700px;
+					}
+			/* outline nodetype -- 1/2/12 by DW*/
+				.divOutlineBody {
+					padding-left: 6%;
+					padding-top: 3%;
+					padding-bottom: 3%;
+					}
+				.divOutlineBody ul {
+					list-style: none;
+					margin-left: 0;
+					padding-left: 1em;
+					}
+				.divOutlineBody li {
+					font-family: Cardo;
+					font-size: 20px;
+					line-height: 150%;
+					color: black;
+					text-indent: -20px;
+					}
+				.divOutlineBody .opText {
+					color:black;
+					}
+				.sidebarTitle {
+					font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+					margin-top: 5px;
+					margin-left: 0px;
+					margin-right: 0px;
+					font-weight: bold;
+					}
+				p.collapsedSidebarText {
+					font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+					margin-left: 0px;
+					margin-top: 8px;
+					margin-bottom: 8px;
+					}
+				.show {
+					padding-left: 8px;
+					padding-right: 0px;
+					padding-bottom: 4px;
+					margin-left: 0px;
+					}
+				.hide {
+					display: none;
+					}
+				img.expandIcon {
+					padding: 0px;
+					padding-right: 4px;
+					border: 0;
+					}
+			/* page content wrapper -- 1/2/12 by DW*/
+				.divOpmlWebpageBody {
+					padding-top: 30px;
+					}
+				.divOpmlNavigation {
+					height: 25px;
+					}
+				.divOpmlContent {
+					padding-top: 15px;
+					padding-bottom: 35px;
+					}
+				.divOpmlTitle {
+					padding-top: 7px;
+					padding-bottom: 5px;
+					}
+				.divOpmlTitle h3 {
+					font-family: Cardo;
+					font-size: 46px;
+					line-height: 110%;
+					padding-bottom: 0;
+					}
+				.divOpmlWebpageBody span {
+					margin-left: 0;
+					color: black;
+					}
+				.divOpmlWebpageBody .divByline {
+					padding-top: 7px;
+					}
+				.divOpmlWebpageBody .divDescription {
+					font-family: Cardo;
+					font-size: 20px;
+					font-style: bold;
+					line-height: 120%;
+					color: black;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					}
+				.divOpmlWebpageBody .spanByline {
+					}
+				.divOpmlWebpageBody .spanByline a {
+					color: black;
+					}
+				.divOpmlPageFooterBox {
+					border-top:1px dashed;
+					border-radius: 3px;
+					border-color: gainsboro;
+					-moz-border-radius: 3px; /* Firefox 3.6 and earlier */
+					padding-top: 3px;
+					}
+				.divOpmlPageFooter {
+					}
+				.divOpmlPageFooter .imgXmlIcon {
+					float: right;
+					padding-right: 3px;
+					}
+				.divComments {
+					}
+				.divComments h3 {
+					font-size: 18px;
+					}
+			</style>
+		<style>html {
+  width: 980px;
+  margin: auto;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+p.blogPostPgf {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+h3.blogPostTitle {
+  font-family: georgia;
+  font-size: 28px;
+  }
+
+li.directoryComment {
+  font-family: georgia;
+  font-size: 17px;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+li.directoryItem {
+  font-family: arial;
+  font-size: 17px;
+  font-weight: plain;
+  line-height: 25px;
+  margin-left: 0px;
+  }
+
+.divDirectory {
+  width: 680px;
+  margin: 3em auto;
+}
+
+.divFooter {
+  position: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  -mox-box-shadow: 0 0 8px rgba(0,0,0,.3);
+  box-shadow: 0 0 8px rgba(0,0,0,.3)
+}
+</style>
+		</head>
+	<body>
+		
+		<div class="divOpmlWebpage">
+			<div class="divOpmlWebpageBody">
+				<div class="divOpmlHeaderGraphic">
+
+					<div class="divGraphic"><a href="/"><img src="http://blog.curry.com/images/2012/01/12/na373art.jpg" width="512" height="512" border="0" align="center" hspace="15" vspace="5" alt="A picture named na373art.jpg"></a></div>
+					</div>
+				<div class="divOpmlNavigation">
+					<div class="divBreadCrumbs"><a class="aTopCrumb" href="/">Top</a><span class="spnCrumbDivider"> > </span><span class="aCurrentCrumb">Shownotes</span></div>
+					</div>
+				<div class="divOpmlContent">
+					<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+
+<script language="javaScript">
+	function expandCollapse(id,showClassName){
+		var imgId = 'img_'+ id;
+		if(document.getElementById(id).className == 'hide'){
+			document.getElementById(id).className=showClassName;
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/downWedge.gif';
+			}
+		else{
+			document.getElementById(id).className='hide';
+			document.getElementById(imgId).src='http://scripting.com/images/2011/11/29/rightWedge.gif';
+			}
+		}
+	</script>
+<style>
+	.divOutlineByline {
+		font-family: Arial;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 140%;
+		padding-bottom: 25px;
+		color: gray;
+		}
+	.divOutlineByline a {
+		color: gray;
+		font-style: italic;
+		}
+	.divOutlineTitle h3 {
+		font-family: Cardo;
+		font-size: 46px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		padding-left: 0;
+		line-height: 110%;
+		}
+	.divOutlineDescription {
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 140%;
+		color: gray;
+		}
+	</style>
+<div class="divOutlineBody">
+	<div class="divOutlineTitle">
+		<h3>Shownotes</h3>
+		</div>
+	<div class="divOutlineDescription">
+		
+		</div>
+	<div class="divOutlineByline">
+
+		By <a href="">Adam Curry</a>.
+		Posted Sunday, January 08, 2012 at 2:36 PM.
+		</div>
+	
+<ul>
+	<li><a href="javascript:expandCollapse('na37320120112Credits25536','showForOutline');"><img class="expandIcon" id="img_na37320120112Credits25536" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('na37320120112Credits25536','showForOutline');"><span class="opText">NA-373-2012-01-12 Credits</span></a></li>
+	<div class="hide" id="na37320120112Credits25536" name="na37320120112Credits25536">
+		<ul>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Paraphilia</li>
+
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Executive Producer: Sir David Overbeck</li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Associate Executive Producers: Hans Schneider, Dr. Nenninger, Moiz Khan</li>
+			<li><a href="http://dvorak.org/na" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Become a member of the 374 Club, support the show <a href="http://dvorak.org/na">here</a></li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Knighthoods: David Overbeck</li>
+			<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Art By: <a href="http://www.twitter.com/fauxjebus">Brad Connell</a></li>
+
+			<li><a href="http://359.nashownotes.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ShowNotes Archive of links and Assets (clips etc) <a href="http://373.nashownotes.com/"> 373.nashownotes.com</a></li>
+			<li><a href="http://nawol.curry.com/noAgenda/shownotes" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>New: Directory Archive of Shownotes (includes all audio and video assets used) <a href="http://nashownotes.com">nashownotes.com</a></li>
+			<li><a href="http://noagendanewsnetwork.com/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The No Agenda News Network- <a href="http://noagendanewsnetwork.com/">noagendanewsnetwork.com</a></li>
+			</ul>
+		</div>
+
+	<li><a href="javascript:expandCollapse('na37320120112Shownotes9754','showForOutline');"><img class="expandIcon" id="img_na37320120112Shownotes9754" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('na37320120112Shownotes9754','showForOutline');"><span class="opText">NA-373-2012-01-12  Shownotes</span></a></li>
+	<div class="hide" id="na37320120112Shownotes9754" name="na37320120112Shownotes9754">
+		<ul>
+			<li><a href="/shownotes/na37320120112Shownotes/search"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Search</li>
+			<li><a href="javascript:expandCollapse('poppiePakiTan12102','showForOutline');"><img class="expandIcon" id="img_poppiePakiTan12102" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('poppiePakiTan12102','showForOutline');"><span class="opText">Poppie/Paki$tan</span></a></li>
+			<div class="hide" id="poppiePakiTan12102" name="poppiePakiTan12102">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('updateFromPakiProducer22715','showForOutline');"><img class="expandIcon" id="img_updateFromPakiProducer22715" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('updateFromPakiProducer22715','showForOutline');"><span class="opText">Update from Paki Producer</span></a></li>
+					<div class="hide" id="updateFromPakiProducer22715" name="updateFromPakiProducer22715">
+						<ul>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Adam... me again. ÊI wrote most of this email on the Daewoo bus back to Peshawar yesterday.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I'm back on the bus on my return to Peshawar. A very short trip to abbottabad, I wish I had more time to have spent a week there to relax.Ê</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Abbottabad is a really small city. Say about 200k residents, it's quiet, in the mountains, and very relaxed. From the first time I remember coming to abbottabad in 1992 it has always been so peaceful. It's a nice change from the rest of Pakistan in terms of pollution, traffic and the weather. ÊIt is considerably cooler in abbottabad year round, and in the winter months (nov-feb) the evenings get especially cold, as low as -5C. ÊThis may not sound cold, especially from a canuck that see's -40C at least three times a year, but because the houses are all concrete and there is no central heating there is basically no break from the cold.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Unfortunately I wasn't able to get very close to OBL's compound, it is under tight military security (pak) and there are checkpoints all around the area. I did however check-in on foursquare, win! Let's hope I dont get a free vacation to gitmo on my return to Canada, although i am sure very few people have checked in there on foursquare, its not one i care to hit for some time!</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">My cousins wife's cousin (that's a reach i know. Êhis name is Fahd) is involved in the security of OBL's compound, His unit is currently deployed for security of the Pakistan Military Academy (PMA) which is in Abbottabad.ÊWhen OBL was supposedly killed there, his detachment assumed control of the house. ÊFahd spends his nights in the compound with a squad, and has said that the state of the compound is very poor - and would be very difficult for someone to live there. It's also not *in* Abbottabad, but just on the outskirts in an adjacent village. A mansion by no means - It is run down, filthy and lacking facilities like a working stove laundry, etc.Ê</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Fahd met us on the only road that goes to OBL's house in a military Hilux with a driver and two armed soldiers. Natually the Hilux had a mounted heavy machine gun in the back as well. They raced up the road and we followed them for a while in my cousins civic - finally they came to a stop, and fahd jumped out and pointed out the house to us. We were quite far away, about a football field's length. ÊÊ</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">My uncles home (a retired doctor, about 10min driving from OBL's compound) Êand neighborhood are considerably nicer than OBL's, win! ÊIf OBL's compound was in a posh neighbourhood... it appears as a pig farm beside where my uncle lives. Êgranted they are not poor or in a bad neighbourhood, they are far from living like elites. i would say mid-upper class.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The PMA is a sensitive location,Êhttp://en.wikipedia.org/wiki/Pakistan_Military_Academy,Êresponsible for training Pakistan's officers. abbottabad is a small city Êmore or less everyone knows everyone else. At least the nearby grocer would know who is living there. Security regularly recons the area andÊinquireÊabout inhabitants to ensure there are no indian or other agents spying on the academy. Basically everyone would be known within vicinity of the PMA. Not that surprising I guess.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">My cousin mentioned that after the OBL incident, people were saying that pak military police were going door to door the night of the incident and telling people to shut their lights off prior to the termination of OBL. ÊNot sure what that means, possible collusion with [some elements in] the pak military. ÊMy uncle indicated that his feelings were that the person residing at that mansion was possibly a cousin of OBL's, but that is about it. ÊAlso, he subscribes to the belief that OBL died 5 or 6 years ago.ÊAgain commenting on USA's need to display the persecution of an enemy, Saddam Hussein's hanging on global television, yet indicating that any footage of OBL was too graphic to show. I never thought about it until now, but man that is medieval. Ê</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">My uncle mentioned that parts of the 'stealth heli' were examined by Chinese before being handed to anyone as well. He also did not think that it was possible the SEALs Êdied in the heli crash in afghanistan later (he had not heard of that crash) but surmised that it was a story generated to make anyone think that those SEALs were now dead, when in fact they are not.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">After OBL was terminated, the news of the operation out, the smoke screen of strained relations with governments andÊmilitary'sÊwith egg on their face... Êmy cousin said that a lot of people came to pray at the house, and began to call OBL hazrat OBL (http://en.wikipedia.org/wiki/Hadrat). ÊAfter a short while Pakistan recognized this would turn into a real problem with many persons coming to worship this site where public enemy #1 was supposedly killed... Êand secured the house and surrounding area.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">On my birthday, jan 12th, we will be travelling to Islamabad, and spend the night in Rawalpindi. The morning of Friday the 13th my wife, two boys and I will be enroute home to Canada. I will try and send some money via Paypal, but as mentioned previously, the internet is pretty shitty out here. Hoping you can pass us some Karma for our return trip on Friday the 13th (islamabad - toronto is 13hours! and calgary is another 3. Êi'll be turning 36 also, 3+6 = 9 .. o noes!). ÊHoping to evade gitmo, and other supernatural [or not] forces, for a safe journey.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">I will try to organize my thoughts a little more and write more before I leave if time allows, or upon my return. ÊI have taken a lot of photos and made some videos as well, anything of interest I will forward to you.</li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Cheers!</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">moiz</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('sopa31997','showForOutline');"><img class="expandIcon" id="img_sopa31997" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sopa31997','showForOutline');"><span class="opText">SOPA</span></a></li>
+
+			<div class="hide" id="sopa31997" name="sopa31997">
+				<ul>
+					<li><a href="javascript:expandCollapse('issaAnnouncesOversightHearingOnDnsSearchEngineBlocking7424','showForOutline');"><img class="expandIcon" id="img_issaAnnouncesOversightHearingOnDnsSearchEngineBlocking7424" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('issaAnnouncesOversightHearingOnDnsSearchEngineBlocking7424','showForOutline');"><span class="opText">Issa Announces Oversight Hearing on DNS & Search Engine Blocking</span></a></li>
+					<div class="hide" id="issaAnnouncesOversightHearingOnDnsSearchEngineBlocking7424" name="issaAnnouncesOversightHearingOnDnsSearchEngineBlocking7424">
+						<ul>
+							<li><a href="http://oversight.house.gov/index.php?catid=22:releasesstatements&amp;id=1553:issa-announces-oversight-hearing-on-dns-a-search-engine-blocking&amp;option=com_content&amp;view=article" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>House Committee on Oversight and Government Reform Chairman Darrell Issa (R-CA) today announced that the Full Committee will hold a hearing on January 18 to examine the potential impact of Domain Name Service (DNS) and search engine blocking on American cyber-security, jobs and the Internet community. In light of policy proposals affecting the way taxpayers access the Internet, the hearing will also explore federal government strategies to protect American intellectual property without adversely affecting economic growth. The Committee will hear testimony from top cyber-security experts and technology job creators.
+
+"An open Internet is crucial to American job creation, government operations, and the daily routines of Americans from all walks of life," said Issa. "The public deserves a full discussion about the consequences of changing the way Americans access information and communicate on the Internet today."
+
+Witnesses
+
+Mr. Stewart Baker: Partner, Steptoe & Johnson LLP
+
+Mr. Brad Burnham: Partner, Union Square Ventures
+
+Mr. Daniel Kaminsky: Security Researcher and Fortune 500 Advisor
+
+Mr. Michael Macleod-Ball: Chief of Staff/First Amendment Counsel, American Civil Liberties Union
+
+Mr. Lanham Napier: Chief Executive Officer, Rackspace Hosting
+
+Dr. Leonard Napolitano: Director, Center for Computer Sciences & Information Technology Sandia National Laboratories
+
+Mr. Alexis Ohanian: Co-Founder, Reddit.com, and Web Entrepreneur
+
+As the January 18th hearing approaches, more information will be made available at http://oversight.house.gov.</li>
+
+							</ul>
+						</div>
+					<li><a href="http://packetstormsecurity.org/news/view/20438/Holland-Moves-To-Block-The-Pirate-Bay.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Holland Moves To Block The Pirate Bay â�� Packet Storm</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('vaccine4122','showForOutline');"><img class="expandIcon" id="img_vaccine4122" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('vaccine4122','showForOutline');"><span class="opText">Vaccine$</span></a></li>
+			<div class="hide" id="vaccine4122" name="vaccine4122">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('12InfectedWithNewSwineFluStrainUsNewsAndWorldReport15959','showForOutline');"><img class="expandIcon" id="img_12InfectedWithNewSwineFluStrainUsNewsAndWorldReport15959" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('12InfectedWithNewSwineFluStrainUsNewsAndWorldReport15959','showForOutline');"><span class="opText">12 Infected With New Swine Flu Strain - US News and World Report</span></a></li>
+					<div class="hide" id="12InfectedWithNewSwineFluStrainUsNewsAndWorldReport15959" name="12InfectedWithNewSwineFluStrainUsNewsAndWorldReport15959">
+						<ul>
+							<li><a href="http://www.usnews.com/news/articles/2012/01/11/12-infected-with-new-swine-flu-strain" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The days of medical masks at airports and widespread panic may be coming back--that's because at least 12 humans are believed to have been infected with a new strain of swine flu that's not covered by this season's vaccine.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">The new swine flu strain, H3N2v, has shown at least some potential for human-to-human transmission in those 12 individuals, which makes it especially dangerous. Between 2009 and mid-2010, more than 17,000 people died worldwide from the highly contagious H1N1 swine flu strain, leading the World Health Organization to call the strain a pandemic.</li>
+							</ul>
+
+						</div>
+					<li><a href="javascript:expandCollapse('12InfectedWithNewSwineFluStrainUsNewsAndWorldReport26075','showForOutline');"><img class="expandIcon" id="img_12InfectedWithNewSwineFluStrainUsNewsAndWorldReport26075" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('12InfectedWithNewSwineFluStrainUsNewsAndWorldReport26075','showForOutline');"><span class="opText">12 Infected With New Swine Flu Strain - US News and World Report</span></a></li>
+					<div class="hide" id="12InfectedWithNewSwineFluStrainUsNewsAndWorldReport26075" name="12InfectedWithNewSwineFluStrainUsNewsAndWorldReport26075">
+						<ul>
+							<li><a href="http://www.usnews.com/news/articles/2012/01/11/12-infected-with-new-swine-flu-strain" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The days of medical masks at airports and widespread panic may be coming back--that's because at least 12 humans are believed to have been infected with a new strain of swine flu that's not covered by this season's vaccine.
+
+The new swine flu strain, H3N2v, has shown at least some potential for human-to-human transmission in those 12 individuals, which makes it especially dangerous. Between 2009 and mid-2010, more than 17,000 people died worldwide from the highly contagious H1N1 swine flu strain, leading the World Health Organization to call the strain a pandemic.
+
+The 12 people with the new swine flu strain live in Indiana, Iowa, Maine, Pennsylvania, and West Virginia. Officials for the Centers for Disease Control say the sample size of H3N2 infections is too small to know whether it will pose a threat to the population at large.
+
+"It's a very small sample and it's geographically spread, which makes it more difficult to get a handle on it," says Jeffrey Dimond, a CDC spokesman. "Most of the cases have come through direct contact with the animals, through the 4H Club and that sort of thing."</li>
+							</ul>
+						</div>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('trainsGoodPlanesBadWhooHoo4927','showForOutline');"><img class="expandIcon" id="img_trainsGoodPlanesBadWhooHoo4927" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('trainsGoodPlanesBadWhooHoo4927','showForOutline');"><span class="opText">Trains Good, Planes Bad (Whoo hoo!)</span></a></li>
+			<div class="hide" id="trainsGoodPlanesBadWhooHoo4927" name="trainsGoodPlanesBadWhooHoo4927">
+				<ul>
+					<li><a href="javascript:expandCollapse('pilotsAlmostPassOutOnBritishAirwaysFlightWeBeganDescendingVerySharplyMailOnline1076','showForOutline');"><img class="expandIcon" id="img_pilotsAlmostPassOutOnBritishAirwaysFlightWeBeganDescendingVerySharplyMailOnline1076" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('pilotsAlmostPassOutOnBritishAirwaysFlightWeBeganDescendingVerySharplyMailOnline1076','showForOutline');"><span class="opText">Pilots 'almost pass out' on British Airways flight: 'We began descending very sharply' | Mail Online</span></a></li>
+					<div class="hide" id="pilotsAlmostPassOutOnBritishAirwaysFlightWeBeganDescendingVerySharplyMailOnline1076" name="pilotsAlmostPassOutOnBritishAirwaysFlightWeBeganDescendingVerySharplyMailOnline1076">
+						<ul>
+							<li><a href="http://www.dailymail.co.uk/news/article-2083895/Pilots-pass-British-Airways-flight-We-began-descending-sharply.html?id=9649" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>'We began descending very sharply': Passengers tell of moment BA jet turned back to Heathrow after both pilots 'almost pass out' at controls</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('iran2106','showForOutline');"><img class="expandIcon" id="img_iran2106" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('iran2106','showForOutline');"><span class="opText">Iran</span></a></li>
+			<div class="hide" id="iran2106" name="iran2106">
+				<ul>
+					<li><a href="javascript:expandCollapse('usIranHasNotYetDecidedToBuildNuclearBomb18075','showForOutline');"><img class="expandIcon" id="img_usIranHasNotYetDecidedToBuildNuclearBomb18075" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('usIranHasNotYetDecidedToBuildNuclearBomb18075','showForOutline');"><span class="opText">US: Iran has not yet decided to build nuclear bomb</span></a></li>
+
+					<div class="hide" id="usIranHasNotYetDecidedToBuildNuclearBomb18075" name="usIranHasNotYetDecidedToBuildNuclearBomb18075">
+						<ul>
+							<li><a href="http://ap.stripes.com/dynamic/stories/U/US_US_IRAN_NUCLEAR?CTIME=2012-01-08-09-01-29&amp;SECTION=HOME&amp;SITE=DCSAS&amp;TEMPLATE=DEFAULT" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>As he has previously, Panetta cautioned against a unilateral strike by Israel against Iran's nuclear facilities, saying the action could trigger Iranian retaliation against U.S. forces in the region.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"We have common cause here" with Israel, he said. "And the better approach is for us to work together."</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Panetta's remarks on CBS' Face the Nation, which were taped Friday and aired Sunday, reflect the long-held view of the Obama administration that Iran is not yet committed to building a nuclear arsenal, only to creating the industrial and scientific capacity to allow one if its leaders to decide to take that final step.</li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('bbcNewsIranCarExplosionKillsNuclearScientistInTehran17237','showForOutline');"><img class="expandIcon" id="img_bbcNewsIranCarExplosionKillsNuclearScientistInTehran17237" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bbcNewsIranCarExplosionKillsNuclearScientistInTehran17237','showForOutline');"><span class="opText">BBC News - Iran car explosion kills nuclear scientist in Tehran</span></a></li>
+					<div class="hide" id="bbcNewsIranCarExplosionKillsNuclearScientistInTehran17237" name="bbcNewsIranCarExplosionKillsNuclearScientistInTehran17237">
+						<ul>
+							<li><a href="http://www.bbc.co.uk/news/world-middle-east-16501566" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A university lecturer and nuclear scientist has been killed in a car explosion in north Tehran.
+
+Mostafa Ahmadi-Roshan, an academic who also worked at the Natanz uranium enrichment facility, and the driver of the car were killed in the attack.
+
+The blast happened after a motorcyclist stuck an apparent bomb to the car.
+
+Several Iranian nuclear scientists have been assassinated in recent years, with Iran blaming Israel and the US. Both countries deny the accusations.</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('syria24279','showForOutline');"><img class="expandIcon" id="img_syria24279" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('syria24279','showForOutline');"><span class="opText">Syria</span></a></li>
+			<div class="hide" id="syria24279" name="syria24279">
+				<ul>
+					<li><a href="javascript:expandCollapse('leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore7497','showForOutline');"><img class="expandIcon" id="img_leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore7497" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore7497','showForOutline');"><span class="opText">Leaked Video of CIA Supported Terrorists Staging a Massacre in Syria | Best Gore</span></a></li>
+					<div class="hide" id="leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore7497" name="leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore7497">
+						<ul>
+
+							<li><a href="http://www.bestgore.com/murder/leaked-video-cia-supported-terrorists-staging-massacre-syria/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Epic FAIL. When will these dumbasses learn? We live in the 21st century. People record videos that nobody is meant to see, then lose their phones and the videos are leaked on the internet to everyone's dismay. This time a phone with the proof of what I've been saying all this time has been leaked. CIA supported terrorists whose job is to brainwash the internet community into believing that Syrian president Bashar al-Assad is slaughtering peaceful protesters filmed themselves staging a massacre. They were staging the blood spill to video tape it so they have more content to frame the president with. Sheep would see it and would raise their fists in support of military intervention against the people of Syria.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('elite3943','showForOutline');"><img class="expandIcon" id="img_elite3943" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('elite3943','showForOutline');"><span class="opText">Elite$</span></a></li>
+			<div class="hide" id="elite3943" name="elite3943">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('venezuelaWillNotRecognizeWorldBankRulingInExxonCaseReuters8680','showForOutline');"><img class="expandIcon" id="img_venezuelaWillNotRecognizeWorldBankRulingInExxonCaseReuters8680" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('venezuelaWillNotRecognizeWorldBankRulingInExxonCaseReuters8680','showForOutline');"><span class="opText">Venezuela will not recognize World Bank ruling in Exxon case | Reuters</span></a></li>
+					<div class="hide" id="venezuelaWillNotRecognizeWorldBankRulingInExxonCaseReuters8680" name="venezuelaWillNotRecognizeWorldBankRulingInExxonCaseReuters8680">
+						<ul>
+							<li><a href="http://www.reuters.com/article/2012/01/09/us-venezuela-exxonmobil-idUSTRE80701V20120109?id=9645" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"I tell you now: we will not recognize any decision by ICSID," Chavez said during a televised speech. He has repeatedly accused the U.S. oil major of using unfair deals in the past to "rob" the South American OPEC member of its resources.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"They are immoral ... How much could they steal in 50 years? Who would dare launch this madness without any foundation? They wanted $12 billion. From where, compadre?" he said.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">"We are not going to bow before imperialism and its tentacles, understand that ... They are trying the impossible: to get us to pay them. We are not going to pay them anything."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('euroland23252','showForOutline');"><img class="expandIcon" id="img_euroland23252" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('euroland23252','showForOutline');"><span class="opText">EUROLand</span></a></li>
+			<div class="hide" id="euroland23252" name="euroland23252">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('greeceSpeedsUpOilAndGasExplorationNewEurope11332','showForOutline');"><img class="expandIcon" id="img_greeceSpeedsUpOilAndGasExplorationNewEurope11332" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('greeceSpeedsUpOilAndGasExplorationNewEurope11332','showForOutline');"><span class="opText">Greece speeds up oil and gas exploration | New Europe</span></a></li>
+					<div class="hide" id="greeceSpeedsUpOilAndGasExplorationNewEurope11332" name="greeceSpeedsUpOilAndGasExplorationNewEurope11332">
+						<ul>
+							<li><a href="http://www.neurope.eu/article/greece-speeds-oil-and-gas-exploration?id=3974" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Debt-stricken Greece, which currently has the least exploration for hydrocarbons in the region, is vowing to exploit its oil and gas reserves.</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif"></li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">On 2 January, the Ministry of Environment, Energy and Climate Change (YPEKA) invited investors through an Open Door process to bid to exploit hydrocarbon reserves in three blocks estimated to hold around 250 million barrels of oil. The first two blocks, Patraikos Gulf and Katakolo, are located off the western coast, and the third block - Ioannina -- is in the northwest of the mainland. Investors must submit offers by 2 July.</li>
+							</ul>
+
+						</div>
+					<li><a href="javascript:expandCollapse('greekCrunchIWasRightThisIsTheEuSBiggestTestYetTheSlog28430','showForOutline');"><img class="expandIcon" id="img_greekCrunchIWasRightThisIsTheEuSBiggestTestYetTheSlog28430" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('greekCrunchIWasRightThisIsTheEuSBiggestTestYetTheSlog28430','showForOutline');"><span class="opText">GREEK CRUNCH: I WAS RIGHT -- THIS IS THE EU'S BIGGEST TEST YET | The Slog</span></a></li>
+					<div class="hide" id="greekCrunchIWasRightThisIsTheEuSBiggestTestYetTheSlog28430" name="greekCrunchIWasRightThisIsTheEuSBiggestTestYetTheSlog28430">
+						<ul>
+							<li><a href="http://hat4uk.wordpress.com/2012/01/11/greek-crunch-i-was-right-this-is-the-eus-biggest-test-yet/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Hedge funds are taking on the powerful International Monetary Fund over its plan to slash Greece's towering debt burden as time runs out on the talks that could sway the future of Europe's single currency. The funds have built up such a powerful positions in Greek bonds that they could derail Europe's tactic of getting banks and other bondholders to share the burden of reducing the country's debt on a voluntary basis....They either prefer letting the country go under, which would trigger the credit insurance they have bought, or hope to get paid out in full if enough others sign up. That puts them in direct conflict with the IMF, which wants to force Greece's cost of financing down to an affordable level.'</li>
+							</ul>
+						</div>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('droneNation13274','showForOutline');"><img class="expandIcon" id="img_droneNation13274" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('droneNation13274','showForOutline');"><span class="opText">Drone Nation</span></a></li>
+			<div class="hide" id="droneNation13274" name="droneNation13274">
+				<ul>
+					<li><a href="http://www.slate.com/blogs/future_tense/2012/01/09/drones_make_up_one_third_of_u_s_military_aircraft_.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Drones make up one-third of U.S. military aircraft.</li>
+					<li><a href="javascript:expandCollapse('bldgblogDroneTax26021','showForOutline');"><img class="expandIcon" id="img_bldgblogDroneTax26021" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bldgblogDroneTax26021','showForOutline');"><span class="opText">BLDGBLOG: Drone Tax</span></a></li>
+					<div class="hide" id="bldgblogDroneTax26021" name="bldgblogDroneTax26021">
+
+						<ul>
+							<li><a href="http://bldgblog.blogspot.com/2011/12/drone-tax.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A post on sUAS News--a blog tracking the "small unmanned aviation system industry"--we read about the possibility of drone aircraft being used to enforce residential property tax.
+
+Citing a recent court ruling in Arkansas that "has approved the use of aerial imagery to collect data on property sizes," and making reference to the already-controversial state deployment of aerial surveillance tools, sUAS suggests that drones could someday be used to manage a near-realtime catalog of local property expansions, transfers, and other tax-relevant land alterations.
+
+Whether enforcing local building codes--keeping an eye, for instance, on illegally built structures such as the so-called Achill Henge in Ireland--or reconciling on-the-ground property lines with their administrative representations back in the city land archives, how soon will drones become a state tool for regional landscape management? </li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('haiti11951','showForOutline');"><img class="expandIcon" id="img_haiti11951" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('haiti11951','showForOutline');"><span class="opText">Haiti</span></a></li>
+			<div class="hide" id="haiti11951" name="haiti11951">
+
+				<ul>
+					<li><a href="javascript:expandCollapse('criticsCallForProbeIntoAidMoneySentToHaiti31100','showForOutline');"><img class="expandIcon" id="img_criticsCallForProbeIntoAidMoneySentToHaiti31100" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('criticsCallForProbeIntoAidMoneySentToHaiti31100','showForOutline');"><span class="opText">Critics call for probe into aid money sent to Haiti</span></a></li>
+					<div class="hide" id="criticsCallForProbeIntoAidMoneySentToHaiti31100" name="criticsCallForProbeIntoAidMoneySentToHaiti31100">
+						<ul>
+							<li><a href="http://www.edmontonjournal.com/news/Critics%2Bcall%2Bprobe%2Binto%2Bmoney%2Bsent%2BHaiti/5966090/story.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Two years after a devastating 7.0 earthquake hit Haiti, killing 316,000 and initially leaving 1.5 million in displaced-persons camps around the nation's capital, UNICEF and many other big-aid agencies are urging Canadians and others not to forget the ravaged country.
+
+With half a million Haitians still living in tent camps in and around Port-au-Prince and cholera epidemics continuing to threaten the country, aid organizations released a report Monday saying they believe they're nearing a turning point in reconstruction efforts.</li>
+							</ul>
+						</div>
+					</ul>
+
+				</div>
+			<li><a href="javascript:expandCollapse('shutUpSlave14609','showForOutline');"><img class="expandIcon" id="img_shutUpSlave14609" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('shutUpSlave14609','showForOutline');"><span class="opText">Shut Up Slave!</span></a></li>
+			<div class="hide" id="shutUpSlave14609" name="shutUpSlave14609">
+				<ul>
+					<li><a href="javascript:expandCollapse('womanSaysCopsPepperSprayedUrinatedOnHer72','showForOutline');"><img class="expandIcon" id="img_womanSaysCopsPepperSprayedUrinatedOnHer72" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('womanSaysCopsPepperSprayedUrinatedOnHer72','showForOutline');"><span class="opText">Woman Says Cops Pepper-Sprayed, Urinated On Her</span></a></li>
+					<div class="hide" id="womanSaysCopsPepperSprayedUrinatedOnHer72" name="womanSaysCopsPepperSprayedUrinatedOnHer72">
+						<ul>
+							<li><a href="http://wap.wtae.com/wap/news/text.jsp?cid=4652&amp;headtitle=Local%20News&amp;ith=9&amp;nid=1341693817&amp;scid=-1&amp;sid=238&amp;title=Local%20News" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A judge has refused to dismiss the lawsuit of a western Pennsylvania woman who claims state troopers pepper sprayed and later urinated on her while she was shackled hand and foot, saying the troopers' claim of sovereign immunity doesn't apply because the alleged misconduct is outside the scope of their official duties. </li>
+
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('paraphiliasPsychologyToday11908','showForOutline');"><img class="expandIcon" id="img_paraphiliasPsychologyToday11908" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('paraphiliasPsychologyToday11908','showForOutline');"><span class="opText">Paraphilias | Psychology Today</span></a></li>
+					<div class="hide" id="paraphiliasPsychologyToday11908" name="paraphiliasPsychologyToday11908">
+						<ul>
+							<li><a href="http://www.psychologytoday.com/conditions/paraphilias" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>There is also a category called Paraphilia Not Otherwise Specified to cover paraphilias not falling into the already named diagnoses such as those involving dead people, urine, feces, enemas and obscene phone calls.</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('theUsSchoolsWithTheirOwnPoliceWorldNewsTheGuardian14842','showForOutline');"><img class="expandIcon" id="img_theUsSchoolsWithTheirOwnPoliceWorldNewsTheGuardian14842" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('theUsSchoolsWithTheirOwnPoliceWorldNewsTheGuardian14842','showForOutline');"><span class="opText">The US schools with their own police | World news | The Guardian</span></a></li>
+					<div class="hide" id="theUsSchoolsWithTheirOwnPoliceWorldNewsTheGuardian14842" name="theUsSchoolsWithTheirOwnPoliceWorldNewsTheGuardian14842">
+						<ul>
+							<li><a href="http://www.guardian.co.uk/world/2012/jan/09/texas-police-schools" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Each day, hundreds of schoolchildren appear before courts in Texas charged with offences such as swearing, misbehaving on the school bus or getting in to a punch-up in the playground. Children have been arrested for possessing cigarettes, wearing "inappropriate" clothes and being late for school.
+
+In 2010, the police gave close to 300,000 "Class C misdemeanour" tickets to children as young as six in Texas for offences in and out of school, which result in fines, community service and even prison time. What was once handled with a telling-off by the teacher or a call to parents can now result in arrest and a record that may cost a young person a place in college or a job years later.
+
+"We've taken childhood behaviour and made it criminal," said Kady Simpkins, a lawyer who represented Sarah Bustamantes. "They're kids. Disruption of class? Every time I look at this law I think: good lord, I never would have made it in school in the US. I grew up in Australia and it's just rowdy there. I don't know how these kids do it, how they go to school every day without breaking these laws."</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('caitReillyUnemployedGraduateSuesMinistersForBeingForcedToWorkInPoundlandMailOnline14339','showForOutline');"><img class="expandIcon" id="img_caitReillyUnemployedGraduateSuesMinistersForBeingForcedToWorkInPoundlandMailOnline14339" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('caitReillyUnemployedGraduateSuesMinistersForBeingForcedToWorkInPoundlandMailOnline14339','showForOutline');"><span class="opText">Cait Reilly: Unemployed graduate sues ministers for being 'forced' to work in Poundland | Mail Online</span></a></li>
+
+					<div class="hide" id="caitReillyUnemployedGraduateSuesMinistersForBeingForcedToWorkInPoundlandMailOnline14339" name="caitReillyUnemployedGraduateSuesMinistersForBeingForcedToWorkInPoundlandMailOnline14339">
+						<ul>
+							<li><a href="http://www.dailymail.co.uk/news/article-2085142/Cait-Reilly-Unemployed-graduate-sues-ministers-forced-work-Poundland.html#ixzz1jAAI6sE5" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>She said she felt she had to do it because 'without my Jobseeker's Allowance, I would literally have nothing'.
+
+Miss Reilly's solicitor, Jim Duffy, said the practice contravenes article 4 (2) of the Human Rights Act, which states: 'No one shall be required to perform forced or compulsory labour.'</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('gold20961','showForOutline');"><img class="expandIcon" id="img_gold20961" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gold20961','showForOutline');"><span class="opText">Gold</span></a></li>
+
+			<div class="hide" id="gold20961" name="gold20961">
+				<ul>
+					<li><a href="javascript:expandCollapse('goldMayExtendBestRallySince1920EndTheLieIndependentNews15002','showForOutline');"><img class="expandIcon" id="img_goldMayExtendBestRallySince1920EndTheLieIndependentNews15002" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('goldMayExtendBestRallySince1920EndTheLieIndependentNews15002','showForOutline');"><span class="opText">Gold may extend best rally since 1920 | End the Lie - Independent News</span></a></li>
+					<div class="hide" id="goldMayExtendBestRallySince1920EndTheLieIndependentNews15002" name="goldMayExtendBestRallySince1920EndTheLieIndependentNews15002">
+						<ul>
+							<li><a href="http://endthelie.com/2012/01/10/gold-may-extend-best-rally-since-1920/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+EndTheLie+%28End+the+Lie%29#axzz1jG1y1o7l" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Gold may be able to extend its best rally since around 1920, as investors and collectors alike are sure to store their wealth away based on the still continuing issues facing Europe and the world at large.
+
+Slowing global economic growth and inflation is sure to play a part in this as well.
+
+[Editor's note: let's not forget the corrupt monetary policy employed by the private Federal Reserve, which is aimed at putting even more money in the hands of the corrupt banking elite and less in the coffers of the American people as a whole.]
+
+"The current global macroeconomic environment is very conducive for [sic] higher gold prices," said Sundeep Sikka, Mumbai-based chief executive officer of the money manager, which runs India's second-biggest gold exchange-traded fund. </li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('devilWeed11563','showForOutline');"><img class="expandIcon" id="img_devilWeed11563" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('devilWeed11563','showForOutline');"><span class="opText">Devil Weed</span></a></li>
+			<div class="hide" id="devilWeed11563" name="devilWeed11563">
+				<ul>
+					<li><a href="javascript:expandCollapse('nicotineCouldWardOffMemoryLossStudyFrance2413828','showForOutline');"><img class="expandIcon" id="img_nicotineCouldWardOffMemoryLossStudyFrance2413828" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('nicotineCouldWardOffMemoryLossStudyFrance2413828','showForOutline');"><span class="opText">Nicotine could ward off memory loss: study - FRANCE 24</span></a></li>
+					<div class="hide" id="nicotineCouldWardOffMemoryLossStudyFrance2413828" name="nicotineCouldWardOffMemoryLossStudyFrance2413828">
+						<ul>
+
+							<li><a href="http://www.france24.com/en/20120109-nicotine-could-ward-off-memory-loss-study" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Older adults who are starting to have problems with memory may benefit from small amounts of nicotine therapy, according to a US study published on Monday.
+
+The research in Neurology, the medical journal of the American Academy of Neurology, included 74 non-smokers with an average age of 76. Half were given a daily nicotine patch for six months, the other half wore a placebo patch.
+
+Those on nicotine therapy showed better results on cognitive tests for attention, memory, as well as how fast and consistently they could process information.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('marijuanaDoesnTAppearToHarmLungFunctionStudyFindsFoxNews18447','showForOutline');"><img class="expandIcon" id="img_marijuanaDoesnTAppearToHarmLungFunctionStudyFindsFoxNews18447" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('marijuanaDoesnTAppearToHarmLungFunctionStudyFindsFoxNews18447','showForOutline');"><span class="opText">Marijuana doesn't appear to harm lung function, study finds | Fox News</span></a></li>
+					<div class="hide" id="marijuanaDoesnTAppearToHarmLungFunctionStudyFindsFoxNews18447" name="marijuanaDoesnTAppearToHarmLungFunctionStudyFindsFoxNews18447">
+						<ul>
+							<li><a href="http://www.foxnews.com/health/2012/01/11/marijuana-doesnt-appear-to-harm-lung-function-study-finds/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Smoking a joint once a week or a bit more apparently doesn't harm the lungs, suggests a 20-year study that bolsters evidence that marijuana doesn't do the kind of damage tobacco does.
+
+The results, from one of the largest and longest studies on the health effects of marijuana, are hazier for heavy users - those who smoke two or more joints daily for several years. The data suggest that using marijuana that often might cause a decline in lung function, but there weren't enough heavy users among the 5,000 young adults in the study to draw firm conclusions.
+
+SUMMARY
+
+Smoking marijuana as often as one joint daily for seven years, or one joint weekly for 20 years was not linked with worse lung function
+
+Still, the authors recommended "caution and moderation when marijuana use is considered."
+
+Marijuana is an illegal drug under federal law although some states allow its use for medical purposes.
+
+The study by researchers at the University of California, San Francisco, and the University of Alabama at Birmingham was released Tuesday by the Journal of the American Medical Association.</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('realNews13779','showForOutline');"><img class="expandIcon" id="img_realNews13779" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('realNews13779','showForOutline');"><span class="opText">Real News</span></a></li>
+			<div class="hide" id="realNews13779" name="realNews13779">
+				<ul>
+					<li><a href="javascript:expandCollapse('largestDutchClogGoesMissingFrance2424258','showForOutline');"><img class="expandIcon" id="img_largestDutchClogGoesMissingFrance2424258" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('largestDutchClogGoesMissingFrance2424258','showForOutline');"><span class="opText">Largest Dutch clog goes missing - FRANCE 24</span></a></li>
+
+					<div class="hide" id="largestDutchClogGoesMissingFrance2424258" name="largestDutchClogGoesMissingFrance2424258">
+						<ul>
+							<li><a href="http://www.france24.com/en/20120110-largest-dutch-clog-goes-missing" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"We don't know who stole it, but it's disappeared," Rosita de Vries said of the clog, which at four metres (13 feet) in length and weighing almost two tonnes is the largest example of the Dutch icon, police said.
+
+"It is a joke. We even received an email announcing that the shoe will probably be back after Carnival," in mid-February, she told AFP, adding it was believed the shoe disappeared Friday night or early on Saturday.
+
+Police however failed to trace the email and inquiries lead to nowhere, De Vries said.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr10319','showForOutline');"><img class="expandIcon" id="img_manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr10319" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr10319','showForOutline');"><span class="opText">Man Dies Eating Cocaine: Man Dies After Eating Ounce of Cocaine Out Of Brother's Butt - wtvr</span></a></li>
+					<div class="hide" id="manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr10319" name="manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr10319">
+						<ul>
+
+							<li><a href="http://www.wtvr.com/news/wpix-man-dies-eating-ounce-cocaine,0,100374.story" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In the footage, Wayne Mitchell can be seen, in handcuffs, reaching back to retrieve the cocaine from his brother. He then drops his head while he eats the cocaine.
+
+Wayne Mitchell soon after began convulsing and bleeding from his mouth. "White powder residue" was found on the rear seat of the police cruiser, cops noted. Deangelo later said "he believed his brother swallowed an ounce of cocaine."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('gitmoNation24842','showForOutline');"><img class="expandIcon" id="img_gitmoNation24842" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('gitmoNation24842','showForOutline');"><span class="opText">Gitmo Nation</span></a></li>
+			<div class="hide" id="gitmoNation24842" name="gitmoNation24842">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('theTsaBlogTsaTop10GoodCatchesOf201127912','showForOutline');"><img class="expandIcon" id="img_theTsaBlogTsaTop10GoodCatchesOf201127912" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('theTsaBlogTsaTop10GoodCatchesOf201127912','showForOutline');"><span class="opText">The TSA Blog: TSA Top 10 Good Catches of 2011</span></a></li>
+					<div class="hide" id="theTsaBlogTsaTop10GoodCatchesOf201127912" name="theTsaBlogTsaTop10GoodCatchesOf201127912">
+						<ul>
+							<li><a href="http://blog.tsa.gov/2012/01/tsa-top-10-good-catches-of-2011.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Our officers have had some good finds this year at our checkpoints and we wanted to share our top 10 good catches with you. Some are dangerous, some simply look dangerous and can cause major delays, and others are just plain weird. Click on the links to read more about each good catch. </li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('homelandSecurityWatchesTwitterSocialMediaReuters9988','showForOutline');"><img class="expandIcon" id="img_homelandSecurityWatchesTwitterSocialMediaReuters9988" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('homelandSecurityWatchesTwitterSocialMediaReuters9988','showForOutline');"><span class="opText">Homeland Security watches Twitter, social media | Reuters</span></a></li>
+
+					<div class="hide" id="homelandSecurityWatchesTwitterSocialMediaReuters9988" name="homelandSecurityWatchesTwitterSocialMediaReuters9988">
+						<ul>
+							<li><a href="http://www.reuters.com/article/2012/01/11/us-usa-homelandsecurity-websites-idUSTRE80A1RC20120111" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The U.S. Department of Homeland Security's command center routinely monitors dozens of popular websites, including Facebook, Twitter, Hulu, WikiLeaks and news and gossip sites including the Huffington Post and Drudge Report, according to a government document.
+
+A "privacy compliance review" issued by DHS last November says that since at least June 2010, its national operations center has been operating a "Social Networking/Media Capability" which involves regular monitoring of "publicly available online forums, blogs, public websites and message boards."</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('hadowPuppetTheatre27094','showForOutline');"><img class="expandIcon" id="img_hadowPuppetTheatre27094" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('hadowPuppetTheatre27094','showForOutline');"><span class="opText">$hadow Puppet Theatre</span></a></li>
+
+			<div class="hide" id="hadowPuppetTheatre27094" name="hadowPuppetTheatre27094">
+				<ul>
+					<li><a href="http://edition.cnn.com/2012/01/09/politics/obama-daley-resigns/index.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>White House chief of staff stepping down - CNN.com</li>
+					<li><a href="javascript:expandCollapse('jacobLewWikipediaTheFreeEncyclopedia31617','showForOutline');"><img class="expandIcon" id="img_jacobLewWikipediaTheFreeEncyclopedia31617" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jacobLewWikipediaTheFreeEncyclopedia31617','showForOutline');"><span class="opText">Jacob Lew - Wikipedia, the free encyclopedia</span></a></li>
+					<div class="hide" id="jacobLewWikipediaTheFreeEncyclopedia31617" name="jacobLewWikipediaTheFreeEncyclopedia31617">
+						<ul>
+							<li><a href="http://en.wikipedia.org/wiki/Jacob_Lew" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In June 2006, Lew was named chief operating officer of Citigroup's Alternative Investments unit, a proprietary trading group. The unit he oversaw invested in a hedge fund "that bet on the housing market to collapse."[3]
+
+Lew co-chaired the Advisory Board for City Year New York. He is a member of the Council on Foreign Relations, the Brookings Institution Hamilton Project Advisory Board, and the National Academy of Social Insurance. Lew is also a member of the bar in Massachusetts and the District of Columbia.[4]</li>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('ministryOfTruth8118','showForOutline');"><img class="expandIcon" id="img_ministryOfTruth8118" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ministryOfTruth8118','showForOutline');"><span class="opText">Ministry of Truth</span></a></li>
+			<div class="hide" id="ministryOfTruth8118" name="ministryOfTruth8118">
+				<ul>
+					<li><a href="javascript:expandCollapse('sourcesSoughtNoticeRadiationDosimetryServicesHsts0112SsnOsh999FederalBusinessOpportunitiesOpportunities17409','showForOutline');"><img class="expandIcon" id="img_sourcesSoughtNoticeRadiationDosimetryServicesHsts0112SsnOsh999FederalBusinessOpportunitiesOpportunities17409" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('sourcesSoughtNoticeRadiationDosimetryServicesHsts0112SsnOsh999FederalBusinessOpportunitiesOpportunities17409','showForOutline');"><span class="opText">Sources Sought Notice - RADIATION DOSIMETRY SERVICES - HSTS01-12-SSN-OSH999 - Federal Business Opportunities: Opportunities</span></a></li>
+
+					<div class="hide" id="sourcesSoughtNoticeRadiationDosimetryServicesHsts0112SsnOsh999FederalBusinessOpportunitiesOpportunities17409" name="sourcesSoughtNoticeRadiationDosimetryServicesHsts0112SsnOsh999FederalBusinessOpportunitiesOpportunities17409">
+						<ul>
+							<li><a href="https://www.fbo.gov/?_cview=1&amp;id=34ca34f51cfdbb16652a5c6643e51e00&amp;mode=form&amp;s=opportunity&amp;tab=core" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The Transportation Security Administration (TSA) is issuing this Sources Sought Notice - Request for Information to improve its understanding of market capabilities and identify qualified vendors that are capable of providing radiation dosimetry services to the TSA Office of Occupational Safety, Health, and Environment (OSHE) in order to perform hazard assessments in accordance with DHS and TSA policy.
+
+All interested and qualified businesses are encouraged to respond to this notice in accordance with the instructions addressed in the attached document.
+
+TSA anticipates that the resultant solicitation will be in support of a two (2) year Blanket Purchase Agreement (BPA) not to exceed the Simplified Acquisition Threshold (SAT) of $150,000.  This RFI is being conducted for market research purposes only.  Responding to this RFI does not guarantee an award of a contract nor does the Government guarantee that a solicitation will be issued as a result of this RFI.
+
+Please refer to the attached document for additional information on Background and Objectives, Contractor's Capabilities Statement, Instructions to Vendors, and Other relevant information. </li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('science16841','showForOutline');"><img class="expandIcon" id="img_science16841" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('science16841','showForOutline');"><span class="opText">Science!</span></a></li>
+
+			<div class="hide" id="science16841" name="science16841">
+				<ul>
+					<li><a href="javascript:expandCollapse('frackingRiskIsExaggeratedEnvironment11January2012NewScientist18485','showForOutline');"><img class="expandIcon" id="img_frackingRiskIsExaggeratedEnvironment11January2012NewScientist18485" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('frackingRiskIsExaggeratedEnvironment11January2012NewScientist18485','showForOutline');"><span class="opText">Fracking risk is exaggerated - environment - 11 January 2012 - New Scientist</span></a></li>
+					<div class="hide" id="frackingRiskIsExaggeratedEnvironment11January2012NewScientist18485" name="frackingRiskIsExaggeratedEnvironment11January2012NewScientist18485">
+						<ul>
+							<li><a href="http://www.newscientist.com/article/dn21341-fracking-risk-is-exaggerated.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Frack away, there's no reason not to. Two of the main objections to "fracking" for shale gas have been blown out of proportion, according to British geologists.
+
+Hydraulic fracturing, or fracking, involves pumping water, sand and chemicals into methane-rich shale deposits around 2 kilometres underground to liberate natural gas. It has been accused of contaminating drinking water with methane and chemicals, and causing minor earthquakes.
+
+"We think the risk is pretty low," said Mike Stephenson, head of energy science at the British Geological Survey at a press briefing in London on Tuesday.
+
+The idea that fracked methane leaks into drinking water was popularised by the documentary film Gasland, in which a resident of Pennsylvania sets his tap water alight (see photo). On Tuesday, Stephenson said he could not comment on this specific case, but that such contamination is unlikely.
+
+Peer-reviewed research on methane contamination is scarce but what little there is suggests fracking is not to blame.</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('demonDrink26469','showForOutline');"><img class="expandIcon" id="img_demonDrink26469" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('demonDrink26469','showForOutline');"><span class="opText">Demon Drink</span></a></li>
+			<div class="hide" id="demonDrink26469" name="demonDrink26469">
+				<ul>
+					<li><a href="javascript:expandCollapse('mayorSPlanToLimitBoozeSalesMNypostCom19090','showForOutline');"><img class="expandIcon" id="img_mayorSPlanToLimitBoozeSalesMNypostCom19090" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('mayorSPlanToLimitBoozeSalesMNypostCom19090','showForOutline');"><span class="opText">Mayor's plan to limit booze sales - m.NYPOST.com</span></a></li>
+					<div class="hide" id="mayorSPlanToLimitBoozeSalesMNypostCom19090" name="mayorSPlanToLimitBoozeSalesMNypostCom19090">
+						<ul>
+
+							<li><a href="http://m.nypost.com/;s=ssySGKV-1u5m1EPdgrOsy12/f/mobile/news/local/hizzoner_sauce_pan_n9AdFlKbp5yniOhUprFt0L" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>First, Mayor Bloomberg went after smoking in public places. Then trans-fats, salt and sugary drinks.
+
+Now Bloomberg -- known for sipping fine wine and downing a cold beer from time to time -- wants to crack down on alcohol sales to curb excessive drinking, according to a provocative planning document obtained by The Post.
+
+The city Health Department's far-reaching Partnership for a Healthier New York City initiatives proposes to slash the number of establishments in the city that sell booze.
+
+Community "transformation" grants provided under President Obama's health-care law would help bankroll the effort.
+
+One of the goals listed in the "request for proposal" document to community groups is "reducing alcohol retail outlet (e.g. bar, corner store) density and illegal alcohol," the document states.
+
+"Talk about a nanny state. Why don't they just close all the liquor establishments?" quipped Mike Long, a former liquor-store owner in Bay Ridge and head of the state Conservative Party.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('haarp18152','showForOutline');"><img class="expandIcon" id="img_haarp18152" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('haarp18152','showForOutline');"><span class="opText">HAARP</span></a></li>
+			<div class="hide" id="haarp18152" name="haarp18152">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('mysteryByeByeBlackbirdSolvedUsdaHasAdmittedToPoisoningMillionsOfAnimalsStickyEarthIssuesCom14677','showForOutline');"><img class="expandIcon" id="img_mysteryByeByeBlackbirdSolvedUsdaHasAdmittedToPoisoningMillionsOfAnimalsStickyEarthIssuesCom14677" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('mysteryByeByeBlackbirdSolvedUsdaHasAdmittedToPoisoningMillionsOfAnimalsStickyEarthIssuesCom14677','showForOutline');"><span class="opText">Mystery Bye Bye Blackbird, Solved... USDA Has Admitted To Poisoning Millions Of Animals *sticky* - Earth-issues.com</span></a></li>
+					<div class="hide" id="mysteryByeByeBlackbirdSolvedUsdaHasAdmittedToPoisoningMillionsOfAnimalsStickyEarthIssuesCom14677" name="mysteryByeByeBlackbirdSolvedUsdaHasAdmittedToPoisoningMillionsOfAnimalsStickyEarthIssuesCom14677">
+						<ul>
+							<li><a href="http://www.earth-issues.com/2011/12/mystery-bye-bye-blackbird-solved-usda-has-admitted-to-poisoning-millions-of-animals/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>It's absolutely shocking news: The U.S. Department of Agriculture has publicly admitted it is responsible for the mass poisoning of tens of millions of birds over the last several years. It's all part of the USDA's program called "Bye Bye Blackbird," and we even have the USDA's spreadsheet where they document how many millions of birds (and other animals) they've poisoned to death.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			<li><a href="javascript:expandCollapse('spaceWars10716','showForOutline');"><img class="expandIcon" id="img_spaceWars10716" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('spaceWars10716','showForOutline');"><span class="opText">Space Wars</span></a></li>
+			<div class="hide" id="spaceWars10716" name="spaceWars10716">
+				<ul>
+					<li><a href="javascript:expandCollapse('russianOfficialSuggestsWeaponCausedSpacecraftFailureNytimesCom11025','showForOutline');"><img class="expandIcon" id="img_russianOfficialSuggestsWeaponCausedSpacecraftFailureNytimesCom11025" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('russianOfficialSuggestsWeaponCausedSpacecraftFailureNytimesCom11025','showForOutline');"><span class="opText">Russian Official Suggests Weapon Caused Spacecraft Failure - NYTimes.com</span></a></li>
+					<div class="hide" id="russianOfficialSuggestsWeaponCausedSpacecraftFailureNytimesCom11025" name="russianOfficialSuggestsWeaponCausedSpacecraftFailureNytimesCom11025">
+						<ul>
+							<li><a href="http://www.nytimes.com/2012/01/11/science/space/russian-official-suggests-weapon-caused-spacecraft-failure.html?_r=2" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A Russian scientific spacecraft whizzing out of control around the Earth, and expected to re-enter the atmosphere on Saturday, may have failed because it was struck by some type of antisatellite weapon, the director of Russia's space agency said in an interview published Tuesday. </li>
+
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">ÒWe donÕt want to accuse anybody, but there are very powerful devices that can influence spacecraft now,Ó Mr. Popovkin said in the interview. ÒThe possibility they were used cannot be ruled out.Ó</li>
+							<li><img class="expandIcon" src="http://scripting.com/images/2011/11/29/blank.gif">Mr. Popovkin also suggested that equipment on the spacecraft may have broken down while the vehicle was stored on the ground, waiting for the time when Earth and Mars would be in the right places in their orbits for the mission to proceed, something that happens only every two years. ÒIf we had not sent it to Mars in 2011, we would have had to throw it away,Ó he said of the craft. </li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('ronPaul11145','showForOutline');"><img class="expandIcon" id="img_ronPaul11145" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ronPaul11145','showForOutline');"><span class="opText">Ron Paul</span></a></li>
+
+			<div class="hide" id="ronPaul11145" name="ronPaul11145">
+				<ul>
+					<li><a href="javascript:expandCollapse('dougWeadWikipediaTheFreeEncyclopedia2968','showForOutline');"><img class="expandIcon" id="img_dougWeadWikipediaTheFreeEncyclopedia2968" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('dougWeadWikipediaTheFreeEncyclopedia2968','showForOutline');"><span class="opText">Doug Wead - Wikipedia, the free encyclopedia</span></a></li>
+					<div class="hide" id="dougWeadWikipediaTheFreeEncyclopedia2968" name="dougWeadWikipediaTheFreeEncyclopedia2968">
+						<ul>
+							<li><a href="http://en.wikipedia.org/wiki/Doug_Wead" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Doug Wead (Muncie, Indiana, 1946[1] ) is a presidential historian, philanthropist and public speaker. He was Special Assistant to U.S. President George H. W. Bush, and is the author of more than thirty books, including the New York Times best-seller All the Presidents' Children: Triumph and Tragedy in the Lives of the First Families.[2] He has authored a sequel which examines the parenting of presidents of the United States, The Raising of a President: The Mothers and Fathers of Our Nation's Leaders.[3]</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('pedobear518','showForOutline');"><img class="expandIcon" id="img_pedobear518" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('pedobear518','showForOutline');"><span class="opText">PedoBear</span></a></li>
+			<div class="hide" id="pedobear518" name="pedobear518">
+				<ul>
+					<li><a href="javascript:expandCollapse('furorInGreeceOverPedophiliaAsADisabilityYahooNews17883','showForOutline');"><img class="expandIcon" id="img_furorInGreeceOverPedophiliaAsADisabilityYahooNews17883" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('furorInGreeceOverPedophiliaAsADisabilityYahooNews17883','showForOutline');"><span class="opText">Furor in Greece over pedophilia as a disability - Yahoo! News</span></a></li>
+					<div class="hide" id="furorInGreeceOverPedophiliaAsADisabilityYahooNews17883" name="furorInGreeceOverPedophiliaAsADisabilityYahooNews17883">
+						<ul>
+
+							<li><a href="http://news.yahoo.com/furor-greece-over-pedophilia-disability-174002476.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Greek disability groups expressed anger Monday at a government decision to expand a list of state-recognized disability categories to include pedophiles, exhibitionists and kleptomaniacs.
+
+The National Confederation of Disabled People called the action "incomprehensible," and said pedophiles are now awarded a higher government disability pay than some people who have received organ transplants.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('ndaa15977','showForOutline');"><img class="expandIcon" id="img_ndaa15977" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('ndaa15977','showForOutline');"><span class="opText">NDAA</span></a></li>
+			<div class="hide" id="ndaa15977" name="ndaa15977">
+				<ul>
+
+					<li><a href="javascript:expandCollapse('samiOsmakacPlannedToCauseHavocInFloridaWithCarBombAssaultRifleAndExplosivesBeltMailOnline17693','showForOutline');"><img class="expandIcon" id="img_samiOsmakacPlannedToCauseHavocInFloridaWithCarBombAssaultRifleAndExplosivesBeltMailOnline17693" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('samiOsmakacPlannedToCauseHavocInFloridaWithCarBombAssaultRifleAndExplosivesBeltMailOnline17693','showForOutline');"><span class="opText">Sami Osmakac 'planned to cause havoc in Florida with car bomb, assault rifle and explosives belt' | Mail Online</span></a></li>
+					<div class="hide" id="samiOsmakacPlannedToCauseHavocInFloridaWithCarBombAssaultRifleAndExplosivesBeltMailOnline17693" name="samiOsmakacPlannedToCauseHavocInFloridaWithCarBombAssaultRifleAndExplosivesBeltMailOnline17693">
+						<ul>
+							<li><a href="http://www.dailymail.co.uk/news/article-2084327/Sami-Osmakac-planned-cause-havoc-Florida-car-bomb-assault-rifle-explosives-belt.html?ito=feeds-newsxml" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Sami Osmakac, a naturalized U.S. citizen who was born in Kosovo - a disputed Balkan state once a part of the former Yugoslavia that declared its independence from Serbia in 2008 - was charged today with one count of attempted use of a weapon of mass destruction.
+
+Osmakac, of Pinellas County, Florida, allegedly bought explosives and guns from an undercover FBI agent, which had been made unusable.</li>
+							</ul>
+						</div>
+					<li><a href="javascript:expandCollapse('howTheFedsBroughtDownArizonaSSuspectedWhiteSupremacistSerialBombingBrothersTpmmuckraker19362','showForOutline');"><img class="expandIcon" id="img_howTheFedsBroughtDownArizonaSSuspectedWhiteSupremacistSerialBombingBrothersTpmmuckraker19362" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('howTheFedsBroughtDownArizonaSSuspectedWhiteSupremacistSerialBombingBrothersTpmmuckraker19362','showForOutline');"><span class="opText">How The Feds Brought Down Arizona's Suspected White Supremacist 'Serial' Bombing Brothers | TPMMuckraker</span></a></li>
+
+					<div class="hide" id="howTheFedsBroughtDownArizonaSSuspectedWhiteSupremacistSerialBombingBrothersTpmmuckraker19362" name="howTheFedsBroughtDownArizonaSSuspectedWhiteSupremacistSerialBombingBrothersTpmmuckraker19362">
+						<ul>
+							<li><a href="http://tpmmuckraker.talkingpointsmemo.com/2012/01/how_the_feds_brought_down_arizonas_suspected_white_supremacist_serial_bombers.php?ref=fpb" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>"We thought we were doing the right thing. We were just trying to send a message," Daniel Mahon told Williams. "When I would take someone's car out, it wasn't anger. It was a sense of duty. It is like a military operation. You plan for it, equip for it."
+
+Williams often egged the brothers on. In one conversation, she asked Dennis Mahon if he ever had any success with sending a package bomb to someone.
+
+Court records say he leaned in close and whispered, "In Tempe, Arizona, Goddamn diversity officer, Scottsdale Police Department, had his fingers blown off." He then caught himself, paused and told her that he had advised "white cops how to do it."
+
+It's clear from the court records that Dennis Mahon liked talking to Williams. He developed a strong emotional and physical attraction to her.
+
+ATF and Williams used this to their advantage. In one example, Williams testified that the investigators got her to pose for photographs wearing a bathing suit with a grenade hanging down from her neck in between her breasts. For the pictures, she stood in front of a pickup truck and a swastika flag. The photos were then mailed to the brothers.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('oilCabalBankTers19335','showForOutline');"><img class="expandIcon" id="img_oilCabalBankTers19335" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('oilCabalBankTers19335','showForOutline');"><span class="opText">Oil Cabal/Bank$ters</span></a></li>
+
+			<div class="hide" id="oilCabalBankTers19335" name="oilCabalBankTers19335">
+				<ul>
+					<li><a href="javascript:expandCollapse('russianMoveAgainstUsCalledFirstShotOfWorldWarIii11315','showForOutline');"><img class="expandIcon" id="img_russianMoveAgainstUsCalledFirstShotOfWorldWarIii11315" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('russianMoveAgainstUsCalledFirstShotOfWorldWarIii11315','showForOutline');"><span class="opText">Russian Move Against US Called First Shot Of World War III</span></a></li>
+					<div class="hide" id="russianMoveAgainstUsCalledFirstShotOfWorldWarIii11315" name="russianMoveAgainstUsCalledFirstShotOfWorldWarIii11315">
+						<ul>
+							<li><a href="http://www.whatdoesitmean.com/index1552.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Prime Minister Putin is warning today that the decision by Iran to cease taking US Dollars for its oil could very be the "first shot" fired in World War III, and one which Russia will be blamed for by the Obama regime.
+
+According to this report, Iran swiftly countered planed US sanctions against its Central Bank yesterday by announcing that it will no longer accept the US Dollar as payment for its oil shipments to India, Japan and China, and further announced that bilateral trade between itself and Russia will, also, break from the US Dollar for settlement in favor of the Iranian Rial and Russian Rubles.
+
+Sure to enrage the Obama regime, this report continues, was that the proposal to switch to the Ruble and the Rial was raised by President Medvedev at a meeting with his Iranian counterpart, Mahmoud Ahmadinejad, in Astana, Kazakhstan, of the Shanghai Cooperation Organization.
+
+Though Iran had previously announced in 2008 that it had stopped trading its oil for US Dollars (Ahmadinejad called the depreciating US Dollar a "worthless piece of paper") India, Japan and China were made exempt due to their large holdings of American currency and fears of wreaking further chaos on the global economic collapse that had just begun.
+
+Important to note, this report reminds us, is that a similar move by Iraq's former leader Saddam Hussein in not accepting US Dollars for oil in 2000 brought about the invasion of his country by the Americans and their European allies resulting in his eventual execution and causing the vast wealth of Iraqi oil and gas fields to be turned over to the Western oil giants.</li>
+							</ul>
+						</div>
+
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('elite17922','showForOutline');"><img class="expandIcon" id="img_elite17922" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('elite17922','showForOutline');"><span class="opText">Elite$</span></a></li>
+			<div class="hide" id="elite17922" name="elite17922">
+				<ul>
+					<li><a href="http://pjmedia.com/tatler/2012/01/09/the-only-known-photos-from-the-white-houses-2009-alice-in-wonderland-party/?id=9717" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>The PJ Tatler >> The only known photos from the White House's 2009 "Alice in Wonderland" party</li>
+					<li><a href="javascript:expandCollapse('obamaCaucusesInOvalOfficeWithPittJolieYahooNews15790','showForOutline');"><img class="expandIcon" id="img_obamaCaucusesInOvalOfficeWithPittJolieYahooNews15790" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('obamaCaucusesInOvalOfficeWithPittJolieYahooNews15790','showForOutline');"><span class="opText">Obama caucuses in Oval Office with Pitt, Jolie - Yahoo! News</span></a></li>
+
+					<div class="hide" id="obamaCaucusesInOvalOfficeWithPittJolieYahooNews15790" name="obamaCaucusesInOvalOfficeWithPittJolieYahooNews15790">
+						<ul>
+							<li><a href="http://news.yahoo.com/obama-caucuses-oval-office-pitt-jolie-205721363.html?id=9699" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Jolie also met with CIA Director David Petraeus at the agency's headquarters. Jolie wanted Petraeus' perspective on cultural trends in Afghanistan for her work with Afghan refugees, an official close to the former U.S. commander in Afghanistan said, speaking anonymously to discuss the private meeting. They had a similar meeting in Baghdad in 2008.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('video25827','showForOutline');"><img class="expandIcon" id="img_video25827" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('video25827','showForOutline');"><span class="opText">VIDEO</span></a></li>
+
+			<div class="hide" id="video25827" name="video25827">
+				<ul>
+					<li><a href="http://news.bbc.co.uk/2/hi/uk_news/8678886.stm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>BBC News - Organised crime fears cause ban on 500 euro note sales</li>
+					<li><a href="http://www.state.gov/secretary/rm/2012/01/180462.htm" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Remarks With Qatari Prime Minister and Foreign Minister Sheikh Hamad bin Jassim bin Jabor Al Thani After Their Meeting</li>
+					<li><a href="http://www.youtube.com/watch?feature=youtube_gdata_player&amp;v=o9mX4l5FoZU" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Dana Bash Admits She's Worried About Ron Paul's Success - [VIDEO] </li>
+					<li><a href="http://edition.cnn.com/2012/01/09/politics/obama-daley-resigns/index.html" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>White House chief of staff stepping down - CNN.com</li>
+					<li><a href="http://www.mediaite.com/online/rick-santorum-answers-question-on-sopa-there-are-limits-to-freedom-on-the-internet/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Rick Santorum SOPA | Santorum Freedom of Speech | Video | Mediaite</li>
+
+					<li><a href="javascript:expandCollapse('bbcNewsPolishProsecutorShootsSelfAfterNewsConference19920','showForOutline');"><img class="expandIcon" id="img_bbcNewsPolishProsecutorShootsSelfAfterNewsConference19920" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bbcNewsPolishProsecutorShootsSelfAfterNewsConference19920','showForOutline');"><span class="opText">BBC News - Polish prosecutor 'shoots self after news conference'</span></a></li>
+					<div class="hide" id="bbcNewsPolishProsecutorShootsSelfAfterNewsConference19920" name="bbcNewsPolishProsecutorShootsSelfAfterNewsConference19920">
+						<ul>
+							<li><a href="http://www.bbc.co.uk/news/world-europe-16466522" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A Polish military prosecutor has shot himself in the head after cutting short a news conference in his office, officials and media reports say.
+
+Col Mikolaj Przybyl was defending a military investigation into media leaks related to the air crash that killed the Polish president in 2010.
+
+He asked reporters to leave so that he could take "a break".
+
+Upon hearing a loud thud, the reporters returned to find him on the floor with a pool of blood around his head.</li>
+							</ul>
+						</div>
+					<li><a href="http://www.youtube.com/watch?feature=youtube_gdata_player&amp;v=zseDPgvTkvY" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Reptilian shape shit Seen On Live TV! - [VIDEO] </li>
+
+					<li><a href="http://www.youtube.com/watch?v=fXexQBk6eTM" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Doug Wead discusses Ron Paul with Andrea Mitchell - [VIDEO] </li>
+					<li><a href="javascript:expandCollapse('bbcNewsIranCarExplosionKillsNuclearScientistInTehran18118','showForOutline');"><img class="expandIcon" id="img_bbcNewsIranCarExplosionKillsNuclearScientistInTehran18118" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('bbcNewsIranCarExplosionKillsNuclearScientistInTehran18118','showForOutline');"><span class="opText">BBC News - Iran car explosion kills nuclear scientist in Tehran</span></a></li>
+					<div class="hide" id="bbcNewsIranCarExplosionKillsNuclearScientistInTehran18118" name="bbcNewsIranCarExplosionKillsNuclearScientistInTehran18118">
+						<ul>
+							<li><a href="http://www.bbc.co.uk/news/world-middle-east-16501566" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>A university lecturer and nuclear scientist has been killed in a car explosion in north Tehran.
+
+Mostafa Ahmadi-Roshan, an academic who also worked at the Natanz uranium enrichment facility, and the driver of the car were killed in the attack.
+
+The blast happened after a motorcyclist stuck an apparent bomb to the car.
+
+Several Iranian nuclear scientists have been assassinated in recent years, with Iran blaming Israel and the US. Both countries deny the accusations.</li>
+							</ul>
+						</div>
+
+					<li><a href="http://blog.chron.com/rickperry/2012/01/fox-host-says-rupaul-is-a-more-likely-gop-candidate-than-ron-paul/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Fox News host says RuPaul as likely a GOP candidate as Ron Paul | Rick Perry 2012 Campaign for President-- News and updates</li>
+					<li><a href="javascript:expandCollapse('manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr16273','showForOutline');"><img class="expandIcon" id="img_manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr16273" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr16273','showForOutline');"><span class="opText">Man Dies Eating Cocaine: Man Dies After Eating Ounce of Cocaine Out Of Brother's Butt - wtvr</span></a></li>
+					<div class="hide" id="manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr16273" name="manDiesEatingCocaineManDiesAfterEatingOunceOfCocaineOutOfBrotherSButtWtvr16273">
+						<ul>
+							<li><a href="http://www.wtvr.com/news/wpix-man-dies-eating-ounce-cocaine,0,100374.story" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>In the footage, Wayne Mitchell can be seen, in handcuffs, reaching back to retrieve the cocaine from his brother. He then drops his head while he eats the cocaine.
+
+Wayne Mitchell soon after began convulsing and bleeding from his mouth. "White powder residue" was found on the rear seat of the police cruiser, cops noted. Deangelo later said "he believed his brother swallowed an ounce of cocaine."</li>
+							</ul>
+						</div>
+
+					<li><a href="javascript:expandCollapse('leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore24243','showForOutline');"><img class="expandIcon" id="img_leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore24243" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore24243','showForOutline');"><span class="opText">Leaked Video of CIA Supported Terrorists Staging a Massacre in Syria | Best Gore</span></a></li>
+					<div class="hide" id="leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore24243" name="leakedVideoOfCiaSupportedTerroristsStagingAMassacreInSyriaBestGore24243">
+						<ul>
+							<li><a href="http://www.bestgore.com/murder/leaked-video-cia-supported-terrorists-staging-massacre-syria/" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Epic FAIL. When will these dumbasses learn? We live in the 21st century. People record videos that nobody is meant to see, then lose their phones and the videos are leaked on the internet to everyone's dismay. This time a phone with the proof of what I've been saying all this time has been leaked. CIA supported terrorists whose job is to brainwash the internet community into believing that Syrian president Bashar al-Assad is slaughtering peaceful protesters filmed themselves staging a massacre. They were staging the blood spill to video tape it so they have more content to frame the president with. Sheep would see it and would raise their fists in support of military intervention against the people of Syria.</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+			</ul>
+		</div>
+	<li><a href="javascript:expandCollapse('clipsStuff3956','showForOutline');"><img class="expandIcon" id="img_clipsStuff3956" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('clipsStuff3956','showForOutline');"><span class="opText">Clips & Stuff</span></a></li>
+	<div class="hide" id="clipsStuff3956" name="clipsStuff3956">
+		<ul>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/500 euro notes.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>500 euro notes.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/BILLS-112hr3261ih.pdf" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>BILLS-112hr3261ih.pdf</li>
+
+			<li><a href="javascript:expandCollapse('iranSyria24671','showForOutline');"><img class="expandIcon" id="img_iranSyria24671" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('iranSyria24671','showForOutline');"><span class="opText">Iran/Syria</span></a></li>
+			<div class="hide" id="iranSyria24671" name="iranSyria24671">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Iran/Syria/Iranian nuke mossad.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Iranian nuke mossad.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Iran/Syria/Lucifer Assad conspiracy.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Lucifer Assad conspiracy.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Iran/Syria/Lucifer clipity clop.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Lucifer clipity clop.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Iran/Syria/Lucifer nuke scientist.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Lucifer nuke scientist.mp3</li>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Iran/Syria/Rice on Assad at UN.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Rice on Assad at UN.mp3</li>
+					</ul>
+				</div>
+			<li><a href="javascript:expandCollapse('jcdClips25867','showForOutline');"><img class="expandIcon" id="img_jcdClips25867" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('jcdClips25867','showForOutline');"><span class="opText">JCD Clips</span></a></li>
+			<div class="hide" id="jcdClips25867" name="jcdClips25867">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/cavuto on ron paul.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>cavuto on ron paul.mp3</li>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/hunstman loves state.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>hunstman loves state.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/huntsman part three.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>huntsman part three.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/huntsmen will be darned.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>huntsmen will be darned.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/idiot kid on Leni.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>idiot kid on Leni.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/news from china.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>news from china.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/odonnel douchebag.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>odonnel douchebag.mp3</li>
+
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/piece of chicken woman.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>piece of chicken woman.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/ron paul event cut off.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>ron paul event cut off.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/RP out of the equation.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>RP out of the equation.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/santorum double speak.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>santorum double speak.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/JCD Clips/santorum on assasinations.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>santorum on assasinations.mp3</li>
+					</ul>
+
+				</div>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Michelle book interview.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Michelle book interview.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/NA-NH-Prediction.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>NA-NH-Prediction.mp3</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/na373art.jpg" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>na373art.jpg</li>
+			<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/Polish colonel 2TTH.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Polish colonel 2TTH.mp3</li>
+			<li><a href="javascript:expandCollapse('rp21800','showForOutline');"><img class="expandIcon" id="img_rp21800" src="http://scripting.com/images/2011/11/29/rightWedge.gif"></a><a onclick="javascript:expandCollapse('rp21800','showForOutline');"><span class="opText">RP</span></a></li>
+
+			<div class="hide" id="rp21800" name="rp21800">
+				<ul>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/RP/BBC World-RP obama.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>BBC World-RP obama.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/RP/Brit HUme RP RuPa.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Brit HUme RP RuPa.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/RP/CBC RP cooky.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>CBC RP cooky.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/RP/CNN Dana Bash.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>CNN Dana Bash.mp3</li>
+					<li><a href="http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/RP/Doug Wead spins.mp3" target="_blank"><img class="expandIcon" src="http://scripting.com/images/2011/11/29/docicon.gif"></a>Doug Wead spins.mp3</li>
+
+					</ul>
+				</div>
+			</ul>
+		</div>
+	</ul>
+
+	</div>
+
+					</div>
+				<div class="divComments">
+
+					
+					</div>
+				<div class="divOpmlPageFooter">
+					<div class="divOpmlPageFooterBox">
+						<!-- XML icon -->
+							<a href="http://static.curry.com/worldoutline/admin/2012/01/12/archive172.opml" title="Click on this icon to view the OPML source text for this directory. More info: http://www.opml.org/spec2."><img class="imgXmlIcon" src="http://scripting.com/images/xmlIcon2.gif" border="0" width="36" height="14" alt="XML" /></a>
+						<!-- stats & atts -->
+							<a href="#" rel="popover" title="Node Stats" data-content="Editor: Adam Curry;  Updated: 1/12/12; 190 reads. 1 items.  Page build ran for 2.100 seconds.">Stats</a> & <a href="#" rel="popover" title="Node Attributes" data-content=".">Atts</a>.
+						<br><br>Good for the environment.
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
