@@ -88,6 +88,26 @@ describe "Navd::Scraper::ShowLoader examples" do
         :show_name => 'Too Many Clips',
         :credits=> "",
         :credits_url => nil
+      },
+      '373' => {
+        :expected_attributes => {
+          :number => 373,
+          :published => true,
+          :show_notes_url=>"http://373.nashownotes.com/",
+          :audio_url=>"http://m.podshow.com/media/15412/episodes/308608/noagenda-308608-01-12-2012.mp3",
+          :published_date=>Date.parse('2012-01-12'),
+          :cover_art_url=>"http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-373-2012-01-12/Assets/na373art.jpg",
+          :assets_url=>'http://373.nashownotes.com/assets',
+          :url=>"http://blog.curry.com/stories/2012/01/12/na37320120112.html",
+          :credits=>nil,
+          :name=>nil
+        },
+        :shownotes_format => :flat,
+        :shownotes_menu_url => 'http://373.nashownotes.com/shownotes',
+        :shownotes_count => 52,
+        :show_name => 'Paraphilia',
+        :credits=> %(Executive Producer: Sir David Overbeck),
+        :credits_url => nil
       }
     }.each do |number,options|
       context "show ##{number}" do
