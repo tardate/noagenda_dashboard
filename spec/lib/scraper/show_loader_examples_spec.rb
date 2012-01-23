@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'support/scraper_mocks'
 include ScraperMocksHelper
 
 describe "Navd::Scraper::ShowLoader examples" do
@@ -108,6 +107,44 @@ describe "Navd::Scraper::ShowLoader examples" do
         :show_name => 'Paraphilia',
         :credits=> %(Executive Producer: Sir David Overbeck),
         :credits_url => nil
+      },
+      '374' => {
+        :expected_attributes => {
+          :number => 374,
+          :published => true,
+          :show_notes_url=>"http://374.nashownotes.com/",
+          :audio_url=>"http://m.podshow.com/media/15412/episodes/308814/noagenda-308814-01-15-2012.mp3",
+          :published_date=>Date.parse('2012-01-15'),
+          :cover_art_url=>"http://dropbox.curry.com/ShowNotesArchive/2012/01/NA-374-2012-01-15/Assets/na374art.jpg",
+          :assets_url=>nil,
+          :url=>"http://374.nashownotes.com/",
+          :credits=>nil,
+          :name=>'Fractals on the Bone'
+        },
+        :shownotes_format => :p374,
+        :shownotes_count => 41,
+        :show_name => 'Fractals on the Bone',
+        :credits=> %(Executive Producers: Sir Martin Anderson, Andrew),
+        :credits_url => nil
+      },
+      '375' => {
+        :expected_attributes => {
+          :number => 375,
+          :published => true,
+          :show_notes_url=>"http://375.nashownotes.com/",
+          :audio_url=>"http://m.podshow.com/media/15412/episodes/309141/noagenda-309141-01-19-2012.mp3",
+          :published_date=>Date.parse('2012-01-19'),
+          :cover_art_url=>"http://blog.curry.com/images/2012/01/19/na375art_big.jpg",
+          :assets_url=>nil,
+          :url=>"http://375.nashownotes.com/",
+          :credits=>nil,
+          :name=>'Problematic Woman'
+        },
+        :shownotes_format => :p374,
+        :shownotes_count => 65,
+        :show_name => 'Problematic Woman',
+        :credits=> %(Executive Producers: Sir Michael Miller),
+        :credits_url => nil
       }
     }.each do |number,options|
       context "show ##{number}" do
@@ -118,7 +155,7 @@ describe "Navd::Scraper::ShowLoader examples" do
           before {
             show_loader.spider.stub(:get_page).and_return(published_show_page_html(show_number))
             show_loader.stub(:p_shownotes_menu).and_return(shownotes_menu_page_html(show_number))
-            show_loader.stub(:p_shownotes_detail_all).and_return(shownotes_detail_page_html(show_number))
+            show_loader.stub(:get_nested_shownotes_page).and_return(shownotes_detail_page_html(show_number))
             show_loader.stub(:credits_list).and_return(nil)
             show_loader.scan_show_assets
           }

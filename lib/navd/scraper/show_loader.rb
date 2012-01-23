@@ -57,8 +57,8 @@ module ::Navd::Scraper
       @show_notes = case shownotes_format
       when :nested
         get_nested_show_notes
-      when :flat
-        get_flat_show_notes
+      when :flat, :p374
+        get_show_notes
       else
         []
       end
@@ -69,7 +69,7 @@ module ::Navd::Scraper
     def get_nested_show_notes
       notes = []
       current_meme = nil
-      show_notes_collection(:nested).each do |n|
+      show_notes_collection.each do |n|
         if n.name=='li' && n[:class]=='directoryItem'
           current_meme = n.text
         elsif n.name=='ul' && n[:class]=='ulDirectory'
@@ -92,10 +92,10 @@ module ::Navd::Scraper
       notes
     end
 
-    def get_flat_show_notes
+    def get_show_notes
       show_notes = []
       # scan all the top-level li elements under the shownotes node
-      show_notes_collection(:flat).each do |n|
+      show_notes_collection.each do |n|
         if n.next_element && n.next_element.name=='div' && (current_meme = n.css('span').text)
           notes = n.next_element.xpath('./ul/li') # top level li elements
           notes.each do |note|
@@ -141,23 +141,27 @@ module ::Navd::Scraper
       show_notes
     end
 
-    def show_notes_collection(format = :flat)
-      case format
+    def show_notes_collection
+      case shownotes_format
       when :nested
-        p_shownotes_detail_all.at_css('ul.ulDirectory').children
+        get_nested_shownotes_page.at_css('ul.ulDirectory').children
       when :flat
         p_shownotes_menu.css('div.divOutlineBody > ul > li').map{|n| n.at_css('span').text =~ /notes/i ? n.next_element : nil }.compact.first.xpath('./ul/li')
+      when :p374
+        p_shownotes_main.css('#shownotes > div.divOutlineBody > ul > li')
       else
         []
       end
     end
 
-    def show_credits_collection(format = :flat)
-      case format
+    def show_credits_collection
+      case shownotes_format
       when :nested
         p_credits.css('.directoryComment').children
       when :flat
         p_shownotes_menu.css('div.divOutlineBody > ul > li').map{|n| n.at_css('span').text =~ /credit/i ? n.next_element : nil }.compact.first.css('*').children
+      when :p374
+        p_shownotes_main.css('#credits p.blogPostPgf').children
       else
         []
       end
@@ -166,7 +170,13 @@ module ::Navd::Scraper
     # Returns an array of credit items given an Nokogiri::HTML::Document container node
     def normalize_credit_list(collection_root)
       nbsp = Nokogiri::HTML("&nbsp;").text
-      c = collection_root.map{|c| c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ').gsub(/\t|\n/,'') : nil }
+      c = collection_root.map do |c|
+        text = c.is_a?(Nokogiri::XML::Text) ? c.text.gsub(nbsp,' ').gsub(/\t|\n/,'') : nil
+        if c.next && text && text =~ /art by/i
+          text << c.next.text
+        end
+        text
+      end
       c.reject!{|i| i.blank?}
       c
     end
@@ -177,7 +187,7 @@ module ::Navd::Scraper
     end
     # Returns an array of credits for the show
     def credits_list
-      @credits_list ||= normalize_credit_list(show_credits_collection(shownotes_format))
+      @credits_list ||= normalize_credit_list(show_credits_collection)
     end
 
     # Returns the human name of the show
@@ -186,7 +196,11 @@ module ::Navd::Scraper
       when 368 # special case
         'Too Many Clips'
       else
-        credits_list.try(:first)
+        if shownotes_format == :p374
+          p_shownotes_main.css('#credits p.blogPostPgf:first b').first.text.gsub('"','')
+        else
+          credits_list.try(:first)
+        end
       end
     end
 
@@ -210,13 +224,13 @@ module ::Navd::Scraper
     # Returns the link to official show page
     # e.g. http://blog.curry.com/stories/2011/10/20/na34920111020.html
     def episode_url
-      @episode_url ||= extract_nodes(p_shownotes_main,:web)[:href]
+      @episode_url ||= extract_nodes(p_shownotes_main,:web)[:href] || uri.to_s
     end
 
     # Returns the link to cover art
     # e.g. http://dropbox.curry.com/ShowNotesArchive/2011/10/NA-349-2011-10-20/Assets/ns349art.png
     def cover_art_url
-      @cover_art_url ||= extract_nodes(p_shownotes_main,:cover_art)[:href]
+      @cover_art_url ||= extract_nodes(p_shownotes_main,:cover_art_url)
     end
 
     # Returns the link to show assets page
@@ -250,14 +264,22 @@ module ::Navd::Scraper
     end
     # Returns Nokogiri::HTML::Document of the main shownotes menu page being processed
     def p_shownotes_menu
-      @p_shownotes_menu ||= shownotes_menu_uri && spider.get_page(shownotes_menu_uri)
+      @p_shownotes_menu ||= if number >= 374
+        p_shownotes_main
+      else
+        shownotes_menu_uri && spider.get_page(shownotes_menu_uri)
+      end
     end
+
     # Returns the shownote menu page format type.
     # Currently supports:
     #   :nested - as for shows ~325-361
     #   :flat - shows 362+
+    #   :p374 - shows 374+
     def shownotes_format
-      @shownotes_format ||= if p_shownotes_menu
+      @shownotes_format ||= if number >= 374
+        :p374
+      elsif p_shownotes_menu
         if p_shownotes_menu.css('ul.ulDirectory').present?
           :nested
         else
@@ -280,36 +302,38 @@ module ::Navd::Scraper
     #      http://349.nashownotes.com/shownotes/na34920111020Shownotes ->
     #      http://349.nashownotes.com/shownotes/na34920111020Shownotes/expandAllTopics
     def get_nested_shownotes_page
-      spider.get_page(shownotes_detail_all_uri)
-    end
-    # Returns the shownotes HTML
-    def p_shownotes_detail_all
-      @p_shownotes_detail_all ||= case shownotes_format
-      when :nested
-        get_nested_shownotes_page
-      when :flat
-      end
+      spider.get_page(shownotes_detail_all_uri) if shownotes_format == :nested
     end
 
     # Set of algorithms to extracts parts of a page
     # +page+ is a Nokogiri::HTML::Document
     # +item+ - symbol for note type required
     def extract_nodes(page,item)
-      result = case item
-      when :all_notes
-        page.css('a.directoryLink').select{|n| n.text[/expand all/i] }.first
-      when :credits
-        page.css('a.directoryLink').select{|n| n.text[/credits/i] }.first
-      when :assets
-        page.css('a.directoryLink').select{|n| n.text[/Assets/] }.first
-      when :cover_art
-        page.css('.directoryComment > a').select{|n| n.text[/Art/] }.first
-      when :mp3
-        page.css('.directoryComment > a').select{|n| n.text[/mp3/] }.first
-      when :notes
-        page.css('a.directoryLink').select{|n| n.text[/notes/] }.first
-      when :web
-        page.css('.directoryComment a').select{|n| n.text[/Episode/] }.first
+      result = if number >= 374
+        meta_node = page.css('#my-tab-content > div:first p.blogPostPgf')
+        case item
+        when :cover_art_url
+          page.css('#coverArt img').first[:src]
+        when :mp3
+          meta_node.css('a').select{|n| n.text[/mp3/] }.first
+        end
+      else
+        case item
+        when :all_notes
+          page.css('a.directoryLink').select{|n| n.text[/expand all/i] }.first
+        when :credits
+          page.css('a.directoryLink').select{|n| n.text[/credits/i] }.first
+        when :assets
+          page.css('a.directoryLink').select{|n| n.text[/Assets/] }.first
+        when :cover_art_url
+          page.css('.directoryComment > a').select{|n| n.text[/Art/] }.first[:href]
+        when :mp3
+          page.css('.directoryComment > a').select{|n| n.text[/mp3/] }.first
+        when :notes
+          page.css('a.directoryLink').select{|n| n.text[/notes/] }.first
+        when :web
+          page.css('.directoryComment a').select{|n| n.text[/Episode/] }.first
+        end
       end
       result || {}
     end
